@@ -1871,8 +1871,7 @@ tbody tr:hover td{background:rgba(255,255,255,.02)}
 //   • Served on a different port    → still point to Flask on 5000
 // ─────────────────────────────────────────────────────────────────────────────
 const IS_FILE_PROTOCOL = window.location.protocol === 'file:';
-const IS_FLASK_PORT    = window.location.port === '5000';
-const API = (IS_FILE_PROTOCOL || !IS_FLASK_PORT) ? 'http://localhost:5000' : '';
+const API = IS_FILE_PROTOCOL ? 'http://localhost:5000' : '';
 
 let token      = null, user      = null;
 let adminToken = null, adminUser = null;   // Separate admin session
