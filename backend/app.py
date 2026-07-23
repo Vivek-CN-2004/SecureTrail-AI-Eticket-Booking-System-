@@ -939,10 +939,13 @@ def user_profile():
     s=db.execute("SELECT COUNT(*) total,SUM(is_fraud) fraud,SUM(CASE WHEN payment_status='SUCCESS' THEN 1 ELSE 0 END) success_pay FROM tickets WHERE user_id=?",(u["user_id"],)).fetchone()
     return jsonify({"user":dict(u),"stats":dict(s)})
 
+with app.app_context():
+    init_db()
+
 if __name__=="__main__":
-    with app.app_context(): init_db()
+    port = int(os.environ.get("PORT", 5000))
     print("\n" + "="*55)
-    print("  SecureTrail running at  http://localhost:5000")
+    print(f"  SecureTrail running at  http://localhost:{port}")
     print("  Admin: admin@securerail.com  /  Admin@123")
     print("="*55 + "\n")
-    app.run(debug=True,host="0.0.0.0",port=5000)
+    app.run(debug=False, host="0.0.0.0", port=port)
