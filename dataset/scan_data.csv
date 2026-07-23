@@ -1,0 +1,1501 @@
+user_id,issuer,source,destination,travel_date,seat,travel_class,price,qr_detected,qr_decodable,qr_pnr_match,ocr_confidence,font_consistent,text_anomaly,exif_clean,file_unmodified,price_reasonable,metadata_consistent,fraud_type,is_fraud
+5337,Cleartrip,Mumbai,Bangalore,2026-03-03,Sleeper,Sleeper,3155.0,1,1,0,46.03170455651708,0,1,0,0,1,0,behavioral,1
+5285,Paytm,Indore,Bangalore,2025-10-28,Business,First,1641.0,1,1,1,72.59078533384783,1,0,1,1,1,1,none,0
+1345,GoIbibo,Delhi,Ahmedabad,2025-11-04,CC,Business,2289.0,1,1,0,57.85912248451646,0,1,0,0,1,0,metadata_tamper,1
+4581,Cleartrip,Nagpur,Mumbai,2026-02-01,CC,Sleeper,2552.0,1,1,1,79.23743372937972,1,0,0,1,1,1,none,0
+4794,GoIbibo,Nagpur,Indore,2026-02-22,AC,Sleeper,725.0,1,1,1,79.81071348297051,1,0,1,1,1,1,none,0
+3165,AbhiBus,Indore,Ahmedabad,2026-04-15,AC,First,388.0,1,1,0,39.11909750302071,0,1,0,0,1,0,behavioral,1
+5141,AbhiBus,Surat,Indore,2025-11-11,Sleeper,AC Chair,3219.0,1,1,0,57.08345716047459,0,1,0,0,1,0,font_mismatch,1
+6681,Paytm,Kanpur,Lucknow,2026-04-15,Business,Sleeper,792.0,1,1,1,79.89023884189098,1,0,1,1,1,1,none,0
+7779,Yatra,Ahmedabad,Indore,2026-03-28,General,Business,3468.0,1,1,0,29.02006747041844,0,1,0,0,1,0,ocr_tamper,1
+2928,Paytm,Chennai,Kolkata,2026-01-29,AC,First,3449.0,1,1,1,94.92426204071955,1,0,0,0,1,1,none,0
+5605,Cleartrip,Jaipur,Mumbai,2026-04-06,Business,AC Chair,2234.0,1,1,1,50.31593466143998,0,1,0,0,1,0,duplicate,1
+1539,Paytm,Hyderabad,Kolkata,2026-03-05,Business,First,811.0,1,1,1,96.07985190117155,1,0,1,1,1,1,none,0
+2770,AbhiBus,Bhopal,Kolkata,2026-04-11,Sleeper,Business,3461.0,1,1,1,84.50545145333433,1,0,1,1,1,1,none,0
+4374,Cleartrip,Bhopal,Surat,2025-11-19,First Class,Business,242.0,1,1,1,52.68632466923579,0,1,0,0,1,0,duplicate,1
+3451,RedBus,Pune,Nagpur,2026-03-30,AC,Business,2506.0,1,1,0,84.65066432711734,0,0,1,1,1,1,none,0
+6651,RedBus,Bhopal,Ahmedabad,2026-05-05,AC,First,1758.0,1,1,0,48.84285236086329,0,1,0,0,1,0,behavioral,1
+9591,IRCTC,Delhi,Mumbai,2026-06-02,AC,Economy,1250.0,1,1,1,85.59517520724089,1,0,0,1,1,1,none,0
+7858,MakeMyTrip,Chennai,Surat,2026-06-15,AC,Business,1484.0,1,1,1,83.53552949561217,1,0,1,0,1,1,none,0
+6532,MakeMyTrip,Ahmedabad,Surat,2026-06-17,Sleeper,Economy,10.0,1,1,0,65.52102791185038,0,1,0,0,0,0,price_mismatch,1
+1651,Paytm,Indore,Kolkata,2026-03-05,First Class,Economy,1186.0,1,1,0,59.98577952629008,0,1,0,0,1,0,metadata_tamper,1
+9936,RedBus,Nagpur,Kanpur,2025-12-26,CC,AC Chair,2571.0,1,1,1,72.80852694120323,1,0,1,1,1,1,none,0
+5241,RedBus,Surat,Ahmedabad,2026-06-06,First Class,AC Chair,1184.0,1,1,1,91.76728276071593,1,0,1,1,1,1,none,0
+3804,Cleartrip,Delhi,Chennai,2026-04-18,First Class,Business,2983.0,1,1,1,77.14242464253508,1,0,1,1,1,1,none,0
+7174,Yatra,Lucknow,Indore,2026-06-03,CC,Business,772.0,1,1,1,85.63074068784701,0,0,1,0,1,1,none,0
+6609,IRCTC,Bangalore,Hyderabad,2026-01-15,2A,Business,580.0,1,1,1,95.53639033339338,1,0,1,1,1,1,none,0
+7805,MakeMyTrip,Kanpur,Jaipur,2025-11-13,First Class,Economy,911.0,1,1,1,94.64456183693954,1,0,1,1,1,1,none,0
+2747,IRCTC,Bangalore,Lucknow,2026-01-19,AC,Business,1485.0,1,1,1,84.04686838209997,1,0,1,1,1,1,none,0
+6256,IRCTC,Jaipur,Chennai,2025-11-26,3A,AC Chair,3493.0,1,1,1,77.43880782555586,1,0,1,1,1,0,none,0
+5978,Paytm,Pune,Kanpur,2025-12-01,AC,Business,2563.0,1,1,1,81.7722570835641,1,0,1,1,1,1,none,0
+8886,RedBus,Chennai,Surat,2026-05-23,General,Economy,2637.0,1,1,1,88.92568691342737,1,0,1,0,1,1,none,0
+9995,GoIbibo,Delhi,Bangalore,2026-04-19,2A,Business,2474.0,1,0,0,56.35257975440546,0,1,0,0,1,0,qr_invalid,1
+8142,Yatra,Bangalore,Kolkata,2026-01-05,2A,Business,3337.0,1,1,1,92.26102520436643,1,0,1,0,1,1,none,0
+4599,Paytm,Jaipur,Bangalore,2026-01-10,First Class,Economy,3439.0,1,1,1,75.10526934283642,1,0,1,1,1,1,none,0
+7571,Cleartrip,Mumbai,Delhi,2026-01-29,AC,Economy,2576.0,1,1,0,75.65678724442793,1,0,1,0,1,1,none,0
+8580,AbhiBus,Chennai,Mumbai,2026-03-18,Business,Economy,262.0,1,1,1,80.2165845244554,1,0,1,1,1,1,none,0
+6154,RedBus,Lucknow,Indore,2026-04-29,CC,Business,2188.0,1,1,0,70.27336201723902,0,1,0,0,1,0,font_mismatch,1
+4088,Paytm,Chennai,Lucknow,2026-01-20,2A,Business,1326.0,1,1,1,88.9969884158305,1,0,1,1,1,1,none,0
+7157,MakeMyTrip,Chennai,Kolkata,2026-05-06,Sleeper,AC Chair,2398.0,1,1,1,93.12074049963317,1,0,1,1,1,1,none,0
+8212,GoIbibo,Delhi,Lucknow,2026-02-14,Business,Business,1971.0,1,1,0,54.57432607390172,0,1,0,0,1,0,behavioral,1
+3909,Yatra,Bangalore,Delhi,2026-04-14,AC,First,1081.0,1,1,1,81.1884511835226,1,0,0,1,1,1,none,0
+2329,AbhiBus,Pune,Surat,2026-06-13,3A,Economy,2649.0,1,1,1,85.6356770143526,1,0,1,1,1,1,none,0
+1523,Paytm,Indore,Hyderabad,2026-02-14,General,AC Chair,1654.0,1,1,1,82.29685660479512,1,0,1,0,1,1,none,0
+4639,MakeMyTrip,Lucknow,Ahmedabad,2025-11-14,CC,Sleeper,1061.0,1,1,1,84.41899240136391,1,0,1,1,1,1,none,0
+8171,Cleartrip,Bhopal,Pune,2025-10-23,Sleeper,Sleeper,2028.0,1,1,1,94.7581878017358,1,0,1,1,1,1,none,0
+9427,IRCTC,Bhopal,Surat,2026-05-04,Business,Business,443.0,1,1,0,52.48840520496146,0,1,0,0,1,0,metadata_tamper,1
+9961,AbhiBus,Kolkata,Ahmedabad,2026-02-28,3A,AC Chair,1942.0,1,1,1,74.60218773696691,1,0,0,0,1,1,none,0
+1592,Paytm,Surat,Kolkata,2026-04-09,General,Business,1047.0,1,1,1,79.14536456995357,1,0,1,0,1,1,none,0
+6589,AbhiBus,Kolkata,Bangalore,2026-04-28,First Class,Economy,2577.0,1,1,1,80.68934375380432,1,0,1,1,1,1,none,0
+5712,GoIbibo,Bangalore,Ahmedabad,2026-05-29,CC,Sleeper,760.0,1,1,1,89.66859415137725,1,0,1,0,1,1,none,0
+4864,GoIbibo,Pune,Ahmedabad,2026-04-24,3A,Economy,1875.0,1,1,0,71.91375999287187,0,1,0,0,1,0,font_mismatch,1
+8434,RedBus,Surat,Delhi,2026-04-18,2A,Economy,2067.0,1,1,1,84.40630481165103,1,0,1,1,1,1,none,0
+5940,AbhiBus,Jaipur,Delhi,2026-02-07,Business,Business,3281.0,1,1,1,92.76117606857298,1,0,1,1,1,1,none,0
+2589,GoIbibo,Bhopal,Mumbai,2025-11-15,Business,Sleeper,1840.0,1,1,1,77.59588452198743,1,0,1,1,1,1,none,0
+5471,IRCTC,Jaipur,Kolkata,2025-12-09,CC,Business,2175.0,1,1,0,30.031116572859517,0,1,0,0,1,0,behavioral,1
+6923,MakeMyTrip,Lucknow,Hyderabad,2026-01-17,Business,First,263.0,1,1,0,36.576554456061054,0,1,0,0,1,0,behavioral,1
+4009,Paytm,Jaipur,Lucknow,2026-05-08,3A,Economy,1921.0,1,1,1,83.7836335940314,1,0,1,1,1,1,none,0
+7915,AbhiBus,Kanpur,Pune,2026-05-08,General,Economy,3418.0,1,1,1,89.221522060366,1,0,0,1,1,1,none,0
+7700,Cleartrip,Surat,Lucknow,2026-05-30,2A,AC Chair,1302.0,0,0,0,56.99969563176043,0,1,0,0,1,0,qr_invalid,1
+1615,IRCTC,Jaipur,Kanpur,2026-01-16,CC,First,3107.0,1,1,1,90.9061946470575,1,0,1,1,1,1,none,0
+6369,Yatra,Kolkata,Chennai,2026-04-11,CC,First,195.0,1,1,0,66.95640219673864,0,1,0,0,1,0,metadata_tamper,1
+4038,AbhiBus,Ahmedabad,Nagpur,2026-02-15,AC,Sleeper,696.0,1,1,0,62.52651806698608,0,1,0,0,1,0,font_mismatch,1
+3930,MakeMyTrip,Pune,Indore,2025-11-11,First Class,AC Chair,1754.0,1,1,0,79.34429373577387,1,0,1,1,1,1,none,0
+5005,RedBus,Chennai,Jaipur,2026-05-21,2A,Business,1411.0,1,1,1,85.04163116889865,1,0,1,1,1,1,none,0
+8989,MakeMyTrip,Indore,Mumbai,2025-11-17,General,First,1361.0,1,1,1,55.68036081501086,0,1,0,0,1,0,duplicate,1
+8692,Yatra,Bhopal,Delhi,2026-05-08,Business,Economy,1198.0,1,1,1,96.33173524826026,1,0,1,0,1,1,none,0
+8188,RedBus,Mumbai,Kolkata,2026-02-27,Sleeper,Sleeper,3414.0,0,0,0,64.24591418966962,0,1,0,0,1,0,qr_invalid,1
+1184,GoIbibo,Ahmedabad,Pune,2026-04-01,3A,Economy,1584.0,1,1,1,81.48315742959073,1,0,1,1,1,1,none,0
+1512,Yatra,Kanpur,Nagpur,2026-03-29,CC,Sleeper,3344.0,1,1,1,82.01366493485786,1,0,1,0,1,1,none,0
+5583,GoIbibo,Mumbai,Kolkata,2025-12-10,3A,Economy,3315.0,1,1,1,72.05452979938107,1,0,1,1,1,1,none,0
+9540,AbhiBus,Kanpur,Indore,2026-01-14,Business,Business,3017.0,1,1,1,91.98216843153708,1,0,1,1,1,1,none,0
+8060,Paytm,Ahmedabad,Jaipur,2026-04-19,2A,Economy,730.0,1,1,1,90.31092739340751,1,0,1,1,1,1,none,0
+4845,IRCTC,Chennai,Surat,2025-11-22,AC,Economy,2539.0,1,1,1,94.61160093795132,1,0,1,1,1,1,none,0
+1781,GoIbibo,Jaipur,Hyderabad,2026-05-28,First Class,Business,2914.0,1,1,1,83.17399156220334,1,0,1,1,1,1,none,0
+3910,Cleartrip,Kolkata,Surat,2025-11-20,General,Sleeper,1489.0,1,1,1,83.15718857764695,1,0,1,1,1,1,none,0
+3183,RedBus,Chennai,Indore,2026-06-01,General,Economy,2246.0,1,1,1,88.7027550027468,1,0,1,0,1,1,none,0
+1597,MakeMyTrip,Kolkata,Lucknow,2025-12-01,2A,Business,0.5,1,1,0,50.044395974315194,0,1,0,0,0,0,price_mismatch,1
+9823,GoIbibo,Lucknow,Nagpur,2026-03-04,First Class,Economy,3006.0,1,1,1,80.09491063500299,1,0,1,1,1,1,none,0
+1663,Yatra,Ahmedabad,Bhopal,2025-11-26,3A,First,3392.0,1,1,0,69.63695025929582,0,1,0,0,1,0,metadata_tamper,1
+1011,GoIbibo,Delhi,Surat,2026-05-28,First Class,Business,2342.0,1,1,0,48.79604974208,0,1,0,0,1,0,ocr_tamper,1
+9496,Yatra,Lucknow,Surat,2026-05-14,Business,First,3168.0,1,1,1,95.70209658486111,1,0,1,1,1,1,none,0
+9400,GoIbibo,Bhopal,Bangalore,2026-02-23,3A,First,2961.0,1,1,1,79.59815251849176,1,0,1,1,1,1,none,0
+7280,GoIbibo,Chennai,Surat,2026-06-11,First Class,AC Chair,479.0,0,0,0,51.740095729424326,0,1,0,0,1,0,no_qr,1
+1658,Yatra,Bangalore,Pune,2025-11-02,First Class,Sleeper,2555.0,1,1,1,90.82257116746382,1,0,1,1,1,1,none,0
+4362,AbhiBus,Mumbai,Pune,2025-12-30,First Class,Economy,3293.0,1,0,0,59.85471355180256,0,1,0,0,1,0,qr_invalid,1
+9349,IRCTC,Bangalore,Delhi,2025-12-04,Sleeper,AC Chair,1740.0,1,1,1,82.04701236910483,1,0,1,0,1,1,none,0
+3438,IRCTC,Ahmedabad,Nagpur,2026-02-12,AC,First,2558.0,1,1,1,73.93512673910017,1,0,1,1,1,1,none,0
+9219,Paytm,Jaipur,Kanpur,2026-06-14,First Class,Business,3071.0,1,1,1,76.63720820044323,1,0,1,1,1,1,none,0
+4401,GoIbibo,Lucknow,Nagpur,2026-01-09,CC,Sleeper,979.0,1,1,1,74.58643179491757,1,0,1,0,1,1,none,0
+1311,RedBus,Chennai,Ahmedabad,2026-04-04,First Class,Sleeper,1345.0,1,1,0,58.88908942782433,0,1,0,0,1,0,metadata_tamper,1
+9204,MakeMyTrip,Indore,Pune,2025-11-13,CC,Economy,2128.0,1,1,0,62.8962264329241,0,1,0,0,1,0,metadata_tamper,1
+2224,GoIbibo,Hyderabad,Delhi,2026-01-20,AC,Business,1627.0,1,1,1,96.24638240247727,1,0,1,1,1,1,none,0
+3085,GoIbibo,Bangalore,Surat,2025-12-03,AC,First,322.0,1,1,1,91.1342557122541,1,0,1,1,1,1,none,0
+6475,GoIbibo,Ahmedabad,Delhi,2026-02-02,General,Sleeper,2097.0,1,1,1,85.61723488134527,1,0,1,0,1,1,none,0
+2374,GoIbibo,Chennai,Kolkata,2026-02-25,AC,First,1455.0,1,1,1,82.21096827229769,1,0,1,1,1,1,none,0
+6592,Paytm,Lucknow,Pune,2026-04-13,CC,AC Chair,2556.0,1,1,1,78.2789358589143,0,0,1,1,1,1,none,0
+6102,AbhiBus,Hyderabad,Lucknow,2026-06-16,Business,Sleeper,162.0,1,1,1,73.14767457260142,1,0,1,1,1,1,none,0
+5306,AbhiBus,Chennai,Hyderabad,2025-12-21,General,Business,3311.0,1,1,1,81.91753494914067,1,0,1,1,1,1,none,0
+1913,GoIbibo,Pune,Bangalore,2026-05-14,3A,AC Chair,503.0,1,1,1,88.40337115704739,1,0,0,1,1,1,none,0
+2622,Yatra,Chennai,Nagpur,2025-11-28,General,Sleeper,5.0,1,1,0,58.56471546974629,0,1,0,0,0,0,price_mismatch,1
+9689,IRCTC,Ahmedabad,Pune,2025-11-24,Business,Economy,2069.0,1,1,1,63.410230070349336,0,1,0,0,1,0,duplicate,1
+3686,RedBus,Mumbai,Bhopal,2026-06-10,First Class,AC Chair,1277.0,1,1,1,89.3475378452527,1,0,1,1,1,1,none,0
+3812,IRCTC,Ahmedabad,Kolkata,2025-12-07,Sleeper,Sleeper,531.0,1,1,1,86.23474337515997,1,0,1,0,1,1,none,0
+7176,IRCTC,Delhi,Pune,2026-01-30,AC,AC Chair,3417.0,1,1,1,76.52951866982407,1,0,1,1,1,1,none,0
+5610,AbhiBus,Hyderabad,Ahmedabad,2026-06-09,CC,Business,1551.0,1,1,1,73.56874742211049,1,0,1,1,1,0,none,0
+3057,Yatra,Pune,Delhi,2025-10-29,General,First,3282.0,1,1,1,90.71305497216247,1,0,1,1,1,1,none,0
+6528,IRCTC,Nagpur,Surat,2026-04-24,Business,Sleeper,3232.0,1,1,1,73.04128698147639,1,0,1,1,1,1,none,0
+6541,IRCTC,Indore,Lucknow,2025-12-16,3A,Sleeper,3480.0,1,1,0,66.18831051236005,0,1,0,0,1,0,metadata_tamper,1
+5517,MakeMyTrip,Lucknow,Hyderabad,2026-06-11,Business,Economy,2275.0,1,1,0,55.77044655210179,0,1,0,0,1,0,metadata_tamper,1
+3882,Paytm,Nagpur,Lucknow,2026-04-04,Business,Sleeper,2392.0,1,1,0,91.69918163924571,0,0,1,1,1,1,none,0
+9377,Yatra,Bhopal,Delhi,2026-04-15,CC,Sleeper,566.0,0,0,0,60.60242911619197,0,1,0,0,1,0,qr_invalid,1
+9374,AbhiBus,Lucknow,Delhi,2026-03-25,CC,Business,2056.0,1,1,0,72.51962508231315,1,0,1,1,1,1,none,0
+1252,IRCTC,Kolkata,Kanpur,2025-12-04,General,AC Chair,2480.0,1,1,1,82.39176405609523,1,0,1,1,1,1,none,0
+3230,Yatra,Pune,Hyderabad,2025-11-30,Sleeper,Business,2520.0,1,1,1,76.06924853762546,1,0,0,1,1,1,none,0
+3124,GoIbibo,Delhi,Bhopal,2026-06-06,General,Business,3062.0,1,1,1,87.60716350660635,1,0,1,1,1,1,none,0
+9824,Cleartrip,Jaipur,Delhi,2026-05-02,General,AC Chair,719.0,1,1,1,76.05799105404584,1,0,1,1,1,1,none,0
+2050,Cleartrip,Bhopal,Mumbai,2026-05-29,General,Sleeper,3420.0,1,1,0,66.32599157892818,0,1,0,0,1,0,font_mismatch,1
+8884,Paytm,Indore,Mumbai,2026-03-29,CC,Sleeper,1427.0,1,1,1,80.35343344528071,1,0,1,1,1,1,none,0
+7127,MakeMyTrip,Bangalore,Nagpur,2026-02-01,CC,Sleeper,1094.0,1,1,1,81.71815802196778,1,0,1,1,1,1,none,0
+4571,GoIbibo,Kanpur,Mumbai,2025-11-23,General,First,2526.0,1,1,1,90.35886170083806,0,0,1,1,1,1,none,0
+6342,Paytm,Delhi,Ahmedabad,2025-12-12,3A,Economy,1100.0,1,1,1,81.53082652593926,1,0,1,1,1,1,none,0
+4856,Yatra,Bangalore,Chennai,2026-02-01,First Class,Business,2143.0,1,1,1,78.04785864709292,1,0,0,1,1,1,none,0
+8506,MakeMyTrip,Mumbai,Surat,2025-12-19,3A,Economy,2710.0,1,1,1,95.14251403193671,1,0,1,1,1,1,none,0
+6086,IRCTC,Mumbai,Bhopal,2026-06-15,Sleeper,AC Chair,2314.0,1,1,1,68.00985392677731,0,1,0,0,1,0,duplicate,1
+2715,IRCTC,Hyderabad,Delhi,2026-03-03,Business,Sleeper,2229.0,1,1,1,92.57939845706076,1,0,1,1,1,1,none,0
+9587,AbhiBus,Mumbai,Surat,2025-12-17,3A,AC Chair,422.0,1,1,1,87.18507696801682,1,0,1,1,1,1,none,0
+8413,MakeMyTrip,Bangalore,Kolkata,2026-01-03,General,Business,1293.0,1,1,0,23.213360246489316,0,1,0,0,1,0,ocr_tamper,1
+9356,RedBus,Surat,Hyderabad,2026-05-15,CC,AC Chair,1987.0,1,1,0,66.83532129957503,0,1,0,0,1,0,font_mismatch,1
+9980,MakeMyTrip,Bhopal,Hyderabad,2026-05-20,Business,Economy,1303.0,1,1,1,81.23545743852992,1,0,1,1,1,1,none,0
+3311,Paytm,Jaipur,Surat,2026-02-14,General,AC Chair,3016.0,1,1,1,72.85476728066735,0,0,1,1,1,1,none,0
+5191,IRCTC,Lucknow,Nagpur,2026-05-21,Business,Sleeper,816.0,1,1,1,72.64728953950232,0,0,1,1,1,1,none,0
+1409,AbhiBus,Jaipur,Indore,2025-12-26,3A,First,2769.0,0,0,0,65.45745248711424,0,1,0,0,1,0,no_qr,1
+9596,GoIbibo,Kolkata,Ahmedabad,2026-05-02,3A,Sleeper,1080.0,1,1,1,92.98397450427481,1,0,1,0,1,1,none,0
+5311,Paytm,Chennai,Bangalore,2026-03-02,Business,AC Chair,347.0,0,0,0,59.43438057545919,0,1,0,0,1,0,no_qr,1
+6518,GoIbibo,Lucknow,Bhopal,2026-01-10,3A,Economy,183.0,1,1,1,93.44669907055552,1,0,1,1,1,1,none,0
+4154,RedBus,Delhi,Surat,2026-03-12,AC,AC Chair,1066.0,1,1,1,96.65763997126561,1,0,1,0,1,1,none,0
+1759,IRCTC,Bhopal,Ahmedabad,2026-05-03,AC,Business,1101.0,1,1,0,47.55886701545427,0,1,0,0,1,0,ocr_tamper,1
+2294,Paytm,Lucknow,Delhi,2026-03-11,Sleeper,First,5.0,1,1,0,51.92635153549691,0,1,0,0,0,0,price_mismatch,1
+6218,Paytm,Chennai,Ahmedabad,2025-10-27,Business,Business,378.0,1,1,1,87.63658553382245,1,0,1,1,1,1,none,0
+5104,IRCTC,Nagpur,Lucknow,2025-12-26,Business,Business,661.0,1,1,1,86.95933776262544,1,0,1,1,1,1,none,0
+7373,MakeMyTrip,Pune,Hyderabad,2025-10-31,First Class,Business,260.0,1,1,1,83.35297526902323,0,0,1,1,1,1,none,0
+7209,Paytm,Bangalore,Mumbai,2026-02-04,2A,First,1195.0,1,1,0,32.96770889355787,0,1,0,0,1,0,ocr_tamper,1
+5626,IRCTC,Kanpur,Hyderabad,2025-12-31,CC,Sleeper,906.0,1,1,1,74.76051738595828,1,0,1,1,1,1,none,0
+6199,GoIbibo,Lucknow,Pune,2026-04-10,CC,Economy,2138.0,1,1,1,79.73020264501469,1,0,1,1,1,1,none,0
+5704,IRCTC,Surat,Bhopal,2026-01-09,Sleeper,Business,1800.0,1,1,1,76.25438211910253,1,0,1,1,1,1,none,0
+7482,Paytm,Kolkata,Delhi,2026-02-10,3A,Business,630.0,1,1,0,26.798883483365458,0,1,0,0,1,0,ocr_tamper,1
+3929,Yatra,Delhi,Indore,2025-10-28,General,Sleeper,1664.0,1,1,1,73.12326758743616,1,0,0,0,1,1,none,0
+2154,AbhiBus,Nagpur,Kanpur,2026-03-09,General,Business,183.0,1,1,1,80.08874907609021,1,0,1,1,1,1,none,0
+9039,Yatra,Surat,Indore,2026-05-15,3A,Business,9999.0,1,1,0,69.61855801192826,0,1,0,0,0,0,price_mismatch,1
+9998,AbhiBus,Kolkata,Indore,2026-06-15,3A,AC Chair,3300.0,1,1,0,96.5632995591827,1,0,1,1,1,1,none,0
+6821,IRCTC,Bangalore,Chennai,2026-03-21,First Class,Business,2171.0,1,1,1,89.37897756177296,1,0,1,1,1,0,none,0
+7238,GoIbibo,Nagpur,Bhopal,2025-12-03,CC,Sleeper,1671.0,1,1,1,83.13719073438757,1,0,1,1,1,1,none,0
+8850,Paytm,Indore,Ahmedabad,2025-12-09,General,Business,546.0,1,1,1,93.47612247608834,1,0,1,1,1,1,none,0
+7717,AbhiBus,Kanpur,Nagpur,2026-02-02,Business,AC Chair,3390.0,1,1,1,93.33945628745138,1,0,1,1,1,1,none,0
+1750,Cleartrip,Nagpur,Hyderabad,2026-03-07,First Class,Sleeper,2302.0,1,1,1,82.44136607882045,1,0,1,0,1,1,none,0
+3727,IRCTC,Bhopal,Jaipur,2026-04-25,Sleeper,AC Chair,2672.0,1,1,1,88.4042425325971,1,0,1,0,1,1,none,0
+1475,Cleartrip,Mumbai,Surat,2026-01-05,General,AC Chair,643.0,1,1,1,95.36452873409684,1,0,1,1,1,1,none,0
+2615,GoIbibo,Surat,Kolkata,2026-05-04,3A,First,2047.0,1,1,1,86.14720884567092,1,0,1,1,1,1,none,0
+5413,AbhiBus,Indore,Lucknow,2026-04-15,General,First,3276.0,1,1,1,86.09943149408409,1,0,0,1,1,1,none,0
+5030,Paytm,Surat,Kanpur,2026-05-15,3A,First,5.0,1,1,0,64.7857527375518,0,1,0,0,0,0,price_mismatch,1
+7105,AbhiBus,Jaipur,Kanpur,2025-10-25,First Class,Business,500.0,1,1,1,87.12395577366539,1,0,1,1,1,1,none,0
+4495,Yatra,Lucknow,Bangalore,2025-12-14,First Class,AC Chair,3338.0,1,1,1,74.83310988778828,1,0,1,0,1,0,none,0
+3609,Cleartrip,Indore,Ahmedabad,2026-02-28,First Class,First,2689.0,1,1,0,54.991011097156985,0,1,0,0,1,0,behavioral,1
+8122,Cleartrip,Jaipur,Lucknow,2026-03-12,3A,Sleeper,2482.0,1,1,1,82.81734014194197,1,0,1,1,1,1,none,0
+8525,Cleartrip,Surat,Indore,2025-12-07,General,Economy,2490.0,1,1,0,73.12567285376419,0,1,0,0,1,0,font_mismatch,1
+3969,RedBus,Pune,Mumbai,2026-05-28,2A,Economy,2992.0,1,1,1,85.3813568931153,0,0,1,1,1,1,none,0
+2186,GoIbibo,Jaipur,Delhi,2026-06-14,2A,First,2460.0,1,1,1,91.55207055156399,1,0,1,1,1,1,none,0
+8588,AbhiBus,Kolkata,Hyderabad,2025-12-04,2A,Sleeper,1014.0,1,1,1,94.18922919517117,1,0,0,1,1,0,none,0
+1496,AbhiBus,Mumbai,Bangalore,2026-02-04,3A,Economy,2682.0,1,1,1,88.09197148709607,1,0,1,1,1,1,none,0
+3588,RedBus,Ahmedabad,Pune,2025-11-17,First Class,AC Chair,1908.0,0,0,0,63.02998701953008,0,1,0,0,1,0,qr_invalid,1
+7109,GoIbibo,Bangalore,Indore,2026-04-08,Sleeper,AC Chair,671.0,1,1,1,97.38864585310017,0,0,0,1,1,1,none,0
+4254,GoIbibo,Bangalore,Chennai,2025-12-30,Sleeper,Economy,2252.0,1,1,1,81.52612065478051,1,0,1,1,1,1,none,0
+2332,RedBus,Bangalore,Ahmedabad,2026-04-15,3A,First,533.0,1,1,0,56.233022362754994,0,1,0,0,1,0,font_mismatch,1
+6227,Yatra,Kolkata,Bangalore,2025-11-28,First Class,Sleeper,3379.0,1,1,1,96.26894078866468,0,0,1,1,1,1,none,0
+2184,IRCTC,Pune,Hyderabad,2026-03-22,AC,First,595.0,1,1,1,75.62342188160457,1,0,1,1,1,1,none,0
+6058,GoIbibo,Hyderabad,Kolkata,2026-02-27,First Class,AC Chair,2092.0,1,1,1,88.70310831481731,1,0,1,1,1,1,none,0
+2987,IRCTC,Delhi,Surat,2026-01-01,3A,Economy,3479.0,1,1,1,81.8712776067028,1,0,1,1,1,1,none,0
+6388,Yatra,Ahmedabad,Mumbai,2026-03-20,First Class,First,2801.0,1,1,1,76.98561807582774,1,0,1,1,1,1,none,0
+1779,AbhiBus,Nagpur,Mumbai,2026-02-24,CC,Economy,195.0,1,1,1,87.12508452551158,0,0,1,1,1,1,none,0
+2418,Paytm,Lucknow,Pune,2026-05-12,AC,First,3264.0,1,1,1,89.4480595543424,1,0,1,1,1,1,none,0
+4473,Yatra,Delhi,Bangalore,2026-03-28,2A,First,687.0,1,1,1,89.94330111837463,1,0,1,1,1,1,none,0
+6522,Yatra,Nagpur,Pune,2026-01-20,General,Sleeper,1305.0,1,1,0,57.035488890828184,0,1,0,0,1,0,font_mismatch,1
+2119,Paytm,Nagpur,Pune,2026-03-26,Business,Business,304.0,0,0,0,67.55043596389454,0,1,0,0,1,0,no_qr,1
+6711,GoIbibo,Kolkata,Chennai,2026-03-05,Sleeper,AC Chair,1297.0,1,1,1,94.05765757496872,1,0,1,1,1,1,none,0
+3649,MakeMyTrip,Bangalore,Indore,2026-02-09,Sleeper,Business,5.0,1,1,0,66.91489662011779,0,1,0,0,0,0,price_mismatch,1
+5482,GoIbibo,Surat,Bhopal,2026-04-03,General,Economy,3488.0,1,1,1,86.81458639213469,1,0,1,1,1,1,none,0
+7627,IRCTC,Lucknow,Pune,2025-12-25,Sleeper,AC Chair,3204.0,1,1,0,90.49152003934627,1,0,1,1,1,1,none,0
+2836,Yatra,Delhi,Chennai,2026-05-27,CC,Sleeper,515.0,1,1,0,72.15728998643952,0,1,0,0,1,0,font_mismatch,1
+5296,GoIbibo,Jaipur,Indore,2026-02-24,CC,AC Chair,2106.0,1,1,1,74.39541429219692,1,0,1,1,1,1,none,0
+5114,GoIbibo,Jaipur,Nagpur,2025-11-22,General,Sleeper,1182.0,1,1,1,94.14386206896853,0,0,1,1,1,1,none,0
+5099,AbhiBus,Pune,Bhopal,2026-06-16,2A,AC Chair,333.0,1,1,1,80.34887538847329,1,0,1,1,1,1,none,0
+1731,IRCTC,Delhi,Pune,2025-12-16,Sleeper,Business,560.0,1,1,1,78.68983699244596,1,0,0,1,1,1,none,0
+8783,Paytm,Ahmedabad,Jaipur,2025-11-30,Business,First,2417.0,0,0,0,59.72939604669007,0,1,0,0,1,0,no_qr,1
+3838,Yatra,Pune,Bangalore,2026-05-12,3A,Business,3042.0,1,1,1,91.37628849442783,1,0,1,1,1,1,none,0
+6476,IRCTC,Bhopal,Lucknow,2025-10-20,CC,First,324.0,1,1,1,80.34607920991634,1,0,1,1,1,1,none,0
+6723,RedBus,Ahmedabad,Bangalore,2026-01-21,2A,First,1313.0,0,0,0,58.447497845239376,0,1,0,0,1,0,qr_invalid,1
+5069,MakeMyTrip,Lucknow,Hyderabad,2025-11-04,CC,Sleeper,1756.0,1,1,1,78.70563011945184,1,0,1,1,1,0,none,0
+2920,RedBus,Indore,Lucknow,2025-11-05,Sleeper,Economy,1978.0,1,1,1,87.52728245968734,1,0,1,0,1,1,none,0
+3267,Cleartrip,Nagpur,Lucknow,2026-01-15,CC,Sleeper,3383.0,1,1,0,63.88428864556435,0,1,0,0,1,0,font_mismatch,1
+4093,AbhiBus,Lucknow,Chennai,2026-06-17,General,First,3455.0,1,1,1,97.60572913644194,1,0,1,1,1,1,none,0
+6762,MakeMyTrip,Hyderabad,Lucknow,2026-01-07,Sleeper,First,1461.0,1,1,1,89.91557107377344,1,0,0,1,1,1,none,0
+5224,MakeMyTrip,Kolkata,Jaipur,2025-11-13,General,AC Chair,1441.0,1,1,0,89.64853463666157,1,0,1,0,1,1,none,0
+4497,Yatra,Surat,Kolkata,2026-02-27,AC,Sleeper,3063.0,1,1,1,93.18046300070958,0,0,1,1,1,1,none,0
+3125,Paytm,Lucknow,Jaipur,2026-05-30,CC,Economy,3349.0,1,1,1,92.12721116850034,1,0,1,1,1,1,none,0
+3494,AbhiBus,Delhi,Surat,2025-10-28,Business,Sleeper,3294.0,1,1,1,95.55784498892321,1,0,1,0,1,1,none,0
+7850,AbhiBus,Chennai,Delhi,2026-03-16,General,AC Chair,1223.0,0,0,0,63.69396758167056,0,1,0,0,1,0,qr_invalid,1
+3550,RedBus,Ahmedabad,Lucknow,2026-03-14,AC,First,1498.0,1,1,1,79.26408674319529,1,0,1,1,1,1,none,0
+8856,GoIbibo,Nagpur,Kanpur,2025-12-30,Business,First,2209.0,1,1,1,77.80399144619669,1,0,0,1,1,1,none,0
+6075,Yatra,Nagpur,Chennai,2026-04-27,Sleeper,Sleeper,1779.0,1,1,1,85.80505542520334,1,0,1,1,1,1,none,0
+2417,Paytm,Kolkata,Ahmedabad,2026-05-27,First Class,Sleeper,2959.0,1,1,1,80.74419016925688,1,0,1,1,1,1,none,0
+8311,IRCTC,Delhi,Lucknow,2025-12-17,Sleeper,AC Chair,2849.0,1,1,1,90.41309234813687,1,0,0,1,1,1,none,0
+6807,GoIbibo,Surat,Mumbai,2026-05-14,3A,First,0.5,1,1,0,57.08193714134684,0,1,0,0,0,0,price_mismatch,1
+9702,RedBus,Nagpur,Indore,2026-01-24,2A,First,1796.0,1,1,1,82.51836258241418,1,0,1,1,1,1,none,0
+9247,GoIbibo,Mumbai,Kanpur,2026-05-12,2A,Business,1665.0,1,1,1,82.01506116935721,1,0,1,0,1,1,none,0
+3209,MakeMyTrip,Kanpur,Kolkata,2026-04-01,CC,AC Chair,1539.0,1,1,1,96.8738561577076,0,0,1,1,1,1,none,0
+2919,MakeMyTrip,Kanpur,Ahmedabad,2025-11-15,Business,Sleeper,850.0,1,1,1,89.34754765030947,0,0,1,1,1,1,none,0
+3471,Yatra,Ahmedabad,Mumbai,2025-12-27,AC,First,1968.0,1,1,0,55.145699587062026,0,1,0,0,1,0,metadata_tamper,1
+2182,RedBus,Pune,Bangalore,2025-12-04,First Class,First,849.0,1,1,1,79.13455730685683,1,0,1,1,1,1,none,0
+7238,Yatra,Hyderabad,Nagpur,2025-11-06,2A,Economy,789.0,1,1,0,64.73640585578818,0,1,0,0,1,0,metadata_tamper,1
+8784,Cleartrip,Lucknow,Surat,2026-05-21,First Class,Sleeper,538.0,1,1,0,69.06069979722345,0,1,0,0,1,0,font_mismatch,1
+8502,Cleartrip,Kolkata,Nagpur,2025-10-28,First Class,Economy,529.0,1,1,1,95.68563777198823,1,0,1,1,1,1,none,0
+2065,MakeMyTrip,Chennai,Indore,2026-01-20,Sleeper,Sleeper,255.0,1,0,0,65.0407882127855,0,1,0,0,1,0,qr_invalid,1
+7757,RedBus,Bhopal,Delhi,2025-11-28,First Class,AC Chair,2233.0,1,1,1,90.22169920775683,1,0,0,1,1,1,none,0
+1051,Cleartrip,Kanpur,Bangalore,2026-05-11,General,Business,3135.0,1,1,1,85.85493993734546,1,0,1,1,1,1,none,0
+4317,Yatra,Delhi,Mumbai,2026-03-06,General,Business,1005.0,1,1,1,95.52511914395433,1,0,1,1,1,1,none,0
+2334,RedBus,Jaipur,Pune,2025-12-02,2A,First,461.0,0,0,0,68.00744698116966,0,1,0,0,1,0,no_qr,1
+8928,RedBus,Pune,Delhi,2026-03-14,Sleeper,Economy,2661.0,1,1,1,91.70236028732151,1,0,1,1,1,1,none,0
+1078,IRCTC,Chennai,Bhopal,2026-02-08,General,Economy,3114.0,1,1,1,76.44468139806358,1,0,1,1,1,1,none,0
+6392,Yatra,Bhopal,Pune,2026-04-27,Business,Economy,2619.0,1,1,1,73.57635748175346,0,0,1,1,1,1,none,0
+5150,MakeMyTrip,Jaipur,Mumbai,2026-01-06,Sleeper,Sleeper,3450.0,1,1,1,76.68602429304514,1,0,1,1,1,1,none,0
+4249,AbhiBus,Bhopal,Nagpur,2026-04-07,Business,First,2571.0,1,1,1,64.35871109917767,0,1,0,0,1,0,duplicate,1
+4232,Yatra,Surat,Lucknow,2026-02-09,3A,AC Chair,758.0,1,1,0,55.20466524343042,0,1,0,0,1,0,font_mismatch,1
+9940,IRCTC,Mumbai,Delhi,2026-02-12,First Class,Economy,9999.0,1,1,0,66.98862605004436,0,1,0,0,0,0,price_mismatch,1
+3038,GoIbibo,Nagpur,Pune,2026-04-08,First Class,Economy,1960.0,1,1,1,67.98699508924908,0,1,0,0,1,0,duplicate,1
+8024,AbhiBus,Jaipur,Ahmedabad,2026-05-30,CC,Sleeper,1996.0,1,1,1,89.6262778885564,1,0,1,1,1,0,none,0
+4667,Cleartrip,Pune,Hyderabad,2026-01-10,First Class,First,2524.0,1,1,0,76.96539777752571,1,0,1,1,1,1,none,0
+5135,MakeMyTrip,Mumbai,Hyderabad,2026-02-21,General,Sleeper,5.0,1,1,0,69.47711530803014,0,1,0,0,0,0,price_mismatch,1
+6795,RedBus,Mumbai,Ahmedabad,2026-01-08,Business,Sleeper,2207.0,1,1,1,80.32125529823571,1,0,1,1,1,1,none,0
+9454,MakeMyTrip,Bangalore,Pune,2026-04-05,First Class,Economy,1789.0,1,1,1,91.58731894171765,0,0,1,1,1,1,none,0
+8040,Paytm,Jaipur,Indore,2026-05-18,Sleeper,First,2946.0,1,1,1,92.42520277915716,1,0,1,1,1,1,none,0
+7784,AbhiBus,Bangalore,Mumbai,2026-05-05,General,Sleeper,866.0,1,1,1,78.13727164171935,1,0,1,1,1,1,none,0
+6391,Paytm,Bhopal,Jaipur,2026-02-22,2A,Sleeper,1975.0,1,1,1,89.13814864024262,1,0,1,1,1,1,none,0
+1624,IRCTC,Delhi,Bangalore,2026-01-06,AC,First,2794.0,1,1,1,86.13767276592665,1,0,1,1,1,1,none,0
+8596,MakeMyTrip,Surat,Indore,2026-03-23,CC,Economy,2956.0,1,1,1,88.3269002812622,1,0,1,0,1,1,none,0
+7595,Paytm,Bangalore,Jaipur,2026-03-23,First Class,Sleeper,2608.0,1,1,1,64.34524425172205,0,1,0,0,1,0,duplicate,1
+3112,RedBus,Delhi,Chennai,2025-12-28,Business,Sleeper,447.0,1,1,1,90.06657266080501,1,0,1,1,1,1,none,0
+4715,GoIbibo,Lucknow,Pune,2025-12-07,General,Business,2889.0,1,1,1,86.95423149245431,0,0,1,1,1,0,none,0
+7781,RedBus,Ahmedabad,Nagpur,2025-11-21,First Class,Business,2650.0,1,1,1,85.55538264125998,1,0,1,0,1,0,none,0
+7715,Cleartrip,Indore,Lucknow,2026-01-21,3A,Business,1861.0,1,1,1,83.99143141198243,1,0,1,1,1,1,none,0
+4572,Yatra,Kolkata,Surat,2026-01-04,Sleeper,First,2984.0,1,1,1,84.69791347805241,1,0,1,1,1,1,none,0
+7243,Cleartrip,Chennai,Nagpur,2026-05-27,Business,Sleeper,2957.0,1,1,1,74.88654636708132,1,0,1,1,1,1,none,0
+7546,IRCTC,Pune,Chennai,2026-05-06,Business,AC Chair,2634.0,1,1,1,92.94855584617758,1,0,0,1,1,1,none,0
+3647,RedBus,Pune,Chennai,2026-05-27,AC,Sleeper,511.0,1,1,1,61.86525587052765,0,1,0,0,1,0,duplicate,1
+9764,Yatra,Hyderabad,Lucknow,2026-03-22,AC,AC Chair,1522.0,1,1,1,76.59754986458564,1,0,0,0,1,1,none,0
+6532,Cleartrip,Kolkata,Bhopal,2026-02-09,Business,First,2838.0,1,1,1,78.67177772149594,1,0,0,1,1,1,none,0
+2876,AbhiBus,Bangalore,Bhopal,2026-03-30,CC,Economy,3068.0,1,1,1,93.20949116602932,0,0,1,1,1,1,none,0
+2555,IRCTC,Kolkata,Delhi,2026-01-14,2A,Economy,225.0,1,1,1,68.42233225814363,0,1,0,0,1,0,duplicate,1
+7085,Cleartrip,Pune,Kanpur,2026-05-08,First Class,Sleeper,1678.0,1,1,1,75.57520523472742,1,0,0,1,1,1,none,0
+5959,Paytm,Bhopal,Mumbai,2026-03-24,2A,Sleeper,1630.0,1,1,1,64.78737942743048,0,1,0,0,1,0,duplicate,1
+7618,IRCTC,Kolkata,Bhopal,2025-11-07,Sleeper,Business,1941.0,1,1,1,74.27787626688676,1,0,1,1,1,0,none,0
+7821,GoIbibo,Bangalore,Bhopal,2026-01-25,Sleeper,Economy,3058.0,1,1,1,94.06613394434927,1,0,1,1,1,1,none,0
+6483,Paytm,Chennai,Jaipur,2025-10-28,Sleeper,AC Chair,2676.0,0,0,0,51.57128271181583,0,1,0,0,1,0,no_qr,1
+7219,AbhiBus,Delhi,Hyderabad,2026-03-28,General,Economy,493.0,1,1,1,87.14022642920348,0,0,1,1,1,1,none,0
+2054,AbhiBus,Surat,Bhopal,2026-03-14,3A,Business,2141.0,1,1,1,73.01278551484485,1,0,1,0,1,0,none,0
+1105,MakeMyTrip,Lucknow,Bangalore,2026-06-03,Sleeper,AC Chair,1300.0,1,1,1,78.47815183530999,1,0,1,1,1,1,none,0
+7738,MakeMyTrip,Delhi,Lucknow,2026-03-13,General,Economy,2399.0,1,1,1,91.56251263482719,1,0,1,1,1,1,none,0
+8218,MakeMyTrip,Mumbai,Ahmedabad,2025-12-26,CC,Business,2052.0,1,1,0,56.34621994326793,0,1,0,0,1,0,metadata_tamper,1
+1302,AbhiBus,Ahmedabad,Bhopal,2026-05-15,AC,Economy,330.0,1,0,0,54.44463053319568,0,1,0,0,1,0,qr_invalid,1
+8076,Paytm,Hyderabad,Bangalore,2026-06-08,AC,Sleeper,9999.0,1,1,0,62.798835574270555,0,1,0,0,0,0,price_mismatch,1
+1268,Paytm,Nagpur,Hyderabad,2026-03-11,2A,Business,992.0,1,1,1,76.74072787722619,1,0,1,1,1,1,none,0
+7406,MakeMyTrip,Delhi,Pune,2026-04-30,CC,Sleeper,820.0,1,1,1,89.12723555508505,1,0,1,1,1,0,none,0
+5538,Yatra,Nagpur,Pune,2026-02-27,General,Sleeper,2958.0,1,1,1,94.2530334336571,1,0,1,0,1,1,none,0
+6961,Cleartrip,Indore,Hyderabad,2026-06-04,Sleeper,Business,2429.0,1,1,0,67.45934149250512,0,1,0,0,1,0,font_mismatch,1
+3718,RedBus,Chennai,Bhopal,2026-03-14,3A,Sleeper,175.0,1,1,1,96.59074302281307,1,0,1,0,1,1,none,0
+3225,Cleartrip,Surat,Pune,2026-04-05,CC,AC Chair,823.0,1,1,1,90.17249498344846,1,0,1,1,1,1,none,0
+8534,GoIbibo,Pune,Bhopal,2026-01-28,CC,AC Chair,3372.0,1,1,1,73.61452072935204,1,0,1,1,1,1,none,0
+3581,Yatra,Ahmedabad,Lucknow,2025-12-10,2A,Sleeper,1234.0,1,1,1,80.35572447783365,1,0,1,1,1,1,none,0
+3894,MakeMyTrip,Lucknow,Bangalore,2026-05-02,CC,AC Chair,2097.0,1,1,1,86.6831922684384,1,0,1,1,1,1,none,0
+1325,MakeMyTrip,Lucknow,Bangalore,2026-03-24,CC,Economy,2639.0,1,1,1,80.40585834538301,1,0,1,1,1,0,none,0
+7111,MakeMyTrip,Surat,Jaipur,2026-06-03,2A,Economy,1040.0,1,1,1,94.35067464447009,1,0,1,1,1,1,none,0
+9243,Paytm,Bangalore,Jaipur,2025-10-24,First Class,Economy,3016.0,1,1,1,96.05106418552921,0,0,1,0,1,1,none,0
+5920,AbhiBus,Bhopal,Ahmedabad,2026-03-25,First Class,Economy,3186.0,1,1,0,56.639776230906584,0,1,0,0,1,0,behavioral,1
+3606,GoIbibo,Bhopal,Nagpur,2026-03-15,General,Sleeper,790.0,1,1,0,61.370822834023315,0,1,0,0,1,0,font_mismatch,1
+1818,Yatra,Indore,Pune,2025-11-25,Sleeper,Business,5.0,1,1,0,53.96785396330814,0,1,0,0,0,0,price_mismatch,1
+4607,Yatra,Hyderabad,Nagpur,2026-05-18,AC,AC Chair,2310.0,1,1,1,75.1436667905179,1,0,1,0,1,0,none,0
+2457,RedBus,Hyderabad,Nagpur,2026-04-04,General,Business,798.0,1,1,0,52.847311409616665,0,1,0,0,1,0,behavioral,1
+5458,AbhiBus,Ahmedabad,Pune,2026-04-03,3A,Business,0.5,1,1,0,54.76870876674627,0,1,0,0,0,0,price_mismatch,1
+4767,RedBus,Surat,Nagpur,2026-03-28,Sleeper,Sleeper,3110.0,1,1,1,78.24198748191796,1,0,1,1,1,1,none,0
+4940,GoIbibo,Chennai,Kolkata,2026-01-27,General,Business,1453.0,1,1,1,80.24929078141703,1,0,1,1,1,0,none,0
+5097,Paytm,Hyderabad,Chennai,2026-05-16,First Class,First,3322.0,1,1,1,77.14469370124937,1,0,0,1,1,1,none,0
+6356,GoIbibo,Mumbai,Jaipur,2025-11-06,AC,First,3323.0,1,1,1,94.93142498842396,1,0,0,1,1,1,none,0
+5346,Cleartrip,Bangalore,Lucknow,2026-03-10,Business,Sleeper,941.0,1,1,1,82.65842383750214,1,0,0,1,1,1,none,0
+6329,RedBus,Kanpur,Bangalore,2026-01-24,First Class,AC Chair,1509.0,1,1,0,35.52323542589694,0,1,0,0,1,0,ocr_tamper,1
+8178,Cleartrip,Bangalore,Surat,2026-04-23,First Class,First,3225.0,1,1,1,94.72823666168875,1,0,1,1,1,1,none,0
+5133,AbhiBus,Surat,Bangalore,2026-02-27,General,Sleeper,761.0,1,1,1,87.02501864959396,1,0,1,1,1,1,none,0
+1255,Paytm,Mumbai,Indore,2026-05-22,2A,Business,3382.0,1,1,1,79.17461826904444,1,0,1,1,1,1,none,0
+2238,Yatra,Jaipur,Ahmedabad,2025-11-06,AC,First,3287.0,1,1,1,94.28905396598435,1,0,1,1,1,1,none,0
+4281,IRCTC,Kolkata,Chennai,2026-06-12,3A,First,2072.0,1,1,1,73.04966363768739,1,0,1,1,1,1,none,0
+9978,AbhiBus,Lucknow,Delhi,2025-12-23,First Class,AC Chair,998.0,1,1,1,85.25814984148995,1,0,1,1,1,1,none,0
+3750,Cleartrip,Mumbai,Nagpur,2026-04-13,First Class,First,2884.0,1,1,1,86.66725796826479,1,0,1,1,1,1,none,0
+7552,GoIbibo,Kanpur,Pune,2025-12-06,3A,Economy,324.0,1,1,1,91.25331217974326,1,0,1,1,1,1,none,0
+4337,Paytm,Chennai,Kolkata,2025-11-08,Business,Business,2876.0,1,1,1,76.47238304140423,1,0,0,1,1,1,none,0
+8299,IRCTC,Indore,Bangalore,2026-01-18,3A,Business,2968.0,1,1,0,45.07172519073155,0,1,0,0,1,0,behavioral,1
+9747,Yatra,Kolkata,Pune,2026-02-12,Business,Sleeper,1490.0,1,1,1,91.49451712661408,1,0,1,1,1,1,none,0
+2477,Cleartrip,Kolkata,Bangalore,2026-01-12,First Class,Sleeper,198.0,1,1,1,76.0238461703192,1,0,1,1,1,1,none,0
+4961,AbhiBus,Bangalore,Bhopal,2026-01-09,Business,AC Chair,349.0,1,1,1,83.99185729278739,1,0,0,1,1,1,none,0
+3762,IRCTC,Delhi,Mumbai,2026-04-06,2A,AC Chair,2588.0,1,1,1,95.48727753114494,1,0,1,1,1,1,none,0
+2489,Yatra,Delhi,Chennai,2025-11-05,Business,Business,5.0,1,1,0,59.03380222830599,0,1,0,0,0,0,price_mismatch,1
+6572,RedBus,Kanpur,Chennai,2026-04-08,2A,Sleeper,2640.0,1,1,1,75.38476737706337,1,0,1,1,1,1,none,0
+7024,GoIbibo,Indore,Ahmedabad,2026-03-26,CC,AC Chair,301.0,1,1,1,93.07199211743239,1,0,1,0,1,1,none,0
+2658,GoIbibo,Bhopal,Jaipur,2025-12-15,3A,Sleeper,2842.0,1,1,0,59.880533011857864,0,1,0,0,1,0,metadata_tamper,1
+4245,Cleartrip,Kolkata,Mumbai,2026-04-10,Business,Sleeper,1361.0,1,1,1,94.21468501674624,1,0,1,0,1,1,none,0
+7500,GoIbibo,Bangalore,Ahmedabad,2026-04-08,3A,Economy,1637.0,1,1,1,72.07220420026849,1,0,1,1,1,1,none,0
+5809,Paytm,Surat,Hyderabad,2025-10-21,Sleeper,First,3267.0,1,1,0,66.10665231093803,0,1,0,0,1,0,font_mismatch,1
+7269,Paytm,Chennai,Surat,2026-03-16,General,Business,2958.0,1,1,1,72.08739441238167,1,0,1,1,1,1,none,0
+5098,GoIbibo,Pune,Kanpur,2025-12-09,General,First,851.0,1,1,1,86.14600181729259,1,0,1,1,1,1,none,0
+3349,MakeMyTrip,Pune,Indore,2026-06-10,Business,AC Chair,441.0,1,1,1,94.97517518868261,1,0,1,0,1,1,none,0
+8055,RedBus,Surat,Kolkata,2026-03-20,CC,First,910.0,1,1,1,81.5350342348794,1,0,1,1,1,1,none,0
+7358,IRCTC,Jaipur,Kanpur,2026-02-10,3A,AC Chair,2337.0,1,1,1,77.6866377617181,1,0,1,1,1,1,none,0
+5619,AbhiBus,Chennai,Kanpur,2026-05-06,3A,Sleeper,3094.0,1,1,1,61.982843799924524,0,1,0,0,1,0,duplicate,1
+4140,Paytm,Bangalore,Bhopal,2026-05-01,First Class,AC Chair,639.0,1,1,1,95.85040675126154,1,0,0,1,1,1,none,0
+1070,IRCTC,Ahmedabad,Hyderabad,2026-02-28,CC,Business,2694.0,1,1,0,97.24795013744951,1,0,1,0,1,1,none,0
+9060,Paytm,Indore,Kanpur,2025-11-07,Business,First,1797.0,1,1,1,92.19492831372499,1,0,1,1,1,1,none,0
+4863,Yatra,Nagpur,Ahmedabad,2026-01-15,2A,Economy,1095.0,0,0,0,54.657292635095864,0,1,0,0,1,0,qr_invalid,1
+4767,IRCTC,Pune,Kolkata,2026-04-01,Sleeper,First,321.0,1,1,1,79.54067992854662,0,0,1,1,1,0,none,0
+7276,RedBus,Kolkata,Hyderabad,2026-04-25,CC,AC Chair,1059.0,1,1,1,79.23375261462228,1,0,0,0,1,1,none,0
+2212,AbhiBus,Lucknow,Nagpur,2025-12-13,First Class,Sleeper,1069.0,1,1,1,83.27930596403624,1,0,1,1,1,1,none,0
+1851,Paytm,Chennai,Ahmedabad,2026-03-21,3A,AC Chair,1366.0,0,0,0,52.393339107841626,0,1,0,0,1,0,no_qr,1
+5998,AbhiBus,Mumbai,Hyderabad,2026-03-11,3A,Business,2257.0,1,1,1,85.30179965862224,0,0,1,1,1,1,none,0
+4460,GoIbibo,Nagpur,Surat,2026-03-29,2A,Economy,2627.0,0,0,0,55.22381432695238,0,1,0,0,1,0,no_qr,1
+9789,MakeMyTrip,Mumbai,Nagpur,2025-11-17,AC,AC Chair,2158.0,1,1,1,65.32547740475373,0,1,0,0,1,0,duplicate,1
+5699,AbhiBus,Bhopal,Surat,2025-11-18,2A,AC Chair,1259.0,1,1,1,83.85871510501045,0,0,1,0,1,1,none,0
+4645,GoIbibo,Delhi,Bangalore,2026-03-30,AC,Sleeper,541.0,0,0,0,58.76442693161151,0,1,0,0,1,0,no_qr,1
+9660,RedBus,Chennai,Bangalore,2026-04-08,3A,Economy,1608.0,1,1,1,83.0377187379741,1,0,1,1,1,0,none,0
+1190,MakeMyTrip,Kolkata,Lucknow,2026-04-21,Business,AC Chair,1178.0,1,1,1,73.52008333770969,0,0,0,1,1,1,none,0
+5070,RedBus,Bhopal,Pune,2025-12-13,General,AC Chair,2714.0,1,1,1,75.37317568922427,1,0,1,1,1,1,none,0
+8667,GoIbibo,Mumbai,Kanpur,2026-06-07,Business,Business,3498.0,0,0,0,54.099564555684005,0,1,0,0,1,0,no_qr,1
+5091,Cleartrip,Bhopal,Mumbai,2025-11-21,General,AC Chair,2662.0,1,1,1,95.84963218719949,1,0,1,1,1,1,none,0
+9485,GoIbibo,Pune,Bangalore,2026-06-09,General,Economy,3013.0,1,1,1,92.99040841019709,1,0,1,1,1,0,none,0
+6252,Yatra,Kolkata,Nagpur,2025-11-10,First Class,First,1505.0,1,1,1,75.43991286999108,1,0,1,1,1,1,none,0
+7640,Cleartrip,Kanpur,Mumbai,2026-02-14,Business,First,3266.0,1,1,1,72.38172338035098,1,0,0,1,1,1,none,0
+7369,GoIbibo,Bhopal,Mumbai,2026-01-13,General,Economy,1843.0,1,1,1,82.23028950408174,1,0,1,1,1,1,none,0
+7136,MakeMyTrip,Hyderabad,Pune,2026-02-16,2A,First,3142.0,1,1,1,77.87123290428418,1,0,1,1,1,1,none,0
+2994,MakeMyTrip,Kanpur,Delhi,2025-11-12,AC,Business,2196.0,0,0,0,57.88979411735448,0,1,0,0,1,0,no_qr,1
+8735,Yatra,Bhopal,Pune,2025-12-07,3A,Sleeper,247.0,1,1,0,23.64334619332507,0,1,0,0,1,0,ocr_tamper,1
+9571,GoIbibo,Jaipur,Bhopal,2026-01-03,2A,Economy,1924.0,1,1,1,55.65950013991108,0,1,0,0,1,0,duplicate,1
+5288,Cleartrip,Mumbai,Chennai,2026-06-08,First Class,Sleeper,3297.0,1,1,1,77.38992353004761,1,0,1,0,1,1,none,0
+4550,Paytm,Delhi,Ahmedabad,2026-02-18,Business,AC Chair,1161.0,1,1,1,80.58592348734541,1,0,1,1,1,1,none,0
+5178,MakeMyTrip,Mumbai,Lucknow,2025-10-29,First Class,AC Chair,0.5,1,1,0,54.08024247987296,0,1,0,0,0,0,price_mismatch,1
+1070,Yatra,Delhi,Chennai,2026-05-20,CC,AC Chair,809.0,1,1,1,77.32115752509202,1,0,1,1,1,1,none,0
+6609,Cleartrip,Bangalore,Hyderabad,2026-05-11,Business,Economy,3054.0,1,1,1,75.85639456738915,1,0,1,1,1,1,none,0
+4549,GoIbibo,Indore,Bhopal,2026-01-11,General,Business,3452.0,1,1,1,92.53098778680234,1,0,1,1,1,1,none,0
+8816,AbhiBus,Bangalore,Bhopal,2026-02-05,First Class,Economy,841.0,1,1,1,77.44536341315822,1,0,0,1,1,1,none,0
+1928,RedBus,Hyderabad,Ahmedabad,2026-05-28,First Class,AC Chair,652.0,0,0,0,65.048283168221,0,1,0,0,1,0,no_qr,1
+3925,GoIbibo,Indore,Chennai,2025-12-28,Business,Business,2911.0,1,1,0,63.6528886582427,0,1,0,0,1,0,font_mismatch,1
+2678,Paytm,Indore,Kanpur,2025-12-24,Business,Business,1444.0,1,1,1,88.82159124936562,1,0,0,1,1,0,none,0
+3510,RedBus,Ahmedabad,Jaipur,2025-11-08,2A,Sleeper,639.0,1,1,0,73.8157646306814,0,1,0,0,1,0,font_mismatch,1
+9754,Yatra,Lucknow,Kolkata,2026-06-04,Sleeper,First,2883.0,1,1,1,72.0459480070371,1,0,1,1,1,0,none,0
+2324,Yatra,Surat,Pune,2026-03-07,Sleeper,AC Chair,896.0,1,1,1,78.49521414249591,1,0,1,1,1,1,none,0
+4540,Paytm,Indore,Ahmedabad,2026-04-13,CC,Business,2599.0,1,1,1,72.71635145891835,0,0,1,0,1,1,none,0
+6982,RedBus,Chennai,Pune,2026-01-15,2A,AC Chair,1879.0,1,1,1,79.55101501037433,1,0,1,0,1,1,none,0
+5726,Cleartrip,Jaipur,Mumbai,2026-05-15,AC,Economy,3012.0,1,1,1,63.056855315471076,0,1,0,0,1,0,duplicate,1
+6181,Cleartrip,Pune,Ahmedabad,2025-12-03,2A,Economy,2751.0,1,1,1,81.9470478665407,1,0,1,0,1,1,none,0
+4267,IRCTC,Bhopal,Bangalore,2026-01-22,General,First,2215.0,1,1,0,70.6308767005071,0,1,0,0,1,0,font_mismatch,1
+6558,MakeMyTrip,Kanpur,Mumbai,2026-05-09,CC,Economy,2394.0,1,1,1,73.60949469481956,1,0,1,1,1,1,none,0
+3104,AbhiBus,Bangalore,Kanpur,2026-04-25,First Class,Business,943.0,1,1,1,84.82774527934251,1,0,1,1,1,1,none,0
+3231,Cleartrip,Surat,Mumbai,2026-04-16,General,AC Chair,3400.0,1,1,1,75.61236382950484,1,0,1,1,1,1,none,0
+2283,RedBus,Jaipur,Indore,2026-04-06,2A,First,3076.0,1,1,1,97.944217853502,1,0,1,1,1,1,none,0
+8119,AbhiBus,Indore,Lucknow,2025-12-26,Sleeper,Economy,2693.0,1,1,1,78.1835477772127,0,0,1,1,1,1,none,0
+2034,RedBus,Bhopal,Delhi,2026-01-09,3A,First,1056.0,1,1,0,76.58659175814977,1,0,1,1,1,1,none,0
+2409,GoIbibo,Kanpur,Chennai,2025-12-21,3A,First,2137.0,1,1,1,92.57899479176366,1,0,1,0,1,1,none,0
+4582,RedBus,Nagpur,Chennai,2026-04-28,First Class,Business,2221.0,1,1,1,96.25763222943061,1,0,1,1,1,1,none,0
+3078,Yatra,Bhopal,Bangalore,2026-05-10,CC,Sleeper,3059.0,1,1,1,87.65911523532262,1,0,1,0,1,1,none,0
+5469,RedBus,Kanpur,Pune,2025-12-12,3A,Business,5.0,1,1,0,65.18893798912754,0,1,0,0,0,0,price_mismatch,1
+4151,Paytm,Ahmedabad,Chennai,2025-10-21,Business,AC Chair,537.0,1,1,1,73.04549655023746,1,0,0,1,1,1,none,0
+8246,Paytm,Kanpur,Kolkata,2025-10-27,3A,Sleeper,1537.0,1,1,1,78.22484816710498,1,0,1,1,1,1,none,0
+9992,Cleartrip,Nagpur,Pune,2025-12-29,2A,First,2396.0,0,0,0,55.24694070928702,0,1,0,0,1,0,qr_invalid,1
+8560,RedBus,Chennai,Hyderabad,2025-12-22,CC,First,1642.0,1,1,1,88.23025574151922,1,0,1,1,1,0,none,0
+4178,IRCTC,Indore,Bangalore,2026-04-04,Business,Economy,1856.0,1,1,1,79.43373952056142,1,0,1,1,1,1,none,0
+4200,Paytm,Kanpur,Surat,2026-05-05,AC,Sleeper,2917.0,1,1,1,87.13931115358415,1,0,1,1,1,1,none,0
+4158,RedBus,Lucknow,Ahmedabad,2026-03-19,3A,First,293.0,1,1,1,84.39564329997056,1,0,1,1,1,1,none,0
+3112,AbhiBus,Pune,Delhi,2026-04-15,2A,Business,445.0,1,1,1,84.39024255218253,1,0,1,1,1,1,none,0
+9662,MakeMyTrip,Bangalore,Mumbai,2026-01-28,Business,Business,3227.0,1,1,1,95.84505045982861,1,0,1,1,1,1,none,0
+4853,GoIbibo,Mumbai,Indore,2025-11-25,Business,Sleeper,1050.0,1,1,1,94.95391992309432,1,0,1,1,1,1,none,0
+3832,GoIbibo,Jaipur,Hyderabad,2025-12-08,First Class,First,865.0,1,1,1,85.70096094023542,1,0,0,1,1,1,none,0
+6794,RedBus,Ahmedabad,Indore,2026-01-02,2A,Sleeper,541.0,1,1,1,83.27346131968638,0,0,1,1,1,1,none,0
+7478,AbhiBus,Surat,Lucknow,2025-11-08,AC,First,2613.0,1,1,1,79.82303045033089,1,0,1,1,1,1,none,0
+1502,IRCTC,Bangalore,Chennai,2025-11-04,Sleeper,Business,1906.0,1,1,0,63.07883483131253,0,1,0,0,1,0,font_mismatch,1
+7546,MakeMyTrip,Bangalore,Nagpur,2025-10-27,AC,Economy,989.0,1,1,0,93.74287508902862,1,0,1,0,1,1,none,0
+7242,Cleartrip,Nagpur,Hyderabad,2025-10-27,First Class,Economy,488.0,1,1,1,72.7581458480289,1,0,1,1,1,1,none,0
+6119,RedBus,Lucknow,Indore,2025-11-14,2A,Sleeper,2528.0,1,1,0,40.54211169305921,0,1,0,0,1,0,ocr_tamper,1
+5171,GoIbibo,Bhopal,Kanpur,2026-03-11,Business,Sleeper,1434.0,1,1,1,90.21043879561269,1,0,1,1,1,1,none,0
+9177,AbhiBus,Jaipur,Kolkata,2025-11-28,CC,Business,1493.0,1,1,1,94.50173469313803,1,0,1,0,1,1,none,0
+2840,Yatra,Nagpur,Indore,2026-06-05,AC,Sleeper,1896.0,1,1,1,88.80376576763227,1,0,0,1,1,1,none,0
+8561,Yatra,Pune,Indore,2026-01-20,First Class,AC Chair,2716.0,1,1,0,55.363572764801404,0,1,0,0,1,0,behavioral,1
+6189,IRCTC,Delhi,Bangalore,2026-02-20,AC,First,3126.0,1,1,1,97.93453021736711,1,0,0,1,1,1,none,0
+4300,Yatra,Lucknow,Bangalore,2026-06-17,General,Economy,3479.0,1,1,0,53.91998965902062,0,1,0,0,1,0,ocr_tamper,1
+2156,AbhiBus,Bhopal,Kolkata,2026-01-15,AC,AC Chair,1411.0,1,1,1,87.3944153510727,1,0,1,1,1,1,none,0
+4983,MakeMyTrip,Jaipur,Kolkata,2026-04-17,Sleeper,Business,274.0,1,1,1,92.21373287915347,1,0,1,1,1,1,none,0
+8802,IRCTC,Lucknow,Jaipur,2025-11-15,First Class,First,979.0,1,1,1,77.78451622629916,1,0,1,1,1,1,none,0
+3037,GoIbibo,Bhopal,Pune,2025-11-24,Business,Business,1201.0,1,1,0,92.78141566104844,1,0,1,1,1,1,none,0
+7976,RedBus,Bangalore,Chennai,2026-02-03,Business,AC Chair,3133.0,1,1,1,75.29945564561316,1,0,0,1,1,1,none,0
+8074,IRCTC,Surat,Jaipur,2025-11-01,2A,Economy,2478.0,0,0,0,59.52181866370654,0,1,0,0,1,0,qr_invalid,1
+6782,IRCTC,Pune,Surat,2025-12-15,Business,Sleeper,836.0,0,0,0,57.2630211957641,0,1,0,0,1,0,no_qr,1
+3817,GoIbibo,Kolkata,Lucknow,2025-11-07,First Class,Sleeper,2954.0,1,1,1,66.5677363550214,0,1,0,0,1,0,duplicate,1
+5406,GoIbibo,Kanpur,Pune,2026-04-24,AC,First,2019.0,1,1,1,94.82611329058125,1,0,1,1,1,1,none,0
+3883,RedBus,Jaipur,Nagpur,2026-03-01,First Class,Economy,1288.0,1,1,1,97.19175585666923,1,0,1,1,1,1,none,0
+6774,MakeMyTrip,Hyderabad,Mumbai,2026-04-15,2A,First,1061.0,1,1,0,91.64697799016307,1,0,1,1,1,1,none,0
+6972,RedBus,Hyderabad,Nagpur,2025-12-03,General,AC Chair,560.0,1,1,1,78.38819609303305,1,0,1,1,1,1,none,0
+3464,GoIbibo,Pune,Jaipur,2026-04-11,First Class,AC Chair,2388.0,1,1,1,94.76007284090306,1,0,1,1,1,1,none,0
+5344,Paytm,Ahmedabad,Nagpur,2026-05-09,First Class,Sleeper,2966.0,1,1,0,90.22288596879105,1,0,1,1,1,1,none,0
+4419,Cleartrip,Pune,Hyderabad,2026-06-16,AC,First,196.0,1,1,1,90.6170800980819,1,0,1,0,1,1,none,0
+7777,Paytm,Lucknow,Hyderabad,2026-04-09,3A,First,1116.0,1,1,0,36.796532711362154,0,1,0,0,1,0,ocr_tamper,1
+4866,RedBus,Bangalore,Mumbai,2026-01-31,Sleeper,Business,418.0,1,1,1,63.09007452817096,0,1,0,0,1,0,duplicate,1
+4000,GoIbibo,Surat,Ahmedabad,2026-03-28,General,Sleeper,994.0,1,1,1,75.97343689837633,1,0,1,1,1,1,none,0
+2369,Paytm,Delhi,Chennai,2026-03-23,Sleeper,AC Chair,2383.0,1,1,1,75.5247160551184,1,0,0,1,1,1,none,0
+7970,IRCTC,Mumbai,Lucknow,2026-01-09,Business,First,1453.0,1,1,1,83.86941365616595,1,0,1,1,1,1,none,0
+6703,RedBus,Jaipur,Mumbai,2025-12-11,First Class,Sleeper,2134.0,1,1,1,97.8428446361836,1,0,0,1,1,1,none,0
+2851,Cleartrip,Lucknow,Mumbai,2026-03-15,Sleeper,AC Chair,2613.0,1,1,1,81.42558033855748,1,0,1,1,1,0,none,0
+1124,IRCTC,Lucknow,Mumbai,2025-11-06,Business,First,811.0,1,1,1,85.66240861744609,1,0,1,1,1,1,none,0
+5434,Cleartrip,Surat,Kanpur,2025-11-23,Business,AC Chair,2230.0,1,1,1,86.23968763727108,1,0,1,1,1,1,none,0
+1112,Yatra,Indore,Kolkata,2026-04-27,General,First,2869.0,1,1,0,32.25022963047832,0,1,0,0,1,0,behavioral,1
+3910,AbhiBus,Bangalore,Kanpur,2025-11-08,General,Sleeper,508.0,1,1,1,78.8520536548836,0,0,1,0,1,1,none,0
+1012,MakeMyTrip,Jaipur,Kolkata,2025-11-14,Business,AC Chair,1633.0,1,1,1,76.4757767770535,1,0,1,0,1,1,none,0
+4247,MakeMyTrip,Jaipur,Bhopal,2026-06-10,2A,Economy,2022.0,1,1,0,91.81411656678898,1,0,0,0,1,1,none,0
+8761,Yatra,Mumbai,Bangalore,2026-05-03,2A,AC Chair,899.0,1,1,0,42.50896262876114,0,1,0,0,1,0,behavioral,1
+2911,IRCTC,Hyderabad,Ahmedabad,2025-12-18,3A,Business,2644.0,1,1,1,75.84907696920865,0,0,1,0,1,1,none,0
+8841,MakeMyTrip,Delhi,Nagpur,2026-04-01,3A,First,2551.0,1,1,0,86.22578734117113,1,0,0,1,1,1,none,0
+8272,Paytm,Bhopal,Surat,2025-11-21,CC,Business,2289.0,1,1,0,79.50037003721621,1,0,0,1,1,1,none,0
+4123,IRCTC,Indore,Jaipur,2026-01-25,AC,First,2218.0,1,1,1,88.26318362763209,1,0,1,1,1,1,none,0
+9163,AbhiBus,Bangalore,Surat,2026-04-08,First Class,Business,865.0,1,1,1,89.72026870694216,1,0,1,1,1,1,none,0
+9999,RedBus,Bangalore,Bhopal,2026-05-14,Sleeper,Sleeper,2818.0,1,1,1,76.9238704422745,1,0,0,1,1,1,none,0
+6555,Yatra,Kolkata,Bhopal,2026-04-21,Sleeper,First,1093.0,1,1,1,75.55709063567885,1,0,1,1,1,1,none,0
+2490,GoIbibo,Jaipur,Lucknow,2026-06-12,First Class,Economy,1414.0,1,1,1,80.47128149668332,1,0,1,1,1,1,none,0
+6869,AbhiBus,Bhopal,Kolkata,2025-11-15,Business,AC Chair,674.0,0,0,0,53.67016017835305,0,1,0,0,1,0,qr_invalid,1
+7866,GoIbibo,Chennai,Indore,2026-04-27,First Class,AC Chair,617.0,1,1,1,74.01415841182238,1,0,1,1,1,1,none,0
+6257,IRCTC,Delhi,Mumbai,2026-04-20,2A,First,498.0,1,1,1,97.33120300859107,1,0,1,1,1,1,none,0
+9193,RedBus,Surat,Jaipur,2025-11-06,Sleeper,AC Chair,1569.0,1,1,1,72.83843041659584,1,0,0,1,1,1,none,0
+9029,IRCTC,Lucknow,Kanpur,2026-04-18,CC,First,3497.0,1,1,1,86.48004447702452,1,0,1,1,1,1,none,0
+5511,Yatra,Delhi,Lucknow,2025-10-27,2A,AC Chair,3169.0,1,1,1,97.35763267502298,1,0,1,1,1,1,none,0
+1291,RedBus,Ahmedabad,Indore,2026-05-12,General,Business,627.0,1,1,0,94.29295707973952,1,0,1,1,1,1,none,0
+7995,RedBus,Pune,Chennai,2025-11-20,Sleeper,Economy,1796.0,1,1,0,32.66163524767498,0,1,0,0,1,0,ocr_tamper,1
+4527,Cleartrip,Chennai,Pune,2025-12-28,General,Economy,611.0,1,1,1,80.32438557581072,1,0,1,1,1,0,none,0
+8389,Cleartrip,Bhopal,Chennai,2026-01-27,General,First,1109.0,1,1,1,92.3332972148579,1,0,1,1,1,1,none,0
+3077,Paytm,Jaipur,Delhi,2025-10-26,3A,First,5.0,1,1,0,57.633677518444,0,1,0,0,0,0,price_mismatch,1
+6895,GoIbibo,Kanpur,Chennai,2026-06-05,General,Economy,979.0,1,1,1,81.16825068817532,1,0,1,1,1,1,none,0
+7182,AbhiBus,Chennai,Bhopal,2026-05-28,General,Economy,2185.0,1,1,1,85.13149160433306,1,0,1,1,1,1,none,0
+6309,Yatra,Ahmedabad,Hyderabad,2026-05-15,3A,Sleeper,1153.0,1,1,1,80.28644618391526,1,0,1,0,1,1,none,0
+2518,IRCTC,Ahmedabad,Lucknow,2025-11-03,Business,First,946.0,1,1,1,74.95804054710467,1,0,1,1,1,1,none,0
+8827,Paytm,Hyderabad,Nagpur,2026-01-04,CC,Economy,218.0,1,1,1,57.98321849046418,0,1,0,0,1,0,duplicate,1
+4268,AbhiBus,Chennai,Ahmedabad,2026-05-22,First Class,Economy,2890.0,1,1,1,87.3335441667873,1,0,1,1,1,1,none,0
+8258,GoIbibo,Hyderabad,Ahmedabad,2025-12-16,Business,Sleeper,428.0,1,1,1,59.3720854422956,0,1,0,0,1,0,duplicate,1
+4159,AbhiBus,Chennai,Nagpur,2026-03-17,AC,Sleeper,1332.0,1,1,1,90.83602492501255,1,0,1,1,1,1,none,0
+1534,Paytm,Lucknow,Delhi,2026-05-23,First Class,AC Chair,468.0,1,1,1,83.69569165831456,0,0,0,1,1,1,none,0
+1938,AbhiBus,Ahmedabad,Lucknow,2025-10-25,AC,Business,3372.0,1,1,0,22.851650524120448,0,1,0,0,1,0,ocr_tamper,1
+2515,RedBus,Indore,Delhi,2026-01-27,AC,Economy,3491.0,1,1,1,84.78135711431882,1,0,1,1,1,1,none,0
+7681,Yatra,Bangalore,Pune,2026-04-04,Sleeper,AC Chair,2148.0,1,1,1,90.78189337587233,1,0,1,1,1,1,none,0
+5969,MakeMyTrip,Chennai,Nagpur,2026-05-22,AC,Economy,2811.0,1,1,1,77.89803160586938,1,0,1,1,1,1,none,0
+4561,RedBus,Ahmedabad,Lucknow,2026-05-10,CC,First,237.0,1,1,0,54.61603880118385,0,1,0,0,1,0,behavioral,1
+4959,Cleartrip,Surat,Kanpur,2026-05-28,CC,Sleeper,3358.0,1,1,1,83.9227258929733,1,0,1,1,1,1,none,0
+3703,GoIbibo,Bangalore,Bhopal,2026-04-01,Sleeper,First,2369.0,1,1,0,70.6953949699591,0,1,0,0,1,0,font_mismatch,1
+9164,Cleartrip,Bhopal,Mumbai,2026-02-15,2A,First,313.0,1,1,0,51.36052572133386,0,1,0,0,1,0,ocr_tamper,1
+9579,Cleartrip,Ahmedabad,Kolkata,2026-05-20,Business,Business,177.0,1,1,1,76.40385754408763,1,0,1,1,1,1,none,0
+4768,IRCTC,Bhopal,Hyderabad,2026-03-01,AC,First,2518.0,1,1,1,53.27359420919435,0,1,0,0,1,0,duplicate,1
+9700,GoIbibo,Bhopal,Surat,2026-06-02,Sleeper,First,2972.0,1,1,1,80.12383839757533,0,0,1,0,1,1,none,0
+1522,Paytm,Kolkata,Ahmedabad,2026-05-10,3A,Economy,2486.0,1,1,1,73.11875076420355,0,0,1,1,1,1,none,0
+5842,RedBus,Ahmedabad,Lucknow,2025-11-04,Sleeper,Economy,1102.0,1,1,1,81.27647876263998,1,0,1,1,1,1,none,0
+9563,GoIbibo,Nagpur,Kanpur,2025-11-28,Business,First,1486.0,1,1,0,52.6239038444906,0,1,0,0,1,0,behavioral,1
+2577,MakeMyTrip,Surat,Bhopal,2026-01-07,CC,AC Chair,1054.0,1,1,1,96.63108712666413,1,0,1,0,1,1,none,0
+5394,IRCTC,Surat,Kolkata,2026-04-04,General,First,3079.0,1,1,1,96.88467875725169,1,0,1,1,1,1,none,0
+8193,MakeMyTrip,Hyderabad,Mumbai,2026-01-28,AC,AC Chair,1182.0,1,1,1,88.59132942806289,1,0,0,1,1,1,none,0
+1425,GoIbibo,Hyderabad,Jaipur,2026-03-31,2A,Business,1094.0,1,1,0,57.41269879750678,0,1,0,0,1,0,font_mismatch,1
+8903,Paytm,Mumbai,Delhi,2026-06-08,Sleeper,AC Chair,3210.0,1,1,1,58.874491303347625,0,1,0,0,1,0,duplicate,1
+7957,Cleartrip,Nagpur,Kanpur,2026-06-16,First Class,AC Chair,1452.0,1,1,1,94.7217059708289,1,0,1,1,1,1,none,0
+3102,Cleartrip,Pune,Bhopal,2026-04-15,3A,First,800.0,1,1,1,73.84663123773515,1,0,1,1,1,1,none,0
+2290,Yatra,Indore,Lucknow,2026-04-04,First Class,First,389.0,1,1,1,95.3353618891537,1,0,1,1,1,1,none,0
+4989,MakeMyTrip,Indore,Mumbai,2026-02-08,Sleeper,Economy,553.0,1,1,1,75.9606714667425,0,0,1,1,1,0,none,0
+9914,AbhiBus,Mumbai,Surat,2025-11-29,Business,AC Chair,2809.0,1,1,1,91.51606560563759,1,0,0,1,1,0,none,0
+2642,MakeMyTrip,Ahmedabad,Bangalore,2025-12-01,Business,Business,2565.0,1,1,0,52.967234231942584,0,1,0,0,1,0,ocr_tamper,1
+4312,Paytm,Kanpur,Surat,2025-12-01,3A,Economy,2678.0,1,1,1,79.06115736513127,0,0,1,0,1,1,none,0
+6912,IRCTC,Delhi,Kanpur,2025-12-23,3A,Business,642.0,1,1,0,46.367984861890704,0,1,0,0,1,0,ocr_tamper,1
+6696,RedBus,Mumbai,Hyderabad,2025-10-23,3A,First,2133.0,1,1,0,60.41027652183057,0,1,0,0,1,0,font_mismatch,1
+2349,MakeMyTrip,Bhopal,Hyderabad,2026-03-01,CC,Business,10.0,1,1,0,53.41171327590784,0,1,0,0,0,0,price_mismatch,1
+5045,Paytm,Chennai,Hyderabad,2025-12-19,General,First,3115.0,1,1,1,80.18568813621002,1,0,1,1,1,1,none,0
+9900,Yatra,Delhi,Pune,2025-11-06,Business,Business,2605.0,1,1,1,86.20222548567476,1,0,1,1,1,1,none,0
+6857,GoIbibo,Indore,Jaipur,2025-11-27,First Class,Business,1033.0,1,1,1,91.88847547036107,1,0,1,1,1,1,none,0
+6401,IRCTC,Lucknow,Hyderabad,2025-11-25,First Class,First,3405.0,1,1,1,88.35798942495278,1,0,1,0,1,1,none,0
+3469,AbhiBus,Mumbai,Kanpur,2025-12-18,3A,AC Chair,3141.0,1,1,1,77.3334321756401,1,0,1,1,1,1,none,0
+3609,RedBus,Surat,Delhi,2026-01-16,2A,AC Chair,421.0,1,1,1,97.66280863863628,1,0,1,1,1,1,none,0
+5713,MakeMyTrip,Bhopal,Pune,2025-11-07,General,Business,1367.0,1,1,1,72.52526534100032,1,0,1,1,1,1,none,0
+2628,IRCTC,Bangalore,Chennai,2026-01-16,First Class,Sleeper,2728.0,1,1,0,69.60181629290669,0,1,0,0,1,0,font_mismatch,1
+2867,Paytm,Lucknow,Ahmedabad,2026-04-10,Business,Business,1710.0,1,1,1,81.87632443065706,1,0,1,1,1,1,none,0
+9073,AbhiBus,Surat,Bhopal,2026-02-23,2A,AC Chair,1761.0,1,1,0,66.87898294634286,0,1,0,0,1,0,metadata_tamper,1
+9642,MakeMyTrip,Nagpur,Pune,2026-01-18,CC,AC Chair,2606.0,1,1,0,40.97604268808032,0,1,0,0,1,0,behavioral,1
+6622,AbhiBus,Chennai,Hyderabad,2026-05-15,General,Sleeper,622.0,1,1,0,79.96623420429759,1,0,1,0,1,1,none,0
+5694,AbhiBus,Pune,Surat,2025-11-08,Business,Economy,3068.0,1,1,1,80.48270273923029,0,0,1,1,1,0,none,0
+5291,GoIbibo,Kanpur,Lucknow,2026-01-07,Business,Business,1214.0,1,1,1,95.5626657696918,1,0,1,1,1,0,none,0
+1011,Yatra,Chennai,Nagpur,2025-11-23,3A,Economy,2746.0,1,1,0,73.46020518844792,0,1,0,0,1,0,font_mismatch,1
+1276,IRCTC,Pune,Nagpur,2026-06-01,Business,First,910.0,1,1,1,95.17000093347711,1,0,1,1,1,1,none,0
+8526,AbhiBus,Delhi,Lucknow,2026-03-24,General,First,845.0,1,1,0,20.47587376175172,0,1,0,0,1,0,ocr_tamper,1
+1295,Yatra,Pune,Lucknow,2025-10-25,AC,AC Chair,2506.0,1,1,0,95.01187963858949,1,0,1,1,1,1,none,0
+5700,IRCTC,Jaipur,Delhi,2026-06-11,2A,First,938.0,1,1,1,75.32316085730372,1,0,1,1,1,1,none,0
+6349,Paytm,Delhi,Hyderabad,2026-01-25,Sleeper,Sleeper,3184.0,1,1,0,71.8062095306924,0,1,0,0,1,0,font_mismatch,1
+6172,Cleartrip,Hyderabad,Pune,2025-11-15,First Class,AC Chair,396.0,0,0,0,50.813969900209365,0,1,0,0,1,0,qr_invalid,1
+6358,IRCTC,Kanpur,Pune,2026-02-04,3A,First,2846.0,1,1,1,87.21735679209283,1,0,1,0,1,1,none,0
+6496,IRCTC,Chennai,Lucknow,2026-03-10,3A,AC Chair,2608.0,1,1,0,55.14316607728205,0,1,0,0,1,0,font_mismatch,1
+2212,IRCTC,Kanpur,Chennai,2026-04-03,Business,First,2066.0,1,1,0,74.82365066977616,0,1,0,0,1,0,font_mismatch,1
+3457,AbhiBus,Kolkata,Indore,2025-12-11,General,AC Chair,2340.0,1,1,1,62.65428578800119,0,1,0,0,1,0,duplicate,1
+1626,AbhiBus,Kolkata,Pune,2025-11-18,AC,Economy,2561.0,1,1,1,75.26811193293435,1,0,1,1,1,1,none,0
+4822,Yatra,Hyderabad,Jaipur,2026-05-04,Sleeper,AC Chair,2199.0,1,1,1,89.44939005576708,1,0,1,1,1,1,none,0
+6235,Cleartrip,Bangalore,Jaipur,2026-05-16,CC,Sleeper,2214.0,1,1,1,83.84268701808182,1,0,1,1,1,1,none,0
+7177,GoIbibo,Indore,Lucknow,2026-01-27,General,First,904.0,1,1,0,81.62606012162804,1,0,1,0,1,1,none,0
+5147,Paytm,Hyderabad,Mumbai,2025-12-25,3A,Sleeper,2218.0,1,1,0,25.451871901138475,0,1,0,0,1,0,ocr_tamper,1
+7760,IRCTC,Bangalore,Delhi,2026-03-10,AC,Business,3142.0,1,1,0,32.84231261691129,0,1,0,0,1,0,behavioral,1
+3701,MakeMyTrip,Bangalore,Mumbai,2025-10-31,3A,Business,1241.0,0,0,0,68.35031628450555,0,1,0,0,1,0,qr_invalid,1
+3112,MakeMyTrip,Kolkata,Mumbai,2025-12-24,Business,Business,2742.0,1,1,0,65.96528893641518,0,1,0,0,1,0,font_mismatch,1
+9575,AbhiBus,Chennai,Indore,2026-05-30,2A,Economy,1968.0,1,1,1,90.71150505558533,1,0,1,1,1,0,none,0
+1639,GoIbibo,Jaipur,Pune,2026-02-10,Business,First,346.0,0,0,0,56.16790663076591,0,1,0,0,1,0,qr_invalid,1
+4050,RedBus,Lucknow,Indore,2026-06-02,3A,Sleeper,1126.0,1,1,1,83.31354487093527,1,0,1,1,1,1,none,0
+1064,Cleartrip,Pune,Nagpur,2025-12-26,3A,First,1649.0,1,1,1,91.83998942010132,1,0,1,1,1,1,none,0
+7843,Yatra,Surat,Chennai,2025-11-25,Business,Economy,1640.0,1,1,1,92.99824083785407,1,0,1,1,1,1,none,0
+9095,AbhiBus,Chennai,Nagpur,2026-02-16,Business,Business,240.0,1,1,1,95.93499303048347,1,0,0,1,1,1,none,0
+1372,IRCTC,Delhi,Mumbai,2026-05-02,Business,Economy,253.0,1,1,1,64.15155767074201,0,1,0,0,1,0,duplicate,1
+5788,Cleartrip,Bangalore,Hyderabad,2026-04-14,First Class,Economy,741.0,1,1,0,85.82812015758321,1,0,1,1,1,1,none,0
+9274,RedBus,Ahmedabad,Bangalore,2025-11-03,Sleeper,AC Chair,322.0,1,1,0,29.53229135668184,0,1,0,0,1,0,ocr_tamper,1
+5145,Paytm,Indore,Chennai,2026-05-17,CC,Business,1668.0,1,1,1,96.08035981319446,1,0,1,1,1,1,none,0
+9350,Yatra,Indore,Jaipur,2026-03-26,Business,Business,1714.0,1,1,1,80.29779022906945,0,0,1,1,1,0,none,0
+1290,RedBus,Indore,Surat,2025-10-20,2A,Economy,1315.0,1,1,1,79.51026178131478,1,0,1,1,1,1,none,0
+7827,GoIbibo,Kolkata,Lucknow,2026-01-16,2A,Sleeper,3036.0,1,1,1,88.26017204024362,1,0,1,1,1,1,none,0
+5324,AbhiBus,Bangalore,Jaipur,2026-05-04,CC,Business,914.0,1,1,1,75.52950974488512,0,0,1,1,1,1,none,0
+6946,MakeMyTrip,Bhopal,Chennai,2026-04-22,First Class,AC Chair,3258.0,1,1,1,77.68543472962358,1,0,1,0,1,1,none,0
+9370,Cleartrip,Delhi,Pune,2026-04-19,Business,Economy,2066.0,1,1,0,71.79339218931312,0,1,0,0,1,0,font_mismatch,1
+3189,MakeMyTrip,Hyderabad,Bhopal,2026-01-21,First Class,Business,1647.0,1,1,0,63.43930927104806,0,1,0,0,1,0,metadata_tamper,1
+5501,Paytm,Jaipur,Lucknow,2026-05-05,Business,AC Chair,3410.0,1,1,0,33.016045654415926,0,1,0,0,1,0,behavioral,1
+2734,GoIbibo,Bhopal,Chennai,2026-05-09,AC,First,2963.0,1,1,1,76.69298594151937,1,0,0,0,1,1,none,0
+2769,IRCTC,Bangalore,Pune,2025-11-04,General,First,2842.0,1,1,0,47.41741350409103,0,1,0,0,1,0,behavioral,1
+1865,Yatra,Kolkata,Indore,2025-12-12,2A,First,2603.0,1,1,1,82.14708710078075,1,0,1,1,1,1,none,0
+3384,MakeMyTrip,Hyderabad,Kolkata,2026-01-02,Business,AC Chair,2090.0,1,1,1,95.65973109221176,1,0,1,1,1,1,none,0
+4615,Yatra,Pune,Surat,2025-11-09,CC,Economy,1460.0,1,1,0,95.03251212983045,1,0,0,1,1,1,none,0
+5416,IRCTC,Bhopal,Kolkata,2026-03-29,2A,First,3314.0,1,1,1,79.43558121251439,1,0,0,1,1,1,none,0
+2199,MakeMyTrip,Chennai,Delhi,2026-01-01,3A,Sleeper,3290.0,1,1,0,73.09964114502415,0,1,0,0,1,0,font_mismatch,1
+7828,RedBus,Lucknow,Chennai,2025-12-01,Business,Economy,1695.0,1,1,1,75.6538854517276,1,0,1,1,1,1,none,0
+1587,AbhiBus,Nagpur,Bangalore,2026-06-16,Business,First,1586.0,1,1,1,55.73786813955021,0,1,0,0,1,0,duplicate,1
+7217,AbhiBus,Jaipur,Hyderabad,2026-03-13,General,First,349.0,1,1,1,77.87246633811026,1,0,1,1,1,1,none,0
+8061,AbhiBus,Kolkata,Hyderabad,2025-12-27,2A,AC Chair,3395.0,1,1,0,30.78982370010636,0,1,0,0,1,0,behavioral,1
+8318,MakeMyTrip,Kolkata,Indore,2026-01-08,Sleeper,Sleeper,2452.0,1,1,1,72.06966740014896,1,0,1,0,1,1,none,0
+7536,Cleartrip,Nagpur,Mumbai,2025-12-02,First Class,Business,1371.0,1,1,1,87.1916665080953,1,0,0,1,1,1,none,0
+8450,MakeMyTrip,Chennai,Kolkata,2026-02-26,First Class,Sleeper,1192.0,1,1,0,58.361702607406315,0,1,0,0,1,0,behavioral,1
+3534,Cleartrip,Hyderabad,Lucknow,2025-10-23,2A,Economy,1153.0,1,1,0,36.81425515037279,0,1,0,0,1,0,ocr_tamper,1
+4215,MakeMyTrip,Delhi,Nagpur,2026-05-18,Business,Business,413.0,1,1,0,72.26972080960003,1,0,1,1,1,0,none,0
+6707,Paytm,Mumbai,Ahmedabad,2026-06-12,AC,Business,2970.0,1,1,0,62.85572110295167,0,1,0,0,1,0,font_mismatch,1
+8114,AbhiBus,Pune,Lucknow,2025-11-22,General,First,2790.0,1,1,1,89.02116660496907,1,0,0,1,1,1,none,0
+3942,RedBus,Bangalore,Chennai,2026-04-15,First Class,AC Chair,765.0,1,1,1,78.36235003856027,1,0,1,1,1,1,none,0
+9570,IRCTC,Nagpur,Lucknow,2025-11-18,CC,AC Chair,1613.0,1,1,1,89.29193687891708,0,0,1,0,1,1,none,0
+7323,RedBus,Surat,Mumbai,2026-06-17,General,First,253.0,1,1,1,92.55201627229589,1,0,0,1,1,1,none,0
+4022,MakeMyTrip,Indore,Kanpur,2026-05-15,Business,Business,2488.0,1,1,1,81.86099234199037,1,0,1,1,1,1,none,0
+1516,RedBus,Pune,Mumbai,2025-11-29,General,Sleeper,5.0,1,1,0,63.441583628665136,0,1,0,0,0,0,price_mismatch,1
+7375,Cleartrip,Bangalore,Surat,2026-05-15,Business,Business,941.0,1,1,1,75.64625206014118,1,0,1,0,1,1,none,0
+6481,Paytm,Kolkata,Mumbai,2025-12-24,CC,First,487.0,1,1,1,83.71992087934066,1,0,1,1,1,1,none,0
+6650,Yatra,Bhopal,Lucknow,2025-12-06,Sleeper,Economy,624.0,1,1,1,88.65482248063614,1,0,1,1,1,1,none,0
+5052,GoIbibo,Chennai,Jaipur,2026-04-30,Business,Sleeper,1859.0,1,1,1,84.15689620543978,1,0,1,1,1,1,none,0
+8448,Cleartrip,Surat,Nagpur,2026-04-05,First Class,AC Chair,660.0,1,1,1,87.58626881890847,1,0,1,1,1,1,none,0
+7466,Paytm,Ahmedabad,Lucknow,2026-03-30,2A,First,2822.0,1,1,1,87.67369141824089,1,0,0,1,1,1,none,0
+1548,Yatra,Indore,Mumbai,2026-03-14,3A,First,1093.0,1,1,1,78.17678036456793,1,0,1,0,1,1,none,0
+6953,GoIbibo,Nagpur,Kolkata,2026-05-16,General,AC Chair,1829.0,0,0,0,69.84071573771965,0,1,0,0,1,0,no_qr,1
+4786,Paytm,Hyderabad,Bhopal,2026-01-03,3A,Business,2590.0,1,1,0,42.16655402834385,0,1,0,0,1,0,ocr_tamper,1
+3025,Cleartrip,Mumbai,Delhi,2026-03-26,Sleeper,Sleeper,198.0,1,1,1,78.68597007526675,1,0,1,1,1,1,none,0
+7936,IRCTC,Mumbai,Kolkata,2026-02-26,AC,Economy,3128.0,1,1,1,90.84682746096702,0,0,0,1,1,1,none,0
+1052,MakeMyTrip,Kolkata,Delhi,2026-04-29,3A,Sleeper,2326.0,1,1,1,87.2385314572386,1,0,1,1,1,1,none,0
+3192,Yatra,Lucknow,Pune,2026-01-30,AC,Economy,550.0,1,1,1,76.81423207078964,1,0,1,0,1,1,none,0
+3728,GoIbibo,Delhi,Lucknow,2025-12-17,First Class,Business,3328.0,1,1,1,91.78655533891799,1,0,1,0,1,1,none,0
+1719,Cleartrip,Delhi,Ahmedabad,2026-03-02,General,First,860.0,1,1,0,72.06486607143894,0,1,0,0,1,0,font_mismatch,1
+7408,Yatra,Nagpur,Pune,2026-03-23,2A,Sleeper,3406.0,1,1,1,87.50922361302203,1,0,1,1,1,1,none,0
+8570,AbhiBus,Ahmedabad,Kolkata,2026-05-05,First Class,First,1718.0,1,1,1,96.58655621476257,1,0,1,1,1,1,none,0
+8668,IRCTC,Chennai,Kolkata,2025-11-09,CC,Economy,925.0,1,1,1,73.98176723364482,1,0,1,1,1,1,none,0
+1519,AbhiBus,Pune,Hyderabad,2025-11-25,AC,Sleeper,2208.0,1,1,0,47.81158510153868,0,1,0,0,1,0,ocr_tamper,1
+7332,RedBus,Mumbai,Surat,2026-04-12,Sleeper,First,5.0,1,1,0,68.90587173293889,0,1,0,0,0,0,price_mismatch,1
+1059,Cleartrip,Jaipur,Surat,2025-12-06,CC,Economy,1953.0,1,1,1,81.86970009512966,1,0,1,1,1,1,none,0
+2798,GoIbibo,Ahmedabad,Pune,2026-05-25,2A,Economy,926.0,1,1,1,78.45618059356555,1,0,1,1,1,1,none,0
+5216,MakeMyTrip,Kolkata,Kanpur,2026-02-09,3A,Economy,856.0,0,0,0,50.04472149584874,0,1,0,0,1,0,no_qr,1
+3776,Paytm,Indore,Delhi,2026-05-04,General,Economy,1425.0,1,1,1,92.44125789772075,1,0,1,1,1,1,none,0
+1375,RedBus,Bangalore,Hyderabad,2026-02-16,Sleeper,First,1574.0,1,1,1,75.59801013544875,0,0,1,1,1,1,none,0
+8940,MakeMyTrip,Bhopal,Mumbai,2025-12-16,2A,Economy,1058.0,1,1,1,88.00767917969846,1,0,0,0,1,1,none,0
+1470,Cleartrip,Ahmedabad,Jaipur,2026-01-21,Business,Business,1306.0,1,1,1,82.53720481843473,1,0,1,1,1,1,none,0
+4003,MakeMyTrip,Delhi,Mumbai,2026-05-24,General,AC Chair,1626.0,1,1,0,53.30364782081511,0,1,0,0,1,0,metadata_tamper,1
+3205,IRCTC,Lucknow,Ahmedabad,2026-05-13,2A,AC Chair,1615.0,1,1,1,73.09507912467488,1,0,1,1,1,1,none,0
+1985,Yatra,Kanpur,Bhopal,2025-12-07,Business,Economy,1765.0,1,1,1,94.90215451699558,1,0,1,1,1,1,none,0
+1004,Cleartrip,Pune,Ahmedabad,2026-02-22,CC,Business,1327.0,0,0,0,55.41646017766303,0,1,0,0,1,0,no_qr,1
+3684,Paytm,Delhi,Ahmedabad,2026-04-07,Sleeper,First,2303.0,1,1,1,82.84181115157713,1,0,1,1,1,1,none,0
+6658,GoIbibo,Ahmedabad,Kanpur,2026-05-18,Sleeper,Business,831.0,1,1,1,89.42804137427363,1,0,1,1,1,1,none,0
+4261,RedBus,Bangalore,Pune,2026-03-11,General,First,2197.0,0,0,0,68.48203339754036,0,1,0,0,1,0,no_qr,1
+3615,GoIbibo,Hyderabad,Surat,2026-02-08,3A,Economy,2896.0,1,1,0,52.37431243578555,0,1,0,0,1,0,metadata_tamper,1
+3643,IRCTC,Chennai,Delhi,2026-03-18,General,Sleeper,2364.0,1,1,1,73.40810935344366,1,0,1,1,1,1,none,0
+2086,Yatra,Jaipur,Kolkata,2026-05-31,AC,Business,2490.0,1,1,1,85.42055865680467,1,0,1,0,1,1,none,0
+6545,IRCTC,Pune,Kanpur,2025-12-27,Sleeper,AC Chair,3355.0,1,1,1,86.59830057862781,1,0,1,1,1,1,none,0
+4080,GoIbibo,Ahmedabad,Kanpur,2026-02-12,First Class,First,3089.0,1,1,1,84.08661055673221,1,0,1,1,1,1,none,0
+2265,Yatra,Surat,Indore,2026-02-28,General,Business,2524.0,1,1,0,94.01019842323576,1,0,1,1,1,1,none,0
+5731,Yatra,Lucknow,Nagpur,2025-11-13,CC,Economy,3134.0,1,1,1,74.93392641380827,1,0,1,1,1,1,none,0
+3326,Cleartrip,Mumbai,Lucknow,2026-03-27,General,Sleeper,3035.0,1,1,0,26.077511768754043,0,1,0,0,1,0,ocr_tamper,1
+8403,MakeMyTrip,Pune,Bangalore,2026-06-05,3A,Sleeper,1683.0,1,1,1,84.23020785488411,1,0,1,1,1,1,none,0
+2715,RedBus,Lucknow,Delhi,2026-03-17,Business,Sleeper,1035.0,1,1,1,82.00973069222813,1,0,1,1,1,1,none,0
+3593,IRCTC,Hyderabad,Lucknow,2025-11-11,First Class,Economy,2349.0,1,1,1,87.63558568014511,1,0,1,1,1,1,none,0
+5275,RedBus,Bhopal,Delhi,2025-12-14,Sleeper,Business,1589.0,1,1,1,88.13014122123127,1,0,1,1,1,1,none,0
+1248,Yatra,Kolkata,Indore,2026-02-02,Sleeper,Sleeper,3433.0,1,1,0,54.18398460763867,0,1,0,0,1,0,metadata_tamper,1
+4812,IRCTC,Jaipur,Bhopal,2025-12-29,General,Economy,244.0,1,1,1,87.71076014350908,1,0,1,1,1,1,none,0
+4574,GoIbibo,Surat,Mumbai,2025-12-26,First Class,AC Chair,10.0,1,1,0,58.482606522915574,0,1,0,0,0,0,price_mismatch,1
+5910,Yatra,Hyderabad,Bhopal,2026-05-28,CC,Economy,2320.0,1,1,1,85.51977670493469,1,0,0,0,1,1,none,0
+1980,MakeMyTrip,Bangalore,Lucknow,2026-03-31,AC,Economy,1216.0,1,1,1,86.45547788708605,1,0,0,0,1,1,none,0
+5786,Yatra,Indore,Pune,2025-12-04,AC,Economy,3302.0,1,1,1,92.60484137825854,1,0,1,1,1,0,none,0
+2588,GoIbibo,Pune,Chennai,2026-05-29,CC,Business,608.0,1,1,1,94.4936671319486,1,0,1,0,1,1,none,0
+1570,GoIbibo,Bhopal,Hyderabad,2026-06-17,CC,Sleeper,1393.0,0,0,0,51.20889695080427,0,1,0,0,1,0,qr_invalid,1
+1729,IRCTC,Bangalore,Indore,2026-04-09,General,Sleeper,1678.0,1,1,0,25.94995894245277,0,1,0,0,1,0,ocr_tamper,1
+7829,RedBus,Pune,Jaipur,2025-12-08,Sleeper,First,3120.0,1,1,1,72.15579478713379,1,0,1,0,1,1,none,0
+9227,AbhiBus,Ahmedabad,Bhopal,2026-06-09,2A,AC Chair,2022.0,0,0,0,53.94465663579814,0,1,0,0,1,0,no_qr,1
+3141,IRCTC,Indore,Kolkata,2026-03-22,First Class,AC Chair,1226.0,1,1,1,93.21047727081468,0,0,1,1,1,1,none,0
+3802,AbhiBus,Chennai,Kanpur,2026-05-02,Sleeper,AC Chair,1331.0,1,1,0,65.18190678800939,0,1,0,0,1,0,font_mismatch,1
+3903,GoIbibo,Lucknow,Ahmedabad,2025-10-26,General,Economy,3122.0,1,1,0,81.7858451060819,1,0,1,1,1,1,none,0
+6589,Cleartrip,Bangalore,Indore,2026-04-04,Business,Sleeper,1029.0,1,1,1,84.59152181071296,1,0,1,1,1,1,none,0
+3776,Paytm,Chennai,Hyderabad,2025-11-19,General,Business,1592.0,1,1,1,79.0998057770886,1,0,1,1,1,0,none,0
+4146,RedBus,Chennai,Ahmedabad,2026-01-01,2A,Business,1260.0,1,1,0,64.92810844985638,0,1,0,0,1,0,font_mismatch,1
+6038,Paytm,Kanpur,Bangalore,2026-04-16,Sleeper,Economy,2898.0,1,1,1,91.77839279386069,1,0,0,0,1,1,none,0
+1166,Cleartrip,Kolkata,Delhi,2026-03-14,3A,First,2516.0,1,1,1,76.08992030428364,1,0,1,1,1,1,none,0
+1517,RedBus,Ahmedabad,Lucknow,2025-12-17,First Class,First,1828.0,1,0,0,55.34717407060408,0,1,0,0,1,0,qr_invalid,1
+8803,Yatra,Bhopal,Ahmedabad,2026-05-06,3A,AC Chair,2313.0,1,1,1,79.24620317013644,1,0,1,1,1,1,none,0
+7966,GoIbibo,Bangalore,Kolkata,2026-01-07,CC,Economy,2191.0,1,1,1,87.31145463315275,1,0,1,1,1,1,none,0
+7908,Paytm,Chennai,Surat,2026-05-15,Sleeper,Economy,1900.0,1,1,1,93.53430921299743,1,0,1,1,1,0,none,0
+4023,GoIbibo,Nagpur,Jaipur,2026-03-24,Business,First,2537.0,1,0,0,63.68378407886093,0,1,0,0,1,0,qr_invalid,1
+6485,Paytm,Surat,Chennai,2025-10-22,First Class,AC Chair,2272.0,1,1,1,93.35463244597669,1,0,1,1,1,1,none,0
+8779,AbhiBus,Jaipur,Hyderabad,2026-03-29,First Class,Economy,1608.0,1,1,1,74.1962044928177,1,0,1,1,1,1,none,0
+9224,AbhiBus,Bangalore,Delhi,2026-05-11,3A,Business,3278.0,1,1,1,95.27720329747417,1,0,1,1,1,1,none,0
+9256,MakeMyTrip,Surat,Chennai,2026-05-26,AC,Business,1315.0,1,1,1,73.11147761854389,1,0,1,1,1,1,none,0
+4414,Yatra,Indore,Pune,2025-12-01,3A,Sleeper,2418.0,1,1,1,77.42092942467364,1,0,1,1,1,1,none,0
+3588,AbhiBus,Ahmedabad,Pune,2025-11-27,Sleeper,Economy,2263.0,1,1,0,25.02735294253529,0,1,0,0,1,0,ocr_tamper,1
+9790,Yatra,Kanpur,Pune,2025-11-02,Business,Business,803.0,0,0,0,62.39797938249166,0,1,0,0,1,0,no_qr,1
+2438,AbhiBus,Nagpur,Chennai,2026-03-14,First Class,Economy,1716.0,1,1,1,95.4703320307187,0,0,1,1,1,1,none,0
+4046,AbhiBus,Bhopal,Delhi,2026-03-29,General,Business,3040.0,1,1,1,86.13366504451129,1,0,1,0,1,1,none,0
+3503,Paytm,Hyderabad,Kolkata,2026-02-25,AC,First,264.0,1,1,1,72.45787869917517,0,0,1,1,1,1,none,0
+1763,Cleartrip,Bangalore,Indore,2025-12-29,Sleeper,Economy,3193.0,1,1,0,27.954701813836618,0,1,0,0,1,0,ocr_tamper,1
+4743,Yatra,Hyderabad,Nagpur,2026-01-25,First Class,Economy,2065.0,1,1,1,82.21746043407879,1,0,1,1,1,1,none,0
+8312,Cleartrip,Delhi,Bangalore,2025-11-24,General,AC Chair,1435.0,1,1,0,55.05781995009738,0,1,0,0,1,0,behavioral,1
+7865,Paytm,Bhopal,Nagpur,2026-05-09,First Class,Sleeper,3301.0,1,1,0,57.91324715097271,0,1,0,0,1,0,behavioral,1
+9121,IRCTC,Mumbai,Bhopal,2025-12-12,First Class,First,1333.0,1,1,1,74.12480833454549,1,0,1,1,1,1,none,0
+5285,Yatra,Delhi,Indore,2025-11-01,First Class,Business,423.0,0,0,0,66.55177664145751,0,1,0,0,1,0,qr_invalid,1
+3602,Paytm,Chennai,Bangalore,2026-03-15,Business,Business,1672.0,1,1,1,81.49441239908654,1,0,1,0,1,1,none,0
+7221,Cleartrip,Bangalore,Indore,2026-02-15,AC,Business,2641.0,1,1,1,83.32557529443012,1,0,1,0,1,1,none,0
+5343,Cleartrip,Jaipur,Lucknow,2026-06-06,AC,Sleeper,164.0,1,1,0,80.9399968283141,1,0,1,1,1,1,none,0
+7496,Yatra,Bhopal,Hyderabad,2026-04-09,Sleeper,First,3374.0,1,1,1,77.04915725004764,1,0,0,1,1,1,none,0
+6164,Cleartrip,Pune,Mumbai,2026-03-03,Sleeper,Sleeper,3261.0,1,1,1,91.59841475496566,1,0,1,1,1,0,none,0
+8258,MakeMyTrip,Kolkata,Bhopal,2026-01-03,Sleeper,First,1956.0,1,1,1,95.58952810864442,1,0,1,1,1,1,none,0
+4524,Paytm,Kolkata,Nagpur,2026-05-07,General,AC Chair,678.0,0,0,0,58.14477215705617,0,1,0,0,1,0,no_qr,1
+3822,Cleartrip,Indore,Lucknow,2025-11-29,Business,Business,1627.0,1,1,1,89.60274338139357,1,0,1,1,1,1,none,0
+2721,AbhiBus,Kolkata,Hyderabad,2026-05-21,2A,AC Chair,637.0,1,1,1,85.59270507207253,1,0,1,1,1,1,none,0
+3853,MakeMyTrip,Chennai,Kolkata,2026-01-14,First Class,Sleeper,473.0,1,1,1,79.57045960985386,1,0,1,1,1,1,none,0
+8789,RedBus,Chennai,Delhi,2026-05-11,CC,First,1770.0,1,1,1,93.22298889166171,1,0,1,1,1,1,none,0
+7939,RedBus,Pune,Jaipur,2026-04-19,General,Business,1301.0,1,1,1,91.71654110616026,1,0,1,1,1,1,none,0
+6667,RedBus,Pune,Hyderabad,2026-02-14,3A,First,721.0,1,1,1,85.64120310102666,1,0,1,1,1,1,none,0
+1196,Cleartrip,Nagpur,Indore,2026-03-04,3A,First,1515.0,1,1,1,74.66911578926482,1,0,1,1,1,1,none,0
+7874,GoIbibo,Kolkata,Ahmedabad,2025-12-12,AC,Business,164.0,1,1,1,55.13026633316617,0,1,0,0,1,0,duplicate,1
+2003,RedBus,Chennai,Pune,2026-05-09,Sleeper,Sleeper,2319.0,1,1,0,86.61093895037223,1,0,1,1,1,1,none,0
+4238,Paytm,Kolkata,Delhi,2026-03-05,3A,First,785.0,1,1,1,92.3006328316796,1,0,1,0,1,1,none,0
+8338,Paytm,Indore,Jaipur,2025-10-30,3A,First,1846.0,1,1,1,76.88954969845717,1,0,1,1,1,1,none,0
+4767,AbhiBus,Kolkata,Mumbai,2025-11-17,3A,Economy,394.0,1,1,0,48.799966065695386,0,1,0,0,1,0,behavioral,1
+2213,MakeMyTrip,Hyderabad,Lucknow,2026-02-09,General,AC Chair,1184.0,1,1,1,96.69917918848193,1,0,0,1,1,1,none,0
+2438,IRCTC,Nagpur,Kanpur,2025-12-18,AC,Sleeper,3025.0,1,1,1,72.34893105526984,1,0,1,1,1,1,none,0
+7975,AbhiBus,Pune,Indore,2026-01-17,General,Sleeper,2737.0,1,1,1,74.78890332111868,1,0,1,1,1,1,none,0
+5270,Cleartrip,Jaipur,Pune,2026-06-13,CC,First,3090.0,1,1,0,60.52584609494237,0,1,0,0,1,0,metadata_tamper,1
+3844,Yatra,Kolkata,Lucknow,2026-01-07,3A,AC Chair,2483.0,1,1,1,95.04713824865135,1,0,1,1,1,0,none,0
+5115,Yatra,Kanpur,Pune,2026-04-18,Business,Sleeper,3158.0,1,1,1,73.00625564151017,1,0,1,1,1,1,none,0
+5469,GoIbibo,Bhopal,Delhi,2026-03-15,Sleeper,AC Chair,1073.0,1,1,0,76.95481081100243,1,0,1,1,1,1,none,0
+7391,Yatra,Pune,Lucknow,2026-02-02,Sleeper,Economy,2621.0,1,1,1,84.92085406335275,1,0,0,0,1,0,none,0
+7899,MakeMyTrip,Mumbai,Ahmedabad,2026-02-10,Business,AC Chair,2443.0,1,1,1,89.37929982599137,1,0,1,1,1,1,none,0
+7897,RedBus,Delhi,Surat,2026-03-19,General,AC Chair,2209.0,1,1,1,74.76097817195922,1,0,1,1,1,1,none,0
+3294,Yatra,Jaipur,Hyderabad,2026-04-10,2A,Sleeper,3118.0,1,1,0,41.35886234708064,0,1,0,0,1,0,behavioral,1
+1320,Paytm,Pune,Surat,2026-05-04,First Class,AC Chair,550.0,1,1,1,89.82448165381986,0,0,1,1,1,1,none,0
+1660,Paytm,Pune,Ahmedabad,2025-11-16,CC,AC Chair,1610.0,1,1,0,97.76034448883742,0,0,1,1,1,1,none,0
+9240,RedBus,Ahmedabad,Indore,2026-01-29,General,Sleeper,2999.0,1,1,1,87.99361947931953,1,0,1,0,1,1,none,0
+1885,IRCTC,Bhopal,Kanpur,2026-03-02,3A,Business,1319.0,1,1,0,54.1383883075424,0,1,0,0,1,0,metadata_tamper,1
+7377,GoIbibo,Hyderabad,Bangalore,2025-11-29,CC,Business,1690.0,1,1,1,93.64922294655437,1,0,1,0,1,1,none,0
+6389,Cleartrip,Hyderabad,Mumbai,2026-04-23,3A,AC Chair,1727.0,1,1,0,30.580188502817947,0,1,0,0,1,0,ocr_tamper,1
+8561,Paytm,Bhopal,Pune,2026-01-29,Business,First,1433.0,1,1,0,35.178014963843154,0,1,0,0,1,0,behavioral,1
+1016,RedBus,Pune,Chennai,2026-04-04,First Class,First,3273.0,1,1,1,95.17050915771316,1,0,1,1,1,1,none,0
+6643,Paytm,Chennai,Kanpur,2025-11-26,First Class,Economy,3138.0,0,0,0,54.10273409556083,0,1,0,0,1,0,no_qr,1
+2808,GoIbibo,Jaipur,Bangalore,2025-12-27,3A,Business,0.5,1,1,0,61.30217460452917,0,1,0,0,0,0,price_mismatch,1
+4544,Paytm,Delhi,Kanpur,2025-11-12,3A,Business,2032.0,1,1,1,94.36210531581409,1,0,1,1,1,1,none,0
+1638,GoIbibo,Jaipur,Lucknow,2025-11-15,Sleeper,AC Chair,643.0,1,1,1,75.08546413725719,1,0,1,0,1,1,none,0
+4585,Paytm,Delhi,Ahmedabad,2026-04-03,First Class,Economy,1551.0,0,0,0,59.386070066065784,0,1,0,0,1,0,qr_invalid,1
+6572,Yatra,Bangalore,Bhopal,2026-01-27,First Class,Business,3258.0,1,1,1,84.17531193804534,1,0,1,0,1,1,none,0
+1395,AbhiBus,Delhi,Surat,2026-04-05,AC,AC Chair,1066.0,1,1,0,65.25214733277289,0,1,0,0,1,0,font_mismatch,1
+1337,Paytm,Ahmedabad,Bangalore,2026-01-30,Sleeper,AC Chair,1415.0,1,1,1,85.85652930995607,0,0,1,1,1,1,none,0
+9863,AbhiBus,Chennai,Kolkata,2026-03-14,AC,Sleeper,1028.0,1,1,1,78.90366927312621,1,0,1,0,1,1,none,0
+7014,GoIbibo,Mumbai,Delhi,2026-06-04,Business,First,2747.0,0,0,0,51.1397619149838,0,1,0,0,1,0,no_qr,1
+1331,Paytm,Delhi,Bhopal,2025-11-19,CC,Business,3153.0,1,1,1,86.66009917154832,1,0,1,1,1,1,none,0
+1957,IRCTC,Surat,Chennai,2025-11-13,General,Business,2911.0,1,1,0,69.1244723094956,0,1,0,0,1,0,font_mismatch,1
+6873,RedBus,Bhopal,Delhi,2026-01-10,2A,AC Chair,2868.0,1,1,1,96.26142111666783,1,0,1,1,1,1,none,0
+9188,IRCTC,Lucknow,Kolkata,2026-04-05,3A,First,2434.0,1,1,1,81.52957598441671,1,0,0,1,1,1,none,0
+1333,Yatra,Kolkata,Pune,2025-12-04,CC,Economy,1950.0,1,1,1,90.2800967163579,1,0,1,1,1,0,none,0
+3749,Paytm,Surat,Kanpur,2026-06-09,Business,Business,1703.0,1,1,1,73.87116740045748,1,0,1,0,1,1,none,0
+3834,GoIbibo,Lucknow,Bangalore,2026-03-08,CC,Sleeper,3302.0,1,1,1,87.21705657400908,1,0,1,1,1,1,none,0
+1246,AbhiBus,Bhopal,Ahmedabad,2025-12-16,Business,Business,2192.0,1,1,1,96.4899232979217,1,0,1,1,1,1,none,0
+6986,Yatra,Kolkata,Mumbai,2026-05-07,2A,First,208.0,1,1,1,80.0866770709192,1,0,0,1,1,1,none,0
+8424,MakeMyTrip,Lucknow,Bhopal,2025-11-28,First Class,Economy,969.0,1,0,0,59.99156578789884,0,1,0,0,1,0,qr_invalid,1
+5661,Yatra,Surat,Nagpur,2026-06-03,General,AC Chair,2903.0,1,1,0,68.43506955070343,0,1,0,0,1,0,font_mismatch,1
+2424,Yatra,Ahmedabad,Mumbai,2026-05-05,General,Business,3364.0,1,1,0,49.6461619370579,0,1,0,0,1,0,ocr_tamper,1
+6331,RedBus,Pune,Kanpur,2026-01-19,First Class,AC Chair,2282.0,1,1,0,66.84489918912134,0,1,0,0,1,0,font_mismatch,1
+8804,MakeMyTrip,Jaipur,Kolkata,2025-12-03,Sleeper,Business,794.0,1,1,0,90.03637496419164,0,0,1,1,1,1,none,0
+8714,Cleartrip,Kolkata,Indore,2026-04-18,CC,First,1491.0,1,1,1,82.95429032939207,1,0,1,1,1,1,none,0
+9819,Cleartrip,Kolkata,Lucknow,2025-12-20,General,Sleeper,2510.0,1,1,1,88.18344274734895,1,0,1,1,1,1,none,0
+4338,Cleartrip,Bangalore,Kanpur,2026-04-27,3A,Economy,1587.0,1,1,1,91.01615806600414,1,0,1,1,1,1,none,0
+1747,AbhiBus,Bangalore,Bhopal,2026-05-07,AC,Sleeper,422.0,1,1,1,95.45281396156048,1,0,1,1,1,1,none,0
+6134,AbhiBus,Kanpur,Kolkata,2025-11-05,Sleeper,First,3255.0,1,1,1,73.13131803041409,1,0,0,1,1,1,none,0
+9475,IRCTC,Kolkata,Jaipur,2026-01-07,CC,Business,2710.0,1,1,0,46.0319718080093,0,1,0,0,1,0,behavioral,1
+7942,Cleartrip,Kolkata,Jaipur,2025-10-21,First Class,First,963.0,1,1,1,77.85175863849608,1,0,0,1,1,1,none,0
+5097,IRCTC,Pune,Nagpur,2026-05-07,AC,AC Chair,856.0,1,1,1,73.21346145349216,1,0,1,1,1,1,none,0
+9524,GoIbibo,Kolkata,Indore,2026-05-04,General,Economy,650.0,1,1,0,57.01600485273735,0,1,0,0,1,0,behavioral,1
+7446,IRCTC,Kolkata,Chennai,2025-12-26,2A,Economy,1842.0,1,1,1,87.58715442223817,1,0,1,1,1,1,none,0
+7064,Paytm,Hyderabad,Chennai,2026-04-07,AC,Sleeper,2127.0,1,1,1,63.17403402933049,0,1,0,0,1,0,duplicate,1
+8601,MakeMyTrip,Surat,Nagpur,2026-05-16,2A,Sleeper,3337.0,1,1,1,87.72070355774885,1,0,1,1,1,1,none,0
+5798,GoIbibo,Indore,Bhopal,2026-01-27,AC,Economy,2401.0,1,1,1,88.83467709051176,1,0,1,1,1,1,none,0
+5941,Cleartrip,Kolkata,Pune,2026-05-23,General,Economy,2908.0,0,0,0,52.20210027701879,0,1,0,0,1,0,no_qr,1
+3109,IRCTC,Mumbai,Indore,2026-05-24,Sleeper,Business,416.0,1,1,1,73.87524697932155,1,0,1,1,1,1,none,0
+3619,IRCTC,Jaipur,Kolkata,2025-12-31,General,Sleeper,3067.0,1,1,1,95.18904827527868,1,0,1,1,1,1,none,0
+8652,Yatra,Jaipur,Mumbai,2025-12-05,Sleeper,Economy,2925.0,1,1,1,96.43167754530474,1,0,1,1,1,1,none,0
+2058,AbhiBus,Hyderabad,Indore,2026-05-13,Sleeper,First,3467.0,1,1,1,88.16243455135228,1,0,0,1,1,1,none,0
+6249,Cleartrip,Indore,Kolkata,2026-05-14,Business,Economy,3126.0,1,1,1,76.05202569522014,1,0,1,1,1,1,none,0
+7133,AbhiBus,Chennai,Kolkata,2026-06-17,Sleeper,AC Chair,2984.0,1,1,1,83.6929369675337,1,0,1,1,1,1,none,0
+6628,MakeMyTrip,Jaipur,Chennai,2026-05-13,First Class,First,1731.0,1,1,1,86.47986829617005,1,0,1,1,1,1,none,0
+4531,Yatra,Bhopal,Indore,2026-02-04,General,Sleeper,1959.0,1,1,1,78.05934839770538,1,0,1,1,1,1,none,0
+6261,Paytm,Chennai,Pune,2026-04-02,CC,Economy,2873.0,1,1,0,32.54671114431265,0,1,0,0,1,0,behavioral,1
+2145,Paytm,Delhi,Kolkata,2026-04-08,General,First,325.0,1,1,1,84.4093481446238,1,0,1,1,1,1,none,0
+3923,GoIbibo,Lucknow,Bhopal,2026-04-16,Sleeper,First,2457.0,1,1,0,56.28733704577111,0,1,0,0,1,0,font_mismatch,1
+6026,MakeMyTrip,Lucknow,Ahmedabad,2025-12-06,Business,First,593.0,1,1,1,95.08758551120506,1,0,1,1,1,1,none,0
+3242,Paytm,Mumbai,Nagpur,2026-03-07,General,First,3132.0,1,1,0,77.34290649559887,1,0,1,1,1,1,none,0
+1686,GoIbibo,Hyderabad,Jaipur,2025-11-13,General,Sleeper,2216.0,0,0,0,66.99373806780055,0,1,0,0,1,0,qr_invalid,1
+6895,IRCTC,Kanpur,Bangalore,2026-02-24,Sleeper,Economy,3262.0,1,1,1,96.54444389446793,1,0,1,1,1,1,none,0
+3339,GoIbibo,Ahmedabad,Surat,2026-04-10,CC,AC Chair,214.0,1,1,0,60.17115914868679,0,1,0,0,1,0,metadata_tamper,1
+2515,Paytm,Bangalore,Jaipur,2025-11-05,Business,Economy,1504.0,1,1,1,79.16599307035344,1,0,1,1,1,1,none,0
+5382,Paytm,Kolkata,Jaipur,2026-05-10,Business,AC Chair,832.0,1,1,0,46.82286145776766,0,1,0,0,1,0,ocr_tamper,1
+6939,IRCTC,Lucknow,Mumbai,2026-01-11,AC,Sleeper,3123.0,1,1,1,90.46435907220656,1,0,1,1,1,1,none,0
+1818,AbhiBus,Chennai,Kolkata,2026-03-28,AC,Business,2821.0,1,1,0,91.86402266019628,1,0,0,1,1,1,none,0
+9395,Paytm,Hyderabad,Pune,2025-10-22,First Class,Business,2341.0,1,1,1,96.08840453983323,1,0,1,1,1,0,none,0
+5679,Cleartrip,Indore,Lucknow,2026-04-27,Business,Business,3449.0,1,1,1,91.76843856673194,1,0,1,1,1,1,none,0
+9265,MakeMyTrip,Surat,Kanpur,2025-12-04,AC,Economy,1905.0,1,1,1,84.11361499779667,1,0,1,1,1,1,none,0
+7865,Cleartrip,Kolkata,Ahmedabad,2026-03-01,Sleeper,Business,2310.0,1,1,1,93.80302336925183,1,0,1,1,1,1,none,0
+1225,MakeMyTrip,Lucknow,Ahmedabad,2026-05-25,2A,Business,1921.0,1,1,0,25.917615517424455,0,1,0,0,1,0,ocr_tamper,1
+2646,AbhiBus,Delhi,Ahmedabad,2026-06-09,Business,Sleeper,2445.0,1,1,0,94.52887547625929,1,0,1,1,1,1,none,0
+9934,Cleartrip,Chennai,Lucknow,2025-12-28,Business,Business,3253.0,1,1,1,51.83759876753014,0,1,0,0,1,0,duplicate,1
+5013,GoIbibo,Delhi,Mumbai,2026-01-11,General,Business,1753.0,1,1,1,77.21090870609426,1,0,1,1,1,0,none,0
+8921,RedBus,Bhopal,Pune,2026-05-26,General,First,1430.0,1,1,1,85.29673974163416,1,0,1,1,1,1,none,0
+4483,RedBus,Chennai,Lucknow,2026-01-18,AC,AC Chair,2164.0,1,1,1,97.56728441580925,1,0,0,1,1,0,none,0
+8039,MakeMyTrip,Mumbai,Ahmedabad,2025-11-13,CC,Economy,1780.0,1,1,1,93.0788382407845,1,0,1,1,1,1,none,0
+7528,RedBus,Kolkata,Pune,2026-01-02,3A,Sleeper,655.0,1,1,1,73.10385533171637,1,0,1,1,1,1,none,0
+1709,RedBus,Mumbai,Hyderabad,2026-03-06,General,First,304.0,1,0,0,55.048328930300244,0,1,0,0,1,0,qr_invalid,1
+4532,MakeMyTrip,Jaipur,Surat,2026-02-05,CC,First,3418.0,1,1,0,50.154417030423915,0,1,0,0,1,0,metadata_tamper,1
+3611,Yatra,Kolkata,Nagpur,2026-05-25,3A,Economy,2117.0,1,1,1,72.91929823887088,1,0,1,1,1,1,none,0
+1782,RedBus,Chennai,Kolkata,2025-11-16,Sleeper,First,3190.0,1,1,1,97.7399164590976,1,0,1,1,1,1,none,0
+4785,RedBus,Ahmedabad,Chennai,2025-10-21,2A,First,1838.0,1,1,0,64.04549999096727,0,1,0,0,1,0,metadata_tamper,1
+6150,AbhiBus,Ahmedabad,Hyderabad,2025-12-23,First Class,Business,3295.0,1,1,0,90.35001425776603,1,0,1,1,1,1,none,0
+1539,IRCTC,Lucknow,Surat,2025-12-22,Business,Sleeper,3100.0,1,1,1,81.88923087261071,1,0,0,1,1,0,none,0
+7105,MakeMyTrip,Delhi,Nagpur,2026-03-03,CC,AC Chair,1392.0,1,1,1,75.90836598448014,1,0,1,0,1,1,none,0
+8498,GoIbibo,Mumbai,Hyderabad,2026-03-12,3A,First,161.0,1,1,1,95.8935235423962,1,0,1,1,1,1,none,0
+2851,MakeMyTrip,Mumbai,Kolkata,2026-03-06,CC,First,1145.0,1,1,1,81.23105197531746,1,0,1,1,1,1,none,0
+5524,AbhiBus,Delhi,Ahmedabad,2025-12-25,2A,AC Chair,622.0,1,1,1,89.80253066906974,1,0,1,1,1,1,none,0
+3613,AbhiBus,Kanpur,Bangalore,2026-05-10,3A,Economy,2843.0,1,1,0,59.46024291657059,0,1,0,0,1,0,behavioral,1
+6023,Yatra,Surat,Mumbai,2026-04-23,Sleeper,First,2638.0,1,1,1,81.15737536740178,1,0,1,1,1,1,none,0
+6641,RedBus,Mumbai,Jaipur,2026-03-22,Sleeper,Economy,638.0,0,0,0,61.61029099230002,0,1,0,0,1,0,no_qr,1
+7882,Yatra,Chennai,Hyderabad,2026-03-19,CC,Economy,3148.0,0,0,0,61.00008784856777,0,1,0,0,1,0,qr_invalid,1
+3852,RedBus,Bangalore,Ahmedabad,2026-01-29,General,First,2425.0,1,1,0,42.2299915442141,0,1,0,0,1,0,ocr_tamper,1
+9068,AbhiBus,Mumbai,Bhopal,2026-01-15,3A,Sleeper,3445.0,1,1,1,84.94977652327691,1,0,1,1,1,1,none,0
+7445,RedBus,Chennai,Bangalore,2025-10-24,Sleeper,AC Chair,1063.0,1,1,1,75.26347552894767,1,0,1,1,1,1,none,0
+7543,GoIbibo,Lucknow,Bhopal,2026-03-12,Business,First,873.0,1,1,1,97.78443055810418,1,0,1,1,1,1,none,0
+6637,Paytm,Bangalore,Pune,2026-06-06,3A,Business,456.0,1,1,1,88.44951702486779,1,0,1,1,1,1,none,0
+5640,Yatra,Bhopal,Ahmedabad,2026-02-24,3A,Economy,171.0,1,1,1,79.93282210077395,1,0,1,1,1,1,none,0
+9934,IRCTC,Bhopal,Kanpur,2025-11-29,First Class,First,3253.0,1,1,1,78.40213418216705,1,0,1,1,1,1,none,0
+2872,Cleartrip,Delhi,Indore,2026-05-30,CC,First,1358.0,0,0,0,61.53398017736565,0,1,0,0,1,0,no_qr,1
+6678,Paytm,Bangalore,Indore,2025-11-14,AC,First,2862.0,1,1,0,53.524962809598485,0,1,0,0,1,0,metadata_tamper,1
+9786,IRCTC,Surat,Delhi,2026-01-15,3A,Economy,2554.0,1,1,1,90.50747922604957,1,0,1,1,1,1,none,0
+8557,RedBus,Ahmedabad,Surat,2025-10-22,AC,Economy,1872.0,1,1,1,79.23252502385313,1,0,1,1,1,1,none,0
+4958,MakeMyTrip,Pune,Lucknow,2026-03-12,CC,First,310.0,1,1,1,95.99294671831404,1,0,1,1,1,0,none,0
+8071,Cleartrip,Mumbai,Jaipur,2026-04-27,CC,Economy,2436.0,0,0,0,51.26540850729404,0,1,0,0,1,0,qr_invalid,1
+4599,RedBus,Indore,Pune,2025-11-19,Business,Sleeper,2284.0,1,1,1,79.55943810136506,1,0,1,0,1,1,none,0
+8023,Yatra,Delhi,Indore,2026-06-12,Sleeper,AC Chair,1365.0,1,1,1,80.7781662956793,1,0,1,1,1,1,none,0
+1205,Yatra,Bangalore,Nagpur,2026-04-17,Sleeper,Economy,2104.0,1,1,1,80.29886634732318,1,0,1,1,1,1,none,0
+8173,AbhiBus,Chennai,Lucknow,2025-12-19,First Class,AC Chair,2273.0,1,1,1,72.48465181885805,1,0,1,0,1,1,none,0
+5070,Paytm,Lucknow,Kolkata,2026-03-01,CC,Business,3197.0,1,1,1,91.46316971873688,1,0,1,0,1,1,none,0
+6076,Yatra,Nagpur,Pune,2026-06-17,3A,First,3496.0,0,0,0,68.80444279927598,0,1,0,0,1,0,qr_invalid,1
+3944,Cleartrip,Kanpur,Mumbai,2026-04-11,First Class,First,2424.0,1,1,1,96.41247094185383,1,0,1,1,1,1,none,0
+4593,Paytm,Nagpur,Bhopal,2026-01-29,3A,Business,2675.0,1,1,0,50.665179429323544,0,1,0,0,1,0,behavioral,1
+7538,RedBus,Surat,Lucknow,2026-02-14,CC,Sleeper,704.0,1,1,1,93.07021246447141,1,0,0,1,1,1,none,0
+7208,GoIbibo,Kanpur,Bangalore,2026-03-15,AC,First,2302.0,1,1,1,78.4216069983542,1,0,1,1,1,0,none,0
+6798,RedBus,Pune,Nagpur,2026-05-23,First Class,First,2683.0,1,1,1,93.16818346343712,0,0,1,1,1,1,none,0
+1099,Paytm,Bangalore,Chennai,2025-10-29,3A,Sleeper,1804.0,1,1,1,82.80773876924596,1,0,1,1,1,0,none,0
+1721,IRCTC,Surat,Bhopal,2026-01-28,General,Sleeper,2925.0,1,1,0,46.2383260885772,0,1,0,0,1,0,behavioral,1
+4797,GoIbibo,Nagpur,Kanpur,2025-12-14,2A,Economy,2344.0,1,1,1,78.15772413158612,1,0,1,1,1,1,none,0
+1005,Cleartrip,Nagpur,Pune,2025-11-29,Business,Sleeper,1423.0,1,1,1,83.49099064522156,1,0,1,1,1,1,none,0
+5924,MakeMyTrip,Mumbai,Bhopal,2026-06-17,Business,First,9999.0,1,1,0,66.89776911226227,0,1,0,0,0,0,price_mismatch,1
+6120,Paytm,Bangalore,Surat,2026-05-22,2A,Business,10.0,1,1,0,65.78848898876004,0,1,0,0,0,0,price_mismatch,1
+1092,Yatra,Bhopal,Delhi,2026-03-13,2A,First,1687.0,1,1,1,74.26342351973038,1,0,1,1,1,1,none,0
+8537,Paytm,Jaipur,Pune,2025-11-23,Sleeper,Business,5.0,1,1,0,50.40829392714008,0,1,0,0,0,0,price_mismatch,1
+8004,AbhiBus,Surat,Ahmedabad,2025-11-25,First Class,Business,1054.0,1,1,1,82.05779566118079,1,0,1,1,1,1,none,0
+7058,GoIbibo,Chennai,Bhopal,2026-06-07,First Class,Sleeper,840.0,1,1,1,87.74770122446358,0,0,0,1,1,1,none,0
+4452,Yatra,Ahmedabad,Jaipur,2026-02-04,Business,AC Chair,2895.0,1,1,0,37.957019632883515,0,1,0,0,1,0,behavioral,1
+3713,RedBus,Indore,Ahmedabad,2026-01-21,Sleeper,Economy,1869.0,1,1,0,97.99152529448777,1,0,1,1,1,1,none,0
+6621,AbhiBus,Pune,Lucknow,2025-11-26,2A,Sleeper,1865.0,1,1,0,65.43571938971155,0,1,0,0,1,0,metadata_tamper,1
+7624,MakeMyTrip,Kolkata,Indore,2025-10-29,CC,Economy,356.0,1,1,0,56.555957072063386,0,1,0,0,1,0,font_mismatch,1
+9045,Yatra,Surat,Mumbai,2026-04-30,Business,Sleeper,1056.0,1,1,0,50.10548669412946,0,1,0,0,1,0,metadata_tamper,1
+3375,MakeMyTrip,Jaipur,Bhopal,2025-12-05,Sleeper,Economy,343.0,1,1,1,83.11678856320776,1,0,1,1,1,1,none,0
+3909,RedBus,Surat,Indore,2025-11-20,First Class,AC Chair,941.0,1,1,1,62.76714483640393,0,1,0,0,1,0,duplicate,1
+1341,Paytm,Indore,Delhi,2026-01-09,Sleeper,Sleeper,1436.0,1,1,0,97.5727397136865,1,0,1,0,1,1,none,0
+9927,IRCTC,Ahmedabad,Pune,2026-06-07,Business,First,959.0,0,0,0,65.26264836023945,0,1,0,0,1,0,qr_invalid,1
+6582,GoIbibo,Jaipur,Pune,2026-06-11,2A,AC Chair,3176.0,1,1,0,43.171862329478316,0,1,0,0,1,0,ocr_tamper,1
+5381,RedBus,Mumbai,Hyderabad,2025-11-05,First Class,Sleeper,1120.0,1,1,0,36.02762153513664,0,1,0,0,1,0,behavioral,1
+3850,Paytm,Chennai,Jaipur,2026-03-28,Business,Business,3092.0,1,1,0,61.700560815523694,0,1,0,0,1,0,metadata_tamper,1
+4739,Cleartrip,Hyderabad,Delhi,2026-06-04,General,Economy,1614.0,1,1,0,47.53954897348753,0,1,0,0,1,0,ocr_tamper,1
+6612,Yatra,Chennai,Kanpur,2026-06-16,AC,Economy,2883.0,1,1,0,65.14872145598164,0,1,0,0,1,0,font_mismatch,1
+6499,GoIbibo,Delhi,Lucknow,2025-11-13,Business,Sleeper,3286.0,0,0,0,50.129378916275456,0,1,0,0,1,0,no_qr,1
+2119,GoIbibo,Pune,Delhi,2025-11-22,General,AC Chair,2658.0,1,1,1,88.51583723608546,1,0,0,1,1,1,none,0
+3025,Paytm,Lucknow,Indore,2025-11-10,Sleeper,First,2171.0,1,1,1,84.44940635259273,1,0,0,1,1,1,none,0
+1445,GoIbibo,Bangalore,Mumbai,2026-01-04,Sleeper,Business,967.0,1,1,1,64.17347123167761,0,1,0,0,1,0,duplicate,1
+8121,AbhiBus,Pune,Bangalore,2025-11-07,3A,Economy,1599.0,1,1,1,78.93300182969877,1,0,1,1,1,1,none,0
+8071,GoIbibo,Kolkata,Bhopal,2025-11-26,CC,AC Chair,2377.0,1,1,1,75.0532868893906,1,0,1,1,1,1,none,0
+1659,Cleartrip,Delhi,Mumbai,2026-03-02,2A,Sleeper,202.0,1,1,1,76.71132195628246,1,0,1,1,1,1,none,0
+8603,Cleartrip,Bhopal,Delhi,2026-05-02,Business,Economy,1657.0,1,1,1,79.85585623417113,1,0,1,1,1,1,none,0
+8117,AbhiBus,Hyderabad,Pune,2026-03-14,2A,First,817.0,1,1,0,67.68115902157186,0,1,0,0,1,0,metadata_tamper,1
+1623,GoIbibo,Bhopal,Nagpur,2026-05-13,CC,AC Chair,1410.0,1,1,0,42.808380346761595,0,1,0,0,1,0,behavioral,1
+7326,GoIbibo,Nagpur,Delhi,2026-06-06,3A,Economy,1787.0,1,1,1,81.37222219754223,1,0,1,1,1,0,none,0
+2141,MakeMyTrip,Nagpur,Kolkata,2025-11-23,First Class,AC Chair,1517.0,1,1,1,74.46097136999524,1,0,1,0,1,1,none,0
+2643,MakeMyTrip,Bhopal,Bangalore,2026-03-06,3A,First,441.0,0,0,0,69.48717165529105,0,1,0,0,1,0,qr_invalid,1
+3853,AbhiBus,Kolkata,Bangalore,2026-03-20,2A,Business,2307.0,1,1,1,84.96114962454315,1,0,1,1,1,1,none,0
+7055,RedBus,Ahmedabad,Bangalore,2026-02-05,CC,First,2334.0,1,1,1,88.73365871052073,1,0,1,1,1,1,none,0
+9696,IRCTC,Lucknow,Kolkata,2026-03-02,CC,First,3227.0,1,1,1,81.47854025938187,1,0,1,1,1,1,none,0
+3741,Yatra,Pune,Jaipur,2025-10-21,AC,Economy,2130.0,1,1,0,95.40861699562674,1,0,0,0,1,1,none,0
+4013,GoIbibo,Pune,Jaipur,2026-01-18,First Class,First,1361.0,1,1,1,76.45922540835873,1,0,1,1,1,1,none,0
+1624,Cleartrip,Bangalore,Indore,2026-02-14,3A,Business,1502.0,1,1,0,63.11912867416562,0,1,0,0,1,0,font_mismatch,1
+3666,Cleartrip,Kanpur,Mumbai,2026-05-15,3A,First,2838.0,1,1,1,58.08114872161606,0,1,0,0,1,0,duplicate,1
+2394,Cleartrip,Kanpur,Bhopal,2026-06-07,CC,Sleeper,998.0,1,1,1,92.28941205565084,1,0,1,1,1,0,none,0
+1790,Paytm,Nagpur,Delhi,2026-02-04,3A,Economy,2583.0,0,0,0,59.076167180998674,0,1,0,0,1,0,qr_invalid,1
+1469,Yatra,Kolkata,Lucknow,2026-02-22,AC,Sleeper,3112.0,1,1,1,83.67710490166438,1,0,1,0,1,1,none,0
+3001,Paytm,Bhopal,Pune,2026-01-15,AC,Business,878.0,1,1,0,33.722590539781514,0,1,0,0,1,0,behavioral,1
+1507,Paytm,Lucknow,Nagpur,2026-04-09,AC,Business,1405.0,1,1,0,68.12134297598425,0,1,0,0,1,0,font_mismatch,1
+3989,RedBus,Ahmedabad,Pune,2026-05-09,First Class,Economy,380.0,1,1,1,94.87143352778556,1,0,1,1,1,1,none,0
+5836,AbhiBus,Surat,Pune,2026-06-16,General,AC Chair,2783.0,1,1,1,90.49064588302383,1,0,1,0,1,1,none,0
+4484,Yatra,Jaipur,Surat,2026-01-02,Business,Sleeper,1257.0,1,1,0,64.46072322601408,0,1,0,0,1,0,font_mismatch,1
+8652,RedBus,Kolkata,Bhopal,2026-03-15,Business,Sleeper,2922.0,1,1,1,92.7987027985999,1,0,1,1,1,1,none,0
+3353,MakeMyTrip,Surat,Chennai,2026-02-02,Business,AC Chair,3088.0,1,1,1,96.33081918080971,1,0,0,1,1,1,none,0
+8001,AbhiBus,Surat,Hyderabad,2026-02-17,AC,AC Chair,3252.0,1,1,0,36.82584035305901,0,1,0,0,1,0,ocr_tamper,1
+3631,Paytm,Indore,Hyderabad,2026-04-16,CC,Sleeper,5.0,1,1,0,64.35373919115781,0,1,0,0,0,0,price_mismatch,1
+7964,Yatra,Indore,Surat,2025-11-04,Business,AC Chair,1383.0,0,0,0,65.95987707974324,0,1,0,0,1,0,no_qr,1
+3145,Yatra,Surat,Kanpur,2026-03-12,Sleeper,Business,1561.0,1,1,1,93.35255585891758,1,0,1,1,1,1,none,0
+3513,Paytm,Chennai,Delhi,2026-05-11,CC,Sleeper,2883.0,1,1,1,77.24818744275271,1,0,1,1,1,1,none,0
+9451,IRCTC,Jaipur,Delhi,2025-12-04,2A,Economy,1890.0,1,1,1,79.89346238443125,1,0,1,0,1,0,none,0
+4769,Cleartrip,Kolkata,Hyderabad,2026-01-18,3A,Sleeper,3120.0,1,1,1,72.03457980692677,1,0,1,1,1,1,none,0
+9104,IRCTC,Jaipur,Delhi,2026-03-24,3A,Economy,2103.0,0,0,0,69.45099202285917,0,1,0,0,1,0,no_qr,1
+5242,AbhiBus,Jaipur,Nagpur,2025-12-12,Sleeper,First,3008.0,1,1,1,83.2621355109809,1,0,0,1,1,1,none,0
+5763,RedBus,Surat,Indore,2026-06-02,General,Economy,3276.0,1,1,1,87.54213298525919,1,0,1,1,1,1,none,0
+6209,MakeMyTrip,Pune,Nagpur,2026-03-29,First Class,First,2063.0,1,1,1,89.0569900435511,1,0,1,1,1,1,none,0
+4278,Paytm,Bangalore,Nagpur,2026-03-22,AC,Business,1423.0,1,1,1,73.15798244920282,1,0,1,1,1,1,none,0
+7284,IRCTC,Surat,Kolkata,2026-05-30,AC,Economy,1882.0,1,1,1,86.76210858681938,0,0,1,1,1,1,none,0
+4714,RedBus,Kolkata,Surat,2026-02-03,CC,Business,1048.0,1,1,1,81.35897878285702,1,0,0,1,1,1,none,0
+5625,Paytm,Lucknow,Mumbai,2026-01-14,Sleeper,Sleeper,310.0,1,1,1,91.66862356113663,1,0,1,1,1,1,none,0
+9670,Paytm,Ahmedabad,Nagpur,2025-11-19,2A,AC Chair,2419.0,1,1,0,62.901052256127215,0,1,0,0,1,0,font_mismatch,1
+1942,GoIbibo,Bhopal,Ahmedabad,2026-03-30,General,Sleeper,3393.0,1,1,1,90.81262582452408,1,0,0,1,1,1,none,0
+1001,GoIbibo,Surat,Bangalore,2026-04-17,Business,Sleeper,1396.0,1,1,1,82.56514805208693,1,0,1,1,1,1,none,0
+7567,IRCTC,Bhopal,Nagpur,2026-03-12,AC,Economy,3060.0,0,0,0,67.31864766787926,0,1,0,0,1,0,no_qr,1
+8138,IRCTC,Surat,Mumbai,2026-02-06,Business,Economy,9999.0,1,1,0,57.95611997895408,0,1,0,0,0,0,price_mismatch,1
+2732,Cleartrip,Ahmedabad,Jaipur,2026-04-15,2A,Business,1784.0,1,1,1,73.71097536438893,1,0,1,1,1,1,none,0
+2115,Cleartrip,Pune,Indore,2026-06-13,Business,Sleeper,2228.0,1,1,1,53.2876397973163,0,1,0,0,1,0,duplicate,1
+3035,Yatra,Bhopal,Surat,2025-12-20,CC,Business,1318.0,1,1,0,88.00858857461101,1,0,1,1,1,1,none,0
+6849,Cleartrip,Jaipur,Kolkata,2025-10-29,2A,Economy,1080.0,1,1,1,66.80978701670222,0,1,0,0,1,0,duplicate,1
+9153,Cleartrip,Indore,Ahmedabad,2025-11-26,First Class,Business,1234.0,1,1,1,94.05978560386225,1,0,1,1,1,1,none,0
+4536,RedBus,Mumbai,Jaipur,2026-05-20,2A,Business,2436.0,1,1,1,96.37887341727057,1,0,1,1,1,1,none,0
+4464,MakeMyTrip,Delhi,Mumbai,2026-05-23,First Class,AC Chair,1225.0,1,1,1,75.05134157574983,1,0,1,1,1,1,none,0
+6401,GoIbibo,Lucknow,Bangalore,2026-03-25,2A,Economy,1475.0,1,1,1,76.0005087513974,1,0,1,1,1,1,none,0
+5625,GoIbibo,Kanpur,Pune,2026-06-07,First Class,Sleeper,2014.0,1,1,1,96.04513976481246,1,0,1,0,1,1,none,0
+6011,Cleartrip,Bhopal,Bangalore,2026-01-11,Business,Sleeper,10.0,1,1,0,58.90145186089275,0,1,0,0,0,0,price_mismatch,1
+1617,GoIbibo,Surat,Pune,2026-05-06,First Class,Economy,2507.0,1,1,0,51.12817329503973,0,1,0,0,1,0,ocr_tamper,1
+3815,GoIbibo,Chennai,Nagpur,2026-01-05,Sleeper,AC Chair,629.0,1,1,1,74.95074123278235,1,0,1,1,1,1,none,0
+1790,GoIbibo,Indore,Surat,2025-12-16,AC,Business,539.0,1,1,1,95.56760192034166,1,0,0,1,1,1,none,0
+3929,Yatra,Indore,Jaipur,2026-02-23,General,First,2324.0,0,0,0,65.53970383871227,0,1,0,0,1,0,no_qr,1
+6500,RedBus,Jaipur,Bangalore,2026-04-29,CC,Business,252.0,1,1,1,92.11257156493527,1,0,1,1,1,1,none,0
+5821,Cleartrip,Hyderabad,Pune,2026-03-01,AC,First,2753.0,1,1,0,42.91489799945828,0,1,0,0,1,0,ocr_tamper,1
+3312,AbhiBus,Indore,Bangalore,2025-12-15,CC,Business,1144.0,1,1,1,95.44282965827549,1,0,1,1,1,1,none,0
+8145,MakeMyTrip,Bhopal,Surat,2026-03-06,General,Sleeper,2895.0,1,1,1,75.41351036269674,1,0,0,1,1,1,none,0
+1566,Yatra,Hyderabad,Kanpur,2026-02-04,CC,AC Chair,2268.0,1,1,1,87.63366130945218,1,0,1,1,1,1,none,0
+1907,IRCTC,Hyderabad,Jaipur,2025-11-27,AC,AC Chair,912.0,1,1,1,94.33179445095439,1,0,1,1,1,1,none,0
+8111,RedBus,Indore,Jaipur,2026-05-14,General,Sleeper,1138.0,1,1,1,92.29565674692529,1,0,1,1,1,1,none,0
+8165,IRCTC,Ahmedabad,Kolkata,2026-05-21,CC,First,218.0,1,1,0,63.938146136917915,0,1,0,0,1,0,metadata_tamper,1
+2272,Yatra,Pune,Surat,2026-01-24,CC,First,1690.0,1,1,1,83.79812232942363,1,0,0,1,1,1,none,0
+3979,Yatra,Delhi,Nagpur,2025-10-29,3A,Economy,1421.0,1,1,0,54.89632452950273,0,1,0,0,1,0,behavioral,1
+6439,AbhiBus,Delhi,Bhopal,2026-02-15,First Class,Economy,3011.0,1,1,1,79.30649666155063,1,0,0,1,1,1,none,0
+4310,GoIbibo,Kanpur,Kolkata,2025-12-29,2A,First,355.0,1,1,1,82.92765256081043,1,0,1,1,1,1,none,0
+2322,MakeMyTrip,Chennai,Bangalore,2026-01-05,2A,Business,837.0,1,1,1,79.04929284924917,1,0,1,0,1,1,none,0
+3225,IRCTC,Jaipur,Bangalore,2025-10-31,First Class,Business,3001.0,1,1,1,79.4192354664378,1,0,1,1,1,1,none,0
+3070,IRCTC,Lucknow,Bhopal,2025-11-27,CC,Economy,786.0,1,1,1,88.39088817566876,1,0,1,1,1,1,none,0
+8052,IRCTC,Jaipur,Surat,2025-12-27,2A,Business,9999.0,1,1,0,50.70467618066772,0,1,0,0,0,0,price_mismatch,1
+5731,AbhiBus,Chennai,Nagpur,2026-04-18,Sleeper,AC Chair,1544.0,1,1,1,54.35581193629981,0,1,0,0,1,0,duplicate,1
+8429,GoIbibo,Delhi,Nagpur,2026-03-15,CC,AC Chair,1739.0,1,1,0,37.01491145313684,0,1,0,0,1,0,behavioral,1
+3232,AbhiBus,Kolkata,Chennai,2026-05-03,Sleeper,Sleeper,2963.0,1,1,0,47.62648508611275,0,1,0,0,1,0,behavioral,1
+3174,RedBus,Hyderabad,Chennai,2025-11-20,2A,Sleeper,645.0,1,1,1,79.00032297398332,0,0,1,1,1,1,none,0
+5177,Cleartrip,Jaipur,Bhopal,2025-12-03,AC,Sleeper,275.0,1,1,1,84.47123826901738,1,0,1,1,1,1,none,0
+4917,Yatra,Kolkata,Lucknow,2026-04-01,Business,Sleeper,940.0,1,1,1,79.39459462554704,1,0,1,1,1,1,none,0
+7109,Yatra,Lucknow,Delhi,2026-04-26,Sleeper,Business,879.0,1,1,1,54.988615986974594,0,1,0,0,1,0,duplicate,1
+6815,RedBus,Bhopal,Jaipur,2026-06-09,General,First,1576.0,0,0,0,55.38544962354786,0,1,0,0,1,0,no_qr,1
+6382,GoIbibo,Nagpur,Bhopal,2026-01-14,AC,AC Chair,821.0,1,1,1,91.1634732681646,1,0,0,1,1,0,none,0
+3222,GoIbibo,Bhopal,Mumbai,2026-02-23,General,AC Chair,921.0,1,1,0,66.04916138858044,0,1,0,0,1,0,metadata_tamper,1
+2349,AbhiBus,Pune,Indore,2025-12-07,Business,AC Chair,2011.0,1,1,1,91.12710103370898,0,0,1,0,1,1,none,0
+3368,MakeMyTrip,Surat,Chennai,2026-06-16,CC,Sleeper,2395.0,1,1,1,86.0208743629899,1,0,1,1,1,1,none,0
+1894,Cleartrip,Kanpur,Mumbai,2026-01-29,AC,Business,2467.0,1,1,1,74.35539977285819,1,0,1,1,1,0,none,0
+3205,MakeMyTrip,Delhi,Kanpur,2026-01-08,2A,Sleeper,2612.0,1,1,1,83.39019996727926,1,0,1,1,1,1,none,0
+7008,Paytm,Bangalore,Chennai,2026-05-02,2A,Business,2130.0,1,1,1,90.25463273717546,1,0,1,1,1,1,none,0
+9884,IRCTC,Jaipur,Nagpur,2025-12-14,First Class,AC Chair,2642.0,1,1,1,76.304779268867,1,0,1,1,1,1,none,0
+9251,AbhiBus,Surat,Kanpur,2026-02-18,First Class,Sleeper,0.5,1,1,0,52.824620123090014,0,1,0,0,0,0,price_mismatch,1
+9194,GoIbibo,Delhi,Bhopal,2025-11-19,Sleeper,Business,2248.0,1,1,1,89.52130677970555,1,0,1,1,1,1,none,0
+7261,GoIbibo,Lucknow,Indore,2026-03-22,First Class,AC Chair,2944.0,1,1,0,54.17525246110732,0,1,0,0,1,0,metadata_tamper,1
+5158,GoIbibo,Delhi,Kolkata,2026-03-12,2A,Sleeper,3322.0,1,1,1,78.27049580656825,1,0,1,1,1,1,none,0
+9387,MakeMyTrip,Surat,Ahmedabad,2026-01-29,General,AC Chair,212.0,1,1,0,31.551724928805182,0,1,0,0,1,0,ocr_tamper,1
+2055,Yatra,Hyderabad,Mumbai,2026-01-10,General,AC Chair,1868.0,1,1,1,73.72851003013909,1,0,0,1,1,1,none,0
+5549,Yatra,Kolkata,Hyderabad,2026-03-10,General,AC Chair,238.0,0,0,0,67.69763446771583,0,1,0,0,1,0,no_qr,1
+1880,GoIbibo,Pune,Bangalore,2026-05-16,Business,Sleeper,2119.0,1,1,1,94.46717750431915,1,0,1,1,1,1,none,0
+1673,AbhiBus,Nagpur,Surat,2026-02-19,General,AC Chair,267.0,1,1,1,78.8620247236875,1,0,1,1,1,1,none,0
+2607,AbhiBus,Surat,Kanpur,2025-11-17,First Class,First,1629.0,1,1,1,85.39633171768791,1,0,0,1,1,1,none,0
+3441,MakeMyTrip,Hyderabad,Jaipur,2026-03-01,First Class,Sleeper,1787.0,1,1,1,90.80797137670822,1,0,1,1,1,1,none,0
+5192,Cleartrip,Surat,Chennai,2025-11-12,General,Business,2462.0,1,1,1,87.34597670316593,1,0,1,0,1,1,none,0
+3460,Cleartrip,Chennai,Jaipur,2026-05-03,Sleeper,Sleeper,1245.0,1,1,1,92.34658519263107,1,0,1,0,1,1,none,0
+7584,Yatra,Indore,Jaipur,2026-05-06,Sleeper,First,1586.0,1,1,0,41.552384818897636,0,1,0,0,1,0,behavioral,1
+3719,GoIbibo,Pune,Hyderabad,2025-12-11,CC,Business,3417.0,1,1,1,73.18986238799589,1,0,1,1,1,1,none,0
+5941,Yatra,Ahmedabad,Chennai,2026-06-06,Business,Economy,2500.0,1,1,1,84.27455511242322,0,0,0,1,1,1,none,0
+8689,MakeMyTrip,Nagpur,Mumbai,2025-11-21,AC,First,522.0,1,1,1,96.38551850176178,1,0,1,1,1,1,none,0
+7171,Paytm,Surat,Kolkata,2025-12-28,AC,AC Chair,2797.0,1,1,1,79.21745438788219,1,0,1,0,1,1,none,0
+9967,IRCTC,Hyderabad,Ahmedabad,2026-06-03,CC,Economy,9999.0,1,1,0,55.005179013536285,0,1,0,0,0,0,price_mismatch,1
+6341,RedBus,Nagpur,Bangalore,2025-12-28,First Class,Economy,792.0,1,1,1,53.437873482600814,0,1,0,0,1,0,duplicate,1
+7526,Cleartrip,Nagpur,Bangalore,2026-04-24,3A,Sleeper,254.0,1,1,1,75.27838178937574,1,0,1,0,1,1,none,0
+5605,Yatra,Nagpur,Chennai,2026-04-28,General,Economy,1232.0,0,0,0,57.09307229988023,0,1,0,0,1,0,qr_invalid,1
+5338,RedBus,Mumbai,Hyderabad,2025-12-20,General,First,3411.0,1,1,0,60.90547522549102,0,1,0,0,1,0,metadata_tamper,1
+3634,Cleartrip,Hyderabad,Jaipur,2025-12-07,CC,First,2646.0,1,1,1,75.13265641908161,1,0,1,0,1,1,none,0
+3543,RedBus,Jaipur,Nagpur,2026-02-20,2A,Economy,2593.0,1,1,1,88.74563149458267,1,0,0,1,1,0,none,0
+4220,Cleartrip,Nagpur,Bhopal,2026-06-17,Business,Economy,1252.0,1,1,1,75.62820304527438,1,0,1,1,1,1,none,0
+8759,MakeMyTrip,Lucknow,Mumbai,2026-04-16,2A,Business,3359.0,1,1,1,61.49016891576968,0,1,0,0,1,0,duplicate,1
+7223,RedBus,Jaipur,Ahmedabad,2025-11-16,AC,First,2772.0,1,1,1,77.57328737380392,1,0,1,1,1,0,none,0
+2411,Cleartrip,Delhi,Surat,2026-03-06,Business,First,2004.0,1,1,1,73.2014525709531,1,0,1,1,1,1,none,0
+5266,Paytm,Lucknow,Hyderabad,2026-05-30,Sleeper,AC Chair,2661.0,1,1,1,85.40920299247873,1,0,1,1,1,1,none,0
+1168,Paytm,Kolkata,Indore,2025-12-06,Sleeper,Sleeper,1544.0,1,0,0,52.32386057496296,0,1,0,0,1,0,qr_invalid,1
+9040,RedBus,Nagpur,Ahmedabad,2026-06-11,First Class,Sleeper,1105.0,1,1,0,68.50086788319045,0,1,0,0,1,0,font_mismatch,1
+3401,GoIbibo,Bhopal,Delhi,2025-11-26,AC,Sleeper,2252.0,1,1,1,79.70234794225499,1,0,1,1,1,0,none,0
+9712,GoIbibo,Lucknow,Jaipur,2026-02-04,First Class,First,2383.0,1,1,1,95.27186228309027,1,0,1,1,1,1,none,0
+2845,IRCTC,Mumbai,Pune,2026-06-17,General,AC Chair,1769.0,1,1,0,51.04053508373207,0,1,0,0,1,0,ocr_tamper,1
+8865,GoIbibo,Nagpur,Bangalore,2025-12-28,AC,Business,2589.0,1,1,1,82.30206949549964,1,0,1,1,1,1,none,0
+6134,Cleartrip,Indore,Mumbai,2025-11-12,General,Business,213.0,1,1,1,79.47075959230534,1,0,1,1,1,1,none,0
+2020,Paytm,Nagpur,Lucknow,2026-06-15,Business,AC Chair,1715.0,1,1,0,66.33471308823506,0,1,0,0,1,0,font_mismatch,1
+4002,GoIbibo,Mumbai,Kanpur,2026-03-23,2A,First,2969.0,1,1,1,78.99520480252421,1,0,1,1,1,1,none,0
+7335,AbhiBus,Mumbai,Bhopal,2026-03-10,General,First,2932.0,1,1,1,81.76484952961692,1,0,1,0,1,1,none,0
+9883,Paytm,Delhi,Indore,2025-10-27,General,Sleeper,3279.0,0,0,0,59.889882805985984,0,1,0,0,1,0,no_qr,1
+5202,Paytm,Hyderabad,Bhopal,2025-12-06,Sleeper,First,1984.0,1,1,1,96.91214863696553,1,0,1,1,1,1,none,0
+3401,GoIbibo,Bhopal,Indore,2025-11-14,AC,Economy,2565.0,1,1,1,77.15236442515496,1,0,1,1,1,1,none,0
+2576,Yatra,Lucknow,Nagpur,2026-04-27,Sleeper,AC Chair,3104.0,1,1,0,55.78031190920996,0,1,0,0,1,0,metadata_tamper,1
+1141,Paytm,Kolkata,Chennai,2026-02-25,3A,AC Chair,3386.0,0,0,0,61.55397939065899,0,1,0,0,1,0,qr_invalid,1
+5176,MakeMyTrip,Indore,Pune,2026-06-16,First Class,Sleeper,1985.0,1,1,1,89.67525888679475,0,0,1,1,1,1,none,0
+9624,Paytm,Bangalore,Surat,2026-05-30,Business,Economy,884.0,1,1,1,93.94247655343769,1,0,1,1,1,1,none,0
+5256,Cleartrip,Ahmedabad,Bhopal,2026-01-21,Business,Sleeper,1686.0,1,1,0,96.86128804220198,1,0,1,1,1,1,none,0
+1057,MakeMyTrip,Lucknow,Indore,2025-12-10,2A,Business,3318.0,1,1,1,85.19253967829721,1,0,0,1,1,1,none,0
+9232,Yatra,Kolkata,Bhopal,2026-06-13,First Class,Business,2122.0,1,1,1,76.30629417781473,1,0,1,1,1,1,none,0
+8823,AbhiBus,Bhopal,Surat,2026-05-27,AC,AC Chair,1965.0,0,0,0,68.60092216269769,0,1,0,0,1,0,no_qr,1
+6551,GoIbibo,Kolkata,Kanpur,2025-10-29,Business,First,1692.0,1,1,1,86.80178373365457,1,0,1,1,1,1,none,0
+7396,IRCTC,Kanpur,Bhopal,2026-03-25,AC,First,1977.0,1,1,1,73.05157627770133,1,0,1,1,1,1,none,0
+5925,Yatra,Kanpur,Kolkata,2026-03-16,First Class,Business,3124.0,1,1,1,75.40385761904675,1,0,1,1,1,1,none,0
+3816,Paytm,Surat,Jaipur,2025-12-13,General,Economy,2849.0,1,1,1,82.22430980510028,1,0,1,1,1,1,none,0
+6409,IRCTC,Bhopal,Lucknow,2026-05-18,Business,Economy,2778.0,1,1,1,93.40174466003361,1,0,1,1,1,1,none,0
+9016,RedBus,Kanpur,Surat,2026-05-10,General,Business,251.0,1,1,1,95.31041884893085,1,0,1,1,1,1,none,0
+1034,GoIbibo,Kanpur,Delhi,2025-12-01,AC,Economy,1115.0,1,1,1,56.67729781717792,0,1,0,0,1,0,duplicate,1
+5220,Yatra,Pune,Mumbai,2026-05-03,AC,AC Chair,2173.0,1,1,1,93.59604460154385,1,0,1,1,1,1,none,0
+7299,RedBus,Nagpur,Lucknow,2026-03-04,CC,Sleeper,1811.0,1,1,1,79.23075554754719,1,0,1,1,1,1,none,0
+3876,RedBus,Kolkata,Lucknow,2026-06-04,Business,Economy,2296.0,1,1,1,96.52706538825973,0,0,1,1,1,1,none,0
+9218,GoIbibo,Kolkata,Indore,2026-03-07,CC,First,3396.0,1,1,1,80.16170227638975,1,0,1,1,1,1,none,0
+2448,AbhiBus,Hyderabad,Kanpur,2026-04-13,3A,Business,421.0,1,1,0,49.444696831447075,0,1,0,0,1,0,behavioral,1
+6362,MakeMyTrip,Bhopal,Delhi,2026-02-23,First Class,Economy,1660.0,1,1,1,53.022523864425146,0,1,0,0,1,0,duplicate,1
+1613,IRCTC,Pune,Lucknow,2026-06-17,AC,AC Chair,1711.0,1,1,1,77.60652008430196,1,0,0,1,1,1,none,0
+3644,RedBus,Kolkata,Chennai,2026-05-29,AC,First,687.0,1,1,1,85.86520526186438,1,0,1,1,1,0,none,0
+4245,Yatra,Indore,Mumbai,2026-02-18,3A,AC Chair,1906.0,1,1,1,94.74829410491989,1,0,1,1,1,1,none,0
+5375,Cleartrip,Delhi,Bhopal,2026-01-17,CC,AC Chair,1120.0,1,1,1,88.10305856802825,1,0,0,1,1,1,none,0
+6822,AbhiBus,Kanpur,Ahmedabad,2026-01-20,Sleeper,AC Chair,1806.0,0,0,0,68.7896268397221,0,1,0,0,1,0,no_qr,1
+5165,RedBus,Pune,Hyderabad,2026-04-28,AC,First,726.0,0,0,0,64.01462086205215,0,1,0,0,1,0,no_qr,1
+5109,Cleartrip,Hyderabad,Chennai,2026-06-04,2A,Sleeper,2100.0,1,1,1,78.52598816421902,1,0,1,1,1,1,none,0
+4304,Paytm,Indore,Jaipur,2025-11-26,Business,Sleeper,3320.0,1,1,1,76.81011824184331,1,0,1,1,1,1,none,0
+5475,AbhiBus,Pune,Kanpur,2025-11-12,First Class,Sleeper,2888.0,1,1,0,48.30329145439082,0,1,0,0,1,0,ocr_tamper,1
+3709,Yatra,Kanpur,Chennai,2026-02-27,Sleeper,First,3185.0,1,1,0,42.317665007812835,0,1,0,0,1,0,ocr_tamper,1
+1484,RedBus,Bhopal,Jaipur,2025-11-18,2A,Sleeper,2609.0,1,1,1,76.52203219570944,1,0,1,1,1,1,none,0
+7024,MakeMyTrip,Delhi,Bhopal,2025-11-05,2A,AC Chair,2655.0,1,1,0,73.1076684309168,0,1,0,0,1,0,font_mismatch,1
+9777,Yatra,Delhi,Mumbai,2026-04-18,First Class,Business,2688.0,1,1,1,86.09394317550763,1,0,1,1,1,1,none,0
+3680,IRCTC,Ahmedabad,Hyderabad,2026-05-18,First Class,AC Chair,278.0,1,1,1,75.88077023828369,1,0,1,1,1,1,none,0
+4186,RedBus,Surat,Delhi,2025-11-18,Sleeper,Business,1881.0,1,1,1,90.11222007957468,1,0,1,1,1,1,none,0
+8375,Paytm,Bhopal,Kolkata,2026-04-01,Sleeper,Sleeper,0.5,1,1,0,69.2086832396667,0,1,0,0,0,0,price_mismatch,1
+9593,Paytm,Lucknow,Bangalore,2026-05-27,Sleeper,AC Chair,2914.0,1,1,1,75.77027319532273,1,0,1,0,1,1,none,0
+4020,AbhiBus,Indore,Lucknow,2026-05-13,General,First,904.0,1,1,1,79.0064220419817,1,0,1,1,1,1,none,0
+9697,IRCTC,Hyderabad,Lucknow,2026-05-12,Sleeper,AC Chair,1865.0,1,1,1,94.07263354969616,1,0,0,1,1,1,none,0
+3929,Cleartrip,Kolkata,Bhopal,2026-04-28,Business,Economy,2417.0,1,1,1,84.49247687225647,1,0,1,1,1,1,none,0
+4098,Cleartrip,Mumbai,Indore,2026-01-22,General,Economy,507.0,1,1,1,89.77290123968712,1,0,1,1,1,1,none,0
+5682,Cleartrip,Jaipur,Hyderabad,2025-11-21,General,Business,1784.0,1,1,0,32.57658168996218,0,1,0,0,1,0,ocr_tamper,1
+8820,IRCTC,Mumbai,Hyderabad,2025-12-09,2A,Business,10.0,1,1,0,68.22823406647396,0,1,0,0,0,0,price_mismatch,1
+3059,Paytm,Surat,Kanpur,2026-01-16,General,AC Chair,648.0,1,1,1,73.21997929463954,0,0,1,1,1,1,none,0
+4242,Yatra,Lucknow,Kolkata,2026-03-31,First Class,Economy,2606.0,1,1,1,89.89669711089212,0,0,1,1,1,1,none,0
+5969,AbhiBus,Surat,Lucknow,2026-06-07,First Class,Sleeper,404.0,1,1,1,90.41293809875687,0,0,1,1,1,1,none,0
+5894,MakeMyTrip,Delhi,Indore,2025-11-28,Business,Business,1541.0,1,1,1,97.20207225864564,1,0,1,1,1,1,none,0
+4288,RedBus,Pune,Jaipur,2025-12-28,3A,AC Chair,3403.0,1,1,1,79.56148794142928,1,0,1,1,1,1,none,0
+6228,MakeMyTrip,Chennai,Jaipur,2025-11-29,Sleeper,AC Chair,527.0,1,1,1,75.34376474375125,0,0,1,1,1,1,none,0
+8068,Yatra,Jaipur,Chennai,2026-04-28,AC,AC Chair,703.0,1,1,1,76.76125737173307,1,0,1,1,1,1,none,0
+1352,Yatra,Ahmedabad,Indore,2026-05-14,3A,Sleeper,3183.0,1,1,1,81.58671137922062,1,0,1,1,1,1,none,0
+9244,RedBus,Bhopal,Kolkata,2025-11-01,3A,Business,305.0,1,1,1,86.92428537985215,1,0,1,1,1,1,none,0
+8612,Paytm,Jaipur,Ahmedabad,2025-12-08,First Class,Economy,501.0,1,1,1,72.82826366545706,1,0,1,1,1,1,none,0
+4703,Cleartrip,Chennai,Kanpur,2026-01-04,AC,AC Chair,3190.0,1,1,1,75.17626600373669,1,0,1,0,1,1,none,0
+6161,Yatra,Pune,Mumbai,2025-10-27,3A,Economy,2117.0,1,1,1,89.68210624705314,1,0,1,1,1,1,none,0
+4881,MakeMyTrip,Lucknow,Pune,2026-02-18,General,First,253.0,1,1,1,76.77903668222645,1,0,1,1,1,1,none,0
+5720,AbhiBus,Kolkata,Pune,2026-04-09,General,First,1894.0,1,1,0,48.87855855802625,0,1,0,0,1,0,behavioral,1
+6075,RedBus,Lucknow,Nagpur,2026-03-10,2A,Economy,2280.0,1,1,1,86.92764826350815,1,0,1,1,1,0,none,0
+2471,Cleartrip,Pune,Kolkata,2026-05-06,CC,Economy,2873.0,1,1,1,83.83035901961603,1,0,1,1,1,1,none,0
+2827,AbhiBus,Jaipur,Bhopal,2026-05-21,First Class,Business,2032.0,1,1,1,78.95233102228693,1,0,1,1,1,1,none,0
+3865,Cleartrip,Hyderabad,Nagpur,2026-04-21,3A,First,1378.0,1,1,1,75.58393516118001,1,0,1,1,1,1,none,0
+7041,IRCTC,Indore,Kanpur,2026-05-21,Business,Economy,766.0,1,1,0,73.23479146580196,0,1,0,0,1,0,font_mismatch,1
+6694,Yatra,Mumbai,Surat,2025-10-21,First Class,Sleeper,3210.0,1,1,1,87.73706636862705,1,0,1,1,1,1,none,0
+8413,IRCTC,Bangalore,Nagpur,2025-12-16,General,Economy,2913.0,1,0,0,65.5897252781747,0,1,0,0,1,0,qr_invalid,1
+1853,IRCTC,Lucknow,Kolkata,2026-05-24,Sleeper,Business,480.0,1,1,0,59.063561818148344,0,1,0,0,1,0,font_mismatch,1
+6273,Yatra,Delhi,Kolkata,2025-12-17,CC,Sleeper,2903.0,1,1,1,85.31844782516671,1,0,0,1,1,1,none,0
+2157,GoIbibo,Hyderabad,Ahmedabad,2026-02-14,2A,First,728.0,1,1,1,97.43648931741087,0,0,0,1,1,0,none,0
+2998,Cleartrip,Surat,Kanpur,2025-12-07,Sleeper,Sleeper,348.0,1,1,1,80.24699140942823,1,0,1,0,1,1,none,0
+9777,Paytm,Ahmedabad,Surat,2026-01-29,3A,Economy,2243.0,1,1,0,62.4482409778707,0,1,0,0,1,0,font_mismatch,1
+1182,Yatra,Nagpur,Delhi,2026-04-05,Sleeper,Economy,2875.0,1,1,1,82.0183028855758,1,0,1,1,1,1,none,0
+4400,MakeMyTrip,Bhopal,Surat,2026-01-27,Sleeper,Business,2904.0,1,1,1,89.88915531817939,1,0,1,0,1,1,none,0
+6725,Yatra,Kolkata,Delhi,2026-03-10,CC,Sleeper,1081.0,1,1,1,73.56039490315544,1,0,0,1,1,1,none,0
+6796,AbhiBus,Chennai,Bangalore,2026-05-27,CC,AC Chair,3029.0,1,1,1,72.68602140873124,1,0,1,1,1,1,none,0
+2539,IRCTC,Kanpur,Bangalore,2026-01-08,CC,Economy,2652.0,1,1,1,93.7011975986248,1,0,1,1,1,1,none,0
+8226,RedBus,Kolkata,Indore,2025-11-08,First Class,First,389.0,1,1,0,62.23002663666461,0,1,0,0,1,0,font_mismatch,1
+9183,GoIbibo,Lucknow,Hyderabad,2026-02-22,First Class,First,1657.0,1,1,0,73.0709829528692,0,1,0,0,1,0,font_mismatch,1
+5707,GoIbibo,Hyderabad,Nagpur,2026-05-24,Sleeper,Sleeper,9999.0,1,1,0,65.20988829930648,0,1,0,0,0,0,price_mismatch,1
+7377,IRCTC,Ahmedabad,Bhopal,2025-12-13,General,Economy,2018.0,1,1,0,52.20839095030514,0,1,0,0,1,0,ocr_tamper,1
+9320,GoIbibo,Lucknow,Chennai,2026-03-31,First Class,Economy,199.0,1,1,1,92.94350270701037,1,0,1,1,1,1,none,0
+7851,AbhiBus,Bangalore,Jaipur,2026-05-22,Business,First,2919.0,1,1,1,87.66858368249315,1,0,1,1,1,1,none,0
+9136,Yatra,Jaipur,Surat,2025-10-31,CC,Economy,3481.0,1,1,1,86.77667206110299,1,0,1,0,1,1,none,0
+5548,Paytm,Jaipur,Mumbai,2026-03-02,First Class,AC Chair,3327.0,1,1,1,95.06999924598952,1,0,1,1,1,1,none,0
+6792,MakeMyTrip,Bhopal,Ahmedabad,2026-05-16,CC,Business,0.5,1,1,0,57.19391469461793,0,1,0,0,0,0,price_mismatch,1
+6798,Paytm,Kanpur,Kolkata,2026-05-12,3A,Economy,3388.0,1,1,1,81.33397104417017,1,0,1,1,1,1,none,0
+1155,MakeMyTrip,Chennai,Ahmedabad,2025-11-10,CC,Economy,1627.0,1,1,0,31.378062918244318,0,1,0,0,1,0,behavioral,1
+7641,Yatra,Chennai,Delhi,2025-11-19,Business,AC Chair,1537.0,1,1,0,59.18547937531926,0,1,0,0,1,0,metadata_tamper,1
+9832,IRCTC,Hyderabad,Chennai,2026-05-10,AC,Sleeper,1564.0,1,1,0,61.16480674899181,0,1,0,0,1,0,font_mismatch,1
+3125,AbhiBus,Bangalore,Nagpur,2026-05-03,AC,First,2680.0,0,0,0,51.83377029870995,0,1,0,0,1,0,no_qr,1
+4890,Yatra,Nagpur,Lucknow,2026-05-25,General,AC Chair,3386.0,1,1,1,68.98655018592117,0,1,0,0,1,0,duplicate,1
+1778,Yatra,Delhi,Surat,2026-01-14,CC,AC Chair,2396.0,1,1,1,91.20099801985012,1,0,1,1,1,1,none,0
+9506,RedBus,Jaipur,Kanpur,2026-05-08,Sleeper,Business,5.0,1,1,0,65.50612583440716,0,1,0,0,0,0,price_mismatch,1
+8940,IRCTC,Delhi,Pune,2025-12-15,Business,Business,566.0,1,1,1,79.4498910825785,1,0,1,1,1,1,none,0
+4761,Yatra,Jaipur,Delhi,2026-03-09,CC,First,1117.0,1,1,1,76.29581141124807,1,0,1,0,1,1,none,0
+3349,Cleartrip,Chennai,Surat,2026-05-11,Business,AC Chair,1995.0,1,1,0,22.051920737044636,0,1,0,0,1,0,ocr_tamper,1
+4995,AbhiBus,Jaipur,Surat,2026-05-14,AC,Economy,2010.0,1,1,1,82.88574883030596,1,0,1,0,1,1,none,0
+3862,IRCTC,Lucknow,Kolkata,2026-06-17,3A,AC Chair,1997.0,1,1,1,89.47555531944526,1,0,1,1,1,1,none,0
+4732,MakeMyTrip,Nagpur,Lucknow,2026-01-08,AC,First,2118.0,1,1,1,89.47718717458007,0,0,0,1,1,1,none,0
+6241,Paytm,Hyderabad,Delhi,2025-12-31,3A,Sleeper,3295.0,1,1,1,78.07998066223803,1,0,1,1,1,1,none,0
+5801,IRCTC,Hyderabad,Mumbai,2026-01-26,General,Economy,2337.0,1,1,1,92.48376364367428,1,0,1,0,1,1,none,0
+4118,AbhiBus,Jaipur,Bhopal,2026-03-27,General,First,1891.0,1,1,1,92.18096014096017,1,0,1,1,1,1,none,0
+7695,RedBus,Mumbai,Pune,2026-01-09,General,Sleeper,159.0,0,0,0,52.5490884257602,0,1,0,0,1,0,no_qr,1
+1964,Cleartrip,Surat,Nagpur,2026-04-21,Business,Economy,2415.0,0,0,0,59.97408164066236,0,1,0,0,1,0,qr_invalid,1
+8982,Paytm,Bangalore,Ahmedabad,2026-02-25,CC,First,1417.0,1,1,1,79.34070644565661,1,0,1,1,1,1,none,0
+2580,MakeMyTrip,Bangalore,Jaipur,2026-03-11,CC,First,629.0,1,1,1,73.58586478732605,1,0,0,1,1,1,none,0
+4517,Yatra,Hyderabad,Nagpur,2026-01-21,AC,First,2902.0,1,1,1,76.25949867702288,1,0,0,1,1,1,none,0
+3815,RedBus,Indore,Delhi,2026-03-13,Business,Business,2604.0,1,1,0,69.10825969906907,0,1,0,0,1,0,metadata_tamper,1
+1914,GoIbibo,Indore,Bangalore,2026-04-07,2A,First,3137.0,1,1,1,87.44428286926863,1,0,1,1,1,1,none,0
+3653,Paytm,Hyderabad,Kolkata,2026-03-06,2A,Business,5.0,1,1,0,65.89253394379365,0,1,0,0,0,0,price_mismatch,1
+6143,GoIbibo,Lucknow,Pune,2026-02-07,First Class,First,1446.0,1,1,1,79.11568512004318,1,0,1,1,1,1,none,0
+8274,MakeMyTrip,Bhopal,Hyderabad,2025-11-19,AC,AC Chair,1467.0,1,1,1,88.82689902430323,1,0,1,1,1,1,none,0
+5727,RedBus,Hyderabad,Lucknow,2026-03-26,2A,Business,2661.0,1,1,1,91.36457263595379,0,0,1,1,1,1,none,0
+3611,AbhiBus,Indore,Surat,2025-11-16,3A,Business,1710.0,1,1,1,91.66559690669962,1,0,1,1,1,1,none,0
+8432,MakeMyTrip,Kolkata,Ahmedabad,2025-12-20,First Class,First,1464.0,1,1,1,77.15639471226645,1,0,1,1,1,1,none,0
+2499,IRCTC,Bhopal,Kolkata,2026-04-10,General,AC Chair,380.0,1,1,0,30.927484921036502,0,1,0,0,1,0,behavioral,1
+3347,AbhiBus,Kolkata,Pune,2026-03-18,First Class,Business,1748.0,1,1,0,40.08954353317986,0,1,0,0,1,0,behavioral,1
+6659,GoIbibo,Bangalore,Bhopal,2026-01-18,Business,AC Chair,2091.0,1,1,1,77.10637515484342,1,0,1,0,1,0,none,0
+7383,AbhiBus,Pune,Indore,2026-03-07,Business,Business,5.0,1,1,0,67.31699912306213,0,1,0,0,0,0,price_mismatch,1
+2180,Cleartrip,Chennai,Delhi,2025-12-18,2A,Business,849.0,1,1,1,93.05106408427255,1,0,1,1,1,1,none,0
+5050,Yatra,Lucknow,Jaipur,2026-02-15,AC,Business,2271.0,1,1,1,88.11068389395362,1,0,1,1,1,0,none,0
+3941,AbhiBus,Kanpur,Jaipur,2025-10-23,Sleeper,First,2823.0,1,1,0,31.64763446334548,0,1,0,0,1,0,ocr_tamper,1
+6360,Yatra,Hyderabad,Lucknow,2025-11-14,CC,Sleeper,2315.0,0,0,0,64.06595169568591,0,1,0,0,1,0,no_qr,1
+4879,Cleartrip,Mumbai,Delhi,2026-03-31,Business,Sleeper,2547.0,0,0,0,63.4770510223092,0,1,0,0,1,0,no_qr,1
+3843,GoIbibo,Surat,Bangalore,2026-04-08,Sleeper,Economy,2904.0,1,1,1,86.63151294521224,1,0,1,1,1,1,none,0
+3824,Cleartrip,Kanpur,Chennai,2026-04-25,2A,Business,1807.0,1,1,1,87.84538918486525,1,0,1,1,1,1,none,0
+9715,Yatra,Bhopal,Surat,2026-04-27,First Class,Business,1510.0,1,1,1,93.16715351803349,1,0,1,1,1,1,none,0
+4483,Yatra,Chennai,Kolkata,2026-03-05,3A,Business,459.0,1,1,1,77.83314649865783,1,0,1,1,1,1,none,0
+6089,Cleartrip,Hyderabad,Chennai,2026-01-24,First Class,First,1541.0,1,1,1,84.50084168340524,0,0,1,0,1,1,none,0
+9732,Yatra,Jaipur,Chennai,2025-12-23,2A,Economy,1552.0,1,1,1,88.76863484867413,1,0,1,1,1,1,none,0
+6000,Cleartrip,Surat,Bhopal,2026-01-18,3A,First,2739.0,1,1,1,95.54092096500035,1,0,1,1,1,1,none,0
+6163,IRCTC,Pune,Nagpur,2026-05-25,Sleeper,First,1703.0,1,0,0,50.40440669861492,0,1,0,0,1,0,qr_invalid,1
+5338,MakeMyTrip,Mumbai,Indore,2026-05-31,First Class,First,2739.0,1,1,1,83.48730910983105,1,0,1,0,1,1,none,0
+6645,AbhiBus,Bhopal,Lucknow,2025-10-23,First Class,AC Chair,2358.0,1,1,1,85.77949251249697,1,0,1,1,1,1,none,0
+9766,AbhiBus,Delhi,Nagpur,2026-02-04,AC,Economy,649.0,1,1,1,90.6044956157649,1,0,0,0,1,1,none,0
+4833,IRCTC,Bangalore,Pune,2026-04-09,General,AC Chair,2768.0,1,1,1,59.90106381056887,0,1,0,0,1,0,duplicate,1
+5323,Paytm,Surat,Nagpur,2025-12-03,Business,AC Chair,1047.0,1,1,1,87.5347762577608,1,0,1,1,1,1,none,0
+5264,Paytm,Indore,Pune,2026-02-05,First Class,First,1216.0,1,1,1,78.91493156703588,1,0,1,0,1,1,none,0
+5656,Cleartrip,Hyderabad,Surat,2026-01-03,3A,AC Chair,1578.0,1,1,1,75.84663503375336,1,0,1,0,1,1,none,0
+5379,MakeMyTrip,Surat,Delhi,2026-04-09,AC,Economy,2480.0,1,1,0,41.92671209134491,0,1,0,0,1,0,behavioral,1
+5836,Cleartrip,Bangalore,Lucknow,2026-06-05,2A,Sleeper,839.0,1,1,0,57.669816235606,0,1,0,0,1,0,font_mismatch,1
+4771,MakeMyTrip,Kolkata,Lucknow,2026-02-19,General,Business,1890.0,1,1,1,85.27431464175969,1,0,1,1,1,0,none,0
+1118,RedBus,Bhopal,Mumbai,2026-02-07,CC,First,788.0,1,1,1,88.76749630747712,0,0,0,1,1,1,none,0
+8887,RedBus,Kanpur,Lucknow,2026-01-30,General,AC Chair,3322.0,0,0,0,69.11476016972779,0,1,0,0,1,0,qr_invalid,1
+1005,AbhiBus,Bangalore,Bhopal,2026-06-13,2A,First,2946.0,1,1,1,97.65715597103967,1,0,0,1,1,1,none,0
+8316,RedBus,Bangalore,Kolkata,2025-11-20,3A,Economy,1779.0,1,1,1,87.68974775589892,1,0,1,0,1,1,none,0
+9925,AbhiBus,Kolkata,Nagpur,2026-05-29,Sleeper,First,701.0,1,1,1,83.52018723754195,0,0,1,1,1,1,none,0
+7000,Yatra,Delhi,Kolkata,2026-01-14,AC,AC Chair,2998.0,0,0,0,66.15668898888492,0,1,0,0,1,0,no_qr,1
+2443,AbhiBus,Hyderabad,Mumbai,2025-12-31,Sleeper,Sleeper,1654.0,1,1,1,97.48417785059786,0,0,1,1,1,1,none,0
+8234,Yatra,Mumbai,Surat,2026-05-24,CC,Business,417.0,1,1,1,77.68211277856065,1,0,1,1,1,0,none,0
+2820,Paytm,Indore,Mumbai,2025-10-25,3A,First,1721.0,1,1,1,80.21183739573289,0,0,1,1,1,1,none,0
+1583,Paytm,Jaipur,Hyderabad,2026-05-21,Sleeper,Economy,296.0,1,1,1,89.27427791262959,1,0,1,1,1,1,none,0
+9098,MakeMyTrip,Kolkata,Ahmedabad,2026-02-13,CC,Sleeper,1909.0,1,1,1,80.73068321862455,1,0,0,1,1,1,none,0
+3947,MakeMyTrip,Chennai,Ahmedabad,2026-01-14,CC,Economy,348.0,1,1,0,32.01323877652945,0,1,0,0,1,0,behavioral,1
+4385,AbhiBus,Kolkata,Hyderabad,2026-04-17,First Class,Sleeper,2778.0,1,1,1,82.40411995262708,1,0,1,1,1,1,none,0
+7042,RedBus,Kanpur,Bangalore,2026-01-16,2A,First,3281.0,1,1,1,72.10528930026011,1,0,1,1,1,0,none,0
+2359,Yatra,Ahmedabad,Lucknow,2025-11-30,CC,First,779.0,1,1,1,85.00217931612535,1,0,1,0,1,0,none,0
+1453,GoIbibo,Kanpur,Pune,2026-05-13,Sleeper,AC Chair,882.0,1,1,0,72.28888868803264,0,1,0,0,1,0,font_mismatch,1
+5709,MakeMyTrip,Hyderabad,Bhopal,2026-04-28,CC,AC Chair,2159.0,1,0,0,56.15575040343347,0,1,0,0,1,0,qr_invalid,1
+4781,MakeMyTrip,Bhopal,Nagpur,2026-01-04,AC,Business,2357.0,1,1,1,96.42188579253977,1,0,1,1,1,1,none,0
+8473,AbhiBus,Jaipur,Surat,2026-06-15,Business,Business,3014.0,1,1,0,26.31461864362328,0,1,0,0,1,0,ocr_tamper,1
+1926,RedBus,Lucknow,Hyderabad,2026-02-06,2A,Sleeper,3417.0,1,1,1,96.0931750767444,1,0,1,0,1,1,none,0
+8014,Yatra,Chennai,Ahmedabad,2026-04-06,3A,Sleeper,3010.0,1,1,1,78.2065112840996,1,0,1,1,1,1,none,0
+2559,RedBus,Kanpur,Lucknow,2026-03-13,First Class,AC Chair,2709.0,0,0,0,66.00990677451651,0,1,0,0,1,0,no_qr,1
+2640,RedBus,Ahmedabad,Jaipur,2026-05-17,Business,First,729.0,1,1,1,85.0950833954754,1,0,1,0,1,1,none,0
+7215,RedBus,Pune,Mumbai,2025-12-21,First Class,Sleeper,164.0,1,1,0,64.94661435156561,0,1,0,0,1,0,font_mismatch,1
+3243,RedBus,Mumbai,Bangalore,2026-04-09,First Class,Business,1329.0,1,1,1,88.71090222762211,1,0,1,1,1,1,none,0
+5082,MakeMyTrip,Chennai,Hyderabad,2025-12-29,AC,Economy,1144.0,1,1,1,94.87124786107907,1,0,1,1,1,1,none,0
+8801,Yatra,Bhopal,Nagpur,2026-01-16,3A,Sleeper,3249.0,1,1,1,91.33181736543665,1,0,1,1,1,1,none,0
+6880,AbhiBus,Pune,Kanpur,2026-01-16,Sleeper,First,3428.0,1,1,1,80.77552415799758,1,0,1,1,1,1,none,0
+2528,Cleartrip,Jaipur,Lucknow,2026-01-03,AC,AC Chair,3162.0,1,0,0,59.423854063803375,0,1,0,0,1,0,qr_invalid,1
+4658,RedBus,Nagpur,Hyderabad,2026-03-11,Business,AC Chair,409.0,1,1,0,45.81657885425755,0,1,0,0,1,0,behavioral,1
+1704,GoIbibo,Indore,Kolkata,2026-05-14,AC,Sleeper,2653.0,1,1,1,88.86282061402606,0,0,1,0,1,1,none,0
+1176,Paytm,Kolkata,Bangalore,2026-04-14,AC,Business,3251.0,1,1,1,60.768929648694865,0,1,0,0,1,0,duplicate,1
+4811,RedBus,Hyderabad,Delhi,2026-05-09,2A,Sleeper,1246.0,1,1,1,92.84947421197677,1,0,1,0,1,1,none,0
+4002,AbhiBus,Lucknow,Bangalore,2026-04-21,3A,Economy,3359.0,1,1,1,93.62009188061447,1,0,1,1,1,1,none,0
+1290,Paytm,Bangalore,Kolkata,2026-05-16,2A,AC Chair,2234.0,1,1,1,96.56318696599725,1,0,1,1,1,1,none,0
+2448,IRCTC,Hyderabad,Mumbai,2025-11-11,First Class,Sleeper,2719.0,1,1,0,90.47927648344948,1,0,1,1,1,1,none,0
+1698,Yatra,Jaipur,Delhi,2025-11-28,General,First,2043.0,1,1,1,80.47100130661829,1,0,0,1,1,1,none,0
+7379,IRCTC,Kolkata,Jaipur,2026-01-26,Business,Economy,1750.0,1,1,0,42.823010531946096,0,1,0,0,1,0,behavioral,1
+8237,Cleartrip,Nagpur,Ahmedabad,2025-11-19,AC,AC Chair,2352.0,1,1,1,73.06908029320262,0,0,1,1,1,1,none,0
+4832,RedBus,Ahmedabad,Kanpur,2026-04-12,General,Business,2340.0,1,1,1,90.99412165301031,1,0,1,0,1,1,none,0
+8684,IRCTC,Nagpur,Bangalore,2025-10-20,General,Sleeper,1454.0,1,1,1,80.88855701354531,1,0,1,1,1,1,none,0
+7689,IRCTC,Pune,Bhopal,2026-05-03,General,Sleeper,1955.0,1,1,1,86.40153805954866,1,0,1,1,1,1,none,0
+9571,IRCTC,Delhi,Chennai,2025-12-09,2A,First,1512.0,1,1,1,91.09445632910436,1,0,1,1,1,1,none,0
+6037,Yatra,Kolkata,Hyderabad,2025-12-28,CC,Economy,3026.0,1,1,1,79.01759091461093,1,0,1,1,1,1,none,0
+9758,IRCTC,Ahmedabad,Hyderabad,2026-01-02,General,Sleeper,2887.0,1,1,1,87.10169140990499,1,0,0,0,1,1,none,0
+8912,MakeMyTrip,Kolkata,Surat,2026-05-18,AC,First,871.0,0,0,0,69.10366694828556,0,1,0,0,1,0,no_qr,1
+1575,Yatra,Lucknow,Bangalore,2026-06-02,3A,Business,2539.0,1,1,1,83.13458506319736,1,0,1,1,1,1,none,0
+3102,Paytm,Surat,Kolkata,2026-04-18,Sleeper,Sleeper,882.0,1,1,1,94.5246189143063,1,0,1,1,1,1,none,0
+4476,GoIbibo,Nagpur,Surat,2026-05-30,First Class,Economy,2705.0,1,1,1,97.96078095276374,0,0,1,1,1,1,none,0
+5078,Cleartrip,Lucknow,Hyderabad,2025-11-27,3A,AC Chair,1313.0,1,1,0,70.9292421487913,0,1,0,0,1,0,font_mismatch,1
+8209,IRCTC,Kolkata,Bhopal,2026-05-24,First Class,Business,757.0,1,1,0,75.01674070621479,1,0,1,1,1,1,none,0
+7718,Paytm,Pune,Lucknow,2026-01-27,CC,First,3421.0,1,1,0,22.259742311286544,0,1,0,0,1,0,ocr_tamper,1
+9552,AbhiBus,Jaipur,Hyderabad,2026-03-09,2A,Economy,2215.0,1,1,1,95.91114177810675,1,0,1,1,1,1,none,0
+1238,IRCTC,Kanpur,Indore,2026-06-04,First Class,AC Chair,1530.0,1,1,1,82.29282586087122,1,0,1,1,1,1,none,0
+4026,AbhiBus,Kolkata,Bhopal,2026-04-20,Sleeper,Sleeper,938.0,1,1,1,87.87821323026276,1,0,0,1,1,0,none,0
+9871,Cleartrip,Lucknow,Hyderabad,2026-01-05,Sleeper,Business,1835.0,0,0,0,54.05163389833241,0,1,0,0,1,0,qr_invalid,1
+9135,RedBus,Bhopal,Jaipur,2025-11-14,AC,Economy,2429.0,1,1,1,72.44907430076546,1,0,1,1,1,1,none,0
+3069,Cleartrip,Ahmedabad,Bhopal,2026-02-06,General,AC Chair,2834.0,1,1,1,83.5082649654261,1,0,1,1,1,1,none,0
+1445,Paytm,Bangalore,Delhi,2025-12-23,Sleeper,First,793.0,1,1,1,95.36163395225748,1,0,1,1,1,1,none,0
+9736,GoIbibo,Pune,Surat,2026-01-28,Business,Economy,1340.0,1,1,1,87.03010521478956,1,0,1,1,1,1,none,0
+4170,RedBus,Bangalore,Indore,2026-02-10,AC,Sleeper,517.0,1,1,1,62.20876323911058,0,1,0,0,1,0,duplicate,1
+2018,MakeMyTrip,Bangalore,Lucknow,2026-01-23,CC,Sleeper,2903.0,1,1,1,94.39459090271237,1,0,1,1,1,1,none,0
+4793,AbhiBus,Chennai,Bhopal,2026-02-06,CC,Economy,3025.0,1,1,1,90.80467365970318,1,0,1,1,1,1,none,0
+4786,AbhiBus,Hyderabad,Surat,2026-03-18,General,Sleeper,1965.0,1,1,1,80.44486564286352,1,0,1,1,1,1,none,0
+5477,AbhiBus,Kanpur,Pune,2026-04-06,AC,Sleeper,1807.0,1,1,0,85.13589791788452,1,0,1,0,1,1,none,0
+5491,Yatra,Jaipur,Kanpur,2026-02-23,Sleeper,Business,661.0,1,1,1,89.70521969457211,0,0,1,1,1,1,none,0
+3174,GoIbibo,Bangalore,Pune,2025-12-17,AC,Business,1228.0,1,1,1,89.6000528806041,1,0,1,1,1,0,none,0
+2311,GoIbibo,Ahmedabad,Kanpur,2025-12-09,Business,AC Chair,2795.0,1,1,0,31.19565580291483,0,1,0,0,1,0,behavioral,1
+2313,IRCTC,Jaipur,Kanpur,2025-12-07,AC,AC Chair,513.0,1,1,1,92.06863191849746,1,0,1,1,1,1,none,0
+7620,IRCTC,Bangalore,Delhi,2026-04-09,Business,Economy,1627.0,1,1,1,85.92286842320887,1,0,1,1,1,1,none,0
+1607,MakeMyTrip,Ahmedabad,Surat,2026-02-13,Sleeper,Economy,2924.0,1,1,1,79.00071125426047,1,0,1,1,1,1,none,0
+5207,AbhiBus,Indore,Hyderabad,2026-03-03,2A,First,1840.0,1,1,1,75.95032843060118,1,0,1,1,1,1,none,0
+6253,AbhiBus,Kanpur,Kolkata,2026-03-06,First Class,Business,2822.0,1,1,0,34.55586196628529,0,1,0,0,1,0,ocr_tamper,1
+4458,RedBus,Surat,Lucknow,2026-05-31,General,First,3201.0,1,1,0,56.99396891785914,0,1,0,0,1,0,metadata_tamper,1
+3515,GoIbibo,Indore,Jaipur,2026-02-10,3A,Sleeper,3497.0,1,1,1,57.223961114487025,0,1,0,0,1,0,duplicate,1
+1635,Paytm,Pune,Bhopal,2026-04-09,2A,Business,968.0,0,0,0,65.10256535043348,0,1,0,0,1,0,no_qr,1
+9775,IRCTC,Surat,Lucknow,2026-06-05,Business,AC Chair,861.0,1,1,1,83.94094480386791,1,0,1,1,1,1,none,0
+2187,Paytm,Hyderabad,Ahmedabad,2026-01-20,First Class,Economy,1084.0,1,1,1,74.29346538396642,1,0,1,1,1,1,none,0
+5173,IRCTC,Pune,Delhi,2025-11-30,First Class,Sleeper,3445.0,1,1,0,66.76026574462205,0,1,0,0,1,0,metadata_tamper,1
+1481,GoIbibo,Lucknow,Bhopal,2026-03-03,AC,Sleeper,795.0,1,1,1,75.08025374580585,1,0,1,1,1,1,none,0
+2860,IRCTC,Bhopal,Nagpur,2025-11-25,2A,First,1540.0,1,1,1,90.1064656739564,1,0,1,1,1,1,none,0
+1711,Cleartrip,Chennai,Delhi,2026-03-07,AC,AC Chair,1944.0,1,1,1,88.50884103819463,1,0,1,0,1,1,none,0
+2012,Yatra,Indore,Delhi,2026-03-25,Sleeper,Sleeper,756.0,1,1,1,94.2141523424286,1,0,1,0,1,1,none,0
+6832,Yatra,Nagpur,Kolkata,2026-05-18,CC,Business,2043.0,1,1,1,57.476251195496204,0,1,0,0,1,0,duplicate,1
+7025,Cleartrip,Indore,Kolkata,2026-02-02,2A,Sleeper,3376.0,0,0,0,65.3618504868664,0,1,0,0,1,0,no_qr,1
+1840,RedBus,Hyderabad,Surat,2025-11-13,Sleeper,Sleeper,1761.0,1,1,1,95.129434446257,1,0,1,1,1,1,none,0
+2626,GoIbibo,Jaipur,Nagpur,2026-03-23,Business,Economy,487.0,1,1,0,37.47579522607999,0,1,0,0,1,0,behavioral,1
+4032,GoIbibo,Jaipur,Bhopal,2026-04-17,AC,Economy,1173.0,1,1,1,92.23580115513005,1,0,1,1,1,0,none,0
+7797,Paytm,Lucknow,Pune,2026-02-24,3A,AC Chair,741.0,1,1,1,96.04323376178941,1,0,1,1,1,1,none,0
+2751,MakeMyTrip,Indore,Bangalore,2026-03-06,AC,Sleeper,183.0,1,1,1,89.09108758969816,1,0,1,1,1,1,none,0
+4713,Paytm,Indore,Surat,2026-06-15,Sleeper,First,2573.0,1,1,1,73.73373104709532,1,0,1,0,1,1,none,0
+4291,Yatra,Bhopal,Surat,2026-01-04,General,First,2428.0,1,1,1,86.8275997814972,0,0,1,1,1,1,none,0
+1975,MakeMyTrip,Jaipur,Kanpur,2026-05-29,Sleeper,AC Chair,3036.0,1,1,0,80.9491395423698,1,0,1,1,1,1,none,0
+6879,GoIbibo,Jaipur,Surat,2026-03-01,First Class,AC Chair,1680.0,1,1,1,77.03638456000668,1,0,1,1,1,0,none,0
+6087,GoIbibo,Indore,Surat,2025-11-14,First Class,Business,1287.0,1,1,1,77.51026240936312,1,0,1,1,1,1,none,0
+7192,AbhiBus,Bangalore,Nagpur,2026-02-07,2A,Business,200.0,1,1,0,35.32817995359787,0,1,0,0,1,0,ocr_tamper,1
+5341,Paytm,Kanpur,Nagpur,2025-12-17,Sleeper,AC Chair,2392.0,1,0,0,63.35622624595027,0,1,0,0,1,0,qr_invalid,1
+2334,AbhiBus,Nagpur,Bhopal,2026-04-24,CC,Business,3013.0,1,1,1,95.72005963796457,1,0,1,1,1,1,none,0
+5828,Yatra,Kolkata,Bhopal,2026-02-22,Business,Business,3139.0,1,1,1,61.15595762707727,0,1,0,0,1,0,duplicate,1
+8935,Cleartrip,Nagpur,Chennai,2026-02-28,Business,Sleeper,2444.0,1,1,1,89.47682666135718,1,0,1,0,1,1,none,0
+9393,RedBus,Bangalore,Chennai,2025-11-01,First Class,Sleeper,2802.0,1,1,1,86.56105167285256,1,0,1,1,1,1,none,0
+3341,Paytm,Nagpur,Mumbai,2026-02-22,First Class,Economy,2972.0,1,1,1,89.31322917954421,0,0,1,1,1,1,none,0
+1411,IRCTC,Jaipur,Delhi,2026-04-09,CC,Sleeper,2103.0,1,1,1,78.957554154446,1,0,1,1,1,0,none,0
+3164,AbhiBus,Mumbai,Jaipur,2025-12-27,Sleeper,Sleeper,246.0,1,1,1,94.73998849292003,1,0,1,1,1,1,none,0
+7706,Yatra,Jaipur,Kanpur,2026-03-02,CC,Economy,1803.0,1,1,1,84.15596365366935,0,0,1,0,1,1,none,0
+3056,Yatra,Hyderabad,Lucknow,2025-10-30,CC,Business,1606.0,1,1,0,69.46774508390159,0,1,0,0,1,0,font_mismatch,1
+6025,IRCTC,Bhopal,Nagpur,2026-05-07,2A,Business,2900.0,1,1,1,90.71227013963193,1,0,0,1,1,1,none,0
+2271,AbhiBus,Kanpur,Lucknow,2026-01-06,General,Business,1119.0,1,1,1,91.33269744696454,0,0,1,1,1,1,none,0
+9471,Paytm,Indore,Kanpur,2025-12-02,General,Business,1340.0,1,1,1,96.41811607821127,1,0,1,1,1,1,none,0
+1008,Paytm,Jaipur,Delhi,2025-12-21,First Class,AC Chair,1452.0,1,1,1,53.160873066666596,0,1,0,0,1,0,duplicate,1
+8286,IRCTC,Mumbai,Indore,2026-01-25,Business,AC Chair,2260.0,1,1,1,73.54340481293934,1,0,0,1,1,1,none,0
+3551,IRCTC,Bhopal,Hyderabad,2025-11-18,AC,AC Chair,2299.0,1,1,1,94.32429454624526,0,0,1,1,1,1,none,0
+8665,GoIbibo,Kanpur,Nagpur,2026-04-21,3A,Sleeper,2691.0,1,1,0,59.16276408070082,0,1,0,0,1,0,behavioral,1
+9704,GoIbibo,Bangalore,Nagpur,2026-01-07,CC,First,567.0,1,1,0,46.77286648404575,0,1,0,0,1,0,behavioral,1
+8145,Yatra,Bhopal,Delhi,2025-12-15,AC,Sleeper,2217.0,1,1,1,74.60235913237946,0,0,1,1,1,1,none,0
+4338,IRCTC,Delhi,Chennai,2025-11-07,2A,AC Chair,2530.0,1,1,1,93.9734140416553,1,0,1,0,1,1,none,0
+2547,AbhiBus,Jaipur,Pune,2025-12-14,2A,Business,2909.0,1,1,0,35.17660222831269,0,1,0,0,1,0,ocr_tamper,1
+1589,GoIbibo,Delhi,Kolkata,2025-12-19,General,Business,1130.0,1,1,0,40.75369418708743,0,1,0,0,1,0,ocr_tamper,1
+7958,Cleartrip,Hyderabad,Kanpur,2026-02-15,Sleeper,First,393.0,1,1,1,93.38389368705882,1,0,0,1,1,1,none,0
+2826,MakeMyTrip,Ahmedabad,Nagpur,2025-11-02,CC,Sleeper,430.0,1,1,1,91.97686043686222,1,0,1,1,1,1,none,0
+9212,Cleartrip,Delhi,Indore,2026-03-31,2A,AC Chair,2637.0,1,1,1,81.29503878899433,1,0,1,1,1,1,none,0
+6533,Paytm,Delhi,Surat,2026-01-09,First Class,First,3165.0,1,1,1,73.89284024031231,1,0,1,1,1,1,none,0
+3490,Cleartrip,Bangalore,Mumbai,2026-04-04,Sleeper,Sleeper,2519.0,1,1,1,62.085145236550645,0,1,0,0,1,0,duplicate,1
+9583,AbhiBus,Ahmedabad,Lucknow,2026-05-26,First Class,First,466.0,1,1,0,49.44088650069884,0,1,0,0,1,0,ocr_tamper,1
+8140,MakeMyTrip,Hyderabad,Bhopal,2025-11-10,General,Sleeper,1265.0,1,1,1,89.89151554012209,0,0,0,1,1,1,none,0
+2303,Paytm,Nagpur,Jaipur,2026-04-13,AC,Sleeper,0.5,1,1,0,67.02535773920121,0,1,0,0,0,0,price_mismatch,1
+8527,Cleartrip,Chennai,Bhopal,2026-03-20,2A,AC Chair,1475.0,1,1,1,72.71015095137454,0,0,1,1,1,1,none,0
+2505,Cleartrip,Delhi,Bangalore,2026-02-27,Sleeper,AC Chair,3294.0,1,1,0,51.764198589304605,0,1,0,0,1,0,behavioral,1
+5855,Yatra,Nagpur,Pune,2026-01-12,3A,First,988.0,1,1,1,97.04697006776765,1,0,1,1,1,1,none,0
+6820,IRCTC,Mumbai,Lucknow,2025-11-20,AC,Business,2746.0,1,1,1,87.25173717224844,1,0,1,0,1,0,none,0
+1962,RedBus,Jaipur,Mumbai,2026-06-08,First Class,AC Chair,2805.0,1,1,0,20.29477115319586,0,1,0,0,1,0,ocr_tamper,1
+2965,Paytm,Bhopal,Mumbai,2025-12-14,AC,AC Chair,3269.0,0,0,0,63.471545461377396,0,1,0,0,1,0,qr_invalid,1
+5149,MakeMyTrip,Kolkata,Lucknow,2026-06-17,3A,Economy,9999.0,1,1,0,58.067356511470535,0,1,0,0,0,0,price_mismatch,1
+4575,AbhiBus,Pune,Lucknow,2025-12-19,First Class,Business,251.0,1,1,1,73.54939550505914,1,0,1,1,1,1,none,0
+2744,IRCTC,Ahmedabad,Jaipur,2026-03-21,AC,First,2583.0,1,1,0,57.513607974250874,0,1,0,0,1,0,behavioral,1
+4123,Yatra,Surat,Ahmedabad,2025-12-10,3A,Business,3347.0,1,1,0,29.66644374921527,0,1,0,0,1,0,ocr_tamper,1
+2869,MakeMyTrip,Indore,Pune,2026-03-04,Sleeper,First,3169.0,1,1,1,89.19970450220227,1,0,1,1,1,1,none,0
+6369,Paytm,Surat,Pune,2026-05-05,First Class,AC Chair,868.0,1,1,1,96.59250944162699,1,0,1,1,1,1,none,0
+9498,IRCTC,Nagpur,Kanpur,2026-05-28,3A,Sleeper,629.0,1,1,1,89.30522933391428,1,0,1,1,1,1,none,0
+9025,MakeMyTrip,Ahmedabad,Kolkata,2025-10-30,General,First,2175.0,1,1,1,85.94504883194644,1,0,1,0,1,1,none,0
+1381,RedBus,Bhopal,Indore,2026-05-23,2A,AC Chair,2413.0,1,1,1,96.09610780370159,1,0,1,1,1,1,none,0
+7066,IRCTC,Indore,Jaipur,2026-01-22,Sleeper,Economy,3046.0,1,1,0,59.05821038377083,0,1,0,0,1,0,font_mismatch,1
+9444,Cleartrip,Pune,Bhopal,2025-10-26,2A,First,1304.0,1,1,0,34.364346088515184,0,1,0,0,1,0,ocr_tamper,1
+7113,GoIbibo,Kolkata,Nagpur,2025-10-31,2A,Business,2677.0,1,1,1,91.85759881783602,1,0,1,1,1,1,none,0
+1955,GoIbibo,Bhopal,Pune,2026-06-03,Business,Sleeper,2412.0,1,1,1,83.39095420767491,1,0,1,1,1,0,none,0
+7341,AbhiBus,Indore,Lucknow,2025-12-09,3A,First,1824.0,1,1,1,69.7512819871208,0,1,0,0,1,0,duplicate,1
+4112,Paytm,Jaipur,Chennai,2026-05-09,AC,Sleeper,1561.0,1,1,1,94.81120871538651,1,0,1,1,1,1,none,0
+3044,Paytm,Bhopal,Mumbai,2026-02-15,Business,First,1509.0,1,1,0,60.74786741837682,0,1,0,0,1,0,font_mismatch,1
+5197,Yatra,Bangalore,Delhi,2025-10-20,2A,AC Chair,592.0,1,1,1,75.92315943662787,1,0,1,1,1,1,none,0
+7166,RedBus,Bangalore,Nagpur,2025-11-04,3A,Economy,2358.0,1,1,0,66.25941769027588,0,1,0,0,1,0,metadata_tamper,1
+9145,AbhiBus,Bangalore,Ahmedabad,2025-11-09,AC,First,1766.0,1,1,1,87.71578759433467,1,0,1,1,1,0,none,0
+6904,AbhiBus,Delhi,Kanpur,2026-06-07,3A,First,2998.0,0,0,0,51.46175989391823,0,1,0,0,1,0,no_qr,1
+8273,AbhiBus,Bhopal,Jaipur,2025-12-07,CC,Economy,3193.0,1,1,1,72.59590350254727,1,0,1,1,1,1,none,0
+5439,AbhiBus,Jaipur,Pune,2025-10-27,Sleeper,Economy,3380.0,1,1,1,78.76468977647113,1,0,1,0,1,1,none,0
+5513,Cleartrip,Indore,Chennai,2025-10-20,Business,Sleeper,3027.0,1,1,1,74.61638939043229,1,0,1,1,1,1,none,0
+8257,IRCTC,Mumbai,Bhopal,2026-05-26,2A,Sleeper,687.0,1,1,1,78.48942219764018,1,0,1,1,1,0,none,0
+9554,AbhiBus,Jaipur,Nagpur,2026-04-24,CC,First,1152.0,1,1,1,79.4099352490095,1,0,1,0,1,1,none,0
+9075,IRCTC,Kolkata,Nagpur,2025-11-10,CC,Sleeper,1035.0,1,1,1,66.60689301189859,0,1,0,0,1,0,duplicate,1
+5502,MakeMyTrip,Bangalore,Hyderabad,2026-06-17,First Class,Business,2269.0,1,1,1,59.81183050701833,0,1,0,0,1,0,duplicate,1
+6815,AbhiBus,Hyderabad,Bhopal,2026-02-04,Business,Sleeper,3180.0,1,1,1,89.42899157127607,1,0,1,0,1,1,none,0
+4106,Cleartrip,Hyderabad,Surat,2026-05-14,Business,Business,3486.0,1,1,0,95.02137582225014,0,0,1,1,1,1,none,0
+1689,AbhiBus,Mumbai,Surat,2025-12-03,First Class,Business,9999.0,1,1,0,67.29181162161382,0,1,0,0,0,0,price_mismatch,1
+1542,Yatra,Jaipur,Delhi,2026-06-15,First Class,First,3110.0,1,1,1,89.32748173707142,1,0,1,1,1,1,none,0
+4249,MakeMyTrip,Kanpur,Mumbai,2025-11-24,AC,AC Chair,1003.0,1,1,0,48.482675817448325,0,1,0,0,1,0,ocr_tamper,1
+6661,IRCTC,Surat,Ahmedabad,2026-03-03,AC,Sleeper,837.0,1,1,1,74.95974972037821,1,0,1,1,1,0,none,0
+4471,IRCTC,Jaipur,Bhopal,2025-11-20,3A,AC Chair,1991.0,1,1,1,72.46328333498847,1,0,1,1,1,1,none,0
+4196,Cleartrip,Hyderabad,Indore,2026-01-07,AC,AC Chair,2771.0,1,1,1,81.66626325706774,0,0,1,0,1,0,none,0
+5914,GoIbibo,Delhi,Lucknow,2026-02-14,3A,AC Chair,2201.0,1,1,1,94.32488122545793,1,0,1,1,1,1,none,0
+3119,RedBus,Delhi,Lucknow,2025-12-07,Business,Sleeper,3294.0,1,1,0,62.182820725890245,0,1,0,0,1,0,font_mismatch,1
+4783,MakeMyTrip,Delhi,Kanpur,2026-03-17,CC,Economy,1331.0,1,1,0,68.47875731586608,0,1,0,0,1,0,font_mismatch,1
+4583,MakeMyTrip,Jaipur,Lucknow,2026-02-12,3A,First,0.5,1,1,0,69.81937517545094,0,1,0,0,0,0,price_mismatch,1
+6150,Cleartrip,Kolkata,Indore,2026-05-05,Business,Business,1077.0,1,1,1,82.27257763633489,1,0,1,1,1,1,none,0
+4289,Cleartrip,Bangalore,Bhopal,2026-03-30,CC,Economy,963.0,1,1,1,89.86681435440407,0,0,1,1,1,0,none,0
+8127,Yatra,Hyderabad,Lucknow,2026-02-17,2A,AC Chair,290.0,1,1,1,75.09454644010664,1,0,1,1,1,1,none,0
+5922,AbhiBus,Kanpur,Jaipur,2026-02-06,General,First,1304.0,1,1,1,89.23593891050912,1,0,1,1,1,1,none,0
+8488,RedBus,Bangalore,Chennai,2026-03-27,Business,Economy,372.0,1,1,0,48.39893060301222,0,1,0,0,1,0,behavioral,1
+7049,GoIbibo,Chennai,Kolkata,2025-12-04,Sleeper,Business,1312.0,1,1,1,79.72429630550525,1,0,1,1,1,1,none,0
+1062,Paytm,Indore,Mumbai,2026-02-02,AC,First,2050.0,1,1,0,46.47614377005543,0,1,0,0,1,0,ocr_tamper,1
+3512,GoIbibo,Mumbai,Indore,2025-12-27,Sleeper,Economy,1281.0,1,1,0,96.7254455362939,1,0,1,1,1,1,none,0
+7677,Yatra,Hyderabad,Nagpur,2026-03-16,2A,Economy,202.0,1,1,1,97.20075094357458,1,0,1,1,1,1,none,0
+3883,RedBus,Kolkata,Jaipur,2026-05-07,CC,Economy,401.0,1,1,1,90.69050515347742,1,0,1,1,1,0,none,0
+7282,MakeMyTrip,Kanpur,Delhi,2025-12-10,AC,AC Chair,436.0,1,1,1,81.73868748419183,1,0,1,1,1,1,none,0
+6517,IRCTC,Delhi,Jaipur,2026-04-12,AC,First,3004.0,1,1,1,88.12802728374069,1,0,1,1,1,1,none,0
+7497,Paytm,Kolkata,Delhi,2025-10-30,2A,Economy,1425.0,1,1,1,77.92828729374274,1,0,1,1,1,1,none,0
+3289,GoIbibo,Ahmedabad,Mumbai,2026-04-18,Business,AC Chair,2960.0,1,1,1,90.19332919660594,1,0,1,1,1,1,none,0
+2752,Cleartrip,Delhi,Jaipur,2026-02-07,Sleeper,Business,1643.0,0,0,0,51.108509332815856,0,1,0,0,1,0,qr_invalid,1
+7485,MakeMyTrip,Mumbai,Hyderabad,2026-04-26,3A,Business,3483.0,1,1,1,74.38067116980412,1,0,0,0,1,0,none,0
+8509,Paytm,Kanpur,Indore,2025-10-29,CC,AC Chair,426.0,1,1,1,50.83082675332307,0,1,0,0,1,0,duplicate,1
+5941,Yatra,Kolkata,Indore,2025-12-31,Business,Economy,2698.0,1,1,1,74.41754293833104,1,0,0,1,1,1,none,0
+6402,Paytm,Indore,Bhopal,2025-11-17,CC,Sleeper,1396.0,1,1,1,87.18359875081744,1,0,1,1,1,1,none,0
+1978,MakeMyTrip,Kanpur,Jaipur,2026-05-11,CC,Sleeper,1582.0,1,1,1,78.62070525041469,0,0,1,0,1,1,none,0
+7148,AbhiBus,Nagpur,Hyderabad,2025-12-31,CC,First,1227.0,1,1,1,79.52626199448484,1,0,1,1,1,1,none,0
+3140,Paytm,Surat,Delhi,2025-11-12,Business,AC Chair,2921.0,1,1,1,92.60086041668995,1,0,1,1,1,1,none,0
+5256,Paytm,Nagpur,Indore,2026-05-11,First Class,Economy,520.0,1,1,0,48.49093567763826,0,1,0,0,1,0,ocr_tamper,1
+1747,Cleartrip,Jaipur,Surat,2025-11-06,AC,AC Chair,545.0,1,1,0,67.8208222269057,0,1,0,0,1,0,font_mismatch,1
+6817,Yatra,Ahmedabad,Indore,2025-12-14,Business,AC Chair,1805.0,1,1,1,87.94065786092813,1,0,1,1,1,1,none,0
+5331,GoIbibo,Lucknow,Indore,2025-12-18,General,AC Chair,2758.0,1,1,1,86.15013024453017,1,0,1,0,1,1,none,0
+4971,GoIbibo,Mumbai,Jaipur,2026-03-08,CC,Economy,1019.0,0,0,0,51.69033746821413,0,1,0,0,1,0,no_qr,1
+1925,Cleartrip,Jaipur,Nagpur,2025-11-18,Business,First,2312.0,1,1,1,73.66224319860908,1,0,1,1,1,1,none,0
+6792,Paytm,Delhi,Bangalore,2025-12-07,Sleeper,Business,1180.0,1,1,1,85.46640627396893,1,0,1,1,1,1,none,0
+6302,Cleartrip,Indore,Surat,2026-03-26,2A,Business,624.0,1,1,1,85.09831054201356,1,0,1,0,1,1,none,0
+7065,GoIbibo,Mumbai,Nagpur,2026-04-08,General,AC Chair,1727.0,1,1,1,52.773066781654734,0,1,0,0,1,0,duplicate,1
+7424,IRCTC,Lucknow,Bhopal,2026-04-08,AC,First,2832.0,0,0,0,69.89681824548393,0,1,0,0,1,0,no_qr,1
+3817,RedBus,Surat,Bhopal,2026-01-11,CC,Economy,3054.0,1,0,0,55.02604001901035,0,1,0,0,1,0,qr_invalid,1
+5032,Paytm,Pune,Kanpur,2026-02-09,First Class,First,9999.0,1,1,0,65.54641821476152,0,1,0,0,0,0,price_mismatch,1
+1073,Cleartrip,Ahmedabad,Lucknow,2025-12-07,CC,Business,3035.0,1,1,1,84.75507443266542,1,0,1,0,1,1,none,0
+4363,MakeMyTrip,Nagpur,Kanpur,2026-05-29,3A,Economy,1406.0,1,1,1,74.47709495406424,1,0,1,1,1,1,none,0
+5838,Cleartrip,Indore,Kolkata,2026-02-09,General,AC Chair,1595.0,1,1,1,97.38968128074112,1,0,1,1,1,1,none,0
+1171,AbhiBus,Kolkata,Hyderabad,2026-04-24,General,Economy,1254.0,1,1,0,65.62794850278911,0,1,0,0,1,0,metadata_tamper,1
+6636,Paytm,Nagpur,Jaipur,2025-11-17,General,AC Chair,581.0,1,1,1,76.27178372458008,1,0,1,1,1,1,none,0
+1303,MakeMyTrip,Kolkata,Kanpur,2025-12-13,General,Business,3158.0,1,1,1,93.7627573261156,1,0,1,1,1,1,none,0
+2688,MakeMyTrip,Mumbai,Indore,2026-05-11,3A,First,2683.0,0,0,0,62.574565215357474,0,1,0,0,1,0,no_qr,1
+9469,Cleartrip,Ahmedabad,Pune,2026-05-15,First Class,First,0.5,1,1,0,54.731684338055516,0,1,0,0,0,0,price_mismatch,1
+2336,AbhiBus,Bangalore,Indore,2026-01-15,General,Business,2738.0,1,1,1,73.10872902278166,1,0,0,1,1,1,none,0
+4699,RedBus,Delhi,Bhopal,2026-04-01,CC,AC Chair,246.0,1,1,0,74.77661269355838,0,1,0,0,1,0,font_mismatch,1
+5682,RedBus,Pune,Hyderabad,2026-01-23,First Class,First,1885.0,0,0,0,69.57430906097913,0,1,0,0,1,0,qr_invalid,1
+8142,Cleartrip,Surat,Hyderabad,2026-06-03,First Class,Sleeper,0.5,1,1,0,60.479942826577755,0,1,0,0,0,0,price_mismatch,1
+3331,AbhiBus,Lucknow,Bhopal,2026-05-09,3A,Economy,1423.0,1,1,1,73.86463005383476,1,0,1,1,1,1,none,0
+9282,AbhiBus,Bhopal,Ahmedabad,2025-12-20,2A,First,2853.0,1,1,0,21.39444320804107,0,1,0,0,1,0,ocr_tamper,1
+4362,MakeMyTrip,Ahmedabad,Delhi,2026-02-24,General,Sleeper,435.0,1,1,1,74.6319925897863,1,0,1,1,1,1,none,0
+8274,AbhiBus,Ahmedabad,Pune,2025-12-05,First Class,First,667.0,1,1,1,79.620564699197,1,0,1,1,1,0,none,0
+5162,Paytm,Kanpur,Kolkata,2026-04-18,Business,First,2770.0,1,1,1,85.40913398544038,1,0,1,1,1,1,none,0
+1266,Cleartrip,Bhopal,Jaipur,2026-03-26,General,Business,3219.0,1,1,0,58.50723705181588,0,1,0,0,1,0,behavioral,1
+8312,AbhiBus,Mumbai,Ahmedabad,2026-05-18,General,Economy,2133.0,1,1,1,84.70173847262382,1,0,1,1,1,1,none,0
+4618,IRCTC,Kolkata,Hyderabad,2025-10-28,Sleeper,Business,325.0,1,1,1,91.29972491466734,1,0,1,1,1,1,none,0
+2144,IRCTC,Chennai,Jaipur,2025-11-20,Business,Business,1181.0,1,1,1,78.62607073306562,1,0,1,1,1,0,none,0
+1021,Yatra,Pune,Nagpur,2026-01-09,Business,Business,1708.0,1,1,1,79.33041394628435,1,0,1,0,1,1,none,0
+3209,MakeMyTrip,Delhi,Ahmedabad,2026-03-27,Business,Economy,937.0,1,1,1,97.26035771199045,1,0,0,1,1,1,none,0
+8550,GoIbibo,Indore,Jaipur,2026-04-14,2A,Sleeper,3308.0,1,1,1,83.66552541399162,1,0,1,1,1,1,none,0
+7530,GoIbibo,Pune,Bangalore,2026-01-07,CC,Sleeper,186.0,1,1,1,72.46057408885572,1,0,1,1,1,1,none,0
+5600,MakeMyTrip,Bangalore,Ahmedabad,2026-04-01,Business,Economy,2139.0,1,1,1,89.32497173529165,1,0,1,1,1,1,none,0
+6932,IRCTC,Bhopal,Ahmedabad,2026-04-04,2A,AC Chair,2182.0,1,1,1,65.40157363840123,0,1,0,0,1,0,duplicate,1
+7213,MakeMyTrip,Pune,Kanpur,2026-02-07,3A,Sleeper,2070.0,1,1,1,77.26421704864747,1,0,1,1,1,1,none,0
+4959,Cleartrip,Nagpur,Bhopal,2026-03-07,First Class,Sleeper,2171.0,1,1,0,77.04687958906794,1,0,0,1,1,1,none,0
+3808,Cleartrip,Jaipur,Surat,2026-05-17,First Class,Sleeper,2200.0,1,1,0,67.55454144516216,0,1,0,0,1,0,metadata_tamper,1
+3597,IRCTC,Bhopal,Mumbai,2026-05-15,First Class,Business,1423.0,1,1,1,85.41763806389963,1,0,1,1,1,1,none,0
+8148,Yatra,Lucknow,Hyderabad,2026-05-29,3A,AC Chair,2318.0,1,1,1,91.56370469011468,1,0,1,1,1,1,none,0
+4385,IRCTC,Indore,Bhopal,2026-04-12,First Class,Business,1592.0,1,1,0,65.63955038408763,0,1,0,0,1,0,font_mismatch,1
+7746,IRCTC,Bangalore,Jaipur,2025-11-25,AC,AC Chair,2767.0,0,0,0,65.7112978819057,0,1,0,0,1,0,no_qr,1
+2312,Paytm,Delhi,Chennai,2025-11-30,3A,Sleeper,2993.0,1,1,1,96.06451857766206,1,0,1,1,1,1,none,0
+7078,Cleartrip,Indore,Kolkata,2026-05-01,2A,Business,2842.0,1,1,1,94.9043802901863,1,0,1,1,1,1,none,0
+1443,MakeMyTrip,Delhi,Pune,2026-03-04,CC,First,2698.0,1,1,1,89.99130305985364,1,0,1,1,1,1,none,0
+2988,GoIbibo,Bangalore,Delhi,2025-12-22,First Class,Sleeper,441.0,1,1,1,92.12522186065783,1,0,1,1,1,1,none,0
+4715,IRCTC,Chennai,Pune,2026-02-10,CC,First,1877.0,1,1,1,78.09183793500546,0,0,1,1,1,1,none,0
+6570,IRCTC,Ahmedabad,Jaipur,2025-12-13,CC,Business,3343.0,1,1,1,83.61520019919033,1,0,1,1,1,0,none,0
+2370,RedBus,Delhi,Bhopal,2025-12-02,First Class,Economy,901.0,1,1,1,72.76673745276513,0,0,1,1,1,1,none,0
+8509,RedBus,Lucknow,Bangalore,2026-04-14,CC,Sleeper,1891.0,1,1,1,59.855831072214016,0,1,0,0,1,0,duplicate,1
+3660,Yatra,Bangalore,Chennai,2025-11-09,CC,Business,5.0,1,1,0,64.00183998743219,0,1,0,0,0,0,price_mismatch,1
+7905,Yatra,Bangalore,Kanpur,2026-05-13,AC,First,5.0,1,1,0,57.11397094553234,0,1,0,0,0,0,price_mismatch,1
+3639,GoIbibo,Mumbai,Bhopal,2026-02-27,Business,Economy,2735.0,1,1,1,87.7415484196697,1,0,1,1,1,1,none,0
+1701,GoIbibo,Chennai,Lucknow,2025-11-24,General,AC Chair,2550.0,1,1,1,79.20820235027387,1,0,1,1,1,1,none,0
+8147,Yatra,Pune,Chennai,2026-03-09,2A,Business,642.0,1,1,0,23.14481435461954,0,1,0,0,1,0,ocr_tamper,1
+9187,GoIbibo,Indore,Nagpur,2026-02-11,First Class,First,955.0,1,1,0,51.16780471428304,0,1,0,0,1,0,behavioral,1
+8229,Cleartrip,Delhi,Jaipur,2026-05-08,CC,Economy,9999.0,1,1,0,55.29007572542422,0,1,0,0,0,0,price_mismatch,1
+9362,AbhiBus,Delhi,Kolkata,2026-05-20,3A,Economy,1037.0,1,1,1,81.28848079404173,1,0,1,0,1,1,none,0
+5400,GoIbibo,Mumbai,Delhi,2026-03-05,3A,First,246.0,1,1,1,80.09628621119488,1,0,1,1,1,1,none,0
+5849,RedBus,Jaipur,Bangalore,2025-11-07,3A,Sleeper,2656.0,1,1,1,75.47066745194827,1,0,1,1,1,1,none,0
+2722,AbhiBus,Lucknow,Nagpur,2026-04-06,CC,First,3433.0,1,1,1,77.5268073139751,0,0,1,1,1,1,none,0
+3941,GoIbibo,Pune,Chennai,2026-03-07,CC,Business,2731.0,1,1,0,50.115517586440475,0,1,0,0,1,0,behavioral,1
+1459,Cleartrip,Delhi,Kanpur,2026-03-13,CC,First,1068.0,1,1,0,60.3311953497272,0,1,0,0,1,0,font_mismatch,1
+1208,Yatra,Delhi,Nagpur,2026-06-12,CC,Sleeper,678.0,1,1,1,90.54877586194644,1,0,1,1,1,1,none,0
+6326,RedBus,Pune,Indore,2025-11-05,Business,First,3025.0,1,1,1,93.879721889723,1,0,1,1,1,1,none,0
+8975,Cleartrip,Lucknow,Mumbai,2026-02-25,AC,Business,3457.0,1,1,0,34.11766499705104,0,1,0,0,1,0,behavioral,1
+8931,RedBus,Kanpur,Ahmedabad,2026-04-18,2A,First,1723.0,1,1,0,68.6742314470334,0,1,0,0,1,0,font_mismatch,1
+1620,AbhiBus,Indore,Delhi,2025-10-24,Sleeper,Sleeper,3059.0,1,1,1,95.9600303627575,1,0,1,1,1,1,none,0
+1284,MakeMyTrip,Kolkata,Hyderabad,2026-01-25,Sleeper,AC Chair,514.0,1,1,1,83.16377149417792,0,0,1,1,1,1,none,0
+9737,Cleartrip,Mumbai,Ahmedabad,2026-01-18,Sleeper,Economy,588.0,1,1,0,44.54133068016713,0,1,0,0,1,0,behavioral,1
+7828,Yatra,Kanpur,Ahmedabad,2026-06-13,3A,Business,2193.0,1,1,0,44.854286997544264,0,1,0,0,1,0,behavioral,1
+9710,MakeMyTrip,Ahmedabad,Mumbai,2026-02-26,2A,Business,1118.0,1,1,0,80.75724497177404,1,0,1,1,1,1,none,0
+8712,Cleartrip,Surat,Kolkata,2025-11-19,AC,AC Chair,1021.0,1,1,1,77.08071779889309,1,0,1,1,1,1,none,0
+1172,IRCTC,Surat,Chennai,2026-06-01,Sleeper,Economy,2382.0,1,1,1,90.08667529070415,1,0,1,1,1,1,none,0
+6239,RedBus,Surat,Kolkata,2026-03-24,General,First,9999.0,1,1,0,63.23378608126366,0,1,0,0,0,0,price_mismatch,1
+5023,GoIbibo,Lucknow,Kanpur,2026-04-12,AC,Business,2419.0,1,1,1,77.53344492471349,1,0,1,1,1,1,none,0
+9975,Yatra,Nagpur,Bhopal,2025-11-13,Business,Business,1286.0,1,1,1,93.6310365760923,1,0,0,1,1,1,none,0
+2258,RedBus,Surat,Jaipur,2026-05-29,General,Sleeper,3124.0,0,0,0,62.11591989103408,0,1,0,0,1,0,qr_invalid,1
+4643,IRCTC,Bhopal,Mumbai,2026-05-22,General,AC Chair,888.0,1,1,1,96.88608299790205,1,0,1,1,1,1,none,0
+3932,IRCTC,Mumbai,Bangalore,2026-03-02,2A,AC Chair,2535.0,1,1,1,84.04262804195287,1,0,1,1,1,1,none,0
+2177,MakeMyTrip,Bhopal,Pune,2026-01-20,2A,AC Chair,1933.0,1,1,0,64.09561965992359,0,1,0,0,1,0,metadata_tamper,1
+4023,Cleartrip,Delhi,Indore,2026-04-04,3A,Sleeper,1396.0,1,1,1,89.3444142731108,1,0,0,0,1,1,none,0
+6508,Paytm,Mumbai,Jaipur,2026-04-29,Business,Sleeper,2634.0,0,0,0,58.37602033344153,0,1,0,0,1,0,qr_invalid,1
+2483,Yatra,Mumbai,Bhopal,2026-05-22,AC,First,2828.0,1,1,1,50.49141545473907,0,1,0,0,1,0,duplicate,1
+4979,MakeMyTrip,Chennai,Nagpur,2026-02-18,CC,Sleeper,693.0,1,0,0,61.65410134814789,0,1,0,0,1,0,qr_invalid,1
+9747,IRCTC,Kolkata,Ahmedabad,2026-04-17,General,Economy,1315.0,1,1,1,82.71397717151177,0,0,1,1,1,0,none,0
+8433,IRCTC,Surat,Bhopal,2026-06-16,3A,AC Chair,2271.0,1,1,1,87.11694172137854,1,0,1,1,1,1,none,0
+9780,MakeMyTrip,Bhopal,Bangalore,2026-01-24,AC,AC Chair,2314.0,1,1,1,96.42823721533813,1,0,0,1,1,1,none,0
+5220,RedBus,Surat,Indore,2025-11-02,Sleeper,First,2391.0,1,1,1,86.46681709435587,1,0,1,1,1,1,none,0
+7112,AbhiBus,Nagpur,Delhi,2026-02-26,First Class,AC Chair,2960.0,1,1,1,85.81266924959378,1,0,0,1,1,1,none,0
+6342,MakeMyTrip,Nagpur,Chennai,2026-03-17,First Class,First,1036.0,1,1,1,59.68932398553195,0,1,0,0,1,0,duplicate,1
+7596,MakeMyTrip,Bhopal,Kolkata,2026-04-23,Sleeper,Business,1205.0,1,1,1,79.44728465769634,1,0,1,1,1,1,none,0
+6817,Yatra,Lucknow,Nagpur,2026-02-24,General,Sleeper,2583.0,1,1,1,74.48144181704325,1,0,1,1,1,1,none,0
+4563,MakeMyTrip,Jaipur,Kanpur,2026-01-07,Sleeper,Sleeper,3328.0,1,1,1,81.96817396671013,1,0,1,1,1,1,none,0
+3104,Cleartrip,Chennai,Bhopal,2026-01-06,General,Business,2044.0,1,1,1,87.95705988283125,1,0,1,1,1,1,none,0
+3158,AbhiBus,Pune,Bhopal,2026-06-03,2A,AC Chair,638.0,1,1,1,89.56723579097671,1,0,1,1,1,1,none,0
+7778,MakeMyTrip,Lucknow,Surat,2026-01-21,CC,Sleeper,1080.0,0,0,0,68.34316595058667,0,1,0,0,1,0,no_qr,1
+2645,Cleartrip,Jaipur,Pune,2026-03-21,Sleeper,Sleeper,2272.0,1,1,1,97.1404541280681,1,0,1,1,1,1,none,0
+9125,GoIbibo,Surat,Nagpur,2026-01-29,Business,Sleeper,1241.0,1,1,0,27.10940765475798,0,1,0,0,1,0,ocr_tamper,1
+1924,RedBus,Lucknow,Bangalore,2026-06-10,2A,Sleeper,10.0,1,1,0,57.64912691602446,0,1,0,0,0,0,price_mismatch,1
+5875,Yatra,Lucknow,Jaipur,2026-03-20,AC,AC Chair,1497.0,1,1,0,44.00753848289834,0,1,0,0,1,0,behavioral,1
+2031,MakeMyTrip,Bangalore,Kolkata,2026-03-27,AC,AC Chair,2526.0,1,1,0,31.2707572223284,0,1,0,0,1,0,behavioral,1
+6730,Paytm,Jaipur,Delhi,2025-11-20,General,Economy,715.0,0,0,0,60.127075020656974,0,1,0,0,1,0,qr_invalid,1
+7508,Cleartrip,Jaipur,Mumbai,2026-02-08,General,Economy,1026.0,1,1,1,96.63339680608632,1,0,1,1,1,0,none,0
+7940,MakeMyTrip,Kanpur,Jaipur,2026-01-26,AC,First,3178.0,1,1,1,81.26756035741587,0,0,1,1,1,1,none,0
+2463,Paytm,Surat,Delhi,2026-05-22,3A,First,1851.0,1,1,0,34.01870877025496,0,1,0,0,1,0,behavioral,1
+2242,Yatra,Bangalore,Ahmedabad,2026-05-30,Sleeper,Business,1072.0,1,1,1,59.6385077902862,0,1,0,0,1,0,duplicate,1
+3070,RedBus,Indore,Mumbai,2026-05-17,CC,Business,2045.0,1,1,1,77.74239243446036,1,0,1,0,1,1,none,0
+9096,AbhiBus,Hyderabad,Jaipur,2026-05-15,General,AC Chair,2300.0,1,1,1,83.89293563584573,1,0,1,1,1,0,none,0
+4365,RedBus,Bhopal,Indore,2026-03-22,AC,First,1992.0,0,0,0,50.11488727305548,0,1,0,0,1,0,no_qr,1
+8397,AbhiBus,Surat,Jaipur,2026-01-14,Sleeper,Economy,2087.0,1,1,0,53.34353366260778,0,1,0,0,1,0,metadata_tamper,1
+3743,GoIbibo,Chennai,Ahmedabad,2026-01-08,First Class,Business,2390.0,1,1,1,94.58935361133513,1,0,1,1,1,1,none,0
+7929,Yatra,Surat,Indore,2026-03-07,3A,Economy,3423.0,0,0,0,59.33170987931247,0,1,0,0,1,0,no_qr,1
+5791,RedBus,Ahmedabad,Chennai,2026-06-11,3A,Business,0.5,1,1,0,68.42643560830368,0,1,0,0,0,0,price_mismatch,1
+5144,Paytm,Bangalore,Lucknow,2025-12-06,CC,First,337.0,1,1,1,88.76756988201424,1,0,1,0,1,1,none,0
+5798,AbhiBus,Kolkata,Bhopal,2026-05-16,Sleeper,Business,2794.0,1,1,1,90.35248332505371,1,0,1,1,1,1,none,0
+8761,Paytm,Jaipur,Bangalore,2026-04-18,2A,Economy,1846.0,1,1,1,89.60483968123256,1,0,1,1,1,1,none,0
+6087,MakeMyTrip,Bhopal,Surat,2026-05-01,CC,Sleeper,2476.0,1,1,1,92.69369798330553,0,0,1,1,1,1,none,0
+5765,AbhiBus,Bhopal,Indore,2026-01-20,CC,Business,1643.0,1,1,1,86.93513465431913,1,0,1,1,1,0,none,0
+3286,AbhiBus,Pune,Nagpur,2026-01-26,First Class,Business,1138.0,0,0,0,59.18429081473727,0,1,0,0,1,0,no_qr,1
+5077,Yatra,Lucknow,Kanpur,2026-05-08,General,AC Chair,1279.0,1,1,0,37.74500515602108,0,1,0,0,1,0,ocr_tamper,1
+9314,MakeMyTrip,Delhi,Jaipur,2025-11-17,General,Business,1574.0,1,1,1,79.78516184233759,1,0,1,1,1,1,none,0
+2994,MakeMyTrip,Chennai,Nagpur,2026-04-12,AC,AC Chair,1056.0,1,1,1,88.29308222637015,1,0,1,0,1,1,none,0
+3340,IRCTC,Bangalore,Pune,2026-03-11,CC,Business,2233.0,1,1,0,67.89299775673103,0,1,0,0,1,0,font_mismatch,1
+6857,Yatra,Lucknow,Indore,2026-01-19,AC,First,894.0,1,1,1,52.70337494417834,0,1,0,0,1,0,duplicate,1
+5753,Cleartrip,Ahmedabad,Chennai,2026-06-04,AC,AC Chair,816.0,1,1,0,78.67970674332345,1,0,1,0,1,1,none,0
+2152,Paytm,Kolkata,Lucknow,2026-06-04,CC,Business,5.0,1,1,0,50.02243334586206,0,1,0,0,0,0,price_mismatch,1
+7688,Cleartrip,Indore,Ahmedabad,2026-01-16,AC,AC Chair,187.0,1,1,1,88.06618299776724,1,0,0,0,1,1,none,0
+1544,Yatra,Hyderabad,Ahmedabad,2025-11-16,AC,Sleeper,2814.0,1,1,1,91.4092796573303,1,0,1,1,1,1,none,0
+3333,Paytm,Mumbai,Jaipur,2026-01-15,AC,First,1905.0,1,1,1,93.41358117099888,1,0,1,0,1,1,none,0
+1113,AbhiBus,Delhi,Surat,2026-06-09,CC,AC Chair,1372.0,1,1,1,83.03468110612089,1,0,1,1,1,1,none,0
+8854,Yatra,Lucknow,Kolkata,2026-01-03,Sleeper,AC Chair,897.0,1,1,1,96.63170698239446,1,0,1,0,1,1,none,0
+6629,MakeMyTrip,Lucknow,Mumbai,2025-12-21,CC,AC Chair,2898.0,1,1,0,43.88352455858083,0,1,0,0,1,0,behavioral,1
+8155,MakeMyTrip,Pune,Chennai,2026-01-29,Sleeper,Business,1559.0,1,1,1,74.52447232445309,1,0,1,1,1,1,none,0
+2458,GoIbibo,Delhi,Mumbai,2025-12-01,2A,First,3416.0,1,1,1,81.41166908625561,0,0,1,1,1,1,none,0
+5739,Paytm,Delhi,Pune,2026-01-14,General,Business,3239.0,1,1,0,37.80981679585916,0,1,0,0,1,0,ocr_tamper,1
+8446,AbhiBus,Surat,Kolkata,2026-05-05,CC,AC Chair,3287.0,1,1,1,80.14309493019051,1,0,1,1,1,1,none,0
+7728,MakeMyTrip,Mumbai,Nagpur,2025-12-21,Sleeper,Business,3497.0,1,1,0,65.94003952229535,0,1,0,0,1,0,metadata_tamper,1
+9673,IRCTC,Delhi,Pune,2025-12-12,2A,First,2569.0,1,1,0,25.158702597228892,0,1,0,0,1,0,ocr_tamper,1
+6183,RedBus,Indore,Hyderabad,2026-01-16,General,AC Chair,1089.0,1,1,1,91.82092220196364,1,0,1,1,1,1,none,0
+6802,AbhiBus,Mumbai,Lucknow,2025-12-09,Business,Business,1418.0,1,1,0,41.37856663623376,0,1,0,0,1,0,behavioral,1
+8412,AbhiBus,Mumbai,Bhopal,2026-02-25,AC,First,965.0,1,1,1,73.59621695183858,1,0,1,1,1,1,none,0
+9474,GoIbibo,Delhi,Jaipur,2026-02-22,CC,Economy,0.5,1,1,0,58.77961592254616,0,1,0,0,0,0,price_mismatch,1
+1462,AbhiBus,Chennai,Surat,2025-11-14,AC,First,2324.0,1,1,1,76.39343616724511,1,0,1,1,1,0,none,0
+5569,GoIbibo,Mumbai,Jaipur,2025-12-30,First Class,AC Chair,2642.0,1,1,0,39.909574264383295,0,1,0,0,1,0,ocr_tamper,1
+9284,AbhiBus,Chennai,Kanpur,2026-04-07,General,AC Chair,3131.0,1,1,1,79.4358261322162,1,0,1,1,1,1,none,0
+3905,Cleartrip,Hyderabad,Chennai,2025-12-25,CC,Sleeper,1306.0,1,1,1,95.30399207708317,1,0,1,0,1,1,none,0
+6227,MakeMyTrip,Delhi,Bhopal,2026-06-06,Sleeper,Sleeper,1331.0,1,1,1,96.15429458269965,1,0,0,1,1,1,none,0
+9022,IRCTC,Delhi,Nagpur,2026-06-15,2A,Economy,3064.0,1,1,1,89.16784956755718,1,0,1,1,1,1,none,0
+5839,RedBus,Nagpur,Kanpur,2026-03-17,Business,First,2673.0,1,1,1,96.9448863295267,1,0,1,1,1,1,none,0
+4925,AbhiBus,Bhopal,Jaipur,2026-01-01,Business,Sleeper,3472.0,1,1,1,80.43528209435642,1,0,1,1,1,1,none,0
+4793,IRCTC,Surat,Hyderabad,2026-04-01,General,Economy,2056.0,1,1,1,83.61124694992971,0,0,1,1,1,0,none,0
+9755,AbhiBus,Ahmedabad,Indore,2025-12-13,AC,Sleeper,1748.0,1,1,1,77.84685841437786,1,0,1,1,1,1,none,0
+7289,IRCTC,Chennai,Nagpur,2026-06-06,Business,Business,1997.0,1,1,1,85.90354021840592,1,0,0,0,1,1,none,0
+2300,Yatra,Hyderabad,Jaipur,2026-06-09,Sleeper,First,527.0,1,1,1,79.27243497379413,1,0,1,1,1,1,none,0
+2466,Yatra,Ahmedabad,Nagpur,2026-02-13,3A,First,813.0,1,1,1,87.24989915082809,1,0,1,1,1,1,none,0
+2116,Paytm,Chennai,Ahmedabad,2025-11-18,General,First,2987.0,1,1,0,78.64807982597847,1,0,1,0,1,1,none,0
+7761,Paytm,Mumbai,Chennai,2026-03-18,General,AC Chair,2694.0,1,1,0,55.887073393730084,0,1,0,0,1,0,font_mismatch,1
+2881,MakeMyTrip,Lucknow,Surat,2026-03-24,First Class,First,842.0,1,1,1,76.93154365860161,1,0,1,1,1,1,none,0
+2326,GoIbibo,Kanpur,Kolkata,2025-12-22,General,AC Chair,899.0,1,1,0,97.01985401570798,1,0,1,1,1,1,none,0
+2540,AbhiBus,Surat,Ahmedabad,2026-03-27,3A,AC Chair,1951.0,0,0,0,63.53933468679551,0,1,0,0,1,0,no_qr,1
+1533,Yatra,Lucknow,Kanpur,2026-02-26,Business,Economy,674.0,1,1,1,88.154701387509,1,0,1,0,1,0,none,0
+8379,Paytm,Hyderabad,Bangalore,2026-04-08,First Class,First,1247.0,1,1,0,39.03088824532531,0,1,0,0,1,0,behavioral,1
+5740,Paytm,Surat,Pune,2025-11-13,3A,Sleeper,969.0,1,1,0,95.28515336276448,1,0,1,1,1,1,none,0
+7990,Paytm,Kanpur,Bangalore,2026-03-22,General,Business,1360.0,1,1,0,60.13323800427278,0,1,0,0,1,0,metadata_tamper,1
+5845,Paytm,Bhopal,Jaipur,2026-01-09,Business,First,1009.0,1,1,1,72.38931047419713,1,0,1,1,1,1,none,0
+9114,MakeMyTrip,Jaipur,Kolkata,2026-05-04,AC,Sleeper,1330.0,1,1,0,46.977023623819534,0,1,0,0,1,0,behavioral,1
+5289,Cleartrip,Surat,Hyderabad,2026-02-23,2A,AC Chair,2818.0,1,1,1,97.36890560085803,1,0,1,1,1,1,none,0
+6566,RedBus,Kanpur,Ahmedabad,2026-01-29,Business,Sleeper,3361.0,0,0,0,60.58780400895469,0,1,0,0,1,0,no_qr,1
+3920,Paytm,Indore,Ahmedabad,2026-02-16,AC,Economy,2638.0,1,1,1,56.773411230605504,0,1,0,0,1,0,duplicate,1
+8833,Paytm,Lucknow,Pune,2026-01-16,CC,AC Chair,1150.0,1,1,1,76.41170035639702,1,0,1,1,1,1,none,0
+1336,MakeMyTrip,Delhi,Chennai,2026-02-15,General,First,3327.0,1,1,1,86.08787575669568,1,0,1,1,1,1,none,0
+5911,RedBus,Jaipur,Pune,2025-10-31,2A,Economy,1042.0,1,1,1,80.99262390630292,1,0,1,1,1,1,none,0
+2645,Yatra,Kanpur,Surat,2025-11-16,Sleeper,First,2837.0,1,1,1,75.15600994522461,1,0,1,1,1,1,none,0
+6609,GoIbibo,Pune,Surat,2025-12-09,AC,Economy,668.0,0,0,0,55.032004273433486,0,1,0,0,1,0,no_qr,1
+9688,RedBus,Bhopal,Hyderabad,2026-05-17,Business,Business,509.0,1,1,1,86.26459850753625,0,0,1,1,1,1,none,0
+5878,Paytm,Mumbai,Delhi,2025-12-20,Sleeper,AC Chair,385.0,1,1,1,75.65565983374617,1,0,1,1,1,1,none,0
+7551,Paytm,Nagpur,Ahmedabad,2026-02-09,Business,Sleeper,1829.0,1,1,1,75.0527384500147,1,0,1,1,1,1,none,0
+6662,MakeMyTrip,Lucknow,Kanpur,2026-05-29,3A,Business,510.0,1,1,1,88.69159157766649,1,0,1,1,1,1,none,0
+6926,Paytm,Indore,Hyderabad,2026-04-10,3A,Sleeper,1749.0,1,1,1,73.04504859130716,1,0,1,1,1,1,none,0
+9497,Paytm,Mumbai,Ahmedabad,2026-01-28,3A,Business,236.0,1,1,1,63.655540286166065,0,1,0,0,1,0,duplicate,1
+9377,RedBus,Delhi,Surat,2026-06-15,2A,Business,215.0,1,1,1,80.9020412479647,1,0,1,1,1,1,none,0
+5710,Yatra,Indore,Mumbai,2026-03-30,General,Business,198.0,1,1,1,87.07278549454156,1,0,1,1,1,1,none,0
+3697,IRCTC,Pune,Kanpur,2025-10-20,Sleeper,Economy,3418.0,1,0,0,63.25568916196979,0,1,0,0,1,0,qr_invalid,1
+8834,Yatra,Jaipur,Ahmedabad,2026-06-11,Sleeper,Economy,360.0,1,1,1,88.0077975602783,1,0,1,1,1,1,none,0
+1947,IRCTC,Jaipur,Chennai,2025-10-30,General,Sleeper,2352.0,1,1,0,48.78144254006809,0,1,0,0,1,0,behavioral,1
+8276,GoIbibo,Kanpur,Lucknow,2025-12-29,First Class,Business,851.0,1,1,1,87.91795426873232,1,0,1,1,1,1,none,0
+6632,AbhiBus,Lucknow,Bangalore,2026-03-12,2A,First,1851.0,1,0,0,66.36314137864221,0,1,0,0,1,0,qr_invalid,1
+4788,Cleartrip,Kolkata,Jaipur,2025-10-28,CC,First,1056.0,1,1,1,77.66379555332496,1,0,1,1,1,1,none,0
+3742,GoIbibo,Kanpur,Bangalore,2026-04-17,3A,Business,2397.0,1,1,1,72.58686449984837,1,0,1,1,1,1,none,0
+6523,MakeMyTrip,Hyderabad,Bangalore,2025-12-18,First Class,Business,2431.0,1,1,1,66.70130691144763,0,1,0,0,1,0,duplicate,1
+4414,RedBus,Hyderabad,Pune,2025-10-30,2A,Sleeper,3219.0,1,1,1,72.75747086299286,1,0,1,1,1,1,none,0
+4166,Paytm,Hyderabad,Nagpur,2026-05-27,General,AC Chair,1260.0,1,1,1,85.51109621754655,1,0,1,1,1,1,none,0
+4318,AbhiBus,Hyderabad,Mumbai,2026-02-28,First Class,AC Chair,2496.0,1,1,1,87.19799221193433,1,0,0,1,1,1,none,0
+9497,Yatra,Jaipur,Bangalore,2026-03-17,3A,First,1677.0,1,1,1,79.65395022789878,1,0,1,1,1,1,none,0
+8893,Cleartrip,Surat,Delhi,2026-03-14,Sleeper,Economy,2331.0,1,1,1,87.86045655863296,1,0,1,1,1,1,none,0
+8676,Paytm,Lucknow,Indore,2025-11-11,Business,Sleeper,1638.0,1,0,0,69.37114948812098,0,1,0,0,1,0,qr_invalid,1
+8558,Cleartrip,Bhopal,Nagpur,2026-04-25,Business,AC Chair,9999.0,1,1,0,53.007854218196755,0,1,0,0,0,0,price_mismatch,1
+2022,AbhiBus,Mumbai,Bhopal,2026-02-17,AC,Economy,1718.0,1,1,1,90.3872268249808,1,0,1,1,1,1,none,0
+3567,AbhiBus,Pune,Bangalore,2025-11-28,Business,AC Chair,2401.0,1,1,0,87.97462429826842,1,0,1,1,1,1,none,0
+4772,Paytm,Pune,Bhopal,2025-11-09,Business,Business,467.0,1,1,1,91.96482575056788,1,0,1,1,1,1,none,0
+7110,AbhiBus,Indore,Bangalore,2026-01-27,AC,Sleeper,1972.0,1,1,0,69.06387715769613,0,1,0,0,1,0,font_mismatch,1
+4793,Yatra,Pune,Jaipur,2026-01-07,Sleeper,Economy,2074.0,0,0,0,67.05726879260959,0,1,0,0,1,0,no_qr,1
+7656,MakeMyTrip,Pune,Bhopal,2026-02-04,2A,First,2513.0,1,1,1,82.14595799253578,1,0,1,1,1,1,none,0
+3293,GoIbibo,Kanpur,Jaipur,2026-06-03,General,AC Chair,1736.0,1,1,0,54.42795115988479,0,1,0,0,1,0,metadata_tamper,1
+1202,Cleartrip,Nagpur,Surat,2026-04-26,General,Economy,729.0,1,1,0,27.387851074950827,0,1,0,0,1,0,ocr_tamper,1
+4761,AbhiBus,Bhopal,Hyderabad,2025-10-26,3A,Business,3414.0,1,1,0,36.50392904601554,0,1,0,0,1,0,ocr_tamper,1
+3115,Cleartrip,Hyderabad,Kanpur,2026-06-10,Business,First,1353.0,1,1,1,79.01205038286821,1,0,1,1,1,1,none,0
+8757,GoIbibo,Chennai,Jaipur,2026-03-22,2A,AC Chair,2879.0,1,1,1,74.05713855903034,1,0,1,1,1,1,none,0
+2945,AbhiBus,Jaipur,Nagpur,2025-11-19,General,First,1942.0,1,1,1,86.38494375089608,1,0,0,0,1,1,none,0

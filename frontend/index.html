@@ -1,0 +1,2959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SecureTrail — E-Ticket Fraud Detection</title>
+<link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Cabinet+Grotesk:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+<style>
+/* ═══════════════════════════════════════════════════════
+   DESIGN SYSTEM — Deep Navy · Electric Cyan · Coral Red
+   ═══════════════════════════════════════════════════════ */
+:root{
+  --ink:#050c18;--surface:#091428;--card:#0d1e35;--card2:#111f38;
+  --line:#1a3050;--line2:#243d5e;
+  --cyan:#00d4ff;--cyan2:#00b8d9;--cyan-glow:rgba(0,212,255,.2);
+  --violet:#7c3aed;--violet2:#6d28d9;
+  --coral:#ff4d6d;--coral2:#e63956;--coral-glow:rgba(255,77,109,.2);
+  --gold:#f5a623;--gold2:#e09315;
+  --green:#00e5a0;--green-glow:rgba(0,229,160,.2);
+  --text:#dde8f5;--muted:#5a7a9e;--muted2:#3d5f82;
+  --font-head:'Clash Display',sans-serif;
+  --font-body:'Cabinet Grotesk',sans-serif;
+  --r:14px;--r2:8px;
+  --sh:0 16px 48px rgba(0,0,0,.6);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--ink);color:var(--text);min-height:100vh;overflow-x:hidden}
+::selection{background:var(--cyan);color:#000}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--surface)}
+::-webkit-scrollbar-thumb{background:var(--line2);border-radius:3px}
+
+/* ── PAGES ── */
+.page{display:none;animation:fadeUp .35s ease both}
+.page.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* ── TYPOGRAPHY ── */
+h1,h2,h3,h4{font-family:var(--font-head);letter-spacing:-.3px}
+.text-cyan{color:var(--cyan)} .text-coral{color:var(--coral)}
+.text-green{color:var(--green)} .text-gold{color:var(--gold)}
+.text-muted{color:var(--muted)}
+
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:.45rem;padding:.75rem 1.6rem;
+  border-radius:var(--r2);border:none;font-family:var(--font-body);
+  font-size:.9rem;font-weight:700;cursor:pointer;transition:all .22s;white-space:nowrap}
+.btn-primary{background:var(--cyan);color:#000}
+.btn-primary:hover{background:var(--cyan2);box-shadow:0 0 20px var(--cyan-glow);transform:translateY(-2px)}
+.btn-coral{background:var(--coral);color:#fff}
+.btn-coral:hover{background:var(--coral2);box-shadow:0 0 20px var(--coral-glow);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--text);border:1px solid var(--line2)}
+.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-2px)}
+.btn-violet{background:var(--violet);color:#fff}
+.btn-violet:hover{background:var(--violet2);transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:#000}
+.btn-gold:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn-sm{padding:.5rem 1rem;font-size:.82rem}
+.btn-full{width:100%;justify-content:center}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none!important}
+
+/* ── INPUTS ── */
+.field{margin-bottom:1.1rem}
+.field label{display:block;font-size:.78rem;font-weight:700;color:var(--muted);
+  text-transform:uppercase;letter-spacing:.07em;margin-bottom:.45rem}
+.field input,.field select{width:100%;padding:.8rem 1rem;
+  background:var(--card2);border:1px solid var(--line);
+  border-radius:var(--r2);color:var(--text);font-size:.95rem;
+  font-family:var(--font-body);outline:none;transition:border .2s}
+.field input:focus,.field select:focus{border-color:var(--cyan);box-shadow:0 0 0 3px var(--cyan-glow)}
+.field input::placeholder{color:var(--muted2)}
+.field select option{background:var(--card2)}
+
+/* ── CARDS ── */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.75rem}
+.card-sm{padding:1.25rem}
+.card-glow-cyan{box-shadow:0 0 30px var(--cyan-glow)}
+.card-glow-coral{box-shadow:0 0 30px var(--coral-glow)}
+
+/* ════════════════════════════════════════════════════
+   NAV
+   ════════════════════════════════════════════════════ */
+nav{
+  position:sticky;top:0;z-index:200;
+  display:flex;align-items:center;gap:1.5rem;
+  padding:1rem 2.5rem;
+  background:rgba(5,12,24,.88);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--line);
+}
+.logo{font-family:var(--font-head);font-size:1.25rem;font-weight:700;
+  color:var(--text);display:flex;align-items:center;gap:.5rem;cursor:pointer}
+.logo span{color:var(--cyan)}
+.logo .shield{font-size:1.4rem}
+.nav-links{display:flex;align-items:center;gap:.15rem}
+.nav-btn{background:transparent;border:none;color:var(--muted);padding:.5rem .9rem;
+  border-radius:6px;font-size:.87rem;font-weight:600;cursor:pointer;transition:all .2s;
+  font-family:var(--font-body)}
+.nav-btn:hover,.nav-btn.act{color:var(--text);background:var(--card)}
+#nav-right{display:flex;align-items:center;gap:.75rem;margin-left:auto}
+#nav-user{display:none;align-items:center;gap:.75rem}
+.avatar{width:36px;height:36px;border-radius:50%;
+  background:linear-gradient(135deg,var(--violet),var(--cyan));
+  display:flex;align-items:center;justify-content:center;
+  font-size:.9rem;font-weight:800;color:#fff;flex-shrink:0}
+#nav-name{font-size:.85rem;color:var(--muted);font-weight:600}
+
+/* ════════════════════════════════════════════════════
+   HERO
+   ════════════════════════════════════════════════════ */
+.hero{
+  position:relative;overflow:hidden;
+  padding:6rem 2.5rem 4.5rem;text-align:center;
+}
+/* Animated grid bg */
+.hero::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(0,212,255,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,212,255,.05) 1px,transparent 1px);
+  background-size:52px 52px;
+  mask-image:radial-gradient(ellipse 90% 70% at 50% 0%,#000 50%,transparent 100%);
+  animation:gridMove 20s linear infinite;
+}
+@keyframes gridMove{from{background-position:0 0}to{background-position:52px 52px}}
+/* Glow orbs */
+.hero::after{
+  content:'';position:absolute;
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle,rgba(124,58,237,.12) 0%,transparent 70%);
+  top:-100px;left:50%;transform:translateX(-50%);pointer-events:none;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.25);
+  color:var(--cyan);font-size:.78rem;font-weight:700;letter-spacing:.1em;
+  padding:.38rem 1rem;border-radius:99px;margin-bottom:1.75rem;
+  text-transform:uppercase;position:relative;z-index:1;
+}
+.hero h1{
+  font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:700;
+  line-height:1.08;letter-spacing:-1.5px;margin-bottom:1.25rem;
+  position:relative;z-index:1;
+}
+.hero h1 em{font-style:normal;
+  background:linear-gradient(135deg,var(--cyan) 0%,var(--violet) 50%,var(--coral) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-size:200%;animation:hue 5s ease infinite alternate;
+}
+@keyframes hue{from{background-position:0%}to{background-position:100%}}
+.hero p{font-size:1.1rem;color:var(--muted);max-width:530px;margin:0 auto 2.25rem;
+  line-height:1.75;position:relative;z-index:1}
+.hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;position:relative;z-index:1}
+
+/* ── Hero split layout ── */
+.hero-split{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  min-height:92vh;position:relative;overflow:hidden;
+}
+@media(max-width:900px){.hero-split{grid-template-columns:1fr;min-height:auto}}
+.hero-left{
+  display:flex;flex-direction:column;justify-content:center;
+  padding:5rem 3.5rem 5rem 4rem;position:relative;z-index:2;
+}
+@media(max-width:900px){.hero-left{padding:4rem 2rem 3rem}}
+.hero-right{
+  position:relative;overflow:hidden;
+}
+.hero-right-img{
+  width:100%;height:100%;object-fit:cover;object-position:center;
+  opacity:.7;display:block;
+}
+.hero-right-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to right,var(--ink) 0%,transparent 30%),
+             linear-gradient(to top,var(--ink) 0%,transparent 40%);
+}
+/* Floating cards on hero image */
+.hero-float-card{
+  position:absolute;background:rgba(9,20,40,.85);
+  backdrop-filter:blur(12px);border:1px solid var(--line2);
+  border-radius:12px;padding:.85rem 1.1rem;font-size:.82rem;
+  animation:floatUp 3s ease-in-out infinite alternate;
+}
+.hero-float-card:nth-child(2){animation-delay:.8s}
+.hero-float-card:nth-child(3){animation-delay:1.6s}
+@keyframes floatUp{from{transform:translateY(0)}to{transform:translateY(-10px)}}
+.hfc-top{top:18%;right:8%}
+.hfc-mid{top:48%;right:4%}
+.hfc-bot{top:72%;right:14%}
+.hfc-label{color:var(--muted);font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;margin-bottom:.25rem}
+.hfc-val{font-family:var(--font-head);font-weight:700;font-size:.95rem}
+
+/* ── Visual image sections ── */
+.img-feature-section{
+  display:grid;grid-template-columns:1fr 1fr;gap:0;
+  min-height:520px;overflow:hidden;
+}
+.img-feature-section.reverse{direction:rtl}
+.img-feature-section.reverse > *{direction:ltr}
+@media(max-width:768px){.img-feature-section{grid-template-columns:1fr}}
+.ifs-img{position:relative;overflow:hidden;min-height:400px}
+.ifs-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.ifs-img:hover img{transform:scale(1.04)}
+.ifs-img-overlay{position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(5,12,24,.6),rgba(0,212,255,.08))}
+.ifs-content{
+  background:var(--surface);padding:4rem 3.5rem;
+  display:flex;flex-direction:column;justify-content:center;
+}
+@media(max-width:768px){.ifs-content{padding:2.5rem 2rem}}
+.ifs-badge{display:inline-flex;align-items:center;gap:.4rem;
+  background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.2);
+  color:var(--cyan);font-size:.72rem;font-weight:700;letter-spacing:.09em;
+  padding:.3rem .8rem;border-radius:99px;margin-bottom:1.25rem;text-transform:uppercase}
+.ifs-content h3{font-family:var(--font-head);font-size:1.75rem;font-weight:700;
+  line-height:1.2;margin-bottom:.85rem;letter-spacing:-.3px}
+.ifs-content p{color:var(--muted);line-height:1.75;font-size:.95rem;margin-bottom:1.5rem}
+.ifs-list{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.75rem}
+.ifs-list-item{display:flex;align-items:center;gap:.6rem;font-size:.88rem;color:var(--muted)}
+.ifs-list-item::before{content:'✓';color:var(--green);font-weight:800;flex-shrink:0}
+
+/* ── Showcase image grid ── */
+.showcase-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:240px 240px;
+  gap:3px;overflow:hidden;
+}
+@media(max-width:700px){.showcase-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto}}
+.sg-item{position:relative;overflow:hidden;cursor:pointer}
+.sg-item img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.sg-item:hover img{transform:scale(1.08)}
+.sg-item:first-child{grid-row:span 2}
+.sg-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,12,24,.8) 0%,transparent 50%);
+  display:flex;align-items:flex-end;padding:1rem 1.1rem}
+.sg-label{font-family:var(--font-head);font-size:.85rem;font-weight:600;color:#fff}
+
+/* ── Testimonial / trust strip ── */
+.trust-strip{
+  background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  padding:2rem 2.5rem;display:flex;align-items:center;justify-content:center;
+  gap:3rem;flex-wrap:wrap;
+}
+.trust-item{display:flex;align-items:center;gap:.6rem;font-size:.88rem;color:var(--muted);font-weight:600}
+.trust-icon{font-size:1.2rem}
+
+/* Stats */
+.stats-row{
+  display:flex;justify-content:center;flex-wrap:wrap;gap:0;
+  background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.stat{padding:1.75rem 2.5rem;text-align:center;flex:1;min-width:140px;
+  border-right:1px solid var(--line)}
+.stat:last-child{border-right:none}
+.stat-n{font-family:var(--font-head);font-size:2rem;font-weight:700}
+.stat-l{font-size:.75rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-top:.2rem}
+
+/* Feature grid */
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.25rem;
+  max-width:1100px;margin:0 auto;padding:4rem 2.5rem}
+.feat-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:1.75rem;transition:all .3s;cursor:default;position:relative;overflow:hidden;
+}
+.feat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  opacity:0;transition:opacity .3s}
+.feat-card.c1::before{background:linear-gradient(90deg,transparent,var(--cyan),transparent)}
+.feat-card.c2::before{background:linear-gradient(90deg,transparent,var(--violet),transparent)}
+.feat-card.c3::before{background:linear-gradient(90deg,transparent,var(--coral),transparent)}
+.feat-card.c4::before{background:linear-gradient(90deg,transparent,var(--green),transparent)}
+.feat-card.c5::before{background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.feat-card.c6::before{background:linear-gradient(90deg,transparent,var(--cyan),transparent)}
+.feat-card:hover{transform:translateY(-5px);border-color:var(--line2)}
+.feat-card:hover::before{opacity:1}
+.feat-icon-wrap{
+  width:52px;height:52px;border-radius:14px;margin-bottom:1.1rem;
+  display:flex;align-items:center;justify-content:center;font-size:1.5rem;
+  background:rgba(0,212,255,.08);border:1px solid rgba(0,212,255,.15);
+}
+.feat-card.c2 .feat-icon-wrap{background:rgba(124,58,237,.08);border-color:rgba(124,58,237,.15)}
+.feat-card.c3 .feat-icon-wrap{background:rgba(255,77,109,.08);border-color:rgba(255,77,109,.15)}
+.feat-card.c4 .feat-icon-wrap{background:rgba(0,229,160,.08);border-color:rgba(0,229,160,.15)}
+.feat-card.c5 .feat-icon-wrap{background:rgba(245,166,35,.08);border-color:rgba(245,166,35,.15)}
+.feat-card.c6 .feat-icon-wrap{background:rgba(0,212,255,.08);border-color:rgba(0,212,255,.15)}
+.feat-img{width:100%;height:130px;object-fit:cover;border-radius:8px;margin-bottom:1rem;
+  display:block;opacity:.8;transition:opacity .3s}
+.feat-card:hover .feat-img{opacity:1}
+.feat-card h3{font-family:var(--font-head);font-size:1rem;margin-bottom:.4rem}
+.feat-card p{font-size:.87rem;color:var(--muted);line-height:1.65}
+
+/* ════════════════════════════════════════════════════
+   AUTH
+   ════════════════════════════════════════════════════ */
+.auth-wrap{
+  min-height:calc(100vh - 65px);display:flex;
+  background:var(--ink);
+}
+.auth-left{
+  flex:1;display:flex;align-items:center;justify-content:center;
+  padding:3rem;background:linear-gradient(135deg,var(--surface),var(--card));
+  border-right:1px solid var(--line);
+}
+.auth-illustration{text-align:center;max-width:380px}
+.auth-illustration .big-icon{font-size:5rem;margin-bottom:1.5rem;display:block}
+.auth-illustration h2{font-family:var(--font-head);font-size:2rem;margin-bottom:.75rem}
+.auth-illustration p{color:var(--muted);line-height:1.7;font-size:.95rem}
+.auth-features{margin-top:1.75rem;text-align:left;display:flex;flex-direction:column;gap:.65rem}
+.auth-feat-row{display:flex;align-items:center;gap:.65rem;font-size:.88rem;color:var(--muted)}
+.auth-feat-row span:first-child{font-size:1rem}
+.auth-right{flex:1;display:flex;align-items:center;justify-content:center;padding:3rem}
+@media(max-width:768px){.auth-left{display:none}.auth-right{width:100%}}
+.auth-box{width:100%;max-width:420px}
+.auth-box h2{font-family:var(--font-head);font-size:1.7rem;margin-bottom:.35rem}
+.auth-box .sub{color:var(--muted);font-size:.9rem;margin-bottom:1.75rem}
+.tabs{display:flex;background:var(--surface);border-radius:var(--r2);padding:4px;margin-bottom:1.5rem}
+.tab{flex:1;padding:.55rem;border:none;background:transparent;color:var(--muted);
+  border-radius:6px;font-size:.88rem;font-weight:700;cursor:pointer;transition:all .2s;
+  font-family:var(--font-body)}
+.tab.act{background:var(--card2);color:var(--text);box-shadow:0 2px 8px rgba(0,0,0,.4)}
+.divider{display:flex;align-items:center;gap:.75rem;margin:.75rem 0;color:var(--muted);font-size:.82rem}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--line)}
+
+/* ════════════════════════════════════════════════════
+   BOOKING FLOW SHARED
+   ════════════════════════════════════════════════════ */
+.flow-wrap{max-width:680px;margin:0 auto;padding:3rem 2rem}
+.flow-header{margin-bottom:2rem}
+.flow-header h2{font-family:var(--font-head);font-size:1.8rem;margin-bottom:.35rem}
+.flow-header p{color:var(--muted);font-size:.92rem}
+.step-bar{display:flex;align-items:center;margin-bottom:2.25rem;gap:0}
+.step{display:flex;align-items:center;gap:.5rem;flex:1}
+.step-num{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:.75rem;font-weight:800;border:2px solid var(--line);
+  color:var(--muted);flex-shrink:0;transition:all .3s}
+.step-num.done{background:var(--green);border-color:var(--green);color:#000}
+.step-num.active{background:var(--cyan);border-color:var(--cyan);color:#000}
+.step-label{font-size:.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.step-label.active-l{color:var(--cyan)}
+.step-line{height:2px;flex:1;background:var(--line);margin:0 .5rem}
+.step-line.done-l{background:var(--green)}
+.fdiv{font-family:var(--font-head);font-size:.75rem;font-weight:700;color:var(--muted);
+  text-transform:uppercase;letter-spacing:.1em;margin:1.5rem 0 .9rem;
+  padding-bottom:.5rem;border-bottom:1px solid var(--line)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media(max-width:540px){.form-row{grid-template-columns:1fr}}
+
+/* Price tag */
+.price-tag{
+  background:linear-gradient(135deg,rgba(0,212,255,.1),rgba(124,58,237,.08));
+  border:1px solid rgba(0,212,255,.25);border-radius:var(--r);
+  padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;
+  margin:1.25rem 0;
+}
+.price-amount{font-family:var(--font-head);font-size:2.2rem;font-weight:700;color:var(--cyan)}
+.price-label{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+
+/* Payment methods visual */
+.pay-methods{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:1.25rem}
+.pay-pill{padding:.45rem .9rem;border-radius:99px;border:1px solid var(--line);
+  background:var(--card2);font-size:.82rem;font-weight:600;color:var(--muted);cursor:pointer;transition:all .2s}
+.pay-pill.sel{border-color:var(--cyan);color:var(--cyan);background:rgba(0,212,255,.08)}
+
+/* Processing animation */
+.processing-anim{text-align:center;padding:2.5rem 1rem}
+.spinner-ring{
+  width:64px;height:64px;border-radius:50%;
+  border:4px solid var(--line);border-top-color:var(--cyan);
+  animation:spin .8s linear infinite;margin:0 auto 1.25rem;
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ════════════════════════════════════════════════════
+   OTP PAGE
+   ════════════════════════════════════════════════════ */
+.otp-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:2.5rem;text-align:center;max-width:440px;margin:0 auto;
+}
+.otp-icon{font-size:3.5rem;margin-bottom:1rem;display:block}
+.otp-title{font-family:var(--font-head);font-size:1.6rem;margin-bottom:.5rem}
+.otp-sub{font-size:.9rem;color:var(--muted);margin-bottom:1.75rem;line-height:1.65}
+.otp-inputs{display:flex;gap:.75rem;justify-content:center;margin:1.5rem 0}
+.otp-digit{
+  width:58px;height:68px;border-radius:10px;border:2px solid var(--line);
+  background:var(--card2);color:var(--text);
+  font-size:1.8rem;font-weight:800;text-align:center;
+  font-family:var(--font-head);outline:none;transition:all .2s;
+  -moz-appearance:textfield;
+}
+.otp-digit::-webkit-inner-spin-button,.otp-digit::-webkit-outer-spin-button{-webkit-appearance:none}
+.otp-digit:focus{border-color:var(--cyan);box-shadow:0 0 0 3px var(--cyan-glow)}
+.otp-digit.filled{border-color:rgba(0,212,255,.5)}
+.timer-ring{position:relative;width:72px;height:72px;margin:0 auto 1rem}
+.timer-svg{transform:rotate(-90deg)}
+.timer-track{fill:none;stroke:var(--line);stroke-width:4}
+.timer-prog{fill:none;stroke:var(--cyan);stroke-width:4;stroke-linecap:round;
+  stroke-dasharray:188;transition:stroke-dashoffset .5s linear,stroke .5s}
+.timer-num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--cyan)}
+.attempt-dots{display:flex;gap:.5rem;justify-content:center;margin:.75rem 0}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--line);transition:background .3s}
+.dot.used{background:var(--coral)}
+.dot.ok{background:var(--green)}
+
+/* Demo OTP notice */
+.demo-otp-box{
+  background:rgba(245,166,35,.08);border:1px solid rgba(245,166,35,.3);
+  border-radius:var(--r2);padding:.9rem 1.1rem;margin-bottom:1.25rem;
+  font-size:.85rem;text-align:left;
+}
+.demo-otp-val{font-family:var(--font-head);font-size:1.4rem;color:var(--gold);
+  letter-spacing:.2em;font-weight:700;text-align:center;margin-top:.35rem}
+
+/* ════════════════════════════════════════════════════
+   RESULT PAGE
+   ════════════════════════════════════════════════════ */
+.result-wrap{max-width:560px;margin:0 auto;padding:3rem 2rem;text-align:center}
+.result-icon-big{font-size:5rem;display:block;margin-bottom:1rem;
+  animation:popIn .5s cubic-bezier(.175,.885,.32,1.275) both}
+@keyframes popIn{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+.result-title{font-family:var(--font-head);font-size:2rem;margin-bottom:.5rem}
+.result-badge{
+  display:inline-flex;align-items:center;gap:.4rem;
+  padding:.4rem 1.1rem;border-radius:99px;font-size:.82rem;font-weight:800;
+  text-transform:uppercase;letter-spacing:.08em;margin:.5rem auto
+}
+.badge-valid{background:rgba(0,229,160,.12);color:var(--green);border:1px solid rgba(0,229,160,.3)}
+.badge-fraud{background:rgba(255,77,109,.12);color:var(--coral);border:1px solid rgba(255,77,109,.3)}
+.badge-suspicious{background:rgba(245,166,35,.12);color:var(--gold);border:1px solid rgba(245,166,35,.3)}
+.badge-ai{background:rgba(124,58,237,.12);color:#a78bfa;border:1px solid rgba(124,58,237,.3)}
+.badge-rule{background:rgba(255,77,109,.1);color:var(--coral);border:1px solid rgba(255,77,109,.25)}
+.result-detail-box{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:1.25rem 1.5rem;margin:1.25rem 0;text-align:left;
+}
+.detail-row{display:flex;justify-content:space-between;align-items:flex-start;
+  gap:.75rem;padding:.5rem 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.detail-row:last-child{border-bottom:none}
+.detail-row .lbl{color:var(--muted);flex-shrink:0}
+.detail-row .val{font-weight:700;text-align:right;word-break:break-all}
+.risk-meter-wrap{margin:1.25rem 0}
+.risk-meter-wrap .lbl-row{display:flex;justify-content:space-between;
+  font-size:.8rem;margin-bottom:.5rem;font-weight:700}
+.risk-track{height:10px;background:var(--card2);border-radius:99px;overflow:hidden}
+.risk-fill{height:100%;border-radius:99px;transition:width 1s ease}
+.result-actions{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem}
+
+/* Fraud reason card */
+.reason-card{
+  background:rgba(255,77,109,.06);border:1px solid rgba(255,77,109,.25);
+  border-radius:var(--r2);padding:1rem 1.25rem;margin:.75rem 0;
+  text-align:left;font-size:.88rem;
+}
+.reason-card .lbl{color:var(--coral);font-weight:700;font-size:.78rem;
+  text-transform:uppercase;letter-spacing:.07em;margin-bottom:.35rem}
+
+/* ════════════════════════════════════════════════════
+   MY TICKETS
+   ════════════════════════════════════════════════════ */
+.tickets-wrap{max-width:900px;margin:0 auto;padding:3rem 2rem}
+.filter-bar{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.5rem}
+.fbtn{padding:.42rem 1rem;border-radius:99px;border:1px solid var(--line);
+  background:transparent;color:var(--muted);font-size:.83rem;font-weight:700;
+  cursor:pointer;transition:all .2s;font-family:var(--font-body)}
+.fbtn:hover{border-color:var(--line2);color:var(--text)}
+.fbtn.act{background:var(--cyan);color:#000;border-color:var(--cyan)}
+
+.ticket-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:1.4rem 1.5rem;margin-bottom:.85rem;
+  display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:start;
+  transition:border-color .25s,transform .2s;
+}
+.ticket-card:hover{border-color:var(--line2);transform:translateX(2px)}
+.ticket-card.fraud-t{border-color:rgba(255,77,109,.3);background:rgba(255,77,109,.025)}
+.ticket-card.sus-t{border-color:rgba(245,166,35,.3);background:rgba(245,166,35,.02)}
+.ticket-card.valid-t{border-color:rgba(0,229,160,.15)}
+.ticket-route{font-family:var(--font-head);font-size:1.1rem;font-weight:600;
+  display:flex;align-items:center;gap:.5rem;margin-bottom:.5rem}
+.arrow-lbl{color:var(--muted);font-size:.9rem}
+.ticket-meta{display:flex;flex-wrap:wrap;gap:.5rem 1.25rem;font-size:.83rem;color:var(--muted);margin-top:.35rem}
+.ticket-meta span{display:flex;align-items:center;gap:.3rem}
+.ticket-actions{display:flex;flex-direction:column;gap:.5rem;align-items:flex-end}
+.ticket-id-lbl{font-size:.75rem;color:var(--muted2)}
+.txn-lbl{font-size:.72rem;color:var(--muted2);font-family:monospace;word-break:break-all;text-align:right}
+
+.status-chip{display:inline-flex;align-items:center;gap:.3rem;
+  padding:.28rem .7rem;border-radius:99px;font-size:.75rem;font-weight:800;text-transform:uppercase}
+.chip-valid{background:rgba(0,229,160,.12);color:var(--green)}
+.chip-fraud{background:rgba(255,77,109,.12);color:var(--coral)}
+.chip-sus{background:rgba(245,166,35,.12);color:var(--gold)}
+.chip-cancelled{background:rgba(90,122,158,.12);color:var(--muted)}
+.chip-pending{background:rgba(0,212,255,.1);color:var(--cyan)}
+.chip-success{background:rgba(0,229,160,.12);color:var(--green)}
+.chip-failed{background:rgba(255,77,109,.12);color:var(--coral)}
+
+.empty{text-align:center;padding:5rem 2rem;color:var(--muted)}
+.empty-icon{font-size:3.5rem;display:block;margin-bottom:1rem}
+.empty h3{font-family:var(--font-head);font-size:1.3rem;color:var(--text);margin-bottom:.5rem}
+
+/* ════════════════════════════════════════════════════
+   ADMIN DASHBOARD
+   ════════════════════════════════════════════════════ */
+.admin-wrap{max-width:1240px;margin:0 auto;padding:3rem 2rem}
+.admin-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;
+  gap:1rem;margin-bottom:2rem}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:1rem;margin-bottom:1.75rem}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:1.4rem 1.5rem;position:relative;overflow:hidden}
+.kpi::after{content:'';position:absolute;bottom:-20px;right:-20px;
+  width:80px;height:80px;border-radius:50%;opacity:.08}
+.kpi.k-cyan::after{background:var(--cyan)}
+.kpi.k-coral::after{background:var(--coral)}
+.kpi.k-green::after{background:var(--green)}
+.kpi.k-gold::after{background:var(--gold)}
+.kpi.k-violet::after{background:var(--violet)}
+.kpi-val{font-family:var(--font-head);font-size:2rem;font-weight:700;line-height:1}
+.kpi-lbl{font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-top:.35rem}
+.kpi-sub{font-size:.8rem;color:var(--muted2);margin-top:.5rem}
+
+.charts-2{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.75rem}
+@media(max-width:680px){.charts-2{grid-template-columns:1fr}}
+.chart-box{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--r);
+  padding:1.5rem;display:flex;flex-direction:column;
+}
+.chart-box h3{
+  font-family:var(--font-head);font-size:.95rem;margin-bottom:1rem;
+  color:var(--muted);flex-shrink:0;
+}
+/* Fixed-height wrapper so canvas never stretches the parent */
+.chart-canvas-wrap{
+  position:relative;
+  height:220px;   /* compact fixed height */
+  width:100%;
+}
+.chart-canvas-wrap.short{height:180px;}
+
+.model-banner{
+  background:linear-gradient(135deg,rgba(124,58,237,.15),rgba(0,212,255,.08));
+  border:1px solid rgba(124,58,237,.3);border-radius:var(--r);
+  padding:1.5rem;display:flex;align-items:center;gap:1.75rem;flex-wrap:wrap;
+  margin-bottom:1.75rem;
+}
+.model-banner h3{font-family:var(--font-head);font-size:.95rem;color:var(--text)}
+.model-banner p{font-size:.82rem;color:var(--muted)}
+.model-metrics{display:flex;gap:2rem;margin-left:auto;flex-wrap:wrap}
+.metric{text-align:center}
+.metric-val{font-family:var(--font-head);font-size:1.5rem;font-weight:700}
+.metric-lbl{font-size:.7rem;text-transform:uppercase;color:var(--muted);letter-spacing:.05em}
+
+.alerts-list{margin-bottom:1.75rem}
+.alert-item{
+  background:var(--card);border:1px solid rgba(255,77,109,.2);border-radius:var(--r2);
+  padding:1rem 1.25rem;margin-bottom:.6rem;display:flex;align-items:flex-start;gap:.75rem;
+  font-size:.86rem;
+}
+.alert-ico{font-size:1.1rem;margin-top:.1rem;flex-shrink:0}
+.alert-body{flex:1}
+.alert-title{color:var(--coral);font-weight:700;font-size:.85rem;margin-bottom:.2rem}
+.alert-desc{color:var(--muted);font-size:.8rem;line-height:1.5}
+.alert-time{font-size:.75rem;color:var(--muted2);white-space:nowrap}
+
+.tbl-box{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.tbl-head{padding:1rem 1.25rem;border-bottom:1px solid var(--line)}
+.tbl-head h3{font-family:var(--font-head);font-size:.95rem}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+th{padding:.75rem 1rem;color:var(--muted);font-size:.75rem;text-transform:uppercase;
+  letter-spacing:.06em;border-bottom:1px solid var(--line);text-align:left;background:var(--surface)}
+td{padding:.75rem 1rem;border-bottom:1px solid var(--line);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:rgba(255,255,255,.02)}
+
+/* ════════════════════════════════════════════════════
+   TOAST
+   ════════════════════════════════════════════════════ */
+#toasts{position:fixed;bottom:1.5rem;right:1.5rem;z-index:500;
+  display:flex;flex-direction:column;gap:.5rem}
+.toast{
+  display:flex;align-items:center;gap:.7rem;
+  background:var(--card2);border:1px solid var(--line2);
+  border-radius:var(--r2);padding:.85rem 1.2rem;
+  box-shadow:var(--sh);min-width:260px;max-width:360px;
+  animation:slideR .3s ease both;
+}
+@keyframes slideR{from{transform:translateX(120%);opacity:0}to{transform:none;opacity:1}}
+.toast.tok{border-color:rgba(0,229,160,.35)}
+.toast.terr{border-color:rgba(255,77,109,.35)}
+.toast.twarn{border-color:rgba(245,166,35,.35)}
+.toast-ico{font-size:1.1rem}
+.toast-msg{flex:1;font-size:.87rem;line-height:1.4}
+
+/* LOADER */
+.loader{display:inline-block;width:17px;height:17px;border:2px solid rgba(255,255,255,.25);
+  border-top-color:currentColor;border-radius:50%;animation:spin .7s linear infinite}
+.sk-loader{text-align:center;padding:4rem;color:var(--muted)}
+.sk-loader .spinner-ring{width:44px;height:44px;margin:0 auto 1rem}
+
+/* ════════════════════════════════════════════════════
+   ADMIN LOGIN PAGE
+   ════════════════════════════════════════════════════ */
+.admin-login-page{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+  background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(124,58,237,.18) 0%,transparent 65%),var(--ink);
+}
+.admin-login-page::before{
+  content:'';position:absolute;inset:0;
+  background-image:linear-gradient(rgba(124,58,237,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(124,58,237,.05) 1px,transparent 1px);
+  background-size:48px 48px;
+  mask-image:radial-gradient(ellipse 70% 80% at 50% 50%,#000 40%,transparent 100%);
+}
+.admin-login-box{
+  position:relative;z-index:2;width:100%;max-width:440px;margin:1.5rem;
+  background:var(--card);border:1px solid rgba(124,58,237,.35);
+  border-radius:20px;overflow:hidden;
+  box-shadow:0 0 60px rgba(124,58,237,.2),0 24px 48px rgba(0,0,0,.6);
+}
+.admin-login-header{
+  background:linear-gradient(135deg,rgba(124,58,237,.3),rgba(109,40,217,.2));
+  border-bottom:1px solid rgba(124,58,237,.3);
+  padding:2.25rem 2.25rem 1.75rem;text-align:center;
+}
+.admin-shield{
+  width:72px;height:72px;border-radius:20px;margin:0 auto 1.1rem;
+  background:linear-gradient(135deg,var(--violet),#9333ea);
+  display:flex;align-items:center;justify-content:center;
+  font-size:2rem;box-shadow:0 8px 24px rgba(124,58,237,.4);
+}
+.admin-login-header h2{
+  font-family:var(--font-head);font-size:1.6rem;font-weight:700;
+  letter-spacing:-.3px;margin-bottom:.3rem;
+}
+.admin-login-header p{color:var(--muted);font-size:.85rem}
+.admin-login-body{padding:2rem 2.25rem 2.25rem}
+/* admin-cred-hint removed — no default credentials shown in UI */
+.admin-back-link{
+  display:flex;align-items:center;justify-content:center;gap:.45rem;
+  margin-top:1.25rem;font-size:.85rem;color:var(--muted);cursor:pointer;
+  transition:color .2s;
+}
+.admin-back-link:hover{color:var(--text)}
+
+/* Admin top bar indicator */
+.admin-bar{
+  background:linear-gradient(90deg,rgba(124,58,237,.25),rgba(109,40,217,.15));
+  border-bottom:1px solid rgba(124,58,237,.3);
+  padding:.55rem 2.5rem;display:flex;align-items:center;justify-content:space-between;
+  font-size:.82rem;
+}
+.admin-bar-left{display:flex;align-items:center;gap:.6rem;color:#a78bfa;font-weight:700}
+.admin-bar-right{display:flex;align-items:center;gap:.75rem}
+.admin-dot{width:8px;height:8px;border-radius:50%;background:var(--green);
+  animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(.8)}}
+
+/* Access denied page */
+.access-denied{
+  min-height:60vh;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;text-align:center;padding:3rem 2rem;
+}
+.access-denied .icon{font-size:4rem;margin-bottom:1rem}
+.access-denied h2{font-family:var(--font-head);font-size:1.8rem;color:var(--coral);margin-bottom:.5rem}
+.access-denied p{color:var(--muted);max-width:360px;line-height:1.7;margin-bottom:1.5rem}
+</style>
+</head>
+<body>
+
+<!-- ─── TOASTS ──────────────────────────────────── -->
+<div id="toasts"></div>
+
+<!-- ─── SERVER STATUS BANNER ─────────────────────── -->
+<div id="server-banner" style="display:none;position:fixed;top:0;left:0;right:0;z-index:9999;
+  background:linear-gradient(135deg,#1a0a00,#2d1500);
+  border-bottom:2px solid #ff6b00;padding:0;font-family:'Cabinet Grotesk',sans-serif">
+  <div style="max-width:900px;margin:0 auto;padding:1rem 1.5rem;display:flex;align-items:flex-start;gap:1rem">
+    <span style="font-size:1.8rem;flex-shrink:0;margin-top:.1rem">🚫</span>
+    <div style="flex:1">
+      <div style="font-weight:800;font-size:1rem;color:#ff9a00;margin-bottom:.35rem;font-family:'Clash Display',sans-serif">
+        Flask Server Not Running — Open as File Detected
+      </div>
+      <div style="color:#c9855a;font-size:.88rem;line-height:1.65;margin-bottom:.85rem">
+        You opened <code style="background:rgba(255,106,0,.15);padding:.1rem .4rem;border-radius:4px;color:#ffb76b">index.html</code> directly.
+        The website needs the Python Flask backend to work. Follow these steps:
+      </div>
+      <div style="display:flex;flex-direction:column;gap:.45rem;font-size:.85rem">
+        <div style="display:flex;align-items:center;gap:.6rem">
+          <span style="background:#ff6b00;color:#000;font-weight:800;font-size:.7rem;
+            padding:.15rem .45rem;border-radius:4px;flex-shrink:0">STEP 1</span>
+          <span style="color:#e0c4a8">Open a terminal (Command Prompt / PowerShell / Terminal)</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:.6rem">
+          <span style="background:#ff6b00;color:#000;font-weight:800;font-size:.7rem;
+            padding:.15rem .45rem;border-radius:4px;flex-shrink:0">STEP 2</span>
+          <code style="color:#ffb76b;background:rgba(255,106,0,.12);padding:.25rem .75rem;
+            border-radius:6px;font-size:.83rem">cd path/to/project</code>
+        </div>
+        <div style="display:flex;align-items:center;gap:.6rem">
+          <span style="background:#ff6b00;color:#000;font-weight:800;font-size:.7rem;
+            padding:.15rem .45rem;border-radius:4px;flex-shrink:0">STEP 3</span>
+          <code style="color:#ffb76b;background:rgba(255,106,0,.12);padding:.25rem .75rem;
+            border-radius:6px;font-size:.83rem">python3 backend/app.py</code>
+        </div>
+        <div style="display:flex;align-items:center;gap:.6rem">
+          <span style="background:#00d4ff;color:#000;font-weight:800;font-size:.7rem;
+            padding:.15rem .45rem;border-radius:4px;flex-shrink:0">STEP 4</span>
+          <span style="color:#e0c4a8">Open <strong style="color:#00d4ff">http://localhost:5000</strong> in your browser</span>
+        </div>
+      </div>
+      <div style="margin-top:1rem;padding:.6rem .9rem;background:rgba(0,212,255,.06);
+        border:1px solid rgba(0,212,255,.2);border-radius:8px;font-size:.8rem;color:#5a9ab0">
+        💡 <strong style="color:#00d4ff">Quick start:</strong> Run <code style="color:#ffb76b">chmod +x run.sh &amp;&amp; ./run.sh</code> from the project root — it does everything automatically.
+      </div>
+    </div>
+    <button onclick="document.getElementById('server-banner').style.display='none'"
+      style="background:transparent;border:1px solid rgba(255,106,0,.3);color:#ff9a00;
+      border-radius:6px;padding:.35rem .7rem;cursor:pointer;font-size:.8rem;flex-shrink:0;
+      font-family:'Cabinet Grotesk',sans-serif">✕ Dismiss</button>
+  </div>
+</div>
+
+<!-- ─── NAV ────────────────────────────────────── -->
+<nav id="main-nav">
+  <div class="logo" onclick="goHome()">
+    <span class="shield">🛡️</span>Secure<span>Trail</span>
+  </div>
+  <div class="nav-links" id="nl-guest">
+    <button class="nav-btn" onclick="nav('home')">Home</button>
+    <button class="nav-btn" onclick="nav('auth')">Login / Register</button>
+  </div>
+  <div id="nav-right">
+    <div id="nav-user">
+      <button class="nav-btn" onclick="nav('home')">Home</button>
+      <button class="nav-btn" onclick="nav('book')">Book Ticket</button>
+      <button class="nav-btn" onclick="nav('scan')">Scan Ticket</button>
+      <button class="nav-btn" onclick="nav('history')">Scan History</button>
+      <button class="nav-btn" onclick="nav('tickets')">My Tickets</button>
+      <button class="nav-btn" onclick="goAdmin()">Admin</button>
+      <div class="avatar" id="nav-av">?</div>
+      <span id="nav-name"></span>
+      <button class="btn btn-ghost btn-sm" onclick="logout()">Logout</button>
+    </div>
+    <button class="btn btn-primary btn-sm" id="nl-cta" onclick="nav('auth')">Get Started</button>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: HOME
+     ═══════════════════════════════════════════════ -->
+<div class="page active" id="page-home">
+
+  <!-- ── HERO SPLIT (text left, image right) ── -->
+  <div class="hero-split">
+    <!-- Animated grid overlay -->
+    <div style="position:absolute;inset:0;z-index:0;
+      background-image:linear-gradient(rgba(0,212,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,255,.04) 1px,transparent 1px);
+      background-size:52px 52px;
+      mask-image:radial-gradient(ellipse 80% 80% at 30% 50%,#000 40%,transparent 100%);
+      animation:gridMove 20s linear infinite;pointer-events:none"></div>
+
+    <!-- Left: content -->
+    <div class="hero-left" style="z-index:2">
+      <div class="hero-badge">🤖 AI · OTP · Real-Time Fraud Detection</div>
+      <h1 style="font-size:clamp(2.2rem,4.5vw,3.8rem);font-weight:700;line-height:1.1;letter-spacing:-1.5px;margin-bottom:1.25rem;font-family:var(--font-head)">
+        E-Tickets<br>Protected by<br><em style="font-style:normal;background:linear-gradient(135deg,var(--cyan),var(--violet),var(--coral));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-size:200%;animation:hue 5s ease infinite alternate">AI & Secure OTP</em>
+      </h1>
+      <p style="font-size:1.05rem;color:var(--muted);max-width:460px;margin-bottom:2rem;line-height:1.75">
+        Book train, bus & flight e-tickets with real-time OTP payment verification and hybrid AI fraud detection. Every journey, secured.
+      </p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2.5rem">
+        <button class="btn btn-primary" onclick="handleBook()" style="font-size:1rem;padding:.9rem 2rem">🎫 Book E-Ticket</button>
+        <button class="btn btn-ghost" onclick="goAdmin()" style="font-size:1rem;padding:.9rem 2rem">📊 Live Dashboard</button>
+      </div>
+      <!-- Mini trust badges -->
+      <div style="display:flex;gap:1.5rem;flex-wrap:wrap">
+        <div style="display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--muted)">
+          <span style="color:var(--green);font-weight:800">✓</span> 98.85% ML Accuracy
+        </div>
+        <div style="display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--muted)">
+          <span style="color:var(--green);font-weight:800">✓</span> OTP in 120s
+        </div>
+        <div style="display:flex;align-items:center;gap:.4rem;font-size:.8rem;color:var(--muted)">
+          <span style="color:var(--green);font-weight:800">✓</span> Hybrid AI + Rules
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: image with floating cards -->
+    <div class="hero-right" style="z-index:1">
+      <img class="hero-right-img"
+        src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=900&q=80&auto=format&fit=crop"
+        alt="Train station" loading="eager">
+      <div class="hero-right-overlay"></div>
+
+      <!-- Floating analytics card 1 -->
+      <div class="hero-float-card hfc-top">
+        <div class="hfc-label">🤖 AI Fraud Check</div>
+        <div class="hfc-val" style="color:var(--green)">✅ VALID — 0% Risk</div>
+      </div>
+      <!-- Floating analytics card 2 -->
+      <div class="hero-float-card hfc-mid">
+        <div class="hfc-label">🔐 OTP Verified</div>
+        <div class="hfc-val" style="color:var(--cyan)">TXN9823041762</div>
+      </div>
+      <!-- Floating analytics card 3 -->
+      <div class="hero-float-card hfc-bot">
+        <div class="hfc-label">🚨 Fraud Blocked</div>
+        <div class="hfc-val" style="color:var(--coral)">Rule-Based · IP Suspicious</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── LIVE STATS ROW ── -->
+  <div class="stats-row" id="home-stats">
+    <div class="stat"><div class="stat-n text-cyan" id="hs-total">—</div><div class="stat-l">Tickets Issued</div></div>
+    <div class="stat"><div class="stat-n text-coral" id="hs-fraud">—</div><div class="stat-l">Fraud Detected</div></div>
+    <div class="stat"><div class="stat-n text-green" id="hs-valid">—</div><div class="stat-l">Valid Tickets</div></div>
+    <div class="stat"><div class="stat-n text-gold" id="hs-users">—</div><div class="stat-l">Users</div></div>
+    <div class="stat"><div class="stat-n" id="hs-acc">98.85%</div><div class="stat-l">Model Accuracy</div></div>
+  </div>
+
+  <!-- ── SECTION 1: IMAGE LEFT + OTP CONTENT RIGHT ── -->
+  <div class="img-feature-section">
+    <div class="ifs-img">
+      <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&q=80&auto=format&fit=crop"
+        alt="OTP Payment Security" loading="lazy">
+      <div class="ifs-img-overlay"></div>
+    </div>
+    <div class="ifs-content">
+      <div class="ifs-badge">🔐 OTP Payment System</div>
+      <h3>Zero-Tolerance<br>Payment Security</h3>
+      <p>Every booking triggers a 4-digit OTP sent directly to your registered email. You have 120 seconds and 3 attempts to confirm — no exceptions, no bypass.</p>
+      <div class="ifs-list">
+        <div class="ifs-list-item">4-digit OTP generated per booking</div>
+        <div class="ifs-list-item">120-second countdown expiry timer</div>
+        <div class="ifs-list-item">Maximum 3 attempts allowed</div>
+        <div class="ifs-list-item">Auto-fails on max attempts — flags user suspicious</div>
+      </div>
+      <button class="btn btn-primary" onclick="handleBook()">Try Secure Booking →</button>
+    </div>
+  </div>
+
+  <!-- ── SECTION 2: AI CONTENT LEFT + IMAGE RIGHT ── -->
+  <div class="img-feature-section reverse">
+    <div class="ifs-img">
+      <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=800&q=80&auto=format&fit=crop"
+        alt="AI Fraud Detection" loading="lazy">
+      <div class="ifs-img-overlay"></div>
+    </div>
+    <div class="ifs-content">
+      <div class="ifs-badge" style="background:rgba(124,58,237,.08);border-color:rgba(124,58,237,.2);color:#a78bfa">🤖 AI Fraud Detection</div>
+      <h3>Hybrid AI That<br>Never Sleeps</h3>
+      <p>Our Decision Tree ML model scores every booking against 11 features with 98.85% accuracy. Backed by rule-based instant checks — fraud has nowhere to hide.</p>
+      <div class="ifs-list">
+        <div class="ifs-list-item">Decision Tree Classifier — 98.85% accuracy</div>
+        <div class="ifs-list-item">11 features: bookings, OTP abuse, IP, device</div>
+        <div class="ifs-list-item">Rule-based checks run first (instant)</div>
+        <div class="ifs-list-item">Risk score: Valid / Suspicious / Fraud</div>
+      </div>
+      <button class="btn btn-violet" onclick="goAdmin()" style="background:var(--violet);color:#fff">View Live Analytics →</button>
+    </div>
+  </div>
+
+  <!-- ── SHOWCASE PHOTO GRID ── -->
+  <div style="padding:0;background:var(--ink)">
+    <div style="text-align:center;padding:3.5rem 2rem 2rem">
+      <div class="hero-badge" style="margin-bottom:.75rem">📸 Travel Secured</div>
+      <h2 style="font-family:var(--font-head);font-size:2rem;font-weight:700;letter-spacing:-.3px">Every Route. Every Mode. Protected.</h2>
+    </div>
+    <div class="showcase-grid">
+      <div class="sg-item">
+        <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=600&q=80&auto=format&fit=crop" alt="Train travel" loading="lazy">
+        <div class="sg-overlay"><div class="sg-label">🚆 Train</div></div>
+      </div>
+      <div class="sg-item">
+        <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=600&q=80&auto=format&fit=crop" alt="Flight" loading="lazy">
+        <div class="sg-overlay"><div class="sg-label">✈️ Flight</div></div>
+      </div>
+      <div class="sg-item">
+        <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80&auto=format&fit=crop" alt="Bus travel" loading="lazy">
+        <div class="sg-overlay"><div class="sg-label">🚌 Bus</div></div>
+      </div>
+      <div class="sg-item">
+        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&q=80&auto=format&fit=crop" alt="Secure payment" loading="lazy">
+        <div class="sg-overlay"><div class="sg-label">💳 Secure Pay</div></div>
+      </div>
+      <div class="sg-item">
+        <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&q=80&auto=format&fit=crop" alt="AI Analytics" loading="lazy">
+        <div class="sg-overlay"><div class="sg-label">🤖 AI Guard</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TRUST STRIP ── -->
+  <div class="trust-strip">
+    <div class="trust-item"><span class="trust-icon">🔒</span> 256-bit SSL Encryption</div>
+    <div class="trust-item"><span class="trust-icon">🤖</span> Scikit-learn Decision Tree</div>
+    <div class="trust-item"><span class="trust-icon">📧</span> Gmail SMTP OTP Delivery</div>
+    <div class="trust-item"><span class="trust-icon">🛡️</span> Real-Time Fraud Blocking</div>
+    <div class="trust-item"><span class="trust-icon">📊</span> Live Admin Analytics</div>
+  </div>
+
+  <!-- ── FEATURE CARDS GRID (with images) ── -->
+  <div style="text-align:center;padding:3.5rem 2rem 1.5rem">
+    <div class="hero-badge" style="margin-bottom:.75rem">⚡ Core Features</div>
+    <h2 style="font-family:var(--font-head);font-size:2rem;font-weight:700;letter-spacing:-.3px">Everything You Need, Nothing You Don't</h2>
+  </div>
+  <div class="feat-grid">
+    <div class="feat-card c1">
+      <img class="feat-img" src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=400&q=70&auto=format&fit=crop" alt="OTP Security" loading="lazy">
+      <div class="feat-icon-wrap">🔐</div>
+      <h3>OTP Payment Verification</h3>
+      <p>4-digit OTP sent to your email on every booking. 120-second expiry, max 3 attempts — zero tolerance for fraud.</p>
+    </div>
+    <div class="feat-card c2">
+      <img class="feat-img" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&q=70&auto=format&fit=crop" alt="AI Detection" loading="lazy">
+      <div class="feat-icon-wrap">🤖</div>
+      <h3>AI Fraud Detection</h3>
+      <p>Decision Tree classifier evaluates 11 features with 98.85% accuracy. Catches patterns no human rule can see.</p>
+    </div>
+    <div class="feat-card c3">
+      <img class="feat-img" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&q=70&auto=format&fit=crop" alt="Analytics Dashboard" loading="lazy">
+      <div class="feat-icon-wrap">📋</div>
+      <h3>Rule-Based Engine</h3>
+      <p>Instant checks: cancelled ticket reuse, high-frequency booking, repeated OTP failures, suspicious IPs & devices.</p>
+    </div>
+    <div class="feat-card c4">
+      <img class="feat-img" src="https://images.unsplash.com/photo-1556742393-d75f468bfcb0?w=400&q=70&auto=format&fit=crop" alt="Transaction" loading="lazy">
+      <div class="feat-icon-wrap">🧾</div>
+      <h3>Transaction IDs</h3>
+      <p>Every successful payment generates a unique TXN ID — stored, traceable, and downloadable as a receipt.</p>
+    </div>
+    <div class="feat-card c5">
+      <img class="feat-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=70&auto=format&fit=crop" alt="Risk Scoring" loading="lazy">
+      <div class="feat-icon-wrap">📊</div>
+      <h3>Live Risk Scoring</h3>
+      <p>Rolling risk scores: 0–20 Valid, 20–50 Suspicious, 50+ Fraud. Surfaced on the real-time admin dashboard.</p>
+    </div>
+    <div class="feat-card c6">
+      <img class="feat-img" src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&q=70&auto=format&fit=crop" alt="PDF Receipt" loading="lazy">
+      <div class="feat-icon-wrap">📄</div>
+      <h3>Payment Receipt PDF</h3>
+      <p>Download a printable receipt after every successful booking. Includes route, seat, TXN ID, and fraud-check stamp.</p>
+    </div>
+  </div>
+
+  <!-- ── BOTTOM CTA BANNER ── -->
+  <div style="position:relative;overflow:hidden;margin:0">
+    <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=1400&q=80&auto=format&fit=crop"
+      alt="Railway station" loading="lazy"
+      style="width:100%;height:320px;object-fit:cover;object-position:center 60%;display:block;opacity:.4">
+    <div style="position:absolute;inset:0;background:linear-gradient(to right,var(--ink) 0%,rgba(5,12,24,.7) 100%);
+      display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:2rem">
+      <h2 style="font-family:var(--font-head);font-size:clamp(1.6rem,4vw,2.5rem);font-weight:700;margin-bottom:.75rem;letter-spacing:-.3px">
+        Ready to Travel Securely?
+      </h2>
+      <p style="color:var(--muted);margin-bottom:1.75rem;font-size:1rem;max-width:420px">
+        Join thousands of passengers who book with AI-powered fraud protection.
+      </p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+        <button class="btn btn-primary" onclick="handleBook()" style="font-size:1rem;padding:.9rem 2rem">🎫 Book Your Ticket</button>
+        <button class="btn btn-ghost" onclick="nav('auth')" style="font-size:1rem;padding:.9rem 2rem">Create Free Account</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: AUTH
+     ═══════════════════════════════════════════════ -->
+<div class="page" id="page-auth">
+<div class="auth-wrap">
+  <!-- Left: Full image panel -->
+  <div class="auth-left" style="padding:0;position:relative;overflow:hidden;min-height:500px">
+    <img src="https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800&q=80&auto=format&fit=crop"
+      alt="Train journey" loading="eager"
+      style="width:100%;height:100%;object-fit:cover;object-position:center;position:absolute;inset:0;opacity:.55">
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(5,12,24,.92) 0%,rgba(9,20,40,.75) 100%)"></div>
+    <div style="position:relative;z-index:2;padding:3.5rem;display:flex;flex-direction:column;justify-content:center;height:100%">
+      <div style="font-size:3rem;margin-bottom:1.25rem">🛡️</div>
+      <h2 style="font-family:var(--font-head);font-size:2rem;font-weight:700;margin-bottom:.75rem;letter-spacing:-.3px">Secured by AI</h2>
+      <p style="color:var(--muted);line-height:1.75;font-size:.95rem;margin-bottom:2rem;max-width:340px">
+        Every e-ticket goes through OTP verification and hybrid AI fraud detection before confirmation.
+      </p>
+      <div style="display:flex;flex-direction:column;gap:.75rem">
+        <div style="display:flex;align-items:center;gap:.75rem;background:rgba(0,212,255,.06);border:1px solid rgba(0,212,255,.15);border-radius:10px;padding:.75rem 1rem">
+          <span style="font-size:1.2rem">🔐</span>
+          <div>
+            <div style="font-size:.82rem;font-weight:700;color:var(--text)">OTP Verification</div>
+            <div style="font-size:.75rem;color:var(--muted)">4-digit code sent to your email</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:.75rem;background:rgba(124,58,237,.06);border:1px solid rgba(124,58,237,.15);border-radius:10px;padding:.75rem 1rem">
+          <span style="font-size:1.2rem">🤖</span>
+          <div>
+            <div style="font-size:.82rem;font-weight:700;color:var(--text)">AI Fraud Detection</div>
+            <div style="font-size:.75rem;color:var(--muted)">98.85% accuracy Decision Tree</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:.75rem;background:rgba(0,229,160,.06);border:1px solid rgba(0,229,160,.15);border-radius:10px;padding:.75rem 1rem">
+          <span style="font-size:1.2rem">🧾</span>
+          <div>
+            <div style="font-size:.82rem;font-weight:700;color:var(--text)">Unique Transaction ID</div>
+            <div style="font-size:.75rem;color:var(--muted)">Every payment traceable & receipted</div>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;gap:.75rem;background:rgba(245,166,35,.06);border:1px solid rgba(245,166,35,.15);border-radius:10px;padding:.75rem 1rem">
+          <span style="font-size:1.2rem">📊</span>
+          <div>
+            <div style="font-size:.82rem;font-weight:700;color:var(--text)">Live Admin Dashboard</div>
+            <div style="font-size:.75rem;color:var(--muted)">Real-time fraud analytics & alerts</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Right form -->
+  <div class="auth-right">
+    <div class="auth-box">
+      <h2>Welcome Back</h2>
+      <p class="sub">Sign in or create your SecureTrail account</p>
+      <div class="tabs">
+        <button class="tab act" id="tl" onclick="swTab('login')">Sign In</button>
+        <button class="tab" id="tr" onclick="swTab('register')">Register</button>
+      </div>
+
+      <!-- Login -->
+      <div id="f-login">
+        <div class="field"><label>Email</label><input type="email" id="li-em" placeholder="you@email.com"></div>
+        <div class="field"><label>Password</label><input type="password" id="li-pw" placeholder="••••••••"
+          onkeydown="if(event.key==='Enter')doLogin()"></div>
+        <button class="btn btn-primary btn-full" onclick="doLogin()" id="btn-li">Sign In</button>
+        <div class="divider">or</div>
+        <p style="text-align:center;font-size:.85rem;color:var(--muted)">
+          No account? <a onclick="swTab('register')" style="color:var(--cyan);cursor:pointer">Register here</a></p>
+      </div>
+
+      <!-- Register -->
+      <div id="f-reg" style="display:none">
+        <div class="field"><label>Full Name</label><input type="text" id="rg-nm" placeholder="John Doe"></div>
+        <div class="field"><label>Email</label><input type="email" id="rg-em" placeholder="you@email.com"></div>
+        <div class="field"><label>Password</label><input type="password" id="rg-pw" placeholder="Min 6 characters"
+          onkeydown="if(event.key==='Enter')doRegister()"></div>
+        <button class="btn btn-primary btn-full" onclick="doRegister()" id="btn-rg">Create Account</button>
+        <div class="divider">or</div>
+        <p style="text-align:center;font-size:.85rem;color:var(--muted)">
+          Have an account? <a onclick="swTab('login')" style="color:var(--cyan);cursor:pointer">Sign in</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: BOOK TICKET
+     ═══════════════════════════════════════════════ -->
+<div class="page" id="page-book">
+<div style="position:relative;height:140px;overflow:hidden">
+  <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=1200&q=80&auto=format&fit=crop"
+    alt="Book ticket" loading="lazy"
+    style="width:100%;height:100%;object-fit:cover;object-position:center 70%;opacity:.4;display:block">
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent,var(--ink));
+    display:flex;align-items:flex-end;padding:1.25rem 2rem">
+    <div style="font-size:.75rem;color:var(--cyan);font-weight:700;letter-spacing:.08em;text-transform:uppercase">🎫 Booking Portal</div>
+  </div>
+</div>
+<div class="flow-wrap">
+  <div class="flow-header">
+    <h2>Book E-Ticket</h2>
+    <p>Fill in travel details. OTP will be sent to your email for payment verification.</p>
+  </div>
+  <!-- Step bar -->
+  <div class="step-bar">
+    <div class="step"><div class="step-num active" id="sb1">1</div><div class="step-label active-l" id="sl1">Details</div></div>
+    <div class="step-line" id="sl-a"></div>
+    <div class="step"><div class="step-num" id="sb2">2</div><div class="step-label" id="sl2">Payment</div></div>
+    <div class="step-line" id="sl-b"></div>
+    <div class="step"><div class="step-num" id="sb3">3</div><div class="step-label" id="sl3">OTP</div></div>
+    <div class="step-line" id="sl-c"></div>
+    <div class="step"><div class="step-num" id="sb4">4</div><div class="step-label" id="sl4">Result</div></div>
+  </div>
+
+  <!-- Step 1: Journey Details -->
+  <div id="step1" class="card">
+    <div class="fdiv">👤 Passenger Info</div>
+    <div class="field"><label>Passenger Name</label><input type="text" id="b-name" placeholder="Full name as on ID"></div>
+    <div class="fdiv">🗺️ Journey</div>
+    <div class="form-row">
+      <div class="field"><label>Source City</label>
+        <select id="b-src" onchange="calcPrice()">
+          <option value="">Select source...</option>
+          <option>Agra</option>
+          <option>Ahmedabad</option>
+          <option>Amritsar</option>
+          <option>Aurangabad</option>
+          <option>Bangalore</option>
+          <option>Bhopal</option>
+          <option>Bhubaneswar</option>
+          <option>Chandigarh</option>
+          <option>Chennai</option>
+          <option>Coimbatore</option>
+          <option>Dehradun</option>
+          <option>Delhi</option>
+          <option>Faridabad</option>
+          <option>Goa</option>
+          <option>Guwahati</option>
+          <option>Gwalior</option>
+          <option>Hyderabad</option>
+          <option>Indore</option>
+          <option>Jaipur</option>
+          <option>Jammu</option>
+          <option>Jamshedpur</option>
+          <option>Jodhpur</option>
+          <option>Kanpur</option>
+          <option>Kochi</option>
+          <option>Kolkata</option>
+          <option>Kota</option>
+          <option>Lucknow</option>
+          <option>Ludhiana</option>
+          <option>Madurai</option>
+          <option>Mangalore</option>
+          <option>Mumbai</option>
+          <option>Mysore</option>
+          <option>Nagpur</option>
+          <option>Nashik</option>
+          <option>Patna</option>
+          <option>Pune</option>
+          <option>Raipur</option>
+          <option>Rajkot</option>
+          <option>Ranchi</option>
+          <option>Srinagar</option>
+          <option>Surat</option>
+          <option>Thiruvananthapuram</option>
+          <option>Udaipur</option>
+          <option>Vadodara</option>
+          <option>Varanasi</option>
+          <option>Vijayawada</option>
+          <option>Visakhapatnam</option>
+        </select>
+      </div>
+      <div class="field"><label>Destination City</label>
+        <select id="b-dst" onchange="calcPrice()">
+          <option value="">Select destination...</option>
+          <option>Agra</option>
+          <option>Ahmedabad</option>
+          <option>Amritsar</option>
+          <option>Aurangabad</option>
+          <option>Bangalore</option>
+          <option>Bhopal</option>
+          <option>Bhubaneswar</option>
+          <option>Chandigarh</option>
+          <option>Chennai</option>
+          <option>Coimbatore</option>
+          <option>Dehradun</option>
+          <option>Delhi</option>
+          <option>Faridabad</option>
+          <option>Goa</option>
+          <option>Guwahati</option>
+          <option>Gwalior</option>
+          <option>Hyderabad</option>
+          <option>Indore</option>
+          <option>Jaipur</option>
+          <option>Jammu</option>
+          <option>Jamshedpur</option>
+          <option>Jodhpur</option>
+          <option>Kanpur</option>
+          <option>Kochi</option>
+          <option>Kolkata</option>
+          <option>Kota</option>
+          <option>Lucknow</option>
+          <option>Ludhiana</option>
+          <option>Madurai</option>
+          <option>Mangalore</option>
+          <option>Mumbai</option>
+          <option>Mysore</option>
+          <option>Nagpur</option>
+          <option>Nashik</option>
+          <option>Patna</option>
+          <option>Pune</option>
+          <option>Raipur</option>
+          <option>Rajkot</option>
+          <option>Ranchi</option>
+          <option>Srinagar</option>
+          <option>Surat</option>
+          <option>Thiruvananthapuram</option>
+          <option>Udaipur</option>
+          <option>Vadodara</option>
+          <option>Varanasi</option>
+          <option>Vijayawada</option>
+          <option>Visakhapatnam</option>
+        </select>
+      </div>
+    </div>
+    <!-- Live price preview — shows as soon as cities are selected -->
+    <div id="price-preview" style="display:none;margin:.75rem 0;background:linear-gradient(135deg,rgba(0,212,255,.08),rgba(124,58,237,.06));border:1px solid rgba(0,212,255,.2);border-radius:12px;padding:1rem 1.25rem;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem">
+      <div>
+        <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:700">Estimated Ticket Price</div>
+        <div style="font-family:var(--font-head);font-size:2rem;font-weight:700;color:var(--cyan);line-height:1.1" id="preview-price">₹—</div>
+        <div style="font-size:.75rem;color:var(--muted);margin-top:.2rem" id="preview-dist">Select cities to see price</div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:700">Route</div>
+        <div style="font-family:var(--font-head);font-size:.95rem;font-weight:600;color:var(--text)" id="preview-route">—</div>
+        <div style="font-size:.72rem;color:var(--muted);margin-top:.2rem">Base fare ₹2/km + ₹100 fixed</div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="field"><label>Travel Date & Time</label><input type="datetime-local" id="b-dt"></div>
+      <div class="field"><label>Seat Type</label>
+        <select id="b-seat">
+          <option>AC</option><option>Sleeper</option><option>General</option>
+          <option>Business</option><option>First Class</option>
+        </select>
+      </div>
+    </div>
+    <button class="btn btn-primary btn-full" onclick="goToPayment()" style="margin-top:.5rem">Next: Payment →</button>
+  </div>
+
+  <!-- Step 2: Payment (hidden) -->
+  <div id="step2" class="card" style="display:none">
+    <div class="fdiv">💳 Payment Details</div>
+    <div class="price-tag">
+      <div>
+        <div class="price-label">Ticket Price</div>
+        <div class="price-amount" id="pay-price-display">₹—</div>
+        <div style="font-size:.72rem;color:var(--muted);margin-top:.25rem" id="pay-dist-display">Calculating...</div>
+      </div>
+      <div style="text-align:right">
+        <div class="price-label">Route</div>
+        <div style="font-family:var(--font-head);font-size:1rem;font-weight:600" id="pay-route">—</div>
+        <div style="font-size:.72rem;color:var(--muted);margin-top:.25rem">₹2/km + ₹100 base</div>
+      </div>
+    </div>
+    <div class="fdiv">Select Payment Method</div>
+    <div class="pay-methods" id="pay-method-pills">
+      <div class="pay-pill sel" onclick="selPay(this,'UPI')">📱 UPI</div>
+      <div class="pay-pill" onclick="selPay(this,'Credit Card')">💳 Credit Card</div>
+      <div class="pay-pill" onclick="selPay(this,'Debit Card')">🏦 Debit Card</div>
+      <div class="pay-pill" onclick="selPay(this,'Net Banking')">🌐 Net Banking</div>
+      <div class="pay-pill" onclick="selPay(this,'Wallet')">👛 Wallet</div>
+    </div>
+    <div class="card" style="background:var(--surface);margin:.5rem 0;font-size:.85rem;color:var(--muted)">
+      🔒 Your payment is protected by 256-bit SSL encryption. An OTP will be sent to your registered email.
+    </div>
+    <div style="display:flex;gap:.75rem;margin-top:.5rem">
+      <button class="btn btn-ghost" onclick="showStep(1)">← Back</button>
+      <button class="btn btn-primary" style="flex:1;justify-content:center" onclick="proceedToPay()" id="btn-pay">
+        🚀 Proceed to Pay <span id="btn-pay-amt">₹—</span>
+      </button>
+    </div>
+
+    <!-- Processing overlay (shown briefly) -->
+    <div id="pay-processing" style="display:none">
+      <div class="processing-anim">
+        <div class="spinner-ring"></div>
+        <div style="font-family:var(--font-head);font-size:1.1rem;margin-bottom:.35rem">Processing Payment...</div>
+        <div style="color:var(--muted);font-size:.88rem">Generating OTP & sending to your email</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 3: OTP (hidden) -->
+  <div id="step3" style="display:none">
+    <div class="otp-card">
+      <span class="otp-icon">📧</span>
+      <div class="otp-title">Verify Your Payment</div>
+      <div class="otp-sub">A 4-digit OTP has been sent to <strong id="otp-email-display" style="color:var(--cyan)">your email</strong>.<br>Enter it below to confirm your <strong id="otp-price-display" style="color:var(--cyan)">₹—</strong> payment.</div>
+
+      <!-- Demo OTP notice -->
+      <div class="demo-otp-box" id="demo-otp-notice">
+        <div style="color:var(--gold);font-weight:700;font-size:.78rem;text-transform:uppercase;letter-spacing:.07em">⚠️ Demo Mode — Your OTP</div>
+        <div class="demo-otp-val" id="demo-otp-val">----</div>
+        <div style="color:var(--muted);font-size:.75rem;margin-top:.3rem">(In production, OTP is sent only by email)</div>
+      </div>
+
+      <!-- Timer -->
+      <div class="timer-ring">
+        <svg class="timer-svg" width="72" height="72" viewBox="0 0 72 72">
+          <circle class="timer-track" cx="36" cy="36" r="30"/>
+          <circle class="timer-prog" id="timer-prog" cx="36" cy="36" r="30"/>
+        </svg>
+        <div class="timer-num" id="timer-num">2:00</div>
+      </div>
+
+      <!-- Attempt dots -->
+      <div class="attempt-dots">
+        <div class="dot" id="dot0"></div>
+        <div class="dot" id="dot1"></div>
+        <div class="dot" id="dot2"></div>
+      </div>
+      <div style="font-size:.75rem;color:var(--muted);margin-bottom:1rem">3 attempts allowed</div>
+
+      <!-- OTP input boxes -->
+      <div class="otp-inputs">
+        <input class="otp-digit" id="od0" type="number" min="0" max="9" maxlength="1"
+          oninput="otpInput(this,0)" onkeydown="otpKey(event,0)">
+        <input class="otp-digit" id="od1" type="number" min="0" max="9" maxlength="1"
+          oninput="otpInput(this,1)" onkeydown="otpKey(event,1)">
+        <input class="otp-digit" id="od2" type="number" min="0" max="9" maxlength="1"
+          oninput="otpInput(this,2)" onkeydown="otpKey(event,2)">
+        <input class="otp-digit" id="od3" type="number" min="0" max="9" maxlength="1"
+          oninput="otpInput(this,3)" onkeydown="otpKey(event,3)">
+      </div>
+
+      <button class="btn btn-primary btn-full" onclick="verifyOTP()" id="btn-otp">
+        🔐 Verify OTP & Confirm Payment
+      </button>
+      <button class="btn btn-ghost btn-full" onclick="resendOTP()" id="btn-resend"
+        style="margin-top:.6rem;opacity:.5;pointer-events:none" disabled>
+        🔄 Resend OTP
+      </button>
+    </div>
+  </div>
+
+</div><!-- /flow-wrap -->
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: RESULT
+     ═══════════════════════════════════════════════ -->
+<div class="page" id="page-result">
+<div style="position:relative;height:160px;overflow:hidden">
+  <img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=1400&q=80&auto=format&fit=crop"
+    alt="Journey" loading="lazy"
+    style="width:100%;height:100%;object-fit:cover;object-position:center 60%;opacity:.35;display:block">
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent 0%,var(--ink) 100%)"></div>
+</div>
+<div class="result-wrap">
+  <span class="result-icon-big" id="res-icon">✅</span>
+  <div class="result-title" id="res-title">Payment Successful!</div>
+  <div id="res-badges" style="display:flex;gap:.5rem;justify-content:center;flex-wrap:wrap;margin:.5rem 0"></div>
+
+  <!-- Fraud checking animation -->
+  <div id="fraud-checking" style="display:none;margin:1rem 0">
+    <div class="spinner-ring" style="width:32px;height:32px;margin:0 auto .5rem"></div>
+    <div style="font-size:.85rem;color:var(--muted)">🔍 Running fraud analysis...</div>
+  </div>
+
+  <div class="result-detail-box" id="res-details"></div>
+
+  <div id="res-reason" style="display:none">
+    <div class="reason-card">
+      <div class="lbl">⚠️ Fraud Reason</div>
+      <div id="res-reason-text" style="color:var(--text);font-size:.9rem"></div>
+    </div>
+  </div>
+
+  <div class="risk-meter-wrap" id="res-risk-wrap">
+    <div class="lbl-row">
+      <span style="color:var(--muted);font-size:.78rem;text-transform:uppercase;font-weight:700">Risk Score</span>
+      <span id="res-risk-pct" style="font-weight:800"></span>
+    </div>
+    <div class="risk-track"><div class="risk-fill" id="res-risk-fill"></div></div>
+    <div style="display:flex;justify-content:space-between;font-size:.72rem;color:var(--muted2);margin-top:.3rem">
+      <span>0 — Valid</span><span>20 — Suspicious</span><span>50+ — Fraud</span>
+    </div>
+  </div>
+
+  <div class="result-actions">
+    <button class="btn btn-ghost" onclick="nav('tickets')">🎟️ My Tickets</button>
+    <button class="btn btn-primary" onclick="handleBook()">Book Another</button>
+    <button class="btn btn-ghost" onclick="downloadReceipt()" id="btn-receipt">📄 Download Receipt</button>
+  </div>
+</div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: SCAN TICKET
+     ═══════════════════════════════════════════════ -->
+<div class="page" id="page-scan">
+  <div class="flow-wrap" style="max-width:800px">
+    <div class="flow-header" style="text-align:center">
+      <h2>🔍 AI Ticket Scanner</h2>
+      <p>Upload your e-ticket image to detect forgery, tampering, and anomalies</p>
+    </div>
+    
+    <div style="display:flex;gap:2rem;flex-wrap:wrap">
+      <!-- Left: Upload Area -->
+      <div style="flex:1;min-width:300px">
+        <div id="drop-area" style="border:2px dashed var(--line);border-radius:var(--r);padding:3rem 2rem;text-align:center;cursor:pointer;transition:all 0.3s;height:100%;display:flex;flex-direction:column;justify-content:center;background:var(--card)">
+          <div style="font-size:3rem;margin-bottom:1rem">📄</div>
+          <h3 style="font-family:var(--font-head);margin-bottom:0.5rem">Drop ticket image here</h3>
+          <p style="color:var(--muted);font-size:0.85rem">or click to browse (JPG, PNG, PDF)</p>
+          <input type="file" id="scan-file" accept="image/*,.pdf" style="display:none">
+          
+          <div id="scan-preview" style="display:none;margin-top:1.5rem">
+            <img id="scan-img-preview" src="" style="max-width:100%;max-height:200px;border-radius:8px;border:1px solid var(--line)">
+            <p id="scan-filename" style="font-size:0.8rem;color:var(--cyan);margin-top:0.5rem;word-break:break-all"></p>
+            <button class="btn btn-ghost btn-sm" onclick="clearScanFile()" style="margin-top:0.5rem">Remove File</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right: Form -->
+      <div style="flex:1;min-width:300px">
+        <div class="card card-sm">
+          <div class="fdiv">Ticket Details (for verification)</div>
+          <div class="field">
+            <label>Issuer (e.g. IRCTC, MakeMyTrip)</label>
+            <input type="text" id="scan-issuer" placeholder="IRCTC">
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label>PNR Number</label>
+              <input type="text" id="scan-pnr" placeholder="1234567890">
+            </div>
+            <div class="field">
+              <label>Passenger Name</label>
+              <input type="text" id="scan-passenger" placeholder="John Doe">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label>Source</label>
+              <input type="text" id="scan-src" placeholder="Mumbai">
+            </div>
+            <div class="field">
+              <label>Destination</label>
+              <input type="text" id="scan-dst" placeholder="Delhi">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label>Travel Date</label>
+              <input type="date" id="scan-date">
+            </div>
+            <div class="field">
+              <label>Price (₹)</label>
+              <input type="number" id="scan-price" placeholder="1500">
+            </div>
+          </div>
+          
+          <button class="btn btn-violet btn-full" onclick="runScan()" style="margin-top:1rem;padding:1rem">
+            <span id="scan-btn-txt">Run AI Analysis</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: SCAN RESULT
+     ═══════════════════════════════════════════════ -->
+<div class="page" id="page-scan-res">
+  <div class="flow-wrap" style="max-width:900px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem">
+      <h2 style="font-family:var(--font-head);font-size:1.8rem">Scan Report</h2>
+      <button class="btn btn-ghost btn-sm" onclick="nav('history')">View History</button>
+    </div>
+    
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:1.5rem">
+      <!-- Left: Score Ring -->
+      <div class="card" style="text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center">
+        <div style="position:relative;width:150px;height:150px;margin-bottom:1.5rem">
+          <svg viewBox="0 0 100 100" style="transform:rotate(-90deg);width:100%;height:100%">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="var(--line)" stroke-width="8" />
+            <circle id="scan-score-ring" cx="50" cy="50" r="45" fill="none" stroke="var(--green)" stroke-width="8" stroke-dasharray="283" stroke-dashoffset="0" style="transition:stroke-dashoffset 1.5s ease-out, stroke 0.5s" />
+          </svg>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center">
+            <div id="scan-score-val" style="font-family:var(--font-head);font-size:2.5rem;font-weight:700;line-height:1">0</div>
+            <div style="font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px">Score</div>
+          </div>
+        </div>
+        <div id="scan-risk-badge" class="result-badge badge-valid" style="font-size:1rem;padding:0.5rem 1.5rem">LOW RISK</div>
+        <p id="scan-verdict-txt" style="color:var(--muted);font-size:0.9rem;margin-top:1rem"></p>
+        
+        <a id="scan-pdf-btn" href="#" class="btn btn-ghost btn-full" style="margin-top:1.5rem" target="_blank">📄 Download PDF Report</a>
+      </div>
+      
+      <!-- Right: ML & Checks -->
+      <div style="display:flex;flex-direction:column;gap:1.5rem">
+        <!-- ML Ensemble -->
+        <div class="card card-sm" style="background:rgba(124,58,237,.05);border-color:rgba(124,58,237,.2)">
+          <h3 style="font-family:var(--font-head);font-size:1rem;color:#a78bfa;margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem">
+            🤖 ML Ensemble Output
+          </h3>
+          <div style="display:flex;gap:1rem">
+            <div style="flex:1">
+              <div style="font-size:0.75rem;color:var(--muted);text-transform:uppercase;margin-bottom:0.25rem">GradientBoosting (70%)</div>
+              <div style="height:6px;background:var(--card2);border-radius:3px;overflow:hidden">
+                <div id="bar-gb" style="height:100%;background:#a78bfa;width:0%;transition:width 1s"></div>
+              </div>
+              <div id="val-gb" style="font-size:0.85rem;font-weight:700;text-align:right;margin-top:0.25rem">0%</div>
+            </div>
+            <div style="flex:1">
+              <div style="font-size:0.75rem;color:var(--muted);text-transform:uppercase;margin-bottom:0.25rem">IsolationForest (30%)</div>
+              <div style="height:6px;background:var(--card2);border-radius:3px;overflow:hidden">
+                <div id="bar-iso" style="height:100%;background:var(--cyan);width:0%;transition:width 1s"></div>
+              </div>
+              <div id="val-iso" style="font-size:0.85rem;font-weight:700;text-align:right;margin-top:0.25rem">0%</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Checks Grid -->
+        <div class="card card-sm">
+          <h3 style="font-family:var(--font-head);font-size:1rem;margin-bottom:1rem">CV & Metadata Checks</h3>
+          <div id="scan-checks-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+        
+        <!-- OCR Text -->
+        <div class="card card-sm">
+          <h3 style="font-family:var(--font-head);font-size:1rem;margin-bottom:0.5rem">Extracted Text (OCR)</h3>
+          <div id="scan-ocr-text" style="font-family:monospace;font-size:0.75rem;color:var(--muted);background:var(--card2);padding:0.75rem;border-radius:6px;max-height:120px;overflow-y:auto;white-space:pre-wrap"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: SCAN HISTORY
+     ═══════════════════════════════════════════════ -->
+<div class="page" id="page-history">
+  <div class="tickets-wrap">
+    <h2 style="font-family:var(--font-head);font-size:2rem;margin-bottom:1.5rem">My Scan History</h2>
+    <div id="history-list"></div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: SCAN TICKET
+     ═══════════════════════════════════════════════ -->
+<div class="page" id="page-scan">
+  <div class="flow-wrap" style="max-width:800px">
+    <div class="flow-header" style="text-align:center">
+      <h2>🔍 AI Ticket Scanner</h2>
+      <p>Upload your e-ticket image to detect forgery, tampering, and anomalies</p>
+    </div>
+    
+    <div style="display:flex;gap:2rem;flex-wrap:wrap">
+      <!-- Left: Upload Area -->
+      <div style="flex:1;min-width:300px">
+        <div id="drop-area" style="border:2px dashed var(--line);border-radius:var(--r);padding:3rem 2rem;text-align:center;cursor:pointer;transition:all 0.3s;height:100%;display:flex;flex-direction:column;justify-content:center;background:var(--card)">
+          <div style="font-size:3rem;margin-bottom:1rem">📄</div>
+          <h3 style="font-family:var(--font-head);margin-bottom:0.5rem">Drop ticket image here</h3>
+          <p style="color:var(--muted);font-size:0.85rem">or click to browse (JPG, PNG, PDF)</p>
+          <input type="file" id="scan-file" accept="image/*,.pdf" style="display:none">
+          
+          <div id="scan-preview" style="display:none;margin-top:1.5rem">
+            <img id="scan-img-preview" src="" style="max-width:100%;max-height:200px;border-radius:8px;border:1px solid var(--line)">
+            <p id="scan-filename" style="font-size:0.8rem;color:var(--cyan);margin-top:0.5rem;word-break:break-all"></p>
+            <button class="btn btn-ghost btn-sm" onclick="clearScanFile()" style="margin-top:0.5rem">Remove File</button>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right: Form -->
+      <div style="flex:1;min-width:300px">
+        <div class="card card-sm">
+          <div class="fdiv">Ticket Details (for verification)</div>
+          <div class="field">
+            <label>Issuer (e.g. IRCTC, MakeMyTrip)</label>
+            <input type="text" id="scan-issuer" placeholder="IRCTC">
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label>PNR Number</label>
+              <input type="text" id="scan-pnr" placeholder="1234567890">
+            </div>
+            <div class="field">
+              <label>Passenger Name</label>
+              <input type="text" id="scan-passenger" placeholder="John Doe">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label>Source</label>
+              <input type="text" id="scan-src" placeholder="Mumbai">
+            </div>
+            <div class="field">
+              <label>Destination</label>
+              <input type="text" id="scan-dst" placeholder="Delhi">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label>Travel Date</label>
+              <input type="date" id="scan-date">
+            </div>
+            <div class="field">
+              <label>Price (₹)</label>
+              <input type="number" id="scan-price" placeholder="1500">
+            </div>
+          </div>
+          
+          <button class="btn btn-violet btn-full" onclick="runScan()" style="margin-top:1rem;padding:1rem">
+            <span id="scan-btn-txt">Run AI Analysis</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: SCAN RESULT
+     ═══════════════════════════════════════════════ -->
+<div class="page" id="page-scan-res">
+  <div class="flow-wrap" style="max-width:900px">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:2rem">
+      <h2 style="font-family:var(--font-head);font-size:1.8rem">Scan Report</h2>
+      <button class="btn btn-ghost btn-sm" onclick="nav('history')">View History</button>
+    </div>
+    
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:1.5rem">
+      <!-- Left: Score Ring -->
+      <div class="card" style="text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center">
+        <div style="position:relative;width:150px;height:150px;margin-bottom:1.5rem">
+          <svg viewBox="0 0 100 100" style="transform:rotate(-90deg);width:100%;height:100%">
+            <circle cx="50" cy="50" r="45" fill="none" stroke="var(--line)" stroke-width="8" />
+            <circle id="scan-score-ring" cx="50" cy="50" r="45" fill="none" stroke="var(--green)" stroke-width="8" stroke-dasharray="283" stroke-dashoffset="0" style="transition:stroke-dashoffset 1.5s ease-out, stroke 0.5s" />
+          </svg>
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center">
+            <div id="scan-score-val" style="font-family:var(--font-head);font-size:2.5rem;font-weight:700;line-height:1">0</div>
+            <div style="font-size:0.7rem;color:var(--muted);text-transform:uppercase;letter-spacing:1px">Score</div>
+          </div>
+        </div>
+        <div id="scan-risk-badge" class="result-badge badge-valid" style="font-size:1rem;padding:0.5rem 1.5rem">LOW RISK</div>
+        <p id="scan-verdict-txt" style="color:var(--muted);font-size:0.9rem;margin-top:1rem"></p>
+        
+        <a id="scan-pdf-btn" href="#" class="btn btn-ghost btn-full" style="margin-top:1.5rem" target="_blank">📄 Download PDF Report</a>
+      </div>
+      
+      <!-- Right: ML & Checks -->
+      <div style="display:flex;flex-direction:column;gap:1.5rem">
+        <!-- ML Ensemble -->
+        <div class="card card-sm" style="background:rgba(124,58,237,.05);border-color:rgba(124,58,237,.2)">
+          <h3 style="font-family:var(--font-head);font-size:1rem;color:#a78bfa;margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem">
+            🤖 ML Ensemble Output
+          </h3>
+          <div style="display:flex;gap:1rem">
+            <div style="flex:1">
+              <div style="font-size:0.75rem;color:var(--muted);text-transform:uppercase;margin-bottom:0.25rem">GradientBoosting (70%)</div>
+              <div style="height:6px;background:var(--card2);border-radius:3px;overflow:hidden">
+                <div id="bar-gb" style="height:100%;background:#a78bfa;width:0%;transition:width 1s"></div>
+              </div>
+              <div id="val-gb" style="font-size:0.85rem;font-weight:700;text-align:right;margin-top:0.25rem">0%</div>
+            </div>
+            <div style="flex:1">
+              <div style="font-size:0.75rem;color:var(--muted);text-transform:uppercase;margin-bottom:0.25rem">IsolationForest (30%)</div>
+              <div style="height:6px;background:var(--card2);border-radius:3px;overflow:hidden">
+                <div id="bar-iso" style="height:100%;background:var(--cyan);width:0%;transition:width 1s"></div>
+              </div>
+              <div id="val-iso" style="font-size:0.85rem;font-weight:700;text-align:right;margin-top:0.25rem">0%</div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Checks Grid -->
+        <div class="card card-sm">
+          <h3 style="font-family:var(--font-head);font-size:1rem;margin-bottom:1rem">CV & Metadata Checks</h3>
+          <div id="scan-checks-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+        
+        <!-- OCR Text -->
+        <div class="card card-sm">
+          <h3 style="font-family:var(--font-head);font-size:1rem;margin-bottom:0.5rem">Extracted Text (OCR)</h3>
+          <div id="scan-ocr-text" style="font-family:monospace;font-size:0.75rem;color:var(--muted);background:var(--card2);padding:0.75rem;border-radius:6px;max-height:120px;overflow-y:auto;white-space:pre-wrap"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: SCAN HISTORY
+     ═══════════════════════════════════════════════ -->
+<div class="page" id="page-history">
+  <div class="tickets-wrap">
+    <h2 style="font-family:var(--font-head);font-size:2rem;margin-bottom:1.5rem">My Scan History</h2>
+    <div id="history-list"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: MY TICKETS
+     ═══════════════════════════════════════════════ -->
+<div class="page" id="page-tickets">
+<div style="position:relative;height:150px;overflow:hidden">
+  <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1200&q=80&auto=format&fit=crop"
+    alt="My Tickets" loading="lazy"
+    style="width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:.4;display:block">
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent,var(--ink));
+    display:flex;align-items:flex-end;padding:1.25rem 2rem">
+    <div style="font-size:.75rem;color:var(--cyan);font-weight:700;letter-spacing:.08em;text-transform:uppercase">🎟️ My Journey History</div>
+  </div>
+</div>
+<div class="tickets-wrap">
+  <div class="flow-header">
+    <h2>My Tickets</h2>
+    <p>All your bookings with payment status and fraud detection results.</p>
+  </div>
+  <div class="filter-bar">
+    <button class="fbtn act" onclick="filterT('all',this)">All</button>
+    <button class="fbtn" onclick="filterT('valid',this)">✅ Valid</button>
+    <button class="fbtn" onclick="filterT('fraud',this)">🚨 Fraud</button>
+    <button class="fbtn" onclick="filterT('suspicious',this)">⚠️ Suspicious</button>
+    <button class="fbtn" onclick="filterT('pending',this)">⏳ Pending</button>
+    <button class="fbtn" onclick="filterT('cancelled',this)">❌ Cancelled</button>
+  </div>
+  <div id="tickets-list"><div class="sk-loader"><div class="spinner-ring"></div>Loading...</div></div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: ADMIN LOGIN
+     ═══════════════════════════════════════════════ -->
+<div class="page" id="page-admin-login">
+<div class="admin-login-page">
+  <div class="admin-login-box">
+    <!-- Header -->
+    <div class="admin-login-header">
+      <div class="admin-shield">🛡️</div>
+      <h2>Admin Portal</h2>
+      <p>Restricted access — authorised personnel only</p>
+    </div>
+    <!-- Body -->
+    <div class="admin-login-body">
+      <div class="field">
+        <label>Admin Email</label>
+        <input type="email" id="adm-em" placeholder="Enter admin email"
+          style="border-color:rgba(124,58,237,.3)"
+          onkeydown="if(event.key==='Enter')doAdminLogin()">
+      </div>
+      <div class="field">
+        <label>Admin Password</label>
+        <input type="password" id="adm-pw" placeholder="Enter admin password"
+          style="border-color:rgba(124,58,237,.3)"
+          onkeydown="if(event.key==='Enter')doAdminLogin()">
+      </div>
+      <div id="adm-err" style="display:none;background:rgba(255,77,109,.08);border:1px solid rgba(255,77,109,.3);
+        border-radius:var(--r2);padding:.7rem 1rem;font-size:.85rem;color:var(--coral);margin-bottom:1rem"></div>
+      <button class="btn btn-full" id="btn-adm-login"
+        onclick="doAdminLogin()"
+        style="background:linear-gradient(135deg,var(--violet),#9333ea);color:#fff;font-size:.95rem;padding:.9rem">
+        🔐 Access Admin Dashboard
+      </button>
+      <div style="margin-top:1rem;padding:.7rem 1rem;background:rgba(0,212,255,.05);
+        border:1px solid rgba(0,212,255,.12);border-radius:var(--r2);font-size:.78rem;color:var(--muted);text-align:center">
+        🔒 Admin credentials are set during system setup.<br>Contact your system administrator for access.
+      </div>
+      <div class="admin-back-link" onclick="nav('home')">
+        ← Back to Home
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════
+     PAGE: ADMIN DASHBOARD
+     ═══════════════════════════════════════════════ -->
+<div class="page" id="page-admin">
+<div style="position:relative;height:160px;overflow:hidden">
+  <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1400&q=80&auto=format&fit=crop"
+    alt="Admin Analytics" loading="lazy"
+    style="width:100%;height:100%;object-fit:cover;object-position:center 40%;opacity:.35;display:block">
+  <div style="position:absolute;inset:0;background:linear-gradient(to bottom,transparent,var(--ink));
+    display:flex;align-items:flex-end;padding:1.25rem 2.5rem">
+    <div style="font-size:.75rem;color:var(--cyan);font-weight:700;letter-spacing:.08em;text-transform:uppercase">📊 Fraud Intelligence Center</div>
+  </div>
+</div>
+<!-- Admin session bar -->
+<div class="admin-bar" id="admin-session-bar">
+  <div class="admin-bar-left">
+    <div class="admin-dot"></div>
+    <span>🛡️ Admin Session Active</span>
+    <span id="admin-bar-name" style="opacity:.7"></span>
+  </div>
+  <div class="admin-bar-right">
+    <span id="admin-bar-email" style="color:var(--muted);font-size:.78rem"></span>
+    <button class="btn btn-ghost btn-sm" onclick="adminLogout()"
+      style="border-color:rgba(124,58,237,.4);color:#a78bfa;font-size:.78rem;padding:.35rem .8rem">
+      🚪 Logout Admin
+    </button>
+  </div>
+</div>
+
+<div class="admin-wrap">
+  <div class="admin-header">
+    <div>
+      <h2 style="font-family:var(--font-head);font-size:1.8rem">Admin Dashboard</h2>
+      <p style="color:var(--muted);font-size:.9rem">Real-time fraud analytics & monitoring</p>
+    </div>
+    <button class="btn btn-ghost btn-sm" onclick="loadAdmin()">🔄 Refresh</button>
+  </div>
+
+  <!-- ML Model banner -->
+  <div class="model-banner" id="model-banner">
+    <div>
+      <div style="font-size:2rem;margin-bottom:.35rem">🤖</div>
+      <h3>Decision Tree Classifier</h3>
+      <p>Scikit-learn · 11 features · Hybrid with Rule-Based Engine</p>
+    </div>
+    <div class="model-metrics" id="model-metrics"></div>
+  </div>
+
+  <!-- KPIs -->
+  <div class="kpi-grid" id="kpi-grid">
+    <div class="sk-loader"><div class="spinner-ring"></div></div>
+  </div>
+
+  <!-- Charts row -->
+  <div class="charts-2">
+    <div class="chart-box">
+      <h3>Fraud vs Valid vs Pending</h3>
+      <div class="chart-canvas-wrap"><canvas id="ch-donut"></canvas></div>
+    </div>
+    <div class="chart-box">
+      <h3>Daily Bookings + Fraud (7 days)</h3>
+      <div class="chart-canvas-wrap"><canvas id="ch-bar"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Payment chart + Method chart -->
+  <div class="charts-2" style="margin-bottom:1.75rem">
+    <div class="chart-box">
+      <h3>Payment Status Breakdown</h3>
+      <div class="chart-canvas-wrap short"><canvas id="ch-pay"></canvas></div>
+    </div>
+    <div class="chart-box">
+      <h3>Fraud Detection Method</h3>
+      <div class="chart-canvas-wrap short"><canvas id="ch-method"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Recent Fraud Alerts -->
+  <div style="margin-bottom:1.75rem">
+    <h3 style="font-family:var(--font-head);font-size:1rem;color:var(--muted);margin-bottom:1rem">
+      🚨 Recent Fraud Alerts
+    </h3>
+    <div class="alerts-list" id="alerts-list"></div>
+  </div>
+
+  <!-- Suspicious Users table -->
+  <div class="tbl-box">
+    <div class="tbl-head"><h3>⚠️ High-Risk Users</h3></div>
+    <div style="overflow-x:auto">
+      <table>
+        <thead><tr>
+          <th>User</th><th>Email</th><th>Risk Score</th>
+          <th>Tickets</th><th>Fraud</th><th>OTP Abuse</th><th>Failed Pays</th>
+        </tr></thead>
+        <tbody id="sus-tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     JAVASCRIPT
+     ═══════════════════════════════════════════════════════════ -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// ─────────────────────────────────────────────────────────────────────────────
+// API URL Detection
+//   • Served by Flask on port 5000  → use same-origin (empty string)
+//   • Opened directly as file://    → point to http://localhost:5000
+//   • Served on a different port    → still point to Flask on 5000
+// ─────────────────────────────────────────────────────────────────────────────
+const IS_FILE_PROTOCOL = window.location.protocol === 'file:';
+const IS_FLASK_PORT    = window.location.port === '5000';
+const API = (IS_FILE_PROTOCOL || !IS_FLASK_PORT) ? 'http://localhost:5000' : '';
+
+let token      = null, user      = null;
+let adminToken = null, adminUser = null;   // Separate admin session
+let bookingState = {
+  passenger: '', source: '', destination: '', travelTime: '',
+  seatType: '', payMethod: 'UPI', ticketId: null, demoOtp: '',
+  transactionId: '', fraudResult: null,
+  price: 0,    // dynamic price in INR
+  dist: 0,     // distance in km
+};
+let allTickets = [];
+let timerInterval = null;
+let timerLeft = 120;
+let charts = {};
+
+// ── Server connectivity check ──────────────────────────────────
+async function checkServer() {
+  // If opened as a local file, show banner immediately — no server possible
+  if (IS_FILE_PROTOCOL) {
+    document.getElementById('server-banner').style.display = 'block';
+    return false;
+  }
+  try {
+    // Ping the public stats endpoint — fastest reliable health check
+    const r = await fetch(API + '/api/public_stats', {
+      signal: AbortSignal.timeout(4000)
+    });
+    if (r.ok) {
+      document.getElementById('server-banner').style.display = 'none';
+      return true;
+    }
+  } catch(e) {
+    // Flask is not running
+    document.getElementById('server-banner').style.display = 'block';
+  }
+  return false;
+}
+
+// ── Init ──────────────────────────────────────────────────────
+window.onload = async () => {
+  // ── Restore user session from localStorage ──────────────────
+  token = localStorage.getItem('st_token');
+  user  = JSON.parse(localStorage.getItem('st_user') || 'null');
+  if (token && user) updateNav(true);
+
+  // ── Restore admin session from localStorage ─────────────────
+  adminToken = localStorage.getItem('st_admin_token');
+  adminUser  = JSON.parse(localStorage.getItem('st_admin_user') || 'null');
+
+  // ── Set default travel datetime (tomorrow, on the hour) ─────
+  const dt = new Date(Date.now() + 86400000);
+  dt.setMinutes(0); dt.setSeconds(0);
+  const dtEl = document.getElementById('b-dt');
+  if (dtEl) dtEl.value = dt.toISOString().slice(0,16);
+
+  // ── Check Flask connectivity + load home stats ───────────────
+  // Run both in parallel — server check shows banner if needed,
+  // loadHomeStats fetches public stats independently
+  checkServer();        // shows/hides the orange warning banner
+  loadHomeStats();      // always tries — shows "—" if not available
+};
+
+// ── Nav ───────────────────────────────────────────────────────
+function nav(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  window.scrollTo(0,0);
+  if (page === 'tickets')     loadTickets();
+  if (page === 'admin')       loadAdmin();
+  if (page === 'admin-login') {
+    // Clear fields on every visit for security
+    const em = document.getElementById('adm-em');
+    const pw = document.getElementById('adm-pw');
+    const er = document.getElementById('adm-err');
+    if (em) em.value = '';
+    if (pw) pw.value = '';
+    if (er) er.style.display = 'none';
+  }
+}
+function goHome() { nav('home'); }
+function handleBook() {
+  if (!token) { nav('auth'); return; }
+  nav('book'); showStep(1);
+}
+
+// ── Admin navigation guard ─────────────────────────────────────
+function goAdmin() {
+  if (adminToken && adminUser) {
+    // Already logged in as admin — go straight to dashboard
+    nav('admin');
+  } else {
+    // Not logged in — go to admin login page
+    nav('admin-login');
+  }
+}
+
+function updateNav(loggedIn) {
+  document.getElementById('nl-guest').style.display   = loggedIn ? 'none' : 'flex';
+  document.getElementById('nl-cta').style.display     = loggedIn ? 'none' : '';
+  document.getElementById('nav-user').style.display   = loggedIn ? 'flex' : 'none';
+  if (loggedIn && user) {
+    document.getElementById('nav-av').textContent   = user.name[0].toUpperCase();
+    document.getElementById('nav-name').textContent = user.name;
+  }
+}
+
+// ── Auth tabs ─────────────────────────────────────────────────
+function swTab(t) {
+  document.getElementById('f-login').style.display   = t === 'login'    ? '' : 'none';
+  document.getElementById('f-reg').style.display     = t === 'register' ? '' : 'none';
+  document.getElementById('tl').classList.toggle('act', t === 'login');
+  document.getElementById('tr').classList.toggle('act', t === 'register');
+}
+
+async function doLogin() {
+  const em = document.getElementById('li-em').value.trim();
+  const pw = document.getElementById('li-pw').value;
+  if (!em || !pw) { toast('Enter email and password', 'err'); return; }
+  const btn = document.getElementById('btn-li');
+  btn.innerHTML = '<span class="loader"></span> Signing in...'; btn.disabled = true;
+  try {
+    const r = await api('POST', '/api/login', {email:em, password:pw});
+    token = r.token; user = r.user;
+    localStorage.setItem('st_token', token);
+    localStorage.setItem('st_user', JSON.stringify(user));
+    updateNav(true);
+    toast(`Welcome, ${user.name}! 👋`, 'ok');
+    nav('home');
+  } catch(e) { toast(e.message, 'err'); }
+  finally { btn.innerHTML = 'Sign In'; btn.disabled = false; }
+}
+
+async function doRegister() {
+  const nm = document.getElementById('rg-nm').value.trim();
+  const em = document.getElementById('rg-em').value.trim();
+  const pw = document.getElementById('rg-pw').value;
+  if (!nm || !em || !pw) { toast('Fill all fields', 'err'); return; }
+  const btn = document.getElementById('btn-rg');
+  btn.innerHTML = '<span class="loader"></span> Creating...'; btn.disabled = true;
+  try {
+    await api('POST', '/api/register', {name:nm, email:em, password:pw});
+    toast('Account created! Please sign in.', 'ok');
+    swTab('login');
+    document.getElementById('li-em').value = em;
+  } catch(e) { toast(e.message, 'err'); }
+  finally { btn.innerHTML = 'Create Account'; btn.disabled = false; }
+}
+
+function logout() {
+  token = null; user = null;
+  localStorage.removeItem('st_token'); localStorage.removeItem('st_user');
+  updateNav(false);
+  nav('home');
+  toast('Logged out', 'ok');
+}
+
+// ── Admin Login ────────────────────────────────────────────────
+async function doAdminLogin() {
+  const em = document.getElementById('adm-em').value.trim();
+  const pw = document.getElementById('adm-pw').value;
+  const errEl = document.getElementById('adm-err');
+  errEl.style.display = 'none';
+  if (!em || !pw) { showAdmErr('Enter email and password'); return; }
+
+  const btn = document.getElementById('btn-adm-login');
+  btn.innerHTML = '<span class="loader"></span> Authenticating...';
+  btn.disabled = true;
+
+  try {
+    const r = await fetch(API + '/api/admin_login', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({email: em, password: pw}),
+      signal: AbortSignal.timeout(8000),
+    });
+    const d = await r.json();
+    if (!r.ok) { showAdmErr(d.error || 'Login failed'); return; }
+
+    // Save admin session separately from user session
+    adminToken = d.token;
+    adminUser  = d.admin;
+    localStorage.setItem('st_admin_token', adminToken);
+    localStorage.setItem('st_admin_user',  JSON.stringify(adminUser));
+
+    // Update admin bar
+    document.getElementById('admin-bar-name').textContent  = adminUser.name;
+    document.getElementById('admin-bar-email').textContent = adminUser.email;
+
+    toast('Welcome, ' + adminUser.name + '! Admin access granted. 🛡️', 'ok');
+    nav('admin');
+  } catch(e) {
+    showAdmErr(e.message || 'Cannot connect to server');
+  } finally {
+    btn.innerHTML = '🔐 Access Admin Dashboard';
+    btn.disabled = false;
+  }
+}
+
+function showAdmErr(msg) {
+  const el = document.getElementById('adm-err');
+  el.textContent = '❌ ' + msg;
+  el.style.display = 'block';
+}
+
+async function adminLogout() {
+  try {
+    await fetch(API + '/api/admin_logout', {
+      method: 'POST',
+      headers: {'Authorization': 'Bearer ' + adminToken},
+    });
+  } catch(e) {}
+  adminToken = null; adminUser = null;
+  localStorage.removeItem('st_admin_token');
+  localStorage.removeItem('st_admin_user');
+  toast('Admin session ended', 'ok');
+  nav('home');
+}
+
+// ── Booking Steps ─────────────────────────────────────────────
+function showStep(n) {
+  document.getElementById('step1').style.display = n===1 ? '' : 'none';
+  document.getElementById('step2').style.display = n===2 ? '' : 'none';
+  document.getElementById('step3').style.display = n===3 ? '' : 'none';
+
+  const steps = [1,2,3,4];
+  steps.forEach(i => {
+    const num = document.getElementById('sb'+i);
+    const lbl = document.getElementById('sl'+i);
+    if (!num) return;
+    num.classList.remove('active','done');
+    lbl.classList.remove('active-l');
+    if (i < n) { num.classList.add('done'); num.textContent = '✓'; }
+    if (i === n) { num.classList.add('active'); lbl.classList.add('active-l'); num.textContent = i; }
+    if (i > n) { num.textContent = i; }
+  });
+  ['sl-a','sl-b','sl-c'].forEach((id,idx) => {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle('done-l', n > idx+1);
+  });
+}
+
+// ── Distance-Based Pricing ────────────────────────────────────
+// Approximate road/rail distances between major Indian cities (km)
+const CITY_DISTANCES = {
+  "Agra-Delhi":200,"Agra-Jaipur":240,"Agra-Lucknow":330,
+  "Agra-Mumbai":1260,"Ahmedabad-Mumbai":530,"Ahmedabad-Delhi":930,
+  "Ahmedabad-Pune":665,"Ahmedabad-Jaipur":660,"Amritsar-Delhi":450,
+  "Amritsar-Chandigarh":230,"Aurangabad-Mumbai":335,"Aurangabad-Pune":235,
+  "Bangalore-Chennai":350,"Bangalore-Mumbai":980,"Bangalore-Hyderabad":570,
+  "Bangalore-Kochi":545,"Bangalore-Mysore":145,"Bangalore-Coimbatore":365,
+  "Bhopal-Delhi":770,"Bhopal-Mumbai":780,"Bhopal-Indore":195,"Bhopal-Nagpur":355,
+  "Bhubaneswar-Kolkata":445,"Bhubaneswar-Visakhapatnam":415,
+  "Chandigarh-Delhi":265,"Chandigarh-Jammu":300,
+  "Chennai-Hyderabad":630,"Chennai-Kochi":685,"Chennai-Coimbatore":500,
+  "Chennai-Madurai":460,"Chennai-Vijayawada":430,"Chennai-Visakhapatnam":790,
+  "Chennai-Bangalore":350,"Coimbatore-Kochi":185,"Coimbatore-Madurai":210,
+  "Dehradun-Delhi":300,"Dehradun-Chandigarh":170,
+  "Delhi-Jaipur":280,"Delhi-Lucknow":555,"Delhi-Agra":200,"Delhi-Mumbai":1420,
+  "Delhi-Kolkata":1480,"Delhi-Hyderabad":1580,"Delhi-Chandigarh":265,
+  "Delhi-Amritsar":450,"Delhi-Jodhpur":600,"Delhi-Kota":480,"Delhi-Varanasi":820,
+  "Delhi-Kanpur":480,"Delhi-Patna":1000,"Delhi-Bhopal":770,"Delhi-Gwalior":320,
+  "Faridabad-Delhi":30,"Faridabad-Agra":185,
+  "Goa-Mumbai":600,"Goa-Pune":455,"Goa-Bangalore":560,"Goa-Mangalore":350,
+  "Guwahati-Kolkata":1000,"Guwahati-Patna":870,
+  "Gwalior-Delhi":320,"Gwalior-Agra":120,"Gwalior-Bhopal":425,
+  "Hyderabad-Mumbai":710,"Hyderabad-Bangalore":570,"Hyderabad-Chennai":630,
+  "Hyderabad-Pune":560,"Hyderabad-Visakhapatnam":625,"Hyderabad-Vijayawada":275,
+  "Indore-Mumbai":590,"Indore-Pune":545,"Indore-Bhopal":195,"Indore-Ahmedabad":395,
+  "Jaipur-Jodhpur":335,"Jaipur-Udaipur":395,"Jaipur-Kota":245,"Jaipur-Mumbai":1165,
+  "Jaipur-Ahmedabad":660,"Jaipur-Agra":240,
+  "Jammu-Srinagar":290,"Jammu-Delhi":580,"Jammu-Chandigarh":300,
+  "Jamshedpur-Kolkata":240,"Jamshedpur-Bhubaneswar":340,"Jamshedpur-Ranchi":130,
+  "Jodhpur-Jaipur":335,"Jodhpur-Udaipur":250,"Jodhpur-Ahmedabad":495,
+  "Kanpur-Lucknow":80,"Kanpur-Delhi":480,"Kanpur-Varanasi":340,"Kanpur-Agra":290,
+  "Kochi-Thiruvananthapuram":215,"Kochi-Coimbatore":185,"Kochi-Bangalore":545,
+  "Kolkata-Patna":585,"Kolkata-Bhubaneswar":445,"Kolkata-Jamshedpur":240,
+  "Kota-Jaipur":245,"Kota-Udaipur":255,"Kota-Bhopal":400,
+  "Lucknow-Varanasi":285,"Lucknow-Kanpur":80,"Lucknow-Delhi":555,
+  "Ludhiana-Chandigarh":100,"Ludhiana-Amritsar":130,"Ludhiana-Delhi":310,
+  "Madurai-Chennai":460,"Madurai-Coimbatore":210,"Madurai-Thiruvananthapuram":305,
+  "Mangalore-Goa":350,"Mangalore-Bangalore":350,"Mangalore-Kochi":360,
+  "Mumbai-Pune":155,"Mumbai-Nashik":170,"Mumbai-Surat":290,"Mumbai-Goa":600,
+  "Mumbai-Ahmedabad":530,"Mumbai-Vadodara":395,"Mumbai-Nagpur":840,
+  "Mumbai-Aurangabad":335,"Mumbai-Kolhapur":375,
+  "Mysore-Bangalore":145,"Mysore-Kochi":480,"Mysore-Coimbatore":215,
+  "Nagpur-Mumbai":840,"Nagpur-Hyderabad":505,"Nagpur-Bhopal":355,"Nagpur-Raipur":295,
+  "Nashik-Mumbai":170,"Nashik-Pune":215,"Nashik-Ahmedabad":415,
+  "Patna-Kolkata":585,"Patna-Varanasi":245,"Patna-Ranchi":330,"Patna-Delhi":1000,
+  "Pune-Mumbai":155,"Pune-Nashik":215,"Pune-Goa":455,"Pune-Hyderabad":560,
+  "Pune-Bangalore":840,"Pune-Ahmedabad":665,
+  "Raipur-Nagpur":295,"Raipur-Bhubaneswar":440,"Raipur-Ranchi":530,
+  "Rajkot-Ahmedabad":215,"Rajkot-Mumbai":730,"Rajkot-Vadodara":200,
+  "Ranchi-Patna":330,"Ranchi-Kolkata":390,"Ranchi-Jamshedpur":130,
+  "Srinagar-Jammu":290,"Srinagar-Chandigarh":450,
+  "Surat-Mumbai":290,"Surat-Ahmedabad":265,"Surat-Vadodara":155,
+  "Thiruvananthapuram-Kochi":215,"Thiruvananthapuram-Chennai":700,"Thiruvananthapuram-Madurai":305,
+  "Udaipur-Jaipur":395,"Udaipur-Jodhpur":250,"Udaipur-Ahmedabad":250,
+  "Vadodara-Ahmedabad":110,"Vadodara-Mumbai":395,"Vadodara-Surat":155,
+  "Varanasi-Lucknow":285,"Varanasi-Patna":245,"Varanasi-Kanpur":340,
+  "Vijayawada-Hyderabad":275,"Vijayawada-Visakhapatnam":345,"Vijayawada-Chennai":430,
+  "Visakhapatnam-Hyderabad":625,"Visakhapatnam-Vijayawada":345,"Visakhapatnam-Bhubaneswar":415,
+};
+
+function getDistance(a, b) {
+  if (!a || !b || a === b) return 0;
+  const key1 = a + '-' + b;
+  const key2 = b + '-' + a;
+  if (CITY_DISTANCES[key1]) return CITY_DISTANCES[key1];
+  if (CITY_DISTANCES[key2]) return CITY_DISTANCES[key2];
+  // Fallback: rough estimate based on alphabetical order offset
+  return Math.abs(a.charCodeAt(0) - b.charCodeAt(0)) * 35 + 200;
+}
+
+function calcTicketPrice(distKm) {
+  // ₹2 per km + ₹100 base fare, minimum ₹150
+  return Math.max(150, Math.round(distKm * 2 + 100));
+}
+
+function formatINR(amt) {
+  return '₹' + amt.toLocaleString('en-IN');
+}
+
+// Called whenever source or destination changes
+function calcPrice() {
+  const src = document.getElementById('b-src').value;
+  const dst = document.getElementById('b-dst').value;
+  const preview = document.getElementById('price-preview');
+  if (!src || !dst || src === dst) {
+    preview.style.display = 'none'; return;
+  }
+  const dist  = getDistance(src, dst);
+  const price = calcTicketPrice(dist);
+  bookingState.price = price;
+  bookingState.dist  = dist;
+
+  document.getElementById('preview-price').textContent = formatINR(price);
+  document.getElementById('preview-dist').textContent  = `~${dist} km distance`;
+  document.getElementById('preview-route').textContent = `${src} → ${dst}`;
+  preview.style.display = 'flex'; preview.style.flexWrap = 'wrap';
+}
+
+function goToPayment() {
+  const name = document.getElementById('b-name').value.trim();
+  const src  = document.getElementById('b-src').value;
+  const dst  = document.getElementById('b-dst').value;
+  const dt   = document.getElementById('b-dt').value;
+  const seat = document.getElementById('b-seat').value;
+  if (!name||!src||!dst||!dt) { toast('Please fill all fields','err'); return; }
+  if (src===dst) { toast('Source and destination must differ','err'); return; }
+
+  // Calculate price
+  const dist  = getDistance(src, dst);
+  const price = calcTicketPrice(dist);
+  bookingState.passenger   = name;
+  bookingState.source      = src;
+  bookingState.destination = dst;
+  bookingState.travelTime  = dt;
+  bookingState.seatType    = seat;
+  bookingState.price       = price;
+  bookingState.dist        = dist;
+
+  // Update payment page
+  document.getElementById('pay-route').textContent        = `${src} → ${dst}`;
+  document.getElementById('pay-price-display').textContent = formatINR(price);
+  document.getElementById('pay-dist-display').textContent  = `~${dist} km`;
+  document.getElementById('btn-pay-amt').textContent        = formatINR(price);
+  document.getElementById('otp-price-display').textContent  = formatINR(price);
+  showStep(2);
+}
+
+let selectedPayMethod = 'UPI';
+function selPay(el, method) {
+  document.querySelectorAll('.pay-pill').forEach(p => p.classList.remove('sel'));
+  el.classList.add('sel');
+  selectedPayMethod = method;
+  bookingState.payMethod = method;
+}
+
+async function proceedToPay() {
+  if (!token) { nav('auth'); return; }
+  const btn = document.getElementById('btn-pay');
+  btn.style.display = 'none';
+  document.getElementById('pay-processing').style.display = '';
+
+  try {
+    const r = await api('POST', '/api/initiate_booking', {
+      passenger_name:  bookingState.passenger,
+      source:          bookingState.source,
+      destination:     bookingState.destination,
+      travel_time:     bookingState.travelTime,
+      seat_type:       bookingState.seatType,
+      payment_method:  selectedPayMethod,
+      ticket_price:    bookingState.price,   // dynamic price
+      travel_distance: bookingState.dist,    // distance in km
+    });
+    bookingState.ticketId = r.ticket_id;
+    bookingState.demoOtp  = r.demo_otp;
+    document.getElementById('demo-otp-val').textContent = r.demo_otp;
+    document.getElementById('otp-email-display').textContent = r.email;
+    if (r.otp_sent) toast('📧 OTP sent to ' + r.email, 'ok');
+    else toast('📧 Demo mode: OTP shown above', 'warn');
+    setTimeout(() => {
+      document.getElementById('pay-processing').style.display = 'none';
+      btn.style.display = '';
+      showStep(3);
+      startTimer();
+      clearOtpBoxes();
+    }, 1800);
+  } catch(e) {
+    document.getElementById('pay-processing').style.display = 'none';
+    btn.style.display = '';
+    toast(e.message, 'err');
+  }
+}
+
+// ── OTP ───────────────────────────────────────────────────────
+function otpInput(el, idx) {
+  const v = el.value.replace(/\D/g,'');
+  el.value = v ? v[0] : '';
+  if (v) {
+    el.classList.add('filled');
+    if (idx < 3) document.getElementById('od'+(idx+1)).focus();
+  } else el.classList.remove('filled');
+}
+
+function otpKey(e, idx) {
+  if (e.key==='Backspace' && !e.target.value && idx > 0)
+    document.getElementById('od'+(idx-1)).focus();
+  if (e.key==='Enter') verifyOTP();
+}
+
+function clearOtpBoxes() {
+  [0,1,2,3].forEach(i => {
+    const el = document.getElementById('od'+i);
+    el.value = ''; el.classList.remove('filled');
+  });
+  document.getElementById('od0').focus();
+}
+
+function getOtpValue() {
+  return [0,1,2,3].map(i => document.getElementById('od'+i).value).join('');
+}
+
+// Timer
+function startTimer() {
+  clearInterval(timerInterval);
+  timerLeft = 120;
+  const prog  = document.getElementById('timer-prog');
+  const numEl = document.getElementById('timer-num');
+  const resend = document.getElementById('btn-resend');
+  const circumference = 2 * Math.PI * 30; // 188.5
+
+  resend.disabled = true; resend.style.opacity = '.5'; resend.style.pointerEvents = 'none';
+
+  timerInterval = setInterval(() => {
+    timerLeft--;
+    const m = Math.floor(timerLeft/60);
+    const s = timerLeft%60;
+    numEl.textContent = `${m}:${s.toString().padStart(2,'0')}`;
+    const offset = circumference - (timerLeft/120) * circumference;
+    prog.style.strokeDashoffset = offset;
+    if (timerLeft <= 20) prog.style.stroke = 'var(--coral)';
+    else prog.style.stroke = 'var(--cyan)';
+    if (timerLeft === 0) {
+      clearInterval(timerInterval);
+      numEl.textContent = 'Expired';
+      resend.disabled = false; resend.style.opacity = '1'; resend.style.pointerEvents = '';
+      toast('OTP expired! Click Resend OTP.', 'warn');
+    }
+  }, 1000);
+}
+
+let attemptCount = 0;
+function updateDots(used) {
+  for (let i=0;i<3;i++) {
+    const d = document.getElementById('dot'+i);
+    d.classList.remove('used','ok');
+    if (i < used) d.classList.add('used');
+  }
+}
+
+async function verifyOTP() {
+  const otp = getOtpValue();
+  if (otp.length !== 4) { toast('Enter all 4 digits', 'err'); return; }
+  if (!bookingState.ticketId) { toast('No active booking', 'err'); return; }
+
+  const btn = document.getElementById('btn-otp');
+  btn.innerHTML = '<span class="loader"></span> Verifying...'; btn.disabled = true;
+
+  try {
+    const r = await api('POST', '/api/verify_otp', {
+      ticket_id: bookingState.ticketId, otp
+    });
+    clearInterval(timerInterval);
+    bookingState.transactionId = r.transaction_id;
+    bookingState.fraudResult   = r.fraud_detection;
+    showResult(r);
+  } catch(e) {
+    attemptCount++;
+    updateDots(attemptCount);
+    clearOtpBoxes();
+    toast(e.message, 'err');
+    if (e.message && e.message.includes('Max')) {
+      // Payment failed — show result
+      showResult({
+        payment_status: 'FAILED',
+        transaction_id: 'N/A',
+        fraud_detection: { is_fraud:false, fraud_status:'VALID', fraud_reason:'', fraud_method:'None', risk_score:0, ml_probability:0 },
+      });
+    }
+  } finally { btn.innerHTML = '🔐 Verify OTP & Confirm Payment'; btn.disabled = false; }
+}
+
+async function resendOTP() {
+  if (!bookingState.ticketId) return;
+  const btn = document.getElementById('btn-resend');
+  btn.innerHTML = '<span class="loader"></span> Sending...'; btn.disabled = true;
+  try {
+    const r = await api('POST', '/api/resend_otp', {ticket_id: bookingState.ticketId});
+    bookingState.demoOtp = r.demo_otp;
+    document.getElementById('demo-otp-val').textContent = r.demo_otp;
+    toast('OTP resent!', 'ok');
+    clearOtpBoxes();
+    startTimer();
+  } catch(e) { toast(e.message,'err'); }
+  finally { btn.innerHTML = '🔄 Resend OTP'; btn.disabled = false; }
+}
+
+// ── Result page ───────────────────────────────────────────────
+function showResult(r) {
+  nav('result');
+  const f  = r.fraud_detection || {};
+  const ok = r.payment_status === 'SUCCESS';
+  const fs = f.fraud_status || 'VALID';
+  const rs = f.risk_score || 0;
+
+  // Icon + title
+  const icons = {VALID:'✅', FRAUD:'🚨', SUSPICIOUS:'⚠️'};
+  const icon  = ok ? (icons[fs]||'✅') : '❌';
+  document.getElementById('res-icon').textContent = icon;
+  document.getElementById('res-title').textContent =
+    ok ? (fs==='VALID' ? 'Payment Successful — Ticket Confirmed!' :
+          fs==='FRAUD' ? 'Payment Success — Fraud Detected!' : 'Payment Success — Suspicious Activity')
+       : 'Payment Failed';
+
+  // Set dynamic price in result
+  const priceFmt = bookingState.price ? formatINR(bookingState.price) : '₹500';
+  const amtEl = document.getElementById('res-amount');
+  if (amtEl) amtEl.textContent = priceFmt;
+
+  // Badges
+  const badges = [];
+  if (ok) badges.push(`<span class="result-badge badge-valid">✅ Payment Success</span>`);
+  else    badges.push(`<span class="result-badge badge-fraud">❌ Payment Failed</span>`);
+  if (fs==='VALID')      badges.push(`<span class="result-badge badge-valid">✅ Valid Ticket</span>`);
+  else if (fs==='FRAUD') badges.push(`<span class="result-badge badge-fraud">🚨 Fraud Detected</span>`);
+  else if (fs==='SUSPICIOUS') badges.push(`<span class="result-badge badge-suspicious">⚠️ Suspicious</span>`);
+  if (f.fraud_method==='AI Model')   badges.push(`<span class="result-badge badge-ai">🤖 AI Model</span>`);
+  if (f.fraud_method==='Rule-Based') badges.push(`<span class="result-badge badge-rule">📋 Rule-Based</span>`);
+  document.getElementById('res-badges').innerHTML = badges.join('');
+
+  // Details
+  document.getElementById('res-details').innerHTML = `
+    <div class="detail-row"><span class="lbl">Transaction ID</span>
+      <span class="val" style="color:var(--cyan);font-family:monospace">${r.transaction_id||'N/A'}</span></div>
+    <div class="detail-row"><span class="lbl">Route</span>
+      <span class="val">${bookingState.source||'—'} → ${bookingState.destination||'—'}</span></div>
+    <div class="detail-row"><span class="lbl">Passenger</span><span class="val">${bookingState.passenger||'—'}</span></div>
+    <div class="detail-row"><span class="lbl">Seat Type</span><span class="val">${bookingState.seatType||'—'}</span></div>
+    <div class="detail-row"><span class="lbl">Payment Method</span><span class="val">${bookingState.payMethod||'—'}</span></div>
+    <div class="detail-row"><span class="lbl">Amount Paid</span><span class="val" style="color:var(--cyan)" id="res-amount">₹—</span></div>
+    <div class="detail-row"><span class="lbl">Fraud Detection</span><span class="val">${f.fraud_method||'None'}</span></div>
+    <div class="detail-row"><span class="lbl">ML Probability</span>
+      <span class="val">${((f.ml_probability||0)*100).toFixed(1)}% fraud likelihood</span></div>
+  `;
+
+  // Fraud reason
+  if (f.fraud_reason) {
+    document.getElementById('res-reason').style.display = '';
+    document.getElementById('res-reason-text').textContent = f.fraud_reason;
+  } else document.getElementById('res-reason').style.display = 'none';
+
+  // Risk meter
+  const riskColor = rs < 20 ? 'var(--green)' : rs < 50 ? 'var(--gold)' : 'var(--coral)';
+  document.getElementById('res-risk-pct').textContent = rs + ' / 100';
+  document.getElementById('res-risk-pct').style.color = riskColor;
+  document.getElementById('res-risk-fill').style.width = Math.min(rs,100) + '%';
+  document.getElementById('res-risk-fill').style.background = riskColor;
+}
+
+function downloadReceipt() {
+  const f  = bookingState.fraudResult || {};
+  const fs = f.fraud_status || 'VALID';
+  const color = fs==='VALID'?'#155724':fs==='FRAUD'?'#721c24':'#856404';
+  const bg    = fs==='VALID'?'#d4edda':fs==='FRAUD'?'#f8d7da':'#fff3cd';
+  const html = `<!DOCTYPE html><html><head><title>Receipt — ${bookingState.transactionId}</title>
+<style>
+  body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f4f8;margin:0;padding:40px;color:#1a2a3a}
+  .wrap{max-width:560px;margin:0 auto;background:#fff;border-radius:16px;
+        box-shadow:0 8px 32px rgba(0,0,0,.12);overflow:hidden}
+  .header{background:linear-gradient(135deg,#0d1e35,#091428);padding:32px;color:#fff;text-align:center}
+  .header h1{font-size:22px;margin:0 0 6px;letter-spacing:-.3px}
+  .header p{color:#6b8ab0;font-size:13px}
+  .body{padding:28px}
+  .badge{display:inline-block;padding:5px 14px;border-radius:99px;
+         font-weight:700;font-size:12px;background:${bg};color:${color};
+         text-transform:uppercase;letter-spacing:.07em;margin:12px 0}
+  .row{display:flex;padding:9px 0;border-bottom:1px solid #e8edf5;font-size:14px}
+  .row:last-child{border:none}
+  .k{color:#6b7a8d;width:160px;flex-shrink:0}
+  .v{font-weight:600;flex:1}
+  .txn{font-family:'Courier New',monospace;color:#0066cc;font-size:13px}
+  .footer{text-align:center;padding:20px;background:#f8fafc;
+          color:#9aa5b4;font-size:11px;border-top:1px solid #e8edf5}
+  .stamp{margin-top:16px;border:2px dashed ${color};color:${color};
+         padding:8px 20px;border-radius:8px;font-size:12px;font-weight:700;display:inline-block}
+</style></head><body>
+<div class="wrap">
+  <div class="header">
+    <h1>🛡️ SecureTrail E-Ticket</h1>
+    <p>AI-Powered Fraud Detection · OTP Verified Payment</p>
+  </div>
+  <div class="body">
+    <div class="badge">${fs==='VALID'?'✅ Valid Ticket':fs==='FRAUD'?'🚨 Fraud Detected':'⚠️ Suspicious'}</div>
+    <div class="row"><div class="k">Transaction ID</div><div class="v txn">${bookingState.transactionId||'N/A'}</div></div>
+    <div class="row"><div class="k">Passenger</div><div class="v">${bookingState.passenger}</div></div>
+    <div class="row"><div class="k">Route</div><div class="v">${bookingState.source} → ${bookingState.destination}</div></div>
+    <div class="row"><div class="k">Travel Time</div><div class="v">${new Date(bookingState.travelTime).toLocaleString()}</div></div>
+    <div class="row"><div class="k">Seat Type</div><div class="v">${bookingState.seatType}</div></div>
+    <div class="row"><div class="k">Payment Method</div><div class="v">${bookingState.payMethod}</div></div>
+    <div class="row"><div class="k">Distance</div><div class="v">${bookingState.dist ? bookingState.dist + " km" : "N/A"}</div></div>
+    <div class="row"><div class="k">Amount Paid</div><div class="v" style="color:#0066cc">${bookingState.price ? formatINR(bookingState.price) : "₹500"}</div></div>
+    <div class="row"><div class="k">Fraud Detection</div><div class="v">${f.fraud_method||'None'}</div></div>
+    <div class="row"><div class="k">Risk Score</div><div class="v">${f.risk_score||0} / 100</div></div>
+    ${f.fraud_reason?`<div class="row"><div class="k">Fraud Reason</div><div class="v" style="color:#b91c1c">${f.fraud_reason}</div></div>`:''}
+    <div class="row"><div class="k">Issued At</div><div class="v">${new Date().toLocaleString()}</div></div>
+    <div style="text-align:center;margin-top:16px">
+      <div class="stamp">${fs==='VALID'?'VERIFIED BY SECURETRAIL AI':fs==='FRAUD'?'FLAGGED AS FRAUDULENT':'MARKED SUSPICIOUS'}</div>
+    </div>
+  </div>
+  <div class="footer">
+    This receipt was generated by SecureTrail AI Fraud Detection System.<br>
+    OTP verified · Decision Tree ML · Rule-Based Engine<br>
+    © 2024 SecureTrail — Secure Every Journey
+  </div>
+</div></body></html>`;
+  const w = window.open('','_blank');
+  w.document.write(html); w.document.close(); w.print();
+}
+
+// ── Tickets ───────────────────────────────────────────────────
+async function loadTickets() {
+  if (!token) { nav('auth'); return; }
+  document.getElementById('tickets-list').innerHTML =
+    '<div class="sk-loader"><div class="spinner-ring"></div>Loading...</div>';
+  try {
+    const r = await api('GET', '/api/get_tickets');
+    allTickets = r.tickets || [];
+    renderTickets(allTickets);
+  } catch(e) {
+    document.getElementById('tickets-list').innerHTML =
+      '<div class="sk-loader">Failed to load tickets</div>';
+  }
+}
+
+function filterT(type, btn) {
+  document.querySelectorAll('.fbtn').forEach(b => b.classList.remove('act'));
+  btn.classList.add('act');
+  if (type==='all')         renderTickets(allTickets);
+  else if (type==='valid')  renderTickets(allTickets.filter(t=>!t.is_fraud && t.ticket_status!=='cancelled' && t.payment_status==='SUCCESS'));
+  else if (type==='fraud')  renderTickets(allTickets.filter(t=>t.is_fraud));
+  else if (type==='suspicious') renderTickets(allTickets.filter(t=>t.risk_score>=20&&t.risk_score<50&&!t.is_fraud));
+  else if (type==='pending')    renderTickets(allTickets.filter(t=>t.payment_status==='PENDING'));
+  else if (type==='cancelled')  renderTickets(allTickets.filter(t=>t.ticket_status==='cancelled'));
+}
+
+function renderTickets(list) {
+  const el = document.getElementById('tickets-list');
+  if (!list.length) {
+    el.innerHTML = `<div class="empty">
+      <span class="empty-icon">🎫</span>
+      <h3>No tickets found</h3>
+      <p>Book your first e-ticket to see it here.</p>
+      <button class="btn btn-primary" style="margin-top:1.25rem" onclick="handleBook()">Book Now</button>
+    </div>`; return;
+  }
+
+  const riskClass = rs => rs<20?'chip-valid':rs<50?'chip-sus':'chip-fraud';
+  const fraudLabel = t => {
+    if (t.is_fraud && t.risk_score>=50) return `<span class="status-chip chip-fraud">🚨 Fraud</span>`;
+    if (t.risk_score>=20) return `<span class="status-chip chip-sus">⚠️ Suspicious</span>`;
+    if (t.payment_status==='SUCCESS') return `<span class="status-chip chip-valid">✅ Valid</span>`;
+    if (t.payment_status==='PENDING') return `<span class="status-chip chip-pending">⏳ Pending</span>`;
+    return `<span class="status-chip chip-failed">❌ Failed</span>`;
+  };
+  const payChip = s => s==='SUCCESS'?`<span class="status-chip chip-success">💳 Paid</span>`:
+                       s==='FAILED'?`<span class="status-chip chip-failed">❌ Failed</span>`:
+                       `<span class="status-chip chip-pending">⏳ Pending</span>`;
+
+  el.innerHTML = list.map(t => {
+    const cls = t.is_fraud&&t.risk_score>=50?'fraud-t':t.risk_score>=20&&!t.is_fraud?'sus-t':'valid-t';
+    return `
+    <div class="ticket-card ${cls}">
+      <div>
+        <div class="ticket-route">${t.source}<span class="arrow-lbl"> → </span>${t.destination}</div>
+        <div class="ticket-meta">
+          <span>👤 ${t.passenger_name}</span>
+          <span>💺 ${t.seat_type}</span>
+          <span>💳 ${t.payment_method}</span>
+          <span>📅 ${new Date(t.travel_time).toLocaleDateString()}</span>
+          <span style="color:var(--cyan);font-weight:700">${t.ticket_price ? formatINR(t.ticket_price) : '₹500'}</span>
+          <span style="color:${t.risk_score<20?'var(--green)':t.risk_score<50?'var(--gold)':'var(--coral)'}">
+            Risk: ${t.risk_score}/100
+          </span>
+        </div>
+        ${t.fraud_reason ? `<div style="margin-top:.6rem;font-size:.8rem;color:var(--coral);
+          padding:.4rem .75rem;background:rgba(255,77,109,.05);border-radius:6px;border-left:2px solid var(--coral)">
+          ⚠️ ${t.fraud_reason}</div>` : ''}
+        ${t.transaction_id ? `<div class="txn-lbl" style="margin-top:.5rem">🧾 ${t.transaction_id}</div>` : ''}
+      </div>
+      <div class="ticket-actions">
+        ${fraudLabel(t)}
+        ${payChip(t.payment_status)}
+        <div class="ticket-id-lbl">#${t.ticket_id}</div>
+        ${t.ticket_status!=='cancelled'&&t.payment_status==='SUCCESS'
+          ? `<button class="btn btn-ghost btn-sm" onclick="cancelTicket(${t.ticket_id})">Cancel</button>` : ''}
+        ${t.transaction_id
+          ? `<button class="btn btn-ghost btn-sm" onclick="previewReceipt(${t.ticket_id})">📄 Receipt</button>` : ''}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function previewReceipt(tid) {
+  const t = allTickets.find(x=>x.ticket_id===tid);
+  if (!t) return;
+  bookingState.transactionId = t.transaction_id;
+  bookingState.passenger     = t.passenger_name;
+  bookingState.source        = t.source;
+  bookingState.destination   = t.destination;
+  bookingState.travelTime    = t.travel_time;
+  bookingState.seatType      = t.seat_type;
+  bookingState.payMethod     = t.payment_method;
+  bookingState.fraudResult   = {
+    fraud_status:   t.is_fraud && t.risk_score>=50 ? 'FRAUD' : t.risk_score>=20 ? 'SUSPICIOUS' : 'VALID',
+    fraud_method:   t.fraud_method,
+    fraud_reason:   t.fraud_reason,
+    risk_score:     t.risk_score,
+    ml_probability: 0,
+  };
+  downloadReceipt();
+}
+
+async function cancelTicket(tid) {
+  if (!confirm(`Cancel ticket #${tid}?`)) return;
+  try {
+    await api('POST', `/api/cancel_ticket/${tid}`);
+    toast(`Ticket #${tid} cancelled`, 'ok');
+    loadTickets();
+  } catch(e) { toast(e.message,'err'); }
+}
+
+// ── Admin ─────────────────────────────────────────────────────
+async function loadAdmin() {
+  // Guard: must have admin session
+  if (!adminToken || !adminUser) {
+    // Show access denied inside admin page then redirect
+    document.getElementById('kpi-grid').innerHTML = `
+      <div class="access-denied" style="grid-column:1/-1">
+        <div class="icon">🔒</div>
+        <h2>Access Denied</h2>
+        <p>You must be logged in as an administrator to view this dashboard.</p>
+        <button class="btn" style="background:var(--violet);color:#fff" onclick="nav('admin-login')">
+          🔐 Admin Login
+        </button>
+      </div>`;
+    // Redirect to login after short delay
+    setTimeout(() => nav('admin-login'), 1200);
+    return;
+  }
+
+  // Update admin bar display
+  document.getElementById('admin-bar-name').textContent  = adminUser.name || '';
+  document.getElementById('admin-bar-email').textContent = adminUser.email || '';
+
+  try {
+    // Use adminToken for authenticated request
+    const resp = await fetch(API + '/api/admin_dashboard', {
+      headers: {'Authorization': 'Bearer ' + adminToken},
+      signal: AbortSignal.timeout(10000),
+    });
+    if (resp.status === 401 || resp.status === 403) {
+      // Token expired or revoked
+      adminToken = null; adminUser = null;
+      localStorage.removeItem('st_admin_token');
+      localStorage.removeItem('st_admin_user');
+      toast('Admin session expired. Please login again.', 'warn');
+      nav('admin-login');
+      return;
+    }
+    const r = await resp.json();
+    renderKPIs(r.stats);
+    renderModelBanner(r.model_info);
+    renderCharts(r);
+    renderAlerts(r.recent_fraud);
+    renderSusTable(r.suspicious_users);
+    // Update home stats
+    document.getElementById('hs-total').textContent = r.stats.total_tickets;
+    document.getElementById('hs-fraud').textContent = r.stats.fraud_tickets;
+    document.getElementById('hs-valid').textContent = r.stats.valid_tickets;
+    document.getElementById('hs-users').textContent = r.stats.total_users;
+    if (r.model_info&&r.model_info.accuracy)
+      document.getElementById('hs-acc').textContent = r.model_info.accuracy + '%';
+  } catch(e) { toast('Dashboard load failed','err'); }
+}
+
+function renderKPIs(s) {
+  document.getElementById('kpi-grid').innerHTML = `
+    <div class="kpi k-cyan"><div class="kpi-val text-cyan">${s.total_tickets}</div><div class="kpi-lbl">Total Tickets</div></div>
+    <div class="kpi k-coral"><div class="kpi-val text-coral">${s.fraud_tickets}</div><div class="kpi-lbl">Fraud Detected</div><div class="kpi-sub">${s.fraud_rate}% fraud rate</div></div>
+    <div class="kpi k-green"><div class="kpi-val text-green">${s.valid_tickets}</div><div class="kpi-lbl">Valid Tickets</div></div>
+    <div class="kpi k-gold"><div class="kpi-val text-gold">${s.pay_success}</div><div class="kpi-lbl">Payments Success</div></div>
+    <div class="kpi k-violet"><div class="kpi-val" style="color:var(--violet)">${s.pay_failed}</div><div class="kpi-lbl">Payments Failed</div></div>
+    <div class="kpi k-cyan"><div class="kpi-val">${s.total_users}</div><div class="kpi-lbl">Users</div></div>
+    <div class="kpi"><div class="kpi-val text-gold">${s.pending}</div><div class="kpi-lbl">Pending</div></div>
+  `;
+}
+
+function renderModelBanner(m) {
+  if (!m||!m.accuracy) return;
+  const cm = m.confusion_matrix||[[0,0],[0,0]];
+  document.getElementById('model-metrics').innerHTML = `
+    <div class="metric"><div class="metric-val text-green">${m.accuracy}%</div><div class="metric-lbl">Accuracy</div></div>
+    <div class="metric"><div class="metric-val text-cyan">${m.auc}</div><div class="metric-lbl">AUC-ROC</div></div>
+    <div class="metric">
+      <div style="font-size:.78rem;color:var(--muted);line-height:1.8">
+        TP: <strong style="color:var(--green)">${cm[1][1]}</strong> &nbsp; FP: <strong style="color:var(--coral)">${cm[0][1]}</strong><br>
+        FN: <strong style="color:var(--gold)">${cm[1][0]}</strong> &nbsp; TN: <strong>${cm[0][0]}</strong>
+      </div>
+      <div class="metric-lbl">Confusion Matrix</div>
+    </div>
+  `;
+}
+
+function renderCharts(d) {
+  const s = d.stats;
+
+  // Base options — maintainAspectRatio:false is REQUIRED so charts
+  // respect the fixed-height wrapper div instead of auto-expanding
+  const base = {
+    responsive: true,
+    maintainAspectRatio: false,   // ← key fix: respects container height
+    animation: { duration: 600 },
+    plugins: {
+      legend: {
+        labels: { color:'#5a7a9e', font:{ size:11 }, boxWidth:12, padding:12 }
+      }
+    }
+  };
+
+  const axisStyle = {
+    ticks: { color:'#5a7a9e', font:{ size:10 }, maxTicksLimit:6 },
+    grid:  { color:'#1a3050' }
+  };
+
+  // ── Donut: Fraud vs Valid vs Pending ──────────────────────────
+  if (charts.donut) charts.donut.destroy();
+  charts.donut = new Chart(document.getElementById('ch-donut'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Valid','Fraud','Pending'],
+      datasets: [{
+        data: [s.valid_tickets, s.fraud_tickets, s.pending],
+        backgroundColor: ['rgba(0,229,160,.75)','rgba(255,77,109,.75)','rgba(0,212,255,.55)'],
+        borderColor:      ['#00e5a0','#ff4d6d','#00d4ff'],
+        borderWidth: 2, hoverOffset: 6
+      }]
+    },
+    options: {
+      ...base,
+      cutout: '68%',
+      plugins: {
+        ...base.plugins,
+        legend: { ...base.plugins.legend, position:'bottom' }
+      }
+    }
+  });
+
+  // ── Stacked Bar: Daily bookings ───────────────────────────────
+  const daily = d.daily || [];
+  if (charts.bar) charts.bar.destroy();
+  charts.bar = new Chart(document.getElementById('ch-bar'), {
+    type: 'bar',
+    data: {
+      labels: daily.map(x => x.day ? x.day.slice(5) : ''),  // show MM-DD only
+      datasets: [
+        { label:'Valid', stack:'a',
+          data: daily.map(x => (x.total||0) - (x.fraud_count||0)),
+          backgroundColor:'rgba(0,229,160,.6)', borderRadius:3 },
+        { label:'Fraud', stack:'a',
+          data: daily.map(x => x.fraud_count||0),
+          backgroundColor:'rgba(255,77,109,.65)', borderRadius:3 }
+      ]
+    },
+    options: {
+      ...base,
+      scales: {
+        x: { stacked:true, ...axisStyle },
+        y: { stacked:true, ...axisStyle, beginAtZero:true }
+      },
+      plugins: {
+        ...base.plugins,
+        legend: { ...base.plugins.legend, position:'top' }
+      }
+    }
+  });
+
+  // ── Pie: Payment status ───────────────────────────────────────
+  if (charts.pay) charts.pay.destroy();
+  charts.pay = new Chart(document.getElementById('ch-pay'), {
+    type: 'doughnut',
+    data: {
+      labels: ['Success','Failed','Pending'],
+      datasets: [{
+        data: [s.pay_success, s.pay_failed, s.pending],
+        backgroundColor:['rgba(0,229,160,.75)','rgba(255,77,109,.75)','rgba(0,212,255,.55)'],
+        borderColor:     ['#00e5a0','#ff4d6d','#00d4ff'],
+        borderWidth:2, hoverOffset:6
+      }]
+    },
+    options: {
+      ...base,
+      cutout: '60%',
+      plugins: {
+        ...base.plugins,
+        legend: { ...base.plugins.legend, position:'bottom' }
+      }
+    }
+  });
+
+  // ── Horizontal Bar: Fraud by method ──────────────────────────
+  const methods = d.by_method || [];
+  if (charts.method) charts.method.destroy();
+  charts.method = new Chart(document.getElementById('ch-method'), {
+    type: 'bar',
+    data: {
+      labels: methods.map(m => m.fraud_method || 'Unknown'),
+      datasets: [{
+        label: 'Fraud Count',
+        data:  methods.map(m => m.cnt),
+        backgroundColor:['rgba(0,212,255,.65)','rgba(124,58,237,.65)','rgba(255,77,109,.55)'],
+        borderRadius: 5
+      }]
+    },
+    options: {
+      ...base,
+      indexAxis: 'y',
+      plugins: { ...base.plugins, legend:{ display:false } },
+      scales: {
+        x: { ...axisStyle, beginAtZero:true },
+        y: { ticks:{ color:'#5a7a9e', font:{ size:11 } }, grid:{ display:false } }
+      }
+    }
+  });
+}
+
+function renderAlerts(alerts) {
+  const el = document.getElementById('alerts-list');
+  if (!alerts||!alerts.length) {
+    el.innerHTML='<div style="color:var(--muted);padding:1rem">No fraud alerts yet.</div>'; return;
+  }
+  el.innerHTML = alerts.map(a=>`
+    <div class="alert-item">
+      <div class="alert-ico">🚨</div>
+      <div class="alert-body">
+        <div class="alert-title">${a.name} — Ticket #${a.ticket_id}
+          ${a.transaction_id?`<span style="font-size:.72rem;color:var(--muted2);font-family:monospace;margin-left:.5rem">${a.transaction_id}</span>`:''}
+        </div>
+        <div class="alert-desc">
+          ${a.source} → ${a.destination} · ${a.fraud_method} ·
+          ${a.fraud_reason||'Pattern detected'}<br>
+          OTP attempts: ${a.otp_attempts||0} · Failed pays: ${a.failed_payments_count||0}
+        </div>
+      </div>
+      <div class="alert-time">${new Date(a.booking_time).toLocaleString()}</div>
+    </div>`).join('');
+}
+
+function renderSusTable(users) {
+  const el = document.getElementById('sus-tbody');
+  if (!users||!users.length) {
+    el.innerHTML='<tr><td colspan="7" style="text-align:center;color:var(--muted)">No high-risk users</td></tr>';return;
+  }
+  const riskChip = r=>{
+    const pct=Math.round(r*100);
+    const cls=pct<30?'chip-valid':pct<60?'chip-sus':'chip-fraud';
+    return `<span class="status-chip ${cls}">${pct}%</span>`;
+  };
+  el.innerHTML=users.map(u=>`<tr>
+    <td>${u.name}</td><td style="color:var(--muted);font-size:.8rem">${u.email}</td>
+    <td>${riskChip(u.risk_score)}</td>
+    <td>${u.total_tickets||0}</td>
+    <td style="color:var(--coral)">${u.fraud_tickets||0}</td>
+    <td style="color:var(--gold)">${u.otp_abuse||0}</td>
+    <td style="color:var(--coral)">${u.total_failed_pay||0}</td>
+  </tr>`).join('');
+}
+
+// ── Home stats (public endpoint — no auth needed) ────────────
+async function loadHomeStats() {
+  try {
+    // Uses /api/public_stats which requires no authentication
+    const resp = await fetch(API + '/api/public_stats', {
+      signal: AbortSignal.timeout(5000)
+    });
+    if (!resp.ok) return;
+    const d = await resp.json();
+    document.getElementById('hs-total').textContent = d.total_tickets  || '—';
+    document.getElementById('hs-fraud').textContent = d.fraud_tickets  || '—';
+    document.getElementById('hs-valid').textContent = d.valid_tickets  || '—';
+    document.getElementById('hs-users').textContent = d.total_users    || '—';
+    if (d.model_accuracy)
+      document.getElementById('hs-acc').textContent = d.model_accuracy + '%';
+  } catch(e) {
+    // Silently fail — stats show '—' if server not running
+  }
+}
+
+// ── API helper ────────────────────────────────────────────────
+async function api(method, path, body) {
+  // Block API calls when opened as a local file
+  if (IS_FILE_PROTOCOL) {
+    document.getElementById('server-banner').style.display = 'block';
+    throw new Error('Open http://localhost:5000 in your browser after starting Flask.');
+  }
+
+  const opts = {
+    method,
+    headers: {
+      'Content-Type': 'application/json',
+      ...(token ? {'Authorization': 'Bearer ' + token} : {}),
+    },
+    signal: AbortSignal.timeout(12000),
+  };
+  if (body) opts.body = JSON.stringify(body);
+
+  let r;
+  try {
+    r = await fetch(API + path, opts);
+  } catch(networkErr) {
+    document.getElementById('server-banner').style.display = 'block';
+    if (networkErr.name === 'TimeoutError' || networkErr.name === 'AbortError') {
+      throw new Error('Request timed out — is Flask running on port 5000?');
+    }
+    throw new Error('Cannot reach server. Run: python backend/app.py  then open http://localhost:5000');
+  }
+
+  // Handle non-JSON responses (e.g. Flask returning HTML error pages)
+  const contentType = r.headers.get('content-type') || '';
+  if (!contentType.includes('application/json')) {
+    throw new Error('Server returned an unexpected response (not JSON). Check Flask is running correctly.');
+  }
+
+  let d;
+  try { d = await r.json(); }
+  catch(e) { throw new Error('Could not parse server response.'); }
+
+  if (!r.ok) throw new Error(d.error || 'Request failed (status ' + r.status + ')');
+  return d;
+}
+
+// ── Toast ─────────────────────────────────────────────────────
+function toast(msg, type='ok') {
+  const icons = {ok:'✅',err:'❌',warn:'⚠️'};
+  const cls   = {ok:'tok',err:'terr',warn:'twarn'};
+  const el = document.createElement('div');
+  el.className = `toast ${cls[type]||'tok'}`;
+  el.innerHTML = `<span class="toast-
+  document.getElementById('toasts').appendChild(el);
+  setTimeout(()=>el.remove(), type==='err'?5000:3500);
+}
+</script>
+</body>
+</html>
