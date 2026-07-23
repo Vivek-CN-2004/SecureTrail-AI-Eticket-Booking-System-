@@ -25,12 +25,12 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 
 
 BASE_DIR     = os.path.dirname(os.path.abspath(__file__))
-FRONTEND_DIR = os.path.join(BASE_DIR, "..", "frontend")
-DB_PATH      = os.path.join(BASE_DIR, "..", "database.db")
-MODEL_PATH   = os.path.join(BASE_DIR, "..", "model", "fraud_model.pkl")
-SCAN_MODEL_PATH = os.path.join(BASE_DIR, "..", "model", "scan_model.pkl")
-UPLOADS_DIR  = os.path.join(BASE_DIR, "..", "uploads")
-REPORTS_DIR  = os.path.join(BASE_DIR, "..", "reports")
+FRONTEND_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "frontend"))
+DB_PATH      = os.path.abspath(os.path.join(BASE_DIR, "..", "database.db"))
+MODEL_PATH   = os.path.abspath(os.path.join(BASE_DIR, "..", "model", "fraud_model.pkl"))
+SCAN_MODEL_PATH = os.path.abspath(os.path.join(BASE_DIR, "..", "model", "scan_model.pkl"))
+UPLOADS_DIR  = os.path.abspath(os.path.join(BASE_DIR, "..", "uploads"))
+REPORTS_DIR  = os.path.abspath(os.path.join(BASE_DIR, "..", "reports"))
 os.makedirs(UPLOADS_DIR, exist_ok=True)
 os.makedirs(REPORTS_DIR, exist_ok=True)
 
@@ -297,6 +297,7 @@ def generate_pdf_report(scan_data, checks, file_path):
     return file_path
 
 
+@app.route("/", defaults={"path": ""})
 @app.route("/<path:path>")
 def serve(path):
     if path.startswith("api/"): return jsonify({"error":f"/{path} not found"}),404
