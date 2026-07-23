@@ -10,7 +10,7 @@ def read(name):
         return f.read()
 
 head   = read("head.html")
-utils  = read("utils.js")
+utils  = ""
 page1  = read("page1.jsx")
 page2  = read("page2.jsx")
 page3  = read("page3.jsx")
